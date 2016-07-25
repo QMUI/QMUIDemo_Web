@@ -1,0 +1,40 @@
+@charset "UTF-8";
+/**
+ * _base.scss 存放项目基础样式、项目用方法、项目用function
+ * @author Kayo
+ * @date 2015-08-18
+ * 
+ * #common
+ */
+
+/* #common */
+xmp,
+pre {
+  margin: 0;
+}
+html {
+  height: 100%;
+}
+code {
+  padding: 2px 4px;
+  font-size: 90%;
+  color: #c7254e;
+  background-color: #f9f2f4;
+  border-radius: 4px;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* 全局动画 */
+%commonAnimation {
+  @include transition(all 0.2s ease-in-out);
+}
+
+// 移动版 Media
+@mixin forMobile {
+  $target: $frame_base_width + $frame_base_mobile_paddingHorizontal * 2;
+  @media handheld and (max-width: $target), screen and (max-width: $target) {
+    @content;
+  }
+}

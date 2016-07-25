@@ -1,0 +1,18 @@
+@charset "UTF-8";
+/**
+ * _tab.scss
+ * @author clearwu
+ * @date 2015-08-17
+ *
+ * .dm_tab
+ *
+ */
+
+/* .dm_tab */
+.dm_tabNav_item_Curr {
+  background: #ecf9ff;
+}
+.dm_tabNav_itemLink:hover {
+  color: #0087ca;
+  text-decoration: underline;
+}

@@ -1,0 +1,52 @@
+@charset "UTF-8";
+/**
+ * _images.scss CSS Sprite 处理
+ * @author Kayo
+ * @date 2015-09-01
+ *
+ */
+
+// 创建一个文件去处理 CSS Sprite
+// 引入 compass 的相关框架，定义了一些常用的variables和mixins，具体可以查看源代码
+@import "compass/utilities/sprites"; 
+
+/* .dm_icon */
+// sprite map 我们可以通过映射来使用不同的名字
+$dm_icon : sprite-map("icons/*.png"); 
+$dm_icon_2x : sprite-map("icons_2x/*.png");
+$dm_icon_3x : sprite-map("icons_3x/*.png");
+// 方便在以其他 className 命名的 dom 中调用图标，如果单纯继承 .ww_commonImg, 会产生很多冗余代码
+%dm_icon { 
+  @include inlineBlock;
+  font-size: 0;
+  background-repeat: no-repeat;
+  // sprite-url 生成 sprite 图，并配合 config.rb的 relative_assets = true 返回相对路径
+  background-image: sprite-url($dm_icon);
+  @include screenResolution(2) {
+    background-image: sprite-url($dm_icon_2x);
+  }
+  @include screenResolution(3) {
+    background-image: sprite-url($dm_icon_3x);
+  }
+  // 生成sprite图之后才能获取宽高，所以sprite-width、sprite-height需放在sprite-url后面
+  background-size: sprite-width($dm_icon) sprite-height($dm_icon); 
+}
+.dm_icon {
+  @extend %dm_icon;
+}
+@each $iconName in sprite-names($dm_icon) {
+  %dm_icon_#{$iconName} {
+    @include sprite($dm_icon,$iconName,true); // 输出background-position、width、height
+  }
+  .dm_icon_#{$iconName} {
+    @extend %dm_icon_#{$iconName};
+  }
+}
+
+// 对于具有链接效果的 icon，建议使用 a>span.icon 的格式去实现
+// a:hover {
+//   .dm_icon_Comment { @include sprite-background-position($dm_icon, "Comment_Hover"); }
+// }
+// a:active {
+//   .dm_icon_Comment { @include sprite-background-position($dm_icon, "Comment_Active"); }
+// }

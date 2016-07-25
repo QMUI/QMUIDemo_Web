@@ -1,0 +1,113 @@
+@charset "UTF-8";
+/**
+ * _others.scss
+ * @author Hugh
+ * @date 2015-08-27
+ *
+ */
+
+.dm_verticalTab {
+  .qui_tab_title {
+    float: left;
+    width: 150px;
+  }
+  .qui_tabNav_item {
+    float: none;
+  }
+  .dm_verticalTabNav_item_Curr {
+    background-color: #ecf9ff;
+  }
+  .qui_tab_cnt {
+    @include bfc;
+  }
+}
+
+/* 等高左右双栏 - 方法1 */
+.dm_dualCols1 {
+  border: 1px solid #c9c9c9;
+  .dm_dualCols_left {
+    display: table-cell;
+    border-right: 1px solid #c9c9c9;
+    padding: 10px;
+  }
+  .dm_dualCols_right {
+    display: table-cell;
+    padding: 10px;
+  }
+}
+
+/* 等高左右双栏 - 方法2 */
+.dm_dualCols2 {
+  border: 1px solid #c9c9c9;
+  overflow: hidden;
+  .dm_dualCols_left {
+    border-right: 1px solid #c9c9c9;
+    padding: 10px;
+    float: left;
+    padding-bottom: 3000px;
+    margin-bottom: -3000px;
+  }
+  .dm_dualCols_right {
+    @include bfc;
+    padding: 10px;
+  }
+}
+
+/* 文件上传按钮 */
+.dm_fileUpload {
+  position: relative;
+  overflow: hidden;
+  .dm_fileUpload_input {
+    width: 100%;
+    height: 200%;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    @include opacity(0);
+    cursor: pointer;
+  }
+}
+
+/* 树状选择菜单 */
+.dm_treeMenu {
+  position: relative;
+  ul {
+    padding-left: 30px;
+  }
+  .dm_treeMenu_item {
+    height: 30px;
+    line-height: 30px;
+    &:before {
+      content: "";
+      position: relative;
+      z-index: 1;
+      float: left;
+      margin-top: 9px;
+      margin-right: 5px;
+      @include triangle(10px, 5px, right, #787878);
+    }
+    &.dm_treeMenu_item_Unfolded:before {
+      margin-top: 12px;
+      margin-left: -3px;
+      @include triangle(10px, 5px, bottom, #787878);
+    }
+    &.dm_treeMenu_item_NoChild:before {
+      content: none;
+    }
+    &.dm_treeMenu_item_Checked {
+      &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 30px;
+        background-color: #DEE5E7;
+        z-index: 0;
+      }
+      & span {
+        position: relative;
+        z-index: 1;
+      }
+    }
+  }
+}

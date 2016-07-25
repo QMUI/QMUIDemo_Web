@@ -1,0 +1,3 @@
+{
+  "../public/js/all.js" : ["../public/js/prettify.js", "../public/js/lang-css.js", "../public/js/main.js"]
+}   

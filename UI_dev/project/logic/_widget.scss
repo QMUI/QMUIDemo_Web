@@ -1,0 +1,13 @@
+@charset "UTF-8";
+/**
+ * _widget.scss 组件展示页面
+ * @author Kayo 
+ * @date 2015-08-18
+ *
+ */
+
+/* 展示遮罩层效果时使用的对话框 */
+.widget_dialogInMask {
+  @include absoluteCenter(442px, 148px);
+  position: fixed;
+}

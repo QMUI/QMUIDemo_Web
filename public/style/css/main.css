@@ -1,0 +1,2267 @@
+@charset "UTF-8";
+/**
+ * main.scss 项目总样式文件 
+ * @author Kayo 
+ * @date 2014-10-31
+ *
+ */
+/**
+ * _qmuiSupport.scss QMUI 框架需要用作功能支撑的 scss 文件，不能用作书写样式代码 
+ * @author Kayo
+ * @date 2015-11-22
+ *
+ */
+/**
+ * var.scss 变量
+ * @author Kayo&Clearwu
+ * @date 2015-08-17
+ *
+ * --- common ----
+ * #common 通用
+ *
+ * --- component ----
+ * #button 按钮组件
+ * #dialog 对话框组件
+ * #mask 遮罩层组件
+ * #dropdownMenu 下拉菜单组件
+ * #tab 选项卡组件
+ * #inputText、#textarea 文本输入组件
+ *
+ * --- project ---
+ * #frame 外层框架
+ * #others 其它组件
+ * #column 栏目，用于展示组件及其介绍
+ * #index 首页
+ */
+/* 
+ * #function QMUI 功能相关
+ * 由于移动页面也有大量渠道流向 PC，最终在 PC 上浏览，因此综合考虑这里 Mobile Only 仅仅会抛弃 IE6/7 相关的属性
+ */
+/**
+ * _qmui.scss QMUI 总样式文件
+ * @author Kayo 
+ * @date 2014-10-31
+ *
+ */
+/**
+ * _helper.scss 助手方法 helper（主要包含 CSS reset）
+ * @author Kayo 
+ * @date 2014-10-31
+ *
+ */
+/**
+ * _mixin.scss
+ * @author Kayo 
+ * @date 2014-10-31
+ *
+ */
+/* line 240, ../../../UI_dev/qmui_web/qmui/helper/mixin/_compatible.scss */
+.qui_clear, .qui_tabNav, .dm_column_display_cnt, .frame_head, .index_cnt_ability_list {
+  *zoom: 1;
+}
+/* line 244, ../../../UI_dev/qmui_web/qmui/helper/mixin/_compatible.scss */
+.qui_clear:after, .qui_tabNav:after, .dm_column_display_cnt:after, .frame_head:after, .index_cnt_ability_list:after {
+  clear: both;
+  content: ".";
+  display: block;
+  line-height: 0;
+  font-size: 0;
+  visibility: hidden;
+  overflow: hidden;
+}
+
+/* line 285, ../../../UI_dev/qmui_web/qmui/helper/mixin/_compatible.scss */
+.qui_txtOverflow {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  word-break: break-all;
+  word-wrap: normal;
+}
+
+/* line 467, ../../../UI_dev/qmui_web/qmui/helper/mixin/_compatible.scss */
+.qui_btn, .index_downloadBtn, .index_banner_startBtn {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/**
+ * _tool.scss 常用工具方法 
+ * @author Kayo 
+ * @date 2015-08-23
+ * 
+ */
+/* line 32, ../../../UI_dev/qmui_web/qmui/helper/mixin/tool/_effect.scss */
+.dm_treeMenu .dm_treeMenu_item:before, .dm_treeMenu .dm_treeMenu_item.dm_treeMenu_item_Unfolded:before {
+  display: block;
+  content: " ";
+  width: 0;
+  line-height: 0;
+  font-size: 0;
+  border-style: solid;
+  border-color: transparent;
+}
+
+/**
+ * _reset.scss
+ * @author Kayo
+ * @date 2014-10-30
+ *
+ * #reset
+ * #html5
+ */
+/* #reset */
+/* line 12, ../../../UI_dev/qmui_web/qmui/helper/_reset.scss */
+body, dl, dd, h1, h2, h3, h4, h5, h6, p, pre, form, fieldset, legend {
+  margin: 0;
+}
+
+/* line 13, ../../../UI_dev/qmui_web/qmui/helper/_reset.scss */
+ul, ol, fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 14, ../../../UI_dev/qmui_web/qmui/helper/_reset.scss */
+th, td {
+  padding: 0;
+}
+
+/* line 15, ../../../UI_dev/qmui_web/qmui/helper/_reset.scss */
+table {
+  font-size: inherit;
+}
+
+/* line 16, ../../../UI_dev/qmui_web/qmui/helper/_reset.scss */
+fieldset, img {
+  border: none;
+}
+
+/* line 17, ../../../UI_dev/qmui_web/qmui/helper/_reset.scss */
+ul, ol, li {
+  list-style: none;
+}
+
+/* line 18, ../../../UI_dev/qmui_web/qmui/helper/_reset.scss */
+body {
+  font-size: 14px;
+  line-height: 1.5;
+  background: #fff;
+  color: #474860;
+}
+
+/* line 19, ../../../UI_dev/qmui_web/qmui/helper/_reset.scss */
+h1, h2, h3, h4 {
+  font-size: 18px;
+  font-weight: normal;
+}
+
+/* line 20, ../../../UI_dev/qmui_web/qmui/helper/_reset.scss */
+body, input, textarea, select, button {
+  font-family: "Helvetica Neue", "Arial", "PingFang SC", "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", sans-serif;
+  outline: none;
+  -webkit-text-size-adjust: none;
+}
+
+/* line 21, ../../../UI_dev/qmui_web/qmui/helper/_reset.scss */
+input, textarea, select, button {
+  font-size: inherit;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* line 25, ../../../UI_dev/qmui_web/qmui/helper/_reset.scss */
+a {
+  color: #36ACFF;
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(105, 186, 255, 0.13);
+}
+
+/* line 26, ../../../UI_dev/qmui_web/qmui/helper/_reset.scss */
+:focus {
+  outline: none;
+}
+
+/* #html5 HTML5 元素的支持 */
+/* line 29, ../../../UI_dev/qmui_web/qmui/helper/_reset.scss */
+article, aside, details,
+figcaption, figure,
+footer, header, hgroup,
+main, nav, section,
+summary {
+  display: block;
+}
+
+/* line 34, ../../../UI_dev/qmui_web/qmui/helper/_reset.scss */
+audio, canvas, video {
+  display: inline-block;
+}
+
+/**
+ * _function.scss
+ * @author Kayo
+ * @date 2014-11-17
+ */
+/* line 9, ../../../UI_dev/qmui_web/qmui/helper/_function.scss */
+.qui_txtNormal {
+  font-weight: normal !important;
+}
+
+/* line 12, ../../../UI_dev/qmui_web/qmui/helper/_function.scss */
+.qui_txtBold {
+  font-weight: bold !important;
+}
+
+/* line 15, ../../../UI_dev/qmui_web/qmui/helper/_function.scss */
+.qui_txtLeft {
+  text-align: left !important;
+}
+
+/* line 18, ../../../UI_dev/qmui_web/qmui/helper/_function.scss */
+.qui_txtRight {
+  text-align: right !important;
+}
+
+/* line 21, ../../../UI_dev/qmui_web/qmui/helper/_function.scss */
+.qui_txtUnderline {
+  text-decoration: underline !important;
+}
+
+/* line 24, ../../../UI_dev/qmui_web/qmui/helper/_function.scss */
+.qui_txtUnderlineNone {
+  text-decoration: none !important;
+}
+
+/* line 34, ../../../UI_dev/qmui_web/qmui/helper/_function.scss */
+.qui_txtNowrap {
+  white-space: nowrap !important;
+}
+
+/* line 37, ../../../UI_dev/qmui_web/qmui/helper/_function.scss */
+.qui_layoutLeft {
+  float: left !important;
+}
+
+/* line 40, ../../../UI_dev/qmui_web/qmui/helper/_function.scss */
+.qui_layoutRight {
+  float: right !important;
+}
+
+/* line 44, ../../../UI_dev/qmui_web/qmui/helper/_function.scss */
+.qui_displayNone {
+  display: none !important;
+}
+
+/**
+ * _component.scss 业务公共组件
+ * @author Kayo 
+ * @date 2014-11-03
+ *
+ * #button 按钮
+ * #dialog 对话框 
+ * #mask 遮罩
+ * #dropdownMenu 下拉菜单
+ * #tab 选项卡
+  *#textField 文本输入
+ *
+ * /
+
+/* #button */
+/**
+ * _button.scss 按钮组件
+ * @author Kayo 
+ * @date 2014-11-04
+ *
+ * .qui_btn
+ *
+ */
+/* .qui_btn */
+/* line 13, ../../../UI_dev/qmui_web/qmui/component/_button.scss */
+.qui_btn {
+  display: inline-block;
+  margin: 0;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  min-width: 24px;
+  height: 22px;
+  padding: 0 12px;
+  background: #f4f4f4;
+  border: 1px solid #888;
+  line-height: 22px;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+  font-size: 12px;
+  color: #000;
+  _overflow-y: hidden;
+}
+
+/* 在低版本 ie 下，带有 border 的 submit 类型的 input 或 button 会有一条黑边，无法去除,
+ * 所以如果按钮样式的 border 不为 none，项目又需要考虑兼容低版本 ie，则建议使用 a 标签代替 */
+/* line 34, ../../../UI_dev/qmui_web/qmui/component/_button.scss */
+button.qui_btn,
+input.qui_btn {
+  *overflow: visible;
+  /* IE6/7的button需要设置此属性以使padding生效 */
+  *min-width: auto;
+}
+
+/* #dialog */
+/**
+ * _dialog.scss 对话框组件
+ * @author Kayo 
+ * @date 2014-11-03
+ *
+ * .qui_dialog
+ * > .qui_dialog_head 对话框的头部
+ *   > .qui_dialog_title 对话框的标题
+ *   > [.qui_dialog_close] 可选。对话框的关闭按钮
+ * > .qui_dialog_cnt 对话框的内容区域
+ * > [.qui_dialog_foot] 可选。对话框的底部
+ */
+/* .qui_dialog */
+/* line 17, ../../../UI_dev/qmui_web/qmui/component/_dialog.scss */
+.qui_dialog {
+  position: absolute;
+  z-index: 100;
+  min-width: 440px;
+  _width: 440px;
+  background: #eaeaea;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+}
+
+/* line 27, ../../../UI_dev/qmui_web/qmui/component/_dialog.scss */
+.qui_dialog_head {
+  background: #eaeaea;
+  border-bottom: 1px solid #ccc;
+  border-radius: 5px 5px 0 0;
+}
+
+/* line 33, ../../../UI_dev/qmui_web/qmui/component/_dialog.scss */
+.qui_dialog_title {
+  height: 25px;
+  line-height: 25px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #000;
+}
+
+/* line 41, ../../../UI_dev/qmui_web/qmui/component/_dialog.scss */
+.qui_dialog_close {
+  position: absolute;
+  top: 12px;
+  right: 10px;
+}
+
+/* line 47, ../../../UI_dev/qmui_web/qmui/component/_dialog.scss */
+.qui_dialog_body {
+  background: #fff;
+}
+
+/* line 50, ../../../UI_dev/qmui_web/qmui/component/_dialog.scss */
+.qui_dialog_body:last-child {
+  border-radius: 0 0 5px 5px;
+}
+
+/* line 54, ../../../UI_dev/qmui_web/qmui/component/_dialog.scss */
+.qui_dialog_foot {
+  background: #eaeaea;
+  border-top: 1px solid #ccc;
+  border-radius: 0 0 5px 5px;
+}
+
+/* #mask */
+/**
+ * _mask.scss 遮罩层组件 
+ * @author Kayo 
+ * @date 2014-11-11
+ *
+ * .qui_maskWrap 遮罩层的包裹容器，包裹遮罩层以及需要弹出的内容（如对话框）
+ * > .qui_mask
+ */
+/* 遮罩层的包裹容器，包裹遮罩层以及需要弹出的内容（如对话框）*/
+/* line 12, ../../../UI_dev/qmui_web/qmui/component/_mask.scss */
+.qui_maskWrap {
+  position: relative;
+  z-index: 90;
+}
+
+/* line 16, ../../../UI_dev/qmui_web/qmui/component/_mask.scss */
+.qui_mask {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 90;
+  background: #000;
+  -webkit-opacity: 0.5;
+  -moz-opacity: 0.5;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  -khtml-opacity: 0.5;
+}
+
+/* #dropdownMenu */
+/**
+ * _dropdownMenu.scss 下拉菜单组件
+ * @author clearwu 
+ * @date 2014-11-11
+ *
+ * .qui_dropdownMenu
+ *
+ */
+/* .qui_dropdownMenu */
+/* line 12, ../../../UI_dev/qmui_web/qmui/component/_dropdownMenu.scss */
+.qui_dropdownMenu {
+  position: absolute;
+  z-index: 30;
+  background: #fff;
+  border: 1px solid #a0a0a0;
+}
+
+/* line 18, ../../../UI_dev/qmui_web/qmui/component/_dropdownMenu.scss */
+.qui_dropdownMenu ul {
+  padding: 5px 0;
+}
+
+/* line 21, ../../../UI_dev/qmui_web/qmui/component/_dropdownMenu.scss */
+.qui_dropdownMenu_itemLink {
+  display: block;
+  height: 22px;
+  line-height: 22px;
+  padding: 0 14px;
+  color: #000;
+}
+
+/* line 28, ../../../UI_dev/qmui_web/qmui/component/_dropdownMenu.scss */
+.qui_dropdownMenu_split {
+  display: block;
+  height: 0;
+  line-height: 0;
+  font-size: 0;
+  margin: 5px 0;
+  border-top: 1px solid #ccc;
+}
+
+/* #tab */
+/**
+ * _tab.scss 选项卡组件
+ * @author clearwu 
+ * @date 2014-11-12
+ *
+ * .qui_tab
+ * > .qui_tab_title
+ *   > .qui_tabNav
+ *     > .qui_tabNav_item
+ *       > .qui_tabNav_itemLink
+ * > .qui_tab_cnt
+ *
+ */
+/* .qui_tab */
+/* line 17, ../../../UI_dev/qmui_web/qmui/component/_tab.scss */
+.qui_tab {
+  background: #ecf9ff;
+}
+
+/* line 20, ../../../UI_dev/qmui_web/qmui/component/_tab.scss */
+.qui_tab_title {
+  background: #a5d9f0;
+}
+
+/* line 23, ../../../UI_dev/qmui_web/qmui/component/_tab.scss */
+.qui_tabNav {
+  padding: 5px 5px 0;
+}
+
+/* line 27, ../../../UI_dev/qmui_web/qmui/component/_tab.scss */
+.qui_tabNav_item {
+  float: left;
+  margin: 0;
+}
+
+/* line 31, ../../../UI_dev/qmui_web/qmui/component/_tab.scss */
+.qui_tabNav_itemLink {
+  display: block;
+  height: 28px;
+  line-height: 28px;
+  padding: 5px 10px;
+  background: transparent;
+  color: #006091;
+}
+
+/* #textField */
+/**
+ * _textField.scss 文本输入组件
+ * @author clearwu 
+ * @date 2014-11-13
+ *
+ * .qui_inputText
+ * .qui_textarea
+ *
+ */
+/* line 12, ../../../UI_dev/qmui_web/qmui/component/_textField.scss */
+.qui_inputText, .qui_textarea {
+  display: block;
+  width: 270px;
+  line-height: 18px;
+  padding: 5px;
+  background: #fff;
+  border: 1px solid #96a5b4;
+  border-radius: 2px;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+/* .qui_inputText */
+/* line 24, ../../../UI_dev/qmui_web/qmui/component/_textField.scss */
+.qui_inputText {
+  height: 18px;
+}
+/* line 27, ../../../UI_dev/qmui_web/qmui/component/_textField.scss */
+.qui_inputText::-ms-clear {
+  display: none;
+}
+
+/* .qui_textarea */
+/* line 32, ../../../UI_dev/qmui_web/qmui/component/_textField.scss */
+.qui_textarea {
+  height: 54px;
+}
+
+/**
+ * _base.scss 存放项目基础样式、项目用方法、项目用function
+ * @author Kayo
+ * @date 2015-08-18
+ * 
+ * #common
+ */
+/* #common */
+/* line 11, ../../../UI_dev/project/_base.scss */
+xmp,
+pre {
+  margin: 0;
+}
+
+/* line 15, ../../../UI_dev/project/_base.scss */
+html {
+  height: 100%;
+}
+
+/* line 18, ../../../UI_dev/project/_base.scss */
+code {
+  padding: 2px 4px;
+  font-size: 90%;
+  color: #c7254e;
+  background-color: #f9f2f4;
+  border-radius: 4px;
+}
+
+/* line 25, ../../../UI_dev/project/_base.scss */
+a:hover {
+  text-decoration: underline;
+}
+
+/* 全局动画 */
+/* line 30, ../../../UI_dev/project/_base.scss */
+.frame_nav_item, .index_downloadBtn, .index_banner_startBtn {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+/**
+ * _3rd.scss 业务公共组件 
+ * @author Kayo 
+ * @date 2015-08-17
+ *
+ */
+/* 按钮 */
+/**
+ * _button.scss
+ * @author Kayo 
+ * @date 2015-08-17
+ *
+ * .dm_btn
+ *  + .dm_btn_Blue
+ *
+ */
+/* .dm_btn */
+/* line 14, ../../../UI_dev/project/widget/_button.scss */
+.dm_btn {
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fff), color-stop(90%, #ebebeb), color-stop(100%, #f3f3f3));
+  background-image: -webkit-linear-gradient(top, #fff 0%, #ebebeb 90%, #f3f3f3 100%);
+  background-image: -moz-linear-gradient(top, #fff 0%, #ebebeb 90%, #f3f3f3 100%);
+  background-image: -o-linear-gradient(top, #fff 0%, #ebebeb 90%, #f3f3f3 100%);
+  background-image: linear-gradient(to bottom, #fff 0%, #ebebeb 90%, #f3f3f3 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFFFF', endColorstr='#FFF3F3F3', GradientType=0);
+  border-radius: 4px;
+  /* line-height 的偏移值依赖于不同字体 */
+  line-height: 24px;
+  line-height: 23px \9\0;
+  _line-height: 26px;
+}
+/* line 22, ../../../UI_dev/project/widget/_button.scss */
+.dm_btn:focus {
+  border-color: #0074bc;
+}
+/* line 25, ../../../UI_dev/project/widget/_button.scss */
+.dm_btn:active, .dm_btn_Active {
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2);
+  border-color: #7e7e7e;
+  background: #F3F3F3;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ebebeb), color-stop(100%, #f3f3f3));
+  background-image: -webkit-linear-gradient(top, #ebebeb 0%, #f3f3f3 100%);
+  background-image: -moz-linear-gradient(top, #ebebeb 0%, #f3f3f3 100%);
+  background-image: -o-linear-gradient(top, #ebebeb 0%, #f3f3f3 100%);
+  background-image: linear-gradient(to bottom, #ebebeb 0%, #f3f3f3 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFEBEBEB', endColorstr='#FFF3F3F3', GradientType=0);
+}
+/* line 32, ../../../UI_dev/project/widget/_button.scss */
+.dm_btn:disabled, .dm_btn_Disabled {
+  background: #ececec;
+  filter: none;
+  border-color: #c3c3c3;
+  color: #a8a8a8 !important;
+  box-shadow: none;
+}
+
+/* line 43, ../../../UI_dev/project/widget/_button.scss */
+button.dm_btn,
+input.dm_btn {
+  *height: 24px;
+  *line-height: 19px;
+  _line-height: 21px;
+}
+
+/* line 50, ../../../UI_dev/project/widget/_button.scss */
+.dm_btn_Blue {
+  border: 1px solid #1d567d;
+  color: #fff !important;
+  background: #2e89c5;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #2a96d8), color-stop(90%, #257db9), color-stop(100%, #2e89c5));
+  background-image: -webkit-linear-gradient(top, #2a96d8 0%, #257db9 90%, #2e89c5 100%);
+  background-image: -moz-linear-gradient(top, #2a96d8 0%, #257db9 90%, #2e89c5 100%);
+  background-image: -o-linear-gradient(top, #2a96d8 0%, #257db9 90%, #2e89c5 100%);
+  background-image: linear-gradient(to bottom, #2a96d8 0%, #257db9 90%, #2e89c5 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF2A96D8', endColorstr='#FF2E89C5', GradientType=0);
+}
+/* line 56, ../../../UI_dev/project/widget/_button.scss */
+.dm_btn_Blue:active, .dm_btn_Blue_Active {
+  border-color: #1d567d;
+  background: #0074bc;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #0074bc), color-stop(100%, #238aca));
+  background-image: -webkit-linear-gradient(top, #0074bc 0%, #238aca 100%);
+  background-image: -moz-linear-gradient(top, #0074bc 0%, #238aca 100%);
+  background-image: -o-linear-gradient(top, #0074bc 0%, #238aca 100%);
+  background-image: linear-gradient(to bottom, #0074bc 0%, #238aca 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF0074BC', endColorstr='#FF238ACA', GradientType=0);
+}
+/* line 62, ../../../UI_dev/project/widget/_button.scss */
+.dm_btn_Blue:disabled, .dm_btn_Blue_Disabled {
+  background: #98c3e2;
+  filter: none;
+  border-color: #a2b6c5;
+  color: #f9fcfe !important;
+  box-shadow: none;
+}
+
+/* 对话框 */
+/**
+ * _dialog.scss
+ * @author Kayo 
+ * @date 2015-08-17
+ *
+ * .dm_dialog
+ */
+/* .dm_dialog */
+/* line 12, ../../../UI_dev/project/widget/_dialog.scss */
+.dm_dialog {
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+/* line 16, ../../../UI_dev/project/widget/_dialog.scss */
+.dm_dialog_head {
+  padding: 5px 15px;
+}
+
+/* line 20, ../../../UI_dev/project/widget/_dialog.scss */
+.dm_dialog_title {
+  font-weight: bold;
+}
+
+/* line 24, ../../../UI_dev/project/widget/_dialog.scss */
+.dm_dialog_close {
+  font-size: 0;
+  line-height: 0;
+}
+
+/* line 29, ../../../UI_dev/project/widget/_dialog.scss */
+.dm_dialog_body {
+  padding: 23px 30px 30px 37px;
+  font-size: 14px;
+}
+
+/* line 34, ../../../UI_dev/project/widget/_dialog.scss */
+.dm_dialog_foot {
+  padding: 5px 12px;
+  text-align: right;
+  line-height: 25px;
+}
+
+/* line 40, ../../../UI_dev/project/widget/_dialog.scss */
+.dm_dialog_foot .dm_btn {
+  margin-left: 3px;
+}
+
+/* 遮罩层 */
+/**
+ * _mask.scss 
+ * @author Kayo 
+ * @date 2015-08-17
+ *
+ * .dm_mask
+ */
+/* .dm_mask */
+/* 下拉菜单 */
+/**
+ * _dropdownMenu.scss
+ * @author clearwu
+ * @date 2015-08-17
+ *
+ * .dm_dropdownMenu
+ *
+ */
+/* .dm_dropdownMenu */
+/* line 12, ../../../UI_dev/project/widget/_dropdownMenu.scss */
+.dm_dropdownMenu {
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+/* line 16, ../../../UI_dev/project/widget/_dropdownMenu.scss */
+.dm_dropdownMenu_itemLink:hover {
+  background-color: #3470cc;
+  color: #fff;
+}
+
+/* 选项卡 */
+/**
+ * _tab.scss
+ * @author clearwu
+ * @date 2015-08-17
+ *
+ * .dm_tab
+ *
+ */
+/* .dm_tab */
+/* line 12, ../../../UI_dev/project/widget/_tab.scss */
+.dm_tabNav_item_Curr {
+  background: #ecf9ff;
+}
+
+/* line 15, ../../../UI_dev/project/widget/_tab.scss */
+.dm_tabNav_itemLink:hover {
+  color: #0087ca;
+  text-decoration: underline;
+}
+
+/* 文本输入 */
+/**
+ * _textField.scss
+ * @author clearwu
+ * @date 2015-08-17
+ *
+ * .qui_inputText
+ * .qui_textarea
+ *
+ */
+/* .qui_inputText */
+/* .qui_textarea */
+/* 第三方插件相关样式 */
+/**
+ * _3rd.scss 第三方插件的相关样式 
+ * @author Kayo 
+ * @date 2015-08-17
+ * 
+ * #prettify 适合 QMUI demo 风格的代码高亮配色（配合 google 高亮代码插件使用）
+ */
+/* #prettify 适合 QMUI demo 风格的代码高亮配色（配合 google 高亮代码插件使用） */
+/* line 11, ../../../UI_dev/project/widget/_3rd.scss */
+xmp .str, pre .str, code .str {
+  color: #65B042;
+}
+
+/* string */
+/* line 12, ../../../UI_dev/project/widget/_3rd.scss */
+xmp .kwd, pre .kwd, code .kwd {
+  color: #E28964;
+}
+
+/* keyword */
+/* line 13, ../../../UI_dev/project/widget/_3rd.scss */
+xmp .com, pre .com, code .com {
+  color: #AEAEAE;
+  font-style: italic;
+}
+
+/* comment */
+/* line 14, ../../../UI_dev/project/widget/_3rd.scss */
+xmp .typ, pre .typ, code .typ {
+  color: #89bdff;
+}
+
+/* type */
+/* line 15, ../../../UI_dev/project/widget/_3rd.scss */
+xmp .lit, pre .lit, code .lit {
+  color: #3387CC;
+}
+
+/* literal */
+/* line 16, ../../../UI_dev/project/widget/_3rd.scss */
+xmp .pun, pre .pun, code .pun {
+  color: #4f9fcf;
+}
+
+/* punctuation */
+/* line 17, ../../../UI_dev/project/widget/_3rd.scss */
+xmp .pln, pre .pln, code .pln {
+  color: #333;
+}
+
+/* plaintext */
+/* line 18, ../../../UI_dev/project/widget/_3rd.scss */
+xmp .tag, pre .tag, code .tag {
+  color: #2f6f9f;
+}
+
+/* html/xml tag */
+/* line 19, ../../../UI_dev/project/widget/_3rd.scss */
+xmp .atn, pre .atn, code .atn {
+  color: #4f9fcf;
+}
+
+/* html/xml attribute name */
+/* line 20, ../../../UI_dev/project/widget/_3rd.scss */
+xmp .atv, pre .atv, code .atv {
+  color: #d44950;
+}
+
+/* html/xml attribute value */
+/* line 21, ../../../UI_dev/project/widget/_3rd.scss */
+xmp .dec, pre .dec, code .dec {
+  color: #3387CC;
+}
+
+/* decimal */
+/* line 23, ../../../UI_dev/project/widget/_3rd.scss */
+xmp.prettyprint, pre.prettyprint, code.prettyprint {
+  background-color: #FAF8F2;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -o-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -khtml-border-radius: 8px;
+  border-radius: 8px;
+  line-height: 1.4;
+  font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+/* line 35, ../../../UI_dev/project/widget/_3rd.scss */
+pre.prettyprint {
+  white-space: pre-wrap;
+}
+
+/* Specify class=linenums on a pre to get line numbering */
+/* line 40, ../../../UI_dev/project/widget/_3rd.scss */
+ol.linenums {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #AEAEAE;
+}
+
+/* IE indents via margin-left */
+/* line 41, ../../../UI_dev/project/widget/_3rd.scss */
+li.L0, li.L1, li.L2, li.L3, li.L5, li.L6, li.L7, li.L8 {
+  list-style-type: none;
+}
+
+/* Alternate shading for lines */
+@media print {
+  /* line 46, ../../../UI_dev/project/widget/_3rd.scss */
+  xmp .str, pre .str, code .str {
+    color: #060;
+  }
+
+  /* line 47, ../../../UI_dev/project/widget/_3rd.scss */
+  xmp .kwd, pre .kwd, code .kwd {
+    color: #006;
+    font-weight: bold;
+  }
+
+  /* line 48, ../../../UI_dev/project/widget/_3rd.scss */
+  xmp .com, pre .com, code .com {
+    color: #600;
+    font-style: italic;
+  }
+
+  /* line 49, ../../../UI_dev/project/widget/_3rd.scss */
+  xmp .typ, pre .typ, code .typ {
+    color: #404;
+    font-weight: bold;
+  }
+
+  /* line 50, ../../../UI_dev/project/widget/_3rd.scss */
+  xmp .lit, pre .lit, code .lit {
+    color: #044;
+  }
+
+  /* line 51, ../../../UI_dev/project/widget/_3rd.scss */
+  xmp .pun, pre .pun, code .pun {
+    color: #440;
+  }
+
+  /* line 52, ../../../UI_dev/project/widget/_3rd.scss */
+  xmp .pln, pre .pln, code .pln {
+    color: #000;
+  }
+
+  /* line 53, ../../../UI_dev/project/widget/_3rd.scss */
+  xmp .tag, pre .tag, code .tag {
+    color: #006;
+    font-weight: bold;
+  }
+
+  /* line 54, ../../../UI_dev/project/widget/_3rd.scss */
+  xmp .atn, pre .atn, code .atn {
+    color: #404;
+  }
+
+  /* line 55, ../../../UI_dev/project/widget/_3rd.scss */
+  xmp .atv, pre .atv, code .atv {
+    color: #060;
+  }
+}
+/* 栏目，用于展示组件及介绍组件 */
+/**
+ * _column.scss 栏目，用于展示组件及其介绍
+ * @author Kayo
+ * @date 2015-08-18
+ *
+ * .dm_column
+ * > .dm_column_title 栏目标题（大组件的标题）
+ * > [.dm_column_tip] 提示语，可以用在栏目这一层，也可以用在栏目项中
+ * > [.dm_column_item] 栏目项（大组件下的各个小组件）
+ *   > .dm_column_item_title 栏目项的标题（小组件的标题）
+ *   > .[.dm_column_tip] 提示语
+ *   > .[dm_column_item_info] 栏目项的信息
+ *   + .dm_column_item_info_Single 栏目项中只包含代码展示没有效果展示的情况
+ *     > [.dm_column_display] 栏目项的实际效果展示
+ *       > .dm_column_display_title 栏目项展示的提示性标题
+ *       > .dm_column_display_cnt 栏目项展示的具体内容
+ *     > .dm_column_item_info_code 栏目项的中的组件的相关代码（高亮显示代码）
+ *     > .dm_column_item_info_list 栏目项的中的列表的相关代码
+ *
+ * .dm_columnDisplayControl 给组件外部使用的类，用于展示代码时控制 absolute 元素 relative 并自适应宽度
+ */
+/* line 24, ../../../UI_dev/project/widget/_column.scss */
+.dm_column {
+  margin-bottom: 85px;
+}
+
+/* 栏目标题（大组件的标题） */
+/* line 29, ../../../UI_dev/project/widget/_column.scss */
+.dm_column_title {
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #D8D8D8;
+  font-size: 38px;
+  color: #333;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+/* 提示语，可以用在栏目这一层，也可以用在栏目项中 */
+/* line 40, ../../../UI_dev/project/widget/_column.scss */
+.dm_column_tip {
+  max-width: 840px;
+  margin-bottom: 22px;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* line 46, ../../../UI_dev/project/widget/_column.scss */
+pre.dm_column_tip {
+  overflow: auto;
+}
+
+/* line 49, ../../../UI_dev/project/widget/_column.scss */
+.dm_column_tip ul li {
+  list-style: disc inside;
+}
+
+/* line 52, ../../../UI_dev/project/widget/_column.scss */
+.dm_column_tip ol li {
+  margin-bottom: 5px;
+  list-style: decimal inside;
+}
+
+/* line 56, ../../../UI_dev/project/widget/_column.scss */
+.dm_column_tip img {
+  max-width: 100%;
+  vertical-align: top;
+  -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.4);
+}
+
+/* 栏目项 */
+/* line 63, ../../../UI_dev/project/widget/_column.scss */
+.dm_column_item {
+  margin-bottom: 30px;
+}
+
+/* line 66, ../../../UI_dev/project/widget/_column.scss */
+.dm_column_item:last-of-type {
+  margin-bottom: 0;
+}
+
+/* 栏目项的标题（小组件的标题） */
+/* line 71, ../../../UI_dev/project/widget/_column.scss */
+.dm_column_item_title {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+  font-weight: bold;
+}
+
+/* 栏目项的信息 */
+/* line 79, ../../../UI_dev/project/widget/_column.scss */
+.dm_column_item_info {
+  max-width: 840px;
+}
+
+/* line 82, ../../../UI_dev/project/widget/_column.scss */
+.dm_column_item_info_Single {
+  margin-bottom: 30px;
+}
+
+/* 栏目项的实际效果展示 */
+/* line 87, ../../../UI_dev/project/widget/_column.scss */
+.dm_column_display {
+  padding: 15px;
+  border: 1px solid #efe8d5;
+  border-bottom: 1px solid #efe8d5;
+  border-radius: 4px 4px 0 0;
+}
+
+/* line 93, ../../../UI_dev/project/widget/_column.scss */
+.dm_column_display_title {
+  margin-bottom: 20px;
+  color: #999;
+  font-weight: bold;
+}
+
+/* line 98, ../../../UI_dev/project/widget/_column.scss */
+.dm_column_display_cnt {
+  overflow: auto;
+}
+/* line 103, ../../../UI_dev/project/widget/_column.scss */
+.dm_column_display_cnt .qui_inputText,
+.dm_column_display_cnt .qui_textarea {
+  margin-bottom: 10px;
+}
+
+/* line 109, ../../../UI_dev/project/widget/_column.scss */
+.dm_column_item_info_code, .dm_column_item_info_tips, .dm_column_item_info_list {
+  padding: 15px;
+  font-size: 14px;
+  background-color: #FAF8F2;
+  border: 1px solid #efe8d5;
+  border-top-width: 0;
+  border-radius: 0 0 4px 4px;
+  overflow: auto;
+}
+
+/* line 118, ../../../UI_dev/project/widget/_column.scss */
+.dm_column_item_info_tips {
+  background-color: #f3f8fc;
+  margin-bottom: 15px;
+  font-size: 12px;
+  color: #707070;
+}
+
+/* line 124, ../../../UI_dev/project/widget/_column.scss */
+.dm_column_item_info_code xmp {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+/* line 128, ../../../UI_dev/project/widget/_column.scss */
+.dm_column_item_info_Single .dm_column_item_info_code, .dm_column_item_info_list {
+  border-top-width: 1px;
+  border-radius: 4px;
+}
+
+/* line 134, ../../../UI_dev/project/widget/_column.scss */
+.dm_column_item_info_list ul ul {
+  margin-bottom: 20px;
+}
+/* line 137, ../../../UI_dev/project/widget/_column.scss */
+.dm_column_item_info_list .dm_column_item_info_list_item {
+  color: #787878;
+  font-size: 18px;
+}
+/* line 141, ../../../UI_dev/project/widget/_column.scss */
+.dm_column_item_info_list .dm_column_item_info_list_item_subitem {
+  padding-left: 30px;
+}
+
+/* line 146, ../../../UI_dev/project/widget/_column.scss */
+.dm_column_item_info_HasMarginTop {
+  margin-top: 20px;
+}
+
+/* 给组件外部使用的类 */
+/* line 151, ../../../UI_dev/project/widget/_column.scss */
+.dm_columnDisplayControl {
+  position: relative !important;
+  z-index: 10;
+  float: left !important;
+}
+
+@media handheld and (max-width: 826px), screen and (max-width: 826px) {
+  /* line 159, ../../../UI_dev/project/widget/_column.scss */
+  .dm_column {
+    margin-bottom: 60px;
+  }
+
+  /* line 162, ../../../UI_dev/project/widget/_column.scss */
+  .dm_column_title {
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+    font-size: 34px;
+  }
+
+  /* line 167, ../../../UI_dev/project/widget/_column.scss */
+  .dm_column_item_title {
+    margin-bottom: 10px;
+    font-size: 22px;
+  }
+}
+/* CSS Sprite 处理 */
+/**
+ * _images.scss CSS Sprite 处理
+ * @author Kayo
+ * @date 2015-09-01
+ *
+ */
+/* .dm_icon */
+/* line 19, ../../../UI_dev/project/widget/_images.scss */
+.dm_icon {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  font-size: 0;
+  background-repeat: no-repeat;
+  background-image: url('../images/icons-s821fee5639.png');
+  background-size: 155px 399px;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2), (min-resolution: 2dppx), (min-resolution: 192dpi) {
+  /* line 19, ../../../UI_dev/project/widget/_images.scss */
+  .dm_icon {
+    background-image: url('../images/icons_2x-s352dd04723.png');
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 3), (min--moz-device-pixel-ratio: 3), (-o-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3), (min-resolution: 3dppx), (min-resolution: 288dpi) {
+  /* line 19, ../../../UI_dev/project/widget/_images.scss */
+  .dm_icon {
+    background-image: url('../images/icons_3x-saf5914378f.png');
+  }
+}
+
+/* line 38, ../../../UI_dev/project/widget/_images.scss */
+.dm_icon_BannerLogo {
+  background-position: 0 0;
+  height: 154px;
+  width: 155px;
+}
+
+/* line 38, ../../../UI_dev/project/widget/_images.scss */
+.dm_icon_BannerMobileLogo {
+  background-position: 0 -154px;
+  height: 77px;
+  width: 78px;
+}
+
+/* line 38, ../../../UI_dev/project/widget/_images.scss */
+.dm_icon_BottomLogo {
+  background-position: 0 -231px;
+  height: 71px;
+  width: 71px;
+}
+
+/* line 38, ../../../UI_dev/project/widget/_images.scss */
+.dm_icon_CloseMenu {
+  background-position: 0 -302px;
+  height: 13px;
+  width: 13px;
+}
+
+/* line 38, ../../../UI_dev/project/widget/_images.scss */
+.dm_icon_Menu {
+  background-position: 0 -315px;
+  height: 8px;
+  width: 17px;
+}
+
+/* line 38, ../../../UI_dev/project/widget/_images.scss */
+.dm_icon_TreeMenuThumb {
+  background-position: 0 -323px;
+  height: 14px;
+  width: 14px;
+}
+
+/* line 38, ../../../UI_dev/project/widget/_images.scss */
+.dm_icon_WeReadLogo {
+  background-position: 0 -337px;
+  height: 26px;
+  width: 112px;
+}
+
+/* line 38, ../../../UI_dev/project/widget/_images.scss */
+.dm_icon_WeWorkLogo {
+  background-position: 0 -363px;
+  height: 26px;
+  width: 103px;
+}
+
+/* line 38, ../../../UI_dev/project/widget/_images.scss */
+.dm_icon_closeDialog {
+  background-position: 0 -389px;
+  height: 10px;
+  width: 10px;
+}
+
+/* 扩展组件 */
+/**
+ * _others.scss
+ * @author Hugh
+ * @date 2015-08-27
+ *
+ */
+/* line 10, ../../../UI_dev/project/widget/_others.scss */
+.dm_verticalTab .qui_tab_title {
+  float: left;
+  width: 150px;
+}
+/* line 14, ../../../UI_dev/project/widget/_others.scss */
+.dm_verticalTab .qui_tabNav_item {
+  float: none;
+}
+/* line 17, ../../../UI_dev/project/widget/_others.scss */
+.dm_verticalTab .dm_verticalTabNav_item_Curr {
+  background-color: #ecf9ff;
+}
+/* line 20, ../../../UI_dev/project/widget/_others.scss */
+.dm_verticalTab .qui_tab_cnt {
+  overflow: hidden;
+  zoom: 1;
+}
+
+/* 等高左右双栏 - 方法1 */
+/* line 26, ../../../UI_dev/project/widget/_others.scss */
+.dm_dualCols1 {
+  border: 1px solid #c9c9c9;
+}
+/* line 28, ../../../UI_dev/project/widget/_others.scss */
+.dm_dualCols1 .dm_dualCols_left {
+  display: table-cell;
+  border-right: 1px solid #c9c9c9;
+  padding: 10px;
+}
+/* line 33, ../../../UI_dev/project/widget/_others.scss */
+.dm_dualCols1 .dm_dualCols_right {
+  display: table-cell;
+  padding: 10px;
+}
+
+/* 等高左右双栏 - 方法2 */
+/* line 40, ../../../UI_dev/project/widget/_others.scss */
+.dm_dualCols2 {
+  border: 1px solid #c9c9c9;
+  overflow: hidden;
+}
+/* line 43, ../../../UI_dev/project/widget/_others.scss */
+.dm_dualCols2 .dm_dualCols_left {
+  border-right: 1px solid #c9c9c9;
+  padding: 10px;
+  float: left;
+  padding-bottom: 3000px;
+  margin-bottom: -3000px;
+}
+/* line 50, ../../../UI_dev/project/widget/_others.scss */
+.dm_dualCols2 .dm_dualCols_right {
+  overflow: hidden;
+  zoom: 1;
+  padding: 10px;
+}
+
+/* 文件上传按钮 */
+/* line 57, ../../../UI_dev/project/widget/_others.scss */
+.dm_fileUpload {
+  position: relative;
+  overflow: hidden;
+}
+/* line 60, ../../../UI_dev/project/widget/_others.scss */
+.dm_fileUpload .dm_fileUpload_input {
+  width: 100%;
+  height: 200%;
+  position: absolute;
+  top: -100%;
+  left: 0;
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -khtml-opacity: 0;
+  cursor: pointer;
+}
+
+/* 树状选择菜单 */
+/* line 72, ../../../UI_dev/project/widget/_others.scss */
+.dm_treeMenu {
+  position: relative;
+}
+/* line 74, ../../../UI_dev/project/widget/_others.scss */
+.dm_treeMenu ul {
+  padding-left: 30px;
+}
+/* line 77, ../../../UI_dev/project/widget/_others.scss */
+.dm_treeMenu .dm_treeMenu_item {
+  height: 30px;
+  line-height: 30px;
+}
+/* line 80, ../../../UI_dev/project/widget/_others.scss */
+.dm_treeMenu .dm_treeMenu_item:before {
+  content: "";
+  position: relative;
+  z-index: 1;
+  float: left;
+  margin-top: 9px;
+  margin-right: 5px;
+  border-width: 5px 5px;
+  _border-color: #f00;
+  _filter: chroma(color=#f00);
+  /* 向上小三角 */
+  border-right: 0;
+  border-left-color: #787878;
+  _border-left-color: #787878;
+}
+/* line 89, ../../../UI_dev/project/widget/_others.scss */
+.dm_treeMenu .dm_treeMenu_item.dm_treeMenu_item_Unfolded:before {
+  margin-top: 12px;
+  margin-left: -3px;
+  border-width: 5px 5px;
+  _border-color: #f00;
+  _filter: chroma(color=#f00);
+  /* 向上小三角 */
+  border-bottom: 0;
+  border-top-color: #787878;
+  _border-top-color: #787878;
+}
+/* line 94, ../../../UI_dev/project/widget/_others.scss */
+.dm_treeMenu .dm_treeMenu_item.dm_treeMenu_item_NoChild:before {
+  content: none;
+}
+/* line 98, ../../../UI_dev/project/widget/_others.scss */
+.dm_treeMenu .dm_treeMenu_item.dm_treeMenu_item_Checked:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 30px;
+  background-color: #DEE5E7;
+  z-index: 0;
+}
+/* line 107, ../../../UI_dev/project/widget/_others.scss */
+.dm_treeMenu .dm_treeMenu_item.dm_treeMenu_item_Checked span {
+  position: relative;
+  z-index: 1;
+}
+
+/**
+ * _logic.scss 业务逻辑代码 
+ * @author Kayo 
+ * @date 2015-08-17
+ *
+ */
+/**
+ * _frame.scss 外层框架 
+ * @author Kayo 
+ * @date 2015-08-17
+ *
+ * #wrap 外层框架
+ * #head 页头 
+ *   #title 网站标题
+ *   #nav 网站导航
+ * #sidebar 左侧栏
+ *   #sidebar_nav 侧栏导航
+ * #cnt 右侧主体
+ * #media 小屏幕适配
+ * #responsive 响应式
+ *
+ */
+/* #wrap 外层框架 */
+/* line 20, ../../../UI_dev/project/logic/_frame.scss */
+.frame_wrap {
+  position: relative;
+  min-height: 100%;
+}
+
+/* #head 版头 */
+/* line 26, ../../../UI_dev/project/logic/_frame.scss */
+.frame_head {
+  padding-left: 188px;
+  background-color: #00A3E1;
+}
+/* line 32, ../../../UI_dev/project/logic/_frame.scss */
+.frame_head .frame_head_showMenuBtn,
+.frame_head .frame_head_closeMenuBtn {
+  display: none;
+}
+
+/* #title 网站标题 */
+/* line 39, ../../../UI_dev/project/logic/_frame.scss */
+.frame_head_title {
+  float: left;
+  margin-right: 28px;
+  font-size: 18px;
+}
+
+/* line 44, ../../../UI_dev/project/logic/_frame.scss */
+.frame_head_title_link {
+  display: block;
+  padding-top: 14px;
+  color: #fff;
+  line-height: 1;
+  font-weight: bold;
+}
+/* line 51, ../../../UI_dev/project/logic/_frame.scss */
+.frame_head_title_link:hover {
+  text-decoration: none;
+}
+
+/* #nav 网站导航 */
+/* line 57, ../../../UI_dev/project/logic/_frame.scss */
+.frame_nav {
+  overflow: hidden;
+  zoom: 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 61, ../../../UI_dev/project/logic/_frame.scss */
+.frame_nav_item {
+  float: left;
+  height: 46px;
+  margin-right: 28px;
+  line-height: 46px;
+  color: #ABE0F5;
+}
+/* line 69, ../../../UI_dev/project/logic/_frame.scss */
+.frame_nav_item:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* line 75, ../../../UI_dev/project/logic/_frame.scss */
+.frame_nav_item_Curr {
+  color: #fff;
+}
+
+/* #sidebar 左侧栏 */
+/* line 80, ../../../UI_dev/project/logic/_frame.scss */
+.frame_sidebar {
+  position: absolute;
+  top: 46px;
+  bottom: 0;
+  left: 0;
+  width: 450px;
+  background-color: #f7f7f7;
+  overflow: auto;
+}
+
+/* line 89, ../../../UI_dev/project/logic/_frame.scss */
+.frame_sidebar_Fixed {
+  position: fixed;
+  top: 0;
+}
+
+/* line 93, ../../../UI_dev/project/logic/_frame.scss */
+.frame_sidebar_inner {
+  float: right;
+  width: 240px;
+  padding: 43px 22px 0 0;
+}
+
+/* #sidebar_nav 侧栏导航 */
+/* line 100, ../../../UI_dev/project/logic/_frame.scss */
+.frame_sidebar_nav {
+  font-size: 14px;
+}
+
+/* line 103, ../../../UI_dev/project/logic/_frame.scss */
+.frame_sidebar_nav_Children {
+  margin-bottom: 12px;
+}
+
+/* line 106, ../../../UI_dev/project/logic/_frame.scss */
+.frame_sidebar_nav_link {
+  display: block;
+  height: 30px;
+  margin-bottom: 2px;
+  padding-left: 20px;
+  line-height: 28px;
+  color: #0075b8;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-transform: capitalize;
+}
+
+/* line 118, ../../../UI_dev/project/logic/_frame.scss */
+.frame_sidebar_nav_Children .frame_sidebar_nav_link {
+  height: 24px;
+  margin-bottom: 0;
+  padding-left: 35px;
+  line-height: 24px;
+  font-weight: normal;
+  font-size: 13px;
+}
+
+/* line 126, ../../../UI_dev/project/logic/_frame.scss */
+.frame_sidebar_nav_link:hover {
+  background-color: #e8ebee;
+  border-right: 1px solid #d8dde2;
+  text-decoration: none;
+}
+
+/* #cnt 右侧主体 */
+/* line 133, ../../../UI_dev/project/logic/_frame.scss */
+.frame_cnt {
+  margin-left: 450px;
+  padding: 35px;
+}
+
+/* #media 小屏幕适配 */
+@media screen and (max-width: 1366px) {
+  /* line 141, ../../../UI_dev/project/logic/_frame.scss */
+  .frame_head {
+    padding-left: 98px;
+  }
+
+  /* line 144, ../../../UI_dev/project/logic/_frame.scss */
+  .frame_sidebar {
+    width: 320px;
+  }
+
+  /* line 147, ../../../UI_dev/project/logic/_frame.scss */
+  .frame_sidebar_inner {
+    width: 200px;
+  }
+
+  /* line 150, ../../../UI_dev/project/logic/_frame.scss */
+  .frame_cnt {
+    margin-left: 320px;
+  }
+}
+@media handheld and (max-width: 826px), screen and (max-width: 826px) {
+  /* line 157, ../../../UI_dev/project/logic/_frame.scss */
+  .frame_head {
+    padding: 0 30px;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+  }
+  /* line 163, ../../../UI_dev/project/logic/_frame.scss */
+  .frame_head .frame_head_showMenuBtn,
+  .frame_head .frame_head_closeMenuBtn {
+    position: absolute;
+    z-index: 90;
+    line-height: 0;
+    font-size: 0;
+    padding: 7px;
+  }
+  /* line 171, ../../../UI_dev/project/logic/_frame.scss */
+  .frame_head .frame_head_showMenuBtn {
+    left: 9px;
+    top: 14px;
+    display: block;
+  }
+  /* line 176, ../../../UI_dev/project/logic/_frame.scss */
+  .frame_head .frame_head_closeMenuBtn {
+    left: 11px;
+    top: 12px;
+  }
+
+  /* line 181, ../../../UI_dev/project/logic/_frame.scss */
+  .frame_head_title {
+    position: relative;
+    z-index: 90;
+    float: none;
+    display: inline-block;
+    margin-right: 0;
+    font-size: 17px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* line 190, ../../../UI_dev/project/logic/_frame.scss */
+  .frame_nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 80;
+    display: none;
+    height: 100vh;
+    width: 100%;
+    padding: 74px 48px 24px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #00A3E1), color-stop(100%, #06DCE9));
+    background-image: -webkit-linear-gradient(top, #00A3E1 0%, #06DCE9 100%);
+    background-image: -moz-linear-gradient(top, #00A3E1 0%, #06DCE9 100%);
+    background-image: -o-linear-gradient(top, #00A3E1 0%, #06DCE9 100%);
+    background-image: linear-gradient(to bottom, #00A3E1 0%, #06DCE9 100%);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF00A3E1', endColorstr='#FF06DCE9', GradientType=0);
+  }
+
+  /* line 202, ../../../UI_dev/project/logic/_frame.scss */
+  .frame_nav_item {
+    float: none;
+    display: block;
+    height: auto;
+    margin-right: 0;
+    margin-bottom: 14px;
+    padding-bottom: 20px;
+    text-align: left;
+    font-size: 17px;
+    line-height: 1;
+    color: #fff;
+    border-style: solid;
+    border-color: #fff;
+    border-width: 0 0 1px 0;
+    border-radius: 0;
+  }
+}
+@media handheld and (max-width: 826px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 826px) and (-webkit-min-device-pixel-ratio: 2), handheld and (max-width: 826px) and (min--moz-device-pixel-ratio: 2), screen and (max-width: 826px) and (min--moz-device-pixel-ratio: 2), handheld and (max-width: 826px) and (-o-min-device-pixel-ratio: 2), screen and (max-width: 826px) and (-o-min-device-pixel-ratio: 2), handheld and (max-width: 826px) and (min-device-pixel-ratio: 2), screen and (max-width: 826px) and (min-device-pixel-ratio: 2), handheld and (max-width: 826px) and (min-resolution: 2dppx), screen and (max-width: 826px) and (min-resolution: 2dppx), handheld and (max-width: 826px) and (min-resolution: 192dpi), screen and (max-width: 826px) and (min-resolution: 192dpi) {
+  /* line 202, ../../../UI_dev/project/logic/_frame.scss */
+  .frame_nav_item {
+    position: relative;
+    border: none;
+  }
+  /* line 131, ../../../UI_dev/qmui_web/qmui/helper/mixin/tool/_effect.scss */
+  .frame_nav_item:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    border-radius: 0;
+    border-style: solid;
+    border-color: #fff;
+    border-width: 0 0 1px 0;
+    -webkit-transform: scale(0.5, 0.5);
+    -moz-transform: scale(0.5, 0.5);
+    -ms-transform: scale(0.5, 0.5);
+    -o-transform: scale(0.5, 0.5);
+    transform: scale(0.5, 0.5);
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    transform-origin: 0 0;
+    pointer-events: none;
+  }
+}
+@media handheld and (max-width: 826px) and (-webkit-min-device-pixel-ratio: 3), screen and (max-width: 826px) and (-webkit-min-device-pixel-ratio: 3), handheld and (max-width: 826px) and (min--moz-device-pixel-ratio: 3), screen and (max-width: 826px) and (min--moz-device-pixel-ratio: 3), handheld and (max-width: 826px) and (-o-min-device-pixel-ratio: 3), screen and (max-width: 826px) and (-o-min-device-pixel-ratio: 3), handheld and (max-width: 826px) and (min-device-pixel-ratio: 3), screen and (max-width: 826px) and (min-device-pixel-ratio: 3), handheld and (max-width: 826px) and (min-resolution: 3dppx), screen and (max-width: 826px) and (min-resolution: 3dppx), handheld and (max-width: 826px) and (min-resolution: 288dpi), screen and (max-width: 826px) and (min-resolution: 288dpi) {
+  /* line 149, ../../../UI_dev/qmui_web/qmui/helper/mixin/tool/_effect.scss */
+  .frame_nav_item:after {
+    width: 300%;
+    height: 300%;
+    border-radius: 0;
+    -webkit-transform: scale(0.3333, 0.3333);
+    -moz-transform: scale(0.3333, 0.3333);
+    -ms-transform: scale(0.3333, 0.3333);
+    -o-transform: scale(0.3333, 0.3333);
+    transform: scale(0.3333, 0.3333);
+  }
+}
+
+@media handheld and (max-width: 826px), screen and (max-width: 826px) {
+  /* line 217, ../../../UI_dev/project/logic/_frame.scss */
+  .frame_head_ShowNav .frame_nav,
+  .frame_head_ShowNav .frame_head_closeMenuBtn {
+    display: block;
+  }
+  /* line 221, ../../../UI_dev/project/logic/_frame.scss */
+  .frame_head_ShowNav .frame_head_showMenuBtn {
+    display: none;
+  }
+
+  /* line 226, ../../../UI_dev/project/logic/_frame.scss */
+  .frame_sidebar {
+    display: none;
+  }
+
+  /* line 229, ../../../UI_dev/project/logic/_frame.scss */
+  .frame_cnt {
+    margin-left: 0;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+/**
+ * _widget.scss 组件展示页面
+ * @author Kayo 
+ * @date 2015-08-18
+ *
+ */
+/* 展示遮罩层效果时使用的对话框 */
+/* line 10, ../../../UI_dev/project/logic/_widget.scss */
+.widget_dialogInMask {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -74px 0 0 -221px;
+  position: fixed;
+}
+
+/**
+ * _index.scss 主页 
+ * @author Kayo 
+ * @date 2015-07-04
+ *
+ * #common 通用部分
+ * #banner 头部大 Banner
+ * #cnt 主体内容
+ * #foot 页脚
+ * #responsive 响应式
+ */
+/* line 18, ../../../UI_dev/project/logic/_index.scss */
+.index_column {
+  position: relative;
+  margin-bottom: 58px;
+}
+/* line 22, ../../../UI_dev/project/logic/_index.scss */
+.index_column:before {
+  content: ".";
+  position: absolute;
+  bottom: 0;
+  left: 283px;
+  right: 283px;
+  font-size: 0;
+  border-top: 1px solid #D8D8D8;
+}
+/* line 32, ../../../UI_dev/project/logic/_index.scss */
+.index_column:last-child {
+  margin-bottom: 0;
+}
+/* line 35, ../../../UI_dev/project/logic/_index.scss */
+.index_column:last-child:before {
+  content: normal;
+}
+
+/* line 40, ../../../UI_dev/project/logic/_index.scss */
+.index_column_title {
+  margin-bottom: 22px;
+  font-size: 34px;
+}
+
+/* line 44, ../../../UI_dev/project/logic/_index.scss */
+.index_column_desc {
+  color: #9595A3;
+  font-size: 16px;
+  line-height: 36px;
+}
+
+/* line 49, ../../../UI_dev/project/logic/_index.scss */
+.index_column_mobileDesc {
+  display: none;
+  line-height: 28px;
+  font-size: 16px;
+  text-align: left;
+}
+/* line 55, ../../../UI_dev/project/logic/_index.scss */
+.index_column_mobileDesc p {
+  margin-top: 31px;
+}
+/* line 58, ../../../UI_dev/project/logic/_index.scss */
+.index_column_mobileDesc p:first-child {
+  margin-top: 0;
+}
+
+/* line 88, ../../../UI_dev/project/logic/_index.scss */
+.index_downloadBtn {
+  display: inline-block;
+  min-width: 100px;
+  margin-bottom: 20px;
+  padding: 5px 29px;
+  font-size: 22px;
+  text-align: center;
+  border: 1px solid #474860;
+  border-radius: 6px;
+  color: #4E4F66;
+}
+/* line 78, ../../../UI_dev/project/logic/_index.scss */
+.index_downloadBtn:hover {
+  text-decoration: none;
+}
+@media handheld and (max-width: 826px), screen and (max-width: 826px) {
+  /* line 88, ../../../UI_dev/project/logic/_index.scss */
+  .index_downloadBtn {
+    padding-left: 25px;
+    padding-right: 25px;
+    font-size: 18px;
+  }
+}
+/* line 91, ../../../UI_dev/project/logic/_index.scss */
+.index_downloadBtn:hover {
+  border-color: #676884;
+  background-color: #676884;
+  color: #fff;
+}
+/* line 96, ../../../UI_dev/project/logic/_index.scss */
+.index_downloadBtn:active {
+  border-color: #474860;
+  background-color: #474860;
+}
+
+/* line 104, ../../../UI_dev/project/logic/_index.scss */
+.index_banner {
+  padding: 75px 0 85px;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #00A3E1), color-stop(100%, #06DCE9));
+  background-image: -webkit-linear-gradient(top, #00A3E1 0%, #06DCE9 100%);
+  background-image: -moz-linear-gradient(top, #00A3E1 0%, #06DCE9 100%);
+  background-image: -o-linear-gradient(top, #00A3E1 0%, #06DCE9 100%);
+  background-image: linear-gradient(to bottom, #00A3E1 0%, #06DCE9 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF00A3E1', endColorstr='#FF06DCE9', GradientType=0);
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+}
+/* line 110, ../../../UI_dev/project/logic/_index.scss */
+.index_banner .dm_icon {
+  margin-bottom: 48px;
+  vertical-align: top;
+}
+/* line 114, ../../../UI_dev/project/logic/_index.scss */
+.index_banner .dm_icon_BannerMobileLogo {
+  display: none;
+}
+
+/* line 118, ../../../UI_dev/project/logic/_index.scss */
+.index_banner_desc {
+  margin-bottom: 49px;
+  color: #fff;
+  font-size: 30px;
+  line-height: 52px;
+}
+
+/* line 124, ../../../UI_dev/project/logic/_index.scss */
+.index_banner_startBtn {
+  display: inline-block;
+  min-width: 100px;
+  margin-bottom: 20px;
+  padding: 5px 29px;
+  font-size: 22px;
+  text-align: center;
+  border: 1px solid #fff;
+  border-radius: 6px;
+  color: #fff;
+}
+/* line 78, ../../../UI_dev/project/logic/_index.scss */
+.index_banner_startBtn:hover {
+  text-decoration: none;
+}
+@media handheld and (max-width: 826px), screen and (max-width: 826px) {
+  /* line 124, ../../../UI_dev/project/logic/_index.scss */
+  .index_banner_startBtn {
+    padding-left: 25px;
+    padding-right: 25px;
+    font-size: 18px;
+  }
+}
+/* line 127, ../../../UI_dev/project/logic/_index.scss */
+.index_banner_startBtn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+/* line 131, ../../../UI_dev/project/logic/_index.scss */
+.index_banner_startBtn:acitve {
+  background-color: #fff;
+  color: #04DACD;
+}
+
+/* line 136, ../../../UI_dev/project/logic/_index.scss */
+.index_banner_version {
+  color: #fff;
+  font-size: 14px;
+}
+
+/* line 142, ../../../UI_dev/project/logic/_index.scss */
+.index_cnt {
+  margin-bottom: 74px;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 147, ../../../UI_dev/project/logic/_index.scss */
+.index_cnt_inside {
+  width: 766px;
+  margin: 0 auto;
+  padding-top: 88px;
+}
+
+/* line 152, ../../../UI_dev/project/logic/_index.scss */
+.index_cnt_purpose {
+  padding-bottom: 58px;
+}
+
+/* line 156, ../../../UI_dev/project/logic/_index.scss */
+.index_cnt_ability {
+  padding-bottom: 42px;
+}
+
+/* line 162, ../../../UI_dev/project/logic/_index.scss */
+.index_ability_item {
+  float: left;
+  width: 49.9%;
+  margin-bottom: 40px;
+  padding-left: 60px;
+  vertical-align: top;
+  text-align: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 171, ../../../UI_dev/project/logic/_index.scss */
+.index_ability_item_title {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #555557;
+}
+
+/* line 177, ../../../UI_dev/project/logic/_index.scss */
+.index_ability_item_cnt {
+  color: #9595A3;
+}
+
+/* line 180, ../../../UI_dev/project/logic/_index.scss */
+.index_ability_item_list_item {
+  list-style: disc;
+}
+
+/* line 184, ../../../UI_dev/project/logic/_index.scss */
+.index_appIntro {
+  margin-bottom: 52px;
+  padding-bottom: 50px;
+}
+
+/* line 188, ../../../UI_dev/project/logic/_index.scss */
+.index_appIntro_desc {
+  margin-bottom: 46px;
+}
+
+/* line 191, ../../../UI_dev/project/logic/_index.scss */
+.index_appIntro_img {
+  display: block;
+  width: 501px;
+  height: 601px;
+  margin: 0 auto 80px;
+  background: url("../images/independent/App.png") no-repeat;
+  background-size: 100%;
+  -webkit-box-shadow: 0 20px 30px 0 #CFDCE6;
+  -moz-box-shadow: 0 20px 30px 0 #CFDCE6;
+  box-shadow: 0 20px 30px 0 #CFDCE6;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2), (min-resolution: 2dppx), (min-resolution: 192dpi) {
+  /* line 191, ../../../UI_dev/project/logic/_index.scss */
+  .index_appIntro_img {
+    background-image: url("../images/independent/App_2x.png");
+  }
+}
+
+@supports (-webkit-filter: drop-shadow(0 20px 20px #cfdce6)) or (filter: drop-shadow(0 20px 20px #cfdce6)) {
+  /* line 205, ../../../UI_dev/project/logic/_index.scss */
+  .index_appIntro_img {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    -webkit-filter: drop-shadow(0 20px 20px #cfdce6);
+    filter: drop-shadow(0 20px 20px #cfdce6);
+  }
+}
+/* line 212, ../../../UI_dev/project/logic/_index.scss */
+.index_project_desc {
+  margin-bottom: 45px;
+}
+
+/* line 215, ../../../UI_dev/project/logic/_index.scss */
+.index_project_list_item {
+  margin-left: 78px;
+  line-height: 0;
+  vertical-align: top;
+}
+/* line 220, ../../../UI_dev/project/logic/_index.scss */
+.index_project_list_item:first-child {
+  margin-left: 0;
+}
+
+/* line 226, ../../../UI_dev/project/logic/_index.scss */
+.index_foot {
+  padding: 72px 0;
+  background-color: #f8f9fa;
+  color: #9595A3;
+  text-align: center;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+/* line 234, ../../../UI_dev/project/logic/_index.scss */
+.index_foot .dm_icon {
+  margin-bottom: 13px;
+}
+
+@media handheld and (max-width: 826px), screen and (max-width: 826px) {
+  /* line 241, ../../../UI_dev/project/logic/_index.scss */
+  .index_banner {
+    padding: 30px 30px 25px 30px;
+  }
+  /* line 244, ../../../UI_dev/project/logic/_index.scss */
+  .index_banner .dm_icon {
+    margin-bottom: 21px;
+  }
+
+  /* line 248, ../../../UI_dev/project/logic/_index.scss */
+  .index_banner .dm_icon_BannerLogo {
+    display: none;
+  }
+
+  /* line 251, ../../../UI_dev/project/logic/_index.scss */
+  .index_banner .dm_icon_BannerMobileLogo {
+    display: inline-block;
+  }
+
+  /* line 254, ../../../UI_dev/project/logic/_index.scss */
+  .index_banner_desc {
+    margin-bottom: 33px;
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  /* line 259, ../../../UI_dev/project/logic/_index.scss */
+  .index_banner_startBtn {
+    margin-bottom: 44px;
+  }
+
+  /* line 263, ../../../UI_dev/project/logic/_index.scss */
+  .index_cnt {
+    margin-bottom: 50px;
+  }
+
+  /* line 266, ../../../UI_dev/project/logic/_index.scss */
+  .index_cnt_inside {
+    width: auto;
+    padding-top: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  /* line 272, ../../../UI_dev/project/logic/_index.scss */
+  .index_column {
+    margin-bottom: 50px;
+  }
+  /* line 275, ../../../UI_dev/project/logic/_index.scss */
+  .index_column:before {
+    left: 50%;
+    right: auto;
+    width: 100px;
+    margin-left: -50px;
+  }
+
+  /* line 283, ../../../UI_dev/project/logic/_index.scss */
+  .index_column_title {
+    margin-bottom: 30px;
+    font-size: 22px;
+  }
+
+  /* line 287, ../../../UI_dev/project/logic/_index.scss */
+  .index_column_desc {
+    display: none;
+  }
+
+  /* line 290, ../../../UI_dev/project/logic/_index.scss */
+  .index_column_mobileDesc {
+    display: block;
+  }
+
+  /* line 294, ../../../UI_dev/project/logic/_index.scss */
+  .index_appIntro_img {
+    height: auto;
+    width: 90%;
+    padding-bottom: 107.96407%;
+  }
+
+  /* line 299, ../../../UI_dev/project/logic/_index.scss */
+  .index_appIntro_desc {
+    margin-bottom: 30px;
+  }
+
+  /* line 303, ../../../UI_dev/project/logic/_index.scss */
+  .index_ability_item {
+    float: none;
+    width: auto;
+    margin-bottom: 35px;
+    padding-left: 0;
+  }
+
+  /* line 309, ../../../UI_dev/project/logic/_index.scss */
+  .index_ability_item_title {
+    font-size: 16px;
+  }
+
+  /* line 312, ../../../UI_dev/project/logic/_index.scss */
+  .index_ability_item_cnt {
+    font-size: 16px;
+  }
+
+  /* line 315, ../../../UI_dev/project/logic/_index.scss */
+  .index_ability_item_list {
+    margin-left: 18px;
+  }
+
+  /* line 319, ../../../UI_dev/project/logic/_index.scss */
+  .index_appIntro_downloadDirect {
+    display: none;
+  }
+
+  /* line 323, ../../../UI_dev/project/logic/_index.scss */
+  .index_project_desc {
+    margin-bottom: 35px;
+  }
+
+  /* line 326, ../../../UI_dev/project/logic/_index.scss */
+  .index_project_list_item {
+    margin-left: 20px;
+  }
+
+  /* line 330, ../../../UI_dev/project/logic/_index.scss */
+  .index_foot {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+/**
+ * _tool.scss 工具方法页面 
+ * @author Kayo 
+ * @date 2016-07-18
+ *
+ * #common 通用部分
+ */
+/* line 21, ../../../UI_dev/project/logic/_tool.scss */
+.tool_stage_item {
+  margin-bottom: 36px;
+  padding-left: 30px;
+}
+/* line 25, ../../../UI_dev/project/logic/_tool.scss */
+.tool_stage_item .dm_column_item_title {
+  margin-left: -30px;
+}
+/* line 28, ../../../UI_dev/project/logic/_tool.scss */
+.tool_stage_item .dm_column_item_info_Single {
+  margin-bottom: 0;
+}
+
+/* line 32, ../../../UI_dev/project/logic/_tool.scss */
+.tool_stage_item_desc {
+  max-width: 840px;
+  margin-bottom: 12px;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* line 39, ../../../UI_dev/project/logic/_tool.scss */
+.tool_stage_para,
+.tool_stage_example {
+  max-width: 840px;
+  margin-top: 25px;
+}
+
+/* line 44, ../../../UI_dev/project/logic/_tool.scss */
+.tool_stage_para_title,
+.tool_stage_example_title {
+  margin-bottom: 12px;
+  border-bottom: 1px solid #efe8d5;
+  padding-bottom: 4px;
+  font-size: 16px;
+}
+
+/* line 51, ../../../UI_dev/project/logic/_tool.scss */
+.tool_stage_para_item {
+  margin-top: 12px;
+}
+/* line 54, ../../../UI_dev/project/logic/_tool.scss */
+.tool_stage_para_item:first-child {
+  margin-top: 0;
+}
+
+/* line 58, ../../../UI_dev/project/logic/_tool.scss */
+.tool_stage_item_para_data {
+  margin-top: 4px;
+}
+/* line 61, ../../../UI_dev/project/logic/_tool.scss */
+.tool_stage_item_para_data:first-child {
+  margin-top: 0;
+}
+
+/* line 66, ../../../UI_dev/project/logic/_tool.scss */
+.tool_stage_paraType {
+  display: inline-block;
+  padding: 1px 10px;
+  border-radius: 12px;
+  border: 1px solid #d44950;
+  color: #d44950;
+  font-size: 12px;
+  margin-left: 10px;
+}
+
+/* line 70, ../../../UI_dev/project/logic/_tool.scss */
+.tool_stage_paraDefaultValue {
+  display: inline-block;
+  padding: 1px 10px;
+  border-radius: 12px;
+  border: 1px solid #36ACFF;
+  color: #36ACFF;
+  font-size: 12px;
+  margin-left: 4px;
+}

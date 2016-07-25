@@ -1,0 +1,56 @@
+@charset "utf-8";
+/**
+ * _3rd.scss 第三方插件的相关样式 
+ * @author Kayo 
+ * @date 2015-08-17
+ * 
+ * #prettify 适合 QMUI demo 风格的代码高亮配色（配合 google 高亮代码插件使用）
+ */
+
+/* #prettify 适合 QMUI demo 风格的代码高亮配色（配合 google 高亮代码插件使用） */
+xmp .str, pre .str, code .str { color: #65B042; } /* string */
+xmp .kwd, pre .kwd, code .kwd { color: #E28964; } /* keyword */
+xmp .com, pre .com, code .com { color: #AEAEAE; font-style: italic; } /* comment */
+xmp .typ, pre .typ, code .typ { color: #89bdff; } /* type */
+xmp .lit, pre .lit, code .lit { color: #3387CC; } /* literal */
+xmp .pun, pre .pun, code .pun { color: #4f9fcf; } /* punctuation */
+xmp .pln, pre .pln, code .pln { color: #333; } /* plaintext */
+xmp .tag, pre .tag, code .tag { color: #2f6f9f; } /* html/xml tag */
+xmp .atn, pre .atn, code .atn { color: #4f9fcf; } /* html/xml attribute name */
+xmp .atv, pre .atv, code .atv { color: #d44950; } /* html/xml attribute value */
+xmp .dec, pre .dec, code .dec { color: #3387CC; } /* decimal */
+
+xmp.prettyprint, pre.prettyprint, code.prettyprint {
+  background-color: $common_color_code_background;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -o-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -khtml-border-radius: 8px;
+  border-radius: 8px;
+  line-height: 1.4;
+  font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+pre.prettyprint {
+  white-space: pre-wrap;
+}
+
+/* Specify class=linenums on a pre to get line numbering */
+ol.linenums { margin-top: 0; margin-bottom: 0; color: #AEAEAE; } /* IE indents via margin-left */
+li.L0,li.L1,li.L2,li.L3,li.L5,li.L6,li.L7,li.L8 { list-style-type: none }
+/* Alternate shading for lines */
+li.L1,li.L3,li.L5,li.L7,li.L9 { }
+
+@media print {
+  xmp .str, pre .str, code .str { color: #060; }
+  xmp .kwd, pre .kwd, code .kwd { color: #006; font-weight: bold; }
+  xmp .com, pre .com, code .com { color: #600; font-style: italic; }
+  xmp .typ, pre .typ, code .typ { color: #404; font-weight: bold; }
+  xmp .lit, pre .lit, code .lit { color: #044; }
+  xmp .pun, pre .pun, code .pun { color: #440; }
+  xmp .pln, pre .pln, code .pln { color: #000; }
+  xmp .tag, pre .tag, code .tag { color: #006; font-weight: bold; }
+  xmp .atn, pre .atn, code .atn { color: #404; }
+  xmp .atv, pre .atv, code .atv { color: #060; }
+}

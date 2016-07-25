@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+  <meta name="renderer" content="webkit" />
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta content="no-siteapp" http-equiv="Cache-Control" />
+  <meta name="description" content="一个旨在提高 UI 开发效率，快速产生项目 UI 的前端工作流" />
+  <meta name="keywords" content="QMUI Web,QMUI,UI 开发,QMUI Web 官网,前端工作流, UI 开发工作流" />
+	<title>组件 - QMUI Web Demo</title>
+  <link rel="icon" type="image/png" sizes="16x16" href="../public/style/images/independent/favicon/favicon_16h.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../public/style/images/independent/favicon/favicon_32h.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="../public/style/images/independent/favicon/favicon_48h.png" />
+	<link rel="stylesheet" type="text/css" href="../public/style/css/main.css" />
+  <!--[if lte IE 8]>
+  <script type="text/javascript">
+    (function(elements) {
+      for (var i = 0, l = elements.length; i < l; i++) {
+        document.createElement(elements[i]);
+      }
+    })(['main', 'article', 'section', 'header', 'nav', 'aside', 'time', 'footer']);
+  </script>
+  <![endif]-->
+</head>
+<body class="frame_wrap">
+	
+	<header id="head" class="frame_head">
+    
+    
+    <div class="frame_head_title"><a class="frame_head_title_link" href="./index.html">QMUI Web</a></div>
+    
+
+    <a class="frame_head_showMenuBtn" id="showMenuBtn" href="javascript:;">
+      <span class="dm_icon dm_icon_Menu"></span>
+    </a>
+    <a class="frame_head_closeMenuBtn" id="closeMenuBtn" href="javascript:;">
+      <span class="dm_icon dm_icon_CloseMenu"></span>
+    </a>
+	
+    <nav class="frame_nav">
+      <a class="frame_nav_item " href="start.html">开始使用</a>
+      <a class="frame_nav_item frame_nav_item_Curr" href="widget.html">组件</a>
+      <a class="frame_nav_item " href="tools.html">工具方法</a>
+      <a class="frame_nav_item " href="scaffold.html">脚手架</a>
+      <a class="frame_nav_item " href="codeNorm.html">编码规范</a>
+      <a class="frame_nav_item " href="app.html">QMUI Web Desktop</a>
+    </nav>
+	</header>
+
+	<div class="frame_sidebar" id="frame_sidebar">
+
+		<div class="frame_sidebar_inner">
+
+			<ul class="frame_sidebar_nav">
+				<li class="frame_sidebar_nav_item">
+					<a class="frame_sidebar_nav_link" href="#qui_widgetCommon">通用组件</a>
+					<ul class="frame_sidebar_nav frame_sidebar_nav_Children">
+						<li class="frame_sidebar_nav_item">
+							<a class="frame_sidebar_nav_link" href="#qui_widget_btn">按钮</a>
+						</li>
+						<li class="frame_sidebar_nav_item">
+							<a class="frame_sidebar_nav_link" href="#qui_widget_dialog">对话框</a>
+						</li>
+						<li class="frame_sidebar_nav_item">
+							<a class="frame_sidebar_nav_link" href="#qui_widget_mask">遮罩层</a>
+						</li>
+						<li class="frame_sidebar_nav_item">
+							<a class="frame_sidebar_nav_link" href="#qui_widget_dropdownMenu">下拉菜单</a>
+						</li>
+						<li class="frame_sidebar_nav_item">
+							<a class="frame_sidebar_nav_link" href="#qui_widget_tab">选项卡</a>
+						</li>
+						<li class="frame_sidebar_nav_item">
+							<a class="frame_sidebar_nav_link" href="#qui_widget_ipt">文本输入</a>
+						</li>
+					</ul>
+				</li>
+				<li class="frame_sidebar_nav_item">
+					<a class="frame_sidebar_nav_link" href="#qui_widgetExpand">扩展组件</a>
+					<ul class="frame_sidebar_nav frame_sidebar_nav_Children">
+						<li class="frame_sidebar_nav_item">
+							<a class="frame_sidebar_nav_link" href="#qui_widget_autoSprite">CSS Sprite 自动合并</a>
+						</li>
+						<li class="frame_sidebar_nav_item">
+							<a class="frame_sidebar_nav_link" href="#qui_widget_dualCols">等高左右双栏</a>
+						</li>
+						<li class="frame_sidebar_nav_item">
+							<a class="frame_sidebar_nav_link" href="#qui_widget_fileUpload">文件上传按钮</a>
+						</li>
+						<li class="frame_sidebar_nav_item">
+							<a class="frame_sidebar_nav_link" href="#qui_widget_treeMenu">树状选择菜单</a>
+						</li>
+			        </ul>
+				</li>
+			</ul>
+
+		</div>
+	</div>
+
+	<div class="frame_cnt">
+
+		<div class="dm_column">
+
+			<h2 id="qui_widgetCommon" class="dm_column_title">通用组件</h2>
+
+			<p class="dm_column_tip">通用组件应该是每个项目必须实现的组件</code></p>
+			
+			<div class="dm_column_item">
+
+				<h3 id="qui_widget_btn" class="dm_column_item_title">按钮</h3>
+
+				<p class="dm_column_tip">主要的 CSS Selector <code>.qui_btn</code></p>
+
+				<div class="dm_column_item_info">
+					<div class="dm_column_display">
+						<div class="dm_column_display_title">展示:</div>
+						<div class="dm_column_display_cnt">
+							<a class="qui_btn dm_btn" href="javascript:;">按钮</a>
+						</div>
+					</div>
+					<div class="dm_column_item_info_code">
+						<xmp class="prettyprint"><a class="qui_btn dm_btn" href="javascript:;">按钮</a></xmp>
+					</div>
+				</div>
+
+			</div>
+			
+			<div class="dm_column_item">
+
+				<h3 id="qui_widget_dialog" class="dm_column_item_title">对话框</h3>
+
+				<p class="dm_column_tip">主要的 CSS Selector <code>.qui_dialog</code></p>
+
+				<div class="dm_column_item_info">
+					<div class="dm_column_display">
+						<div class="dm_column_display_title">展示:</div>
+						<div class="dm_column_display_cnt">
+							<div class="qui_dialog dm_dialog dm_columnDisplayControl">
+								<a class="qui_dialog_close dm_dialog_close" href="javascript:;">
+                  <span class="dm_icon dm_icon_closeDialog"></span>
+                </a>
+								<div class="qui_dialog_head dm_dialog_head">
+									<div class="qui_dialog_title dm_dialog_title">对话框标题</div>
+								</div>
+								<div class="qui_dialog_body dm_dialog_body">我是对话框柔软的身体</div>
+								<div class="qui_dialog_foot dm_dialog_foot">
+									<a class="qui_btn dm_btn dm_btn_Blue" href="javascript:;">是</a>
+                  <a class="qui_btn dm_btn" href="javascript:;">否</a>
+                  <a class="qui_btn dm_btn dm_btn_Blue dm_btn_Blue_Disabled" href="javascript:;">否</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="dm_column_item_info_code">
+<xmp class="prettyprint"><div class="qui_dialog dm_dialog">
+  <a class="qui_dialog_close dm_dialog_close" href="javascript:;">
+    <span class="dm_dialog_colseIcon"></span>
+  </a>
+  <div class="qui_dialog_head dm_dialog_head">
+    <div class="qui_dialog_title dm_dialog_title">对话框标题</div>
+  </div>
+  <div class="qui_dialog_body dm_dialog_body">我是对话框柔软的身体</div>
+  <div class="qui_dialog_foot dm_dialog_foot">
+    <a class="qui_btn dm_btn dm_btn_Blue" href="javascript:;">是</a>
+    <a class="qui_btn dm_btn" href="javascript:;">否</a>
+    <a class="qui_btn dm_btn dm_btn_Blue dm_btn_Blue_Disabled" href="javascript:;">否</a>
+  </div>
+</div></xmp>
+					</div>
+				</div>
+
+			</div>
+			
+			<div class="dm_column_item">
+
+				<h3 id="qui_widget_mask" class="dm_column_item_title">遮罩层</h3>
+
+				<p class="dm_column_tip">主要的 CSS Selector <code>.qui_mask</code></p>
+
+				<div class="dm_column_item_info">
+					<div class="dm_column_display">
+						<div class="dm_column_display_title">展示:</div>
+						<div class="dm_column_display_cnt">
+              <a id="qui_showMask" href="javascript:;">查看效果</a>
+						</div>
+					</div>
+					<div class="dm_column_item_info_code">
+<xmp class="prettyprint"><div id="maskWrap" style="display: none;"> <!-- 包裹遮罩层和主体元素的容器，由前端控制 -->
+  <div class="qui_mask dm_mask"></div>
+  <!-- 这里是对话框或其他需要展示的主体元素 -->
+</div></xmp>
+					</div>
+				</div>
+
+			</div>
+			
+			<div class="dm_column_item">
+
+				<h3 id="qui_widget_dropdownMenu" class="dm_column_item_title">下拉菜单</h3>
+
+				<p class="dm_column_tip">主要的 CSS Selector <code>.qui_dropdownMenu</code></p>
+
+				<div class="dm_column_item_info">
+					<div class="dm_column_display">
+						<div class="dm_column_display_title">展示:</div>
+            <div class="dm_column_display_cnt">
+              <div class="qui_dropdownMenu dm_dropdownMenu dm_columnDisplayControl">
+                <ul>
+                  <li class="qui_dropdownMenu_item dm_dropdownMenu_item">
+                  <a href="javascript:;" class="qui_dropdownMenu_itemLink dm_dropdownMenu_itemLink">菜单选项一</a>
+                  </li>
+                  <li class="qui_dropdownMenu_item dm_dropdownMenu_item">
+                  <a href="javascript:;" class="qui_dropdownMenu_itemLink dm_dropdownMenu_itemLink">菜单选项二</a>
+                  </li>
+                  <li class="qui_dropdownMenu_item dm_dropdownMenu_item">
+                  <a href="javascript:;" class="qui_dropdownMenu_itemLink dm_dropdownMenu_itemLink">菜单选项三</a>
+                  </li>
+                  <li class="qui_dropdownMenu_item dm_dropdownMenu_item">
+                  <a href="javascript:;" class="qui_dropdownMenu_itemLink dm_dropdownMenu_itemLink">菜单选项四</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+					<div class="dm_column_item_info_code">
+<xmp class="prettyprint"><div class="qui_dropdownMenu dm_dropdownMenu">
+  <ul>
+    <li class="qui_dropdownMenu_item dm_dropdownMenu_item">
+      <a href="javascript:;" class="qui_dropdownMenu_itemLink dm_dropdownMenu_itemLink">菜单选项一</a>
+    </li>
+    <li class="qui_dropdownMenu_item dm_dropdownMenu_item">
+      <a href="javascript:;" class="qui_dropdownMenu_itemLink dm_dropdownMenu_itemLink">菜单选项二</a>
+    </li>
+    <li class="qui_dropdownMenu_item dm_dropdownMenu_item">
+      <a href="javascript:;" class="qui_dropdownMenu_itemLink dm_dropdownMenu_itemLink">菜单选项三</a>
+    </li>
+    <li class="qui_dropdownMenu_item dm_dropdownMenu_item">
+      <a href="javascript:;" class="qui_dropdownMenu_itemLink dm_dropdownMenu_itemLink">菜单选项四</a>
+    </li>
+  </ul>
+</div></xmp>
+					</div>
+				</div>
+
+			</div>
+			
+			<div class="dm_column_item">
+
+				<h3 id="qui_widget_tab" class="dm_column_item_title">选项卡</h3>
+
+				<p class="dm_column_tip">主要的 CSS Selector <code>.qui_tab</code></p>
+
+				<div class="dm_column_item_info">
+					<div class="dm_column_display">
+						<div class="dm_column_display_title">展示:</div>
+            <div class="dm_column_display_cnt">
+              <div class="qui_tab dm_tab">
+                <div class="qui_tab_title dm_tab_title">
+                  <ul class="qui_tabNav dm_tabNav">
+                    <li class="qui_tabNav_item dm_tabNav_item dm_tabNav_item_Curr">
+                    <a href="javascript:;" class="qui_tabNav_itemLink dm_tabNav_itemLink">选项卡一</a>
+                    </li>
+                    <li class="qui_tabNav_item dm_tabNav_item">
+                    <a href="javascript:;" class="qui_tabNav_itemLink dm_tabNav_itemLink">选项卡二</a>
+                    </li>
+                    <li class="qui_tabNav_item dm_tabNav_item">
+                    <a href="javascript:;" class="qui_tabNav_itemLink dm_tabNav_itemLink">选项卡三</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="qui_tab_cnt dm_tab_cnt">这里是选项卡的内容</div>
+              </div>
+
+            </div>
+					</div>
+					<div class="dm_column_item_info_code">
+<xmp class="prettyprint"><div class="qui_tab dm_tab">
+  <div class="qui_tab_title dm_tab_title">
+    <ul class="qui_tabNav dm_tabNav">
+      <li class="qui_tabNav_item dm_tabNav_item dm_tabNav_item_Curr">
+        <a href="javascript:;" class="qui_tabNav_itemLink dm_tabNav_itemLink">选项卡一</a>
+      </li>
+      <li class="qui_tabNav_item dm_tabNav_item">
+        <a href="javascript:;" class="qui_tabNav_itemLink dm_tabNav_itemLink">选项卡二</a>
+      </li>
+      <li class="qui_tabNav_item dm_tabNav_item">
+        <a href="javascript:;" class="qui_tabNav_itemLink dm_tabNav_itemLink">选项卡三</a>
+      </li>
+    </ul>
+  </div>
+  <div class="qui_tab_cnt dm_tab_cnt">这里是选项卡的内容</div>
+</div></xmp>
+					</div>
+				</div>
+
+			</div>
+			
+			<div class="dm_column_item">
+
+				<h3 id="qui_widget_ipt" class="dm_column_item_title">文本输入</h3>
+
+        <p class="dm_column_tip">主要的 CSS Selector <code>.qui_inputText</code> <code>.qui_textarea</code></p>
+
+				<div class="dm_column_item_info">
+					<div class="dm_column_display">
+						<div class="dm_column_display_title">展示:</div>
+            <div class="dm_column_display_cnt">
+              <input type="text" class="qui_inputText dm_inputText" placeholder="普通文本框" />
+              <textarea class="qui_textarea dm_textarea" placeholder="长文本框"></textarea>
+            </div>
+					</div>
+					<div class="dm_column_item_info_code">
+<xmp class="prettyprint"><input type="text" class="qui_inputText dm_inputText" placeholder="普通文本框" />
+<textarea class="qui_textarea dm_textarea" placeholder="可惜"></textarea></xmp>
+					</div>
+				</div>
+
+			</div>
+				
+		</div><!-- common widget end -->
+
+
+		<div class="dm_column">
+
+			<h2 id="qui_widgetExpand" class="dm_column_title">扩展组件</h2>
+
+			<p class="dm_column_tip">扩展组件是指那些不便于收录到通用组件中（通常是因为组件的业务性无法完全剥离，或者是组件只有在某些项目下才会被用到，通用性不大），但因为结构复杂，或者有一些技术难点的存在，仍值得参考的组件。因此这里展示的扩展组件都仅作参考作用，QMUI 主源码中并不提供这些组件。</p>
+		
+      <!-- CSS Sprite 自动合并 start -->
+			<div class="dm_column_item">
+
+				<h3 id="qui_widget_autoSprite" class="dm_column_item_title">CSS Sprite 自动合并</h3>
+
+		        <p class="dm_column_tip">QMUI 提供了一套自动 CSS Sprite 的方案，但由于该方案无法剥离业务耦合，因此无法抽成公共的方法，所以无法集成到 QMUI Web 源码中，这里使用示例的形式展示该方案。</p>
+
+		        <p class="dm_column_tip">效果可以参考本站任意一个 icon（例如对话框的关闭按钮），相关的 scss 文是本 Demo 中的 UI_dev/project/widget/_images.scss，里面有关于这套方案的详细注释。<strong>如果你已经通过代码大概了解了这套方案的机制，那么下面还有几点总结可以帮助了解这套方案：</strong></p>
+
+		        <div class="dm_column_tip">
+		          <ul>
+		            <li>总的思路是在图片目录内，为一张 Sprite 图所需的所有 icon 建立一个目录，Compass 会去遍历这个目录，并根据图片名和前缀生成对应的虚函数和 class。因此所有的 icon 都应该用一个独立的 span 去实现。</li>
+		            <li>如果是带有链接的 icon，应该使用 a 标签，通常这类 icon 还有 hover 的效果，需要在 hover 时切换另一张图，这时候应该用  a>span.icon 的形式实现，a:hover 时通过 Compass 的命令获取需要的图片，具体的写法可以参见 scss 文件。</li>
+		            <li>两倍图也是另外建立一个与存放一倍图的目录平级的目录，使用 Compass 遍历，与一倍图相似。这里要提醒的是，1倍图和2倍图的宽高必须保持严格的1:2的关系，因为 Compass 最终会以一倍图的尺寸计算每个 icon 的 background-position，再利用 background-size: 100% 控制2倍图的显示，如果尺寸不成比例，2倍图下的 icon 位置就会乱了。</li>
+		          </ul>
+		        </div>
+
+		    </div>
+      <!-- CSS Sprite 自动合并 end -->
+		
+			<!-- 等高左右双栏 start -->
+			<div class="dm_column_item">
+				<h3 id="qui_widget_dualCols" class="dm_column_item_title">等高左右双栏</h3>
+
+				<div class="dm_column_item_info">
+					<div class="dm_column_display">
+						<div class="dm_column_display_title">展示（实现方式1）:</div>
+			            <div class="dm_column_display_cnt">
+			            	<div class="dm_dualCols1">
+			            		<div class="dm_dualCols_left">左栏</div>
+			            		<div class="dm_dualCols_right">右栏</div>
+			            	</div>
+			            </div>
+					</div>
+					<div class="dm_column_item_info_tips">
+						<ul>
+							<li>
+								采用table-cell原理实现，缺点是会受到table-cell固有缺陷的限制，比如table-cell本身无法固定宽度。
+							</li>
+						</ul>
+					</div>
+
+					<div class="dm_column_display">
+						<div class="dm_column_display_title">展示（实现方式2）:</div>
+			            <div class="dm_column_display_cnt">
+			            	<div class="dm_dualCols2">
+			            		<div class="dm_dualCols_left">左栏</div>
+			            		<div class="dm_dualCols_right">右栏</div>
+			            	</div>
+			            </div>
+					</div>
+					<div class="dm_column_item_info_tips">
+						采用特殊padding+margin实现，缺点是外层容器需设置overflow:hidden，而这通常会阻碍容器内部的下拉菜单伸出外容器。
+					</div>
+		        </div>
+		    </div>
+			<!-- 等高左右双栏 end -->
+
+			<!-- 文件上传按钮 start -->
+			<div class="dm_column_item">
+				<h3 id="qui_widget_fileUpload" class="dm_column_item_title">文件上传按钮</h3>
+
+				<div class="dm_column_item_info">
+					<div class="dm_column_display">
+						<div class="dm_column_display_title">展示:</div>
+			            <div class="dm_column_display_cnt">
+			            	<a class="qui_btn dm_fileUpload" href="javascript:;">上传
+			            		<input class="dm_fileUpload_input" type="file">
+			            	</a>
+			            </div>
+					</div>
+					<div class="dm_column_item_info_tips">
+						<ul>
+							<li>
+								内部包裹有一个"file"类型的input，但这种类型的input有部分区域是无法实现cursor:pointer效果的，因此需要像此例中一样，设法将不可自定义鼠标的区域移到包裹容器外部。
+							</li>
+						</ul>
+					</div>
+		        </div>
+		    </div>
+			<!-- 等高左右双栏 end -->
+
+			<!-- 树状选择菜单 start -->
+			<div class="dm_column_item">
+				<h3 id="qui_widget_treeMenu" class="dm_column_item_title">树状选择菜单</h3>
+
+				<div class="dm_column_item_info">
+					<div class="dm_column_display">
+						<div class="dm_column_display_title">展示:</div>
+			            <div class="dm_column_display_cnt">
+			            	<div class="dm_treeMenu">
+			            		<ul>
+			            			<li>
+			            				<div class="dm_treeMenu_item dm_treeMenu_item_Unfolded"><span>中国</span></div>
+			            				<ul>
+			            					<li>
+			            						<div class="dm_treeMenu_item"><span>河南省</span></div>
+			            					</li>
+			            					<li>
+			            						<div class="dm_treeMenu_item dm_treeMenu_item_Checked"><span>东北省</span></div>
+			            					</li>
+			            					<li>
+			            						<div class="dm_treeMenu_item dm_treeMenu_item_Unfolded"><span>广东省</span></div>
+			            						<ul>
+			            							<li>
+			            								<div class="dm_treeMenu_item dm_treeMenu_item_NoChild "><span>广州市</span></div>
+			            							</li>
+			            							<li>
+			            								<div class="dm_treeMenu_item dm_treeMenu_item_NoChild"><span>佛山市</span></div>
+			            							</li>
+			            						</ul>
+			            					</li>
+			            				</ul>
+			            			</li>
+			            		</ul>
+			            	</div>
+			            </div>
+					</div>
+					<div class="dm_column_item_info_tips">
+						<ul>
+							<li>
+								比较繁琐的是checked状态下的背景色块的位置相关的样式设置
+							</li>
+						</ul>
+					</div>
+		        </div>
+		    </div>
+			<!-- 树状选择菜单 end -->
+
+		</div>
+
+	</div><!-- content end -->
+
+  <!-- 遮罩层效果演示 -->
+  <div id="qui_maskWrap" style="display: none;">
+		<div class="qui_mask dm_mask"></div>
+		<div class="qui_dialog dm_dialog widget_dialogInMask">
+			<div class="qui_dialog_head dm_dialog_head">
+				<div class="qui_dialog_title dm_dialog_title">对话框标题</div>
+				<a class="qui_dialog_close dm_dialog_close dm_icon dm_icon_CloseDialog" href="javascript:;"></a>
+			</div>
+			<div class="qui_dialog_body dm_dialog_body">点击任意处关闭</div>
+			<div class="qui_dialog_foot dm_dialog_foot">
+				<a class="qui_btn dm_btn dm_btn_Blue" href="javascript:;">确认</a>
+				<a class="qui_btn dm_btn" href="javascript:;">取消</a>
+			</div>
+		</div>
+	</div>
+	
+	<script type="text/javascript" src="../public/js/all.js"></script>
+	
+	
+</body>
+</html>
+

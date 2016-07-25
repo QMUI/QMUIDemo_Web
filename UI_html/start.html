@@ -1,0 +1,321 @@
+@@include('./header.html', {
+  "title": "开始使用 - QMUI Web Demo",
+  "currentPage": "start"
+})
+	<div class="frame_sidebar" id="frame_sidebar">
+
+		<div class="frame_sidebar_inner">
+
+			<ul class="frame_sidebar_nav">
+				<li class="frame_sidebar_nav_item">
+					<a class="frame_sidebar_nav_link" href="#qui_overview">概况</a>
+				</li>
+				<li class="frame_sidebar_nav_item">
+					<a class="frame_sidebar_nav_link" href="#qui_environment">环境配置</a>
+				</li>
+				<li class="frame_sidebar_nav_item">
+					<a class="frame_sidebar_nav_link" href="#qui_projectStructure">项目结构</a>
+					<ul class="frame_sidebar_nav frame_sidebar_nav_Children">
+						<li class="frame_sidebar_nav_item">
+							<a class="frame_sidebar_nav_link" href="#qui_imagesManage">图片文件管理</a>
+						</li>
+          </ul>
+        </li>
+				</li>
+				<li class="frame_sidebar_nav_item">
+					<a class="frame_sidebar_nav_link" href="#qui_createProject">创建新项目</a>
+					<ul class="frame_sidebar_nav frame_sidebar_nav_Children">
+						<li class="frame_sidebar_nav_item">
+							<a class="frame_sidebar_nav_link" href="#qui_mountFramework">挂载 QMUI 为 SVN 外部库</a>
+						</li>
+						<li class="frame_sidebar_nav_item">
+							<a class="frame_sidebar_nav_link" href="#qui_useConfig">使用配置文件</a>
+						</li>
+						<li class="frame_sidebar_nav_item">
+							<a class="frame_sidebar_nav_link" href="#qui_createCommand">执行创建新项目命令</a>
+						</li>
+					</ul>
+				</li>
+				<li class="frame_sidebar_nav_item">
+					<a class="frame_sidebar_nav_link" href="#qui_useFramework">框架的使用</a>
+					<ul class="frame_sidebar_nav frame_sidebar_nav_Children">
+						<li class="frame_sidebar_nav_item">
+							<a class="frame_sidebar_nav_link" href="#qui_configAndWidget">基础配置与组件</a>
+						</li>
+						<li class="frame_sidebar_nav_item">
+							<a class="frame_sidebar_nav_link" href="#qui_scaffold">脚手架</a>
+						</li>
+						<li class="frame_sidebar_nav_item">
+							<a class="frame_sidebar_nav_link" href="#qui_sassSupport">SASS 与 Compass 支持</a>
+						</li>
+						<li class="frame_sidebar_nav_item">
+							<a class="frame_sidebar_nav_link" href="#qui_expandWidget">扩展组件</a>
+						</li>
+					</ul>
+				</li>
+				<li class="frame_sidebar_nav_item">
+					<a class="frame_sidebar_nav_link" href="#qui_browserCompatibility">兼容性策略</a>
+				</li>
+				<li class="frame_sidebar_nav_item">
+					<a class="frame_sidebar_nav_link" href="#qui_frameworkImprove">完善框架</a>
+				</li>
+			</ul>
+
+		</div>
+	</div>
+
+	<div class="frame_cnt">
+
+    <!-- 概况 start -->
+		<div class="dm_column">
+
+			<h2 id="qui_overview" class="dm_column_title">概况</h2>
+
+      <p class="dm_column_tip">QMUI Web 主要分为 project 和 qmui 两个文件夹，project 是我们实际编写项目内容的文件夹，分为 logic（业务代码） 和 widget（公共组件），为了保持 QMUI 的独立性，project 文件夹会被基于 gulp 的工具复制一份到外层目录中使用，而不是直接修改 QMUI 目录中的版本。这个工具实际上也是 QMUI 提供的脚手架，会提供如 include 模板功能、清理文件、压缩功能等便捷功能。</p>
+
+      <p class="dm_column_tip">QMUI Web 遵循 <a href="./codeNorm.html" target="_blank" title="QMUI 编码规范">QMUI 编码规范</a>，因此框架中提供的样式除 Reset 外都以 qui_ 作开头，以充当框架的命名空间。业务上的样式也应该有自己的命名空间，例如本 Demo 中的样式的公共部分都以 dm_ 开头，各细致的业务就以业务的功能作开头（例如组件页面的非公共代码都以 widget_ 开头），从而以不同的命名空间划分不同的样式，避免样式的互相干扰。</p>
+
+      <p class="dm_column_tip">除此以外，QMUI 封装了大量 SASS 和 Compass 方法供使用，另外还在 Demo 中以参考组件的形式收录了一些结构较复杂的扩展组件，供使用者参考。</p>
+
+		
+		</div>
+    <!-- 概况 end -->
+
+    <!-- 环境配置 start -->
+    <div class="dm_column">
+
+      <h2 id="qui_environment" class="dm_column_title">环境配置</h2>
+
+      <p class="dm_column_tip">QMUI Web 需要依赖一些第三方框架或工具才能运行，分别是 gulp，SASS，Compass，Node.js（gulp 需要依赖），Ruby（SASS 和 Compass 需要依赖）</p>
+
+      <div class="dm_column_item">
+
+        <h3 class="dm_column_item_title">安装步骤</h3>
+
+        <div class="dm_column_tip">
+          <ul>
+            <li>Node.js 的安装可以参考 <a href="https://nodejs.org/" target="_blank" title="Node.js 官网">Node.js 官网</a></li> 
+            <li>Ruby 的安装可以参考 <a href="https://www.ruby-lang.org/zh_cn/downloads/" target="_blank" title="Ruby 官方网站">Ruby 官网</a>。</li>
+            <li>以下的安装命令建议在 Mac 下都加上 sudo。</li>
+          </ul>
+        </div>
+
+        <div class="dm_column_item_info dm_column_item_info_Single">
+          <div class="dm_column_item_info_code">
+<xmp class="prettyprint">#安装 gulp
+npm install --global gulp
+#安装 SASS 
+gem install sass
+#安装 Compass
+gem update --system
+gem install compass
+</xmp>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    <!-- 环境配置 end -->
+
+    <!-- 项目结构 start -->
+		<div class="dm_column">
+
+			<h2 id="qui_projectStructure" class="dm_column_title">项目结构</h2>
+
+			<p class="dm_column_tip">QMUI Web 对项目文件结构（UI 层相关文件）有一定的依赖，不同的项目中如果能有相似的文件结构，也能便于开发。推荐的文件结构如下：</p>
+
+<pre class="dm_column_tip">
+项目根目录
+├─public          // 静态资源目录，由 Compass 和 gulp 生成
+│  ├─js           // 静态资源 js 文件
+│  ├─style        // 静态资源 UI 文件
+│  │  ├─css       // 静态资源 css 文件
+│  │  └─images    // 静态资源 images 文件
+│  └─template     // 最终的模板目录，原则上是前端去建立和管理
+├─UI_dev          // 实际进行开发的样式目录
+│  ├─project      // 项目相关 SASS 与 images 文件，由 gulp 生成，请参考“<a href="#qui_createProject" title="创建新项目">创建新项目</a>”
+│  │  ├─images    // 项目相关图片文件
+│  │  ├─logic     // 项目相关逻辑样式
+│  │  └─widget    // 项目相关公共组件样式
+│  └─qmui_web     // <strong>QMUI Web 主源码应放置在这一层目录</strong>
+├─UI_html         // 静态模板目录，用于 UI 工程师开发
+└─UI_html_result  // 静态模板 gulp 处理后的版本，用于前端拼接最终的模板
+</pre>
+      </p>
+
+      <p class="dm_column_tip">可以看出，在需要用到的目录结构中，并不是所有目录都需要我们手工创建，实际需要手工创建的目录并不多。</p>
+	
+      <p class="dm_column_tip">另外这些目录结构只是层次上要求如此，即不建议修改目录的层级，但目录名如果与其他模块或组件冲突，可以自行修改目录名，记得修改 config.json 和 config.rb 的相关设置就好（这两个文件需要复制到 UI_dev 中修改，如果直接修改 QMUI 源码中的配置文件，会影响框架的独立性，详细请参考“<a href="#qui_useConfig" title="使用配置文件">使用配置文件”）</a></p>
+
+      <!-- 图片文件管理 start -->
+			<div class="dm_column_item">
+
+				<h3 id="qui_imagesManage" class="dm_column_item_title">图片文件管理</h3>
+        <p class="dm_column_tip">为了解决 CSS Sprite 造成的重复劳动工作以及管理图片，QMUI 提供了一套图片文件管理的方案。图片文件统一放置在一个目录中（project/images），其中，需要做雪碧图的图片应该在 images 下建立子目录统一放置，QMUI 会根据相应的规则合成雪碧图，关于这一点的详细情况，请参考<a href="widget.html#qui_widget_autoSprite">这里</a>。而不需要做成雪碧图的独立图片，应该放置在 images/independent（由 config.json 中的 independentImagesDirectory 选项控制）目录中，该目录中也可以再建立子目录。无论是雪碧图还是独立图片，QMUI 都会统一管理这些图片，输出到静态资源目录（public/images），并自动进行图片压缩。</p>
+      </div>
+      <!-- 图片文件管理 end -->
+		</div>
+    <!-- 项目结构 end -->
+
+    <!-- 创建新项目 start -->
+		<div class="dm_column">
+
+			<h2 id="qui_createProject" class="dm_column_title">创建新项目</h2>
+
+			<p class="dm_column_tip">如果需要的环境已经配置好，并且按照上面的要求建立好对应的目录结构，那么就可以正式创建一个新项目了。</p>
+		
+      <!-- 挂载 QMUI 为 SVN 外部库 start -->
+			<div class="dm_column_item">
+
+				<h3 id="qui_mountFramework" class="dm_column_item_title">挂载 QMUI 为 SVN 外部库</h3>
+
+        <p class="dm_column_tip">创建项目的第一步，是引入 QMUI 的框架文件，建议采取 Git submodule 或 SVN 外部库的方式引入，这是希望把 QMUI 的源码修改与项目源码修改隔离开，达到互不干扰的效果。根据上面的项目结构要求，QMUI 框架应该引入到 <strong>qmui_web</strong> 目录中。</p>
+
+        <p class="dm_column_tip">QMUI 采用 npm 进行 node 包管理，因此你还需要使用 npm 安装 QMUI 依赖的 node 包，请在 qmui_web 目录下执行以下命令（<strong>QMUI Web 所有相关命令都在 qmui_web 目录下执行</strong>）：</p>
+
+        <div class="dm_column_item_info dm_column_item_info_Single">
+          <div class="dm_column_item_info_code">
+            <xmp class="prettyprint">#使用 npm 安装依赖包，待安装完毕后才可继续进行下一步（Windows 下面不需要 sudo）
+sudo npm install</xmp>
+          </div>
+        </div>
+
+      </div>
+      <!-- 挂载 QMUI 为 SVN 外部库 end -->
+		
+      <!-- 使用配置文件 start -->
+			<div class="dm_column_item">
+
+				<h3 id="qui_useConfig" class="dm_column_item_title">使用配置文件</h3>
+
+        <p class="dm_column_tip">在 qmui_web（QMUI Web 框架根目录）中，有两个配置文件 config.rb 和 config.json，<strong>在项目开始之前应该把这两个文件复制到 qmui_web 的上一层目录（按推荐的文件结构，应该是 UI_dev 目录）</strong>，这两个配置文件分别用于框架在 Compass 和 gulp 两种能力下的配置。</p>
+        <p class="dm_column_tip">具体的说，config.rb 会配置静态资源最终输出的路径，输出的样式文件是否需要压缩等 Compass 和 SASS 相关配置。如果开发时使用的就是框架所推荐的文件结构，那么这个配置文件基本可以不用调整。</p>
+        <p class="dm_column_tip">而 config.json 则配置 gulp 在使用时的一些依赖的变量，与 config.rb 相似，如果开发时使用的就是框架所推荐的文件结构，那么基本上只需要配置 <code>project</code> 和 <code>prefix</code> 两个参数即可。详细的配置选项如下：</p>
+
+        <div class="dm_column_tip">
+          <ul>
+            <li><code>project</code> 项目名称，暂时没有被实际用到，只是预留接口</li>
+            <li><code>prefix</code> 代码前缀，用于在样式和 HTML 中创建 class 的命名前缀，即命名空间，必须根据项目名称定好一个清晰不容易与其他项目冲突的前缀</li>
+            <li><code>resultCssFileName</code> 项目主样式文件的名称，在创建新项目时会被用到，一般来说，QMUI 建议如果项目不是非常大的量级，都只使用一个样式表，方便代码管理</li>
+            <li><code>cleanFileType</code> 执行gulp clean 命令时需要清除的文件</li>
+            <li><code>htmlSourcePath</code> 静态模板来源目录，即模板开发的目录</li>
+            <li><code>imagesSourcePath</code> 图片文件来源目录，即图片开发的目录</li>
+            <li><code>htmlResultPath</code> 静态模板经 gulp 处理后输出的目录，即把 include 合并后的输出版本</li>
+            <li><code>imagesResultPath</code> 图片文件经 Compass 和 gulp 处理后输出的目录，即最终实际被项目使用的图片资源</li>
+            <li><code>independentImagesDirectory</code> 独立图片的开发目录的目录名，QMUI 会根据这个目录名在 imagesSourcePath 目录中生成一个子目录</li>
+            <li><code>openIncludeFunction</code> 是否开启模板 include 引擎，默认开启</li>
+            <li><code>includePrefix</code> include 引擎所使用的前缀，它影响了所有 include 方法的使用，默认为 @@</li>
+          </ul>
+        </div>
+
+        <p class="dm_column_tip">其中 <code>htmlSourcePath</code> <code>imagesSourcePath</code> <code>htmlResultPath</code> <code>imagesResultPath</code> <strong>这四个选项都是项目资源的路径配置选项，若要修改，请与 config.rb 中相关选项指向的目录保持一致，但需要注意因为相对位置不同（这里是以 qmui_web 目录为 Base Path），因此这几个属性值应该比 config.rb 中的对应值多一个 "../"。</strong></p>
+
+      </div>
+      <!-- 使用配置文件 end -->
+		
+      <!-- 执行创建新项目命令 start -->
+			<div class="dm_column_item">
+
+				<h3 id="qui_createCommand" class="dm_column_item_title">执行创建新项目命令</h3>
+
+        <p class="dm_column_tip">最后一步就是执行创建新项目的命令，只需在 qmui_web 目录下执行一句命令。项目创建完毕后控制台会有提示。</p>
+
+				<div class="dm_column_item_info dm_column_item_info_Single">
+					<div class="dm_column_item_info_code">
+<xmp class="prettyprint">gulp createProject</xmp>
+          </div>
+        </div>
+
+        <p class="dm_column_tip">
+          <img src="../public/style/images/independent/CreateProject.png" alt="创建新项目成功效果图" />
+        </p>
+
+      </div>
+      <!-- 执行创建新项目命令 end -->
+		
+		</div>
+    <!-- 创建新项目 end -->
+    
+    <!-- 框架的使用 start -->
+		<div class="dm_column">
+
+			<h2 id="qui_useFramework" class="dm_column_title">框架的使用</h2>
+
+      <p class="dm_column_tip">作为一个框架，QMUI Web 主要提供了四种能力来提升 UI 开发的效率与质量。<strong>分别用于快速实现项目 UI，快速解决重复劳动力工作，CSS 的预处理和复杂的组件参考四个方面，这也是 QMUI Web  的使用目标。</strong></p>
+		
+      <!-- 基础配置与组件 start -->
+			<div class="dm_column_item">
+
+				<h3 id="qui_configAndWidget" class="dm_column_item_title">基础配置与组件</h3>
+
+        <div class="dm_column_tip">框架中会有一份配置表，是各种 SASS 的变量，这些变量控制了一个网页基本的字体样式，链接颜色，以及6个通用组件的样式配置，在创建一个新项目时，应该先根据设计稿配置好这些信息，<strong>当这些信息配置完成，那么一个项目的基本样式就可以快速实现了。</strong>例如下图中这些配置属于 QMUI 通用配置，通过修改这些配置则可以快速修改项目的字体策略、正文字体大小，链接颜色等 UI 常用的 CSS 属性。</div>
+
+        <div class="dm_column_tip">
+          <img src="../public/style/images/independent/Var.png" alt="基础配置与组件" />
+        </div>
+
+      </div>
+      <!-- 基础配置与组件 end -->
+		
+      <!-- 脚手架 start -->
+			<div class="dm_column_item">
+
+				<h3 id="qui_scaffold" class="dm_column_item_title">脚手架</h3>
+
+        <div class="dm_column_tip">QMUI 中的脚手架由 gulp 充当，<strong>所谓的脚手架，一般都是用于快速解决大量重复劳动力的工作，从而提升效率。</strong>QMUI 的 gulp 中预先实现了监控 SASS 文件并自动编译（代替不稳定的 Compass Watch），模板 include 能力（可以传参和使用条件判断），图片压缩，文件清理，集中管理图片，文件合并以及自动变更路径的能力。各个命令都是在 qmui_web 文件夹中调用对应的 gulp 命令即可，部分命令依赖于 config.json 的配置。具体命令列表及功能可以参考<a href="./scaffold.html">脚手架</a>页面。</div>
+
+        <div class="dm_column_tip">
+          <img src="../public/style/images/independent/Gulp.gif" alt="Gulp 任务效果图" />
+        </div>
+
+      </div>
+      <!-- 脚手架 end -->
+		
+      <!-- SASS 与 Compass 支持 start -->
+			<div class="dm_column_item">
+
+				<h3 id="qui_sassSupport" class="dm_column_item_title">SASS 与 Compass 支持</h3>
+
+        <div class="dm_column_tip">QMUI 中提供了大量基于 SASS 和 Compass 的 CSS 预处理的方法，包括 CSS Reset，一些常见的 CSS 类（例如清除浮动），已经封装处理好 CSS 属性兼容性的方法，计算长度值的简便方法（例如获取 padding 在某个方向的值，计算两个长度值的中间值），快速实现一些样式效果的工具方法（例如实现 border 三角形，适应多倍屏幕的 1px 边框等）。这些都是<strong>用于提高样式开发的效率和质量。</strong>详细请参考<a href="./tools.html">工具方法</a>页面。</div>
+
+      </div>
+      <!-- SASS 与 Compass 支持 end -->
+		
+      <!-- 扩展组件 start -->
+			<div class="dm_column_item">
+
+				<h3 id="qui_expandWidget" class="dm_column_item_title">扩展组件</h3>
+
+        <div class="dm_column_tip">扩展组件并不是由 QMUI Web 的主源码提供，而是由 Demo 提供，通常是因为这类组件结构较复杂，因此业务性无法很好地剥离，从而不能抽取成公共组件，因此这类组件就放在了 Demo 页，<strong>以参考组件的形式帮助开发。</strong>详情可以看<a href="./widget.html#qui_widgetExpand" title="扩展组件列表">这里</a>。</div>
+
+      </div>
+      <!-- 扩展组件 end -->
+		
+		</div>
+    <!-- 框架的使用 end -->
+
+    <!-- 兼容性策略 start -->
+		<div class="dm_column">
+
+			<h2 id="qui_browserCompatibility" class="dm_column_title">兼容性策略</h2>
+
+			<p class="dm_column_tip">QMUI 提供的几个能力里面，基于 gulp 的脚手架都是开发过程的辅助工具，与浏览器兼容无关。而 QMUI 的提供的 SASS 和 Compass 方法、公共组件都兼容 IE6+。扩展组件由于是从不同的业务中抽取出来，因此兼容性并没有统一的标准，请参考每个扩展组件的标注。</p>
+		
+		</div>
+    <!-- 兼容性策略 end -->
+
+    <!-- 完善框架start -->
+		<div class="dm_column">
+
+			<h2 id="qui_frameworkImprove" class="dm_column_title">完善框架</h2>
+
+      <p class="dm_column_tip"><a href="https://github.com/QMUI/qmui_web/issues" target="_blank">QMUI Web Issues</a></p>
+      <p class="dm_column_tip"><a href="https://github.com/QMUI/qmui_web_desktop/issues" target="_blank">QMUI Web Desktop Issues</a></p>
+		
+		</div>
+    <!-- 完善框架end -->
+
+	</div><!-- content end -->
+
+@@include('./footer.html')

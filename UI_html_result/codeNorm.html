@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+  <meta name="renderer" content="webkit" />
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta content="no-siteapp" http-equiv="Cache-Control" />
+  <meta name="description" content="一个旨在提高 UI 开发效率，快速产生项目 UI 的前端工作流" />
+  <meta name="keywords" content="QMUI Web,QMUI,UI 开发,QMUI Web 官网,前端工作流, UI 开发工作流" />
+	<title>编码规范 - QMUI Web Demo</title>
+  <link rel="icon" type="image/png" sizes="16x16" href="../public/style/images/independent/favicon/favicon_16h.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../public/style/images/independent/favicon/favicon_32h.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="../public/style/images/independent/favicon/favicon_48h.png" />
+	<link rel="stylesheet" type="text/css" href="../public/style/css/main.css" />
+  <!--[if lte IE 8]>
+  <script type="text/javascript">
+    (function(elements) {
+      for (var i = 0, l = elements.length; i < l; i++) {
+        document.createElement(elements[i]);
+      }
+    })(['main', 'article', 'section', 'header', 'nav', 'aside', 'time', 'footer']);
+  </script>
+  <![endif]-->
+</head>
+<body class="frame_wrap">
+	
+	<header id="head" class="frame_head">
+    
+    
+    <div class="frame_head_title"><a class="frame_head_title_link" href="./index.html">QMUI Web</a></div>
+    
+
+    <a class="frame_head_showMenuBtn" id="showMenuBtn" href="javascript:;">
+      <span class="dm_icon dm_icon_Menu"></span>
+    </a>
+    <a class="frame_head_closeMenuBtn" id="closeMenuBtn" href="javascript:;">
+      <span class="dm_icon dm_icon_CloseMenu"></span>
+    </a>
+	
+    <nav class="frame_nav">
+      <a class="frame_nav_item " href="start.html">开始使用</a>
+      <a class="frame_nav_item " href="widget.html">组件</a>
+      <a class="frame_nav_item " href="tools.html">工具方法</a>
+      <a class="frame_nav_item " href="scaffold.html">脚手架</a>
+      <a class="frame_nav_item frame_nav_item_Curr" href="codeNorm.html">编码规范</a>
+      <a class="frame_nav_item " href="app.html">QMUI Web Desktop</a>
+    </nav>
+	</header>
+
+	<div class="frame_sidebar" id="frame_sidebar">
+
+		<div class="frame_sidebar_inner">
+
+			<ul class="frame_sidebar_nav">
+				<li class="frame_sidebar_nav_item">
+			    <a class="frame_sidebar_nav_link" href="#qui_codeNorm">编码规范说明</a>
+				</li>
+				<li class="frame_sidebar_nav_item">
+			    <a class="frame_sidebar_nav_link" href="#qui_htmlAndCSSNorm">HTML/CSS 编写规范</a>
+					<ul class="frame_sidebar_nav frame_sidebar_nav_Children">
+						<li class="frame_sidebar_nav_item">
+							<a class="frame_sidebar_nav_link" href="#qui_classPrefix">前缀规范</a>
+						</li>
+						<li class="frame_sidebar_nav_item">
+							<a class="frame_sidebar_nav_link" href="#qui_classFormat">格式规范</a>
+						</li>
+					</ul>
+				</li>
+				<li class="frame_sidebar_nav_item">
+				  <a class="frame_sidebar_nav_link" href="#qui_scssAndCSSNorm">SCSS/CSS 文件注释规范</a>
+					<ul class="frame_sidebar_nav frame_sidebar_nav_Children">
+						<li class="frame_sidebar_nav_item">
+            <a class="frame_sidebar_nav_link" href="#qui_cssCommentary">注释的格式</a>
+						</li>
+						<li class="frame_sidebar_nav_item">
+							<a class="frame_sidebar_nav_link" href="#qui_cssFileCommentary">文件级注释</a>
+						</li>
+						<li class="frame_sidebar_nav_item">
+							<a class="frame_sidebar_nav_link" href="#qui_cssModuleCommentary">模块级注释</a>
+						</li>
+						<li class="frame_sidebar_nav_item">
+							<a class="frame_sidebar_nav_link" href="#qui_cssInlineCommentary">行内注释</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+
+		</div>
+	</div>
+
+	<div class="frame_cnt">
+
+    <!-- 编码规范 start -->
+		<div class="dm_column">
+
+			<h2 id="qui_codeNorm" class="dm_column_title">编码规范说明</h2>
+
+			<p class="dm_column_tip">QMUI 本身的代码遵循一系列的规范编写，这是由于 Web UI 代码（CSS 与 HTML 为主）语法较为松散，引入编码规范有助于提高团队内协助的效率以及代码的可维护性。</p>
+		
+		</div>
+    <!-- 编码规范 end -->
+
+    <!-- HTML/CSS 编写规范 start -->
+		<div class="dm_column">
+
+		  <h2 id="qui_htmlAndCSSNorm" class="dm_column_title">HTML/CSS 编写规范</h2>
+
+      <p class="dm_column_tip">为最大限度解决协同合作过程中出现的命名冲突问题、方便理解代码上下文、提高代码的执行效率，同时缩短项目交接时间、有必要制定一套简单易用的命名规范。基本原则是 class 需要遵循其代表的功能语义，模块化开发，不同业务模块使用不同前缀，公共部门使用项目缩写为前缀。</p>
+
+      <!-- 前缀规范 start -->
+			<div class="dm_column_item">
+
+				<h3 id="qui_classPrefix" class="dm_column_item_title">前缀规范</h3>
+
+        <div class="dm_column_tip">
+          <ol>
+            <li>公共组件命名以项目缩写作为前缀，如一个名为 Demo 的项目，项目缩写可以是 dm，那么该项目下的项目组件和公共类可以这样命名： dm_btn（按钮）、dm_icon（图标）、dm_ipt（输入框）、dm_toolbar（工具栏）。</li>
+            <li>逻辑模块命名以具体描述作为前缀，如简历（resume）功能里面的非公共组件部分，以 resume_ 作为前缀（resume_mod、resume_text、resume_list），个人信息（profile）页面的非公共组件部分，则可以以 profile_ 作为前缀（profile_statge、profile_stage_title）。</li>
+          </ol>
+        </div>
+
+      </div>
+      <!-- 前缀规范 end -->
+
+      <!-- 格式规范start -->
+			<div class="dm_column_item">
+
+				<h3 id="qui_classFormat" class="dm_column_item_title">格式规范</h3>
+
+        <div class="dm_column_tip">
+          <ol>
+            <li>允许出现下划线和驼峰（大小写）。</li>
+            <li>除用于表示前缀的下划线外，其余下划线只有两种意义，一种代表直接父子关系，一种代表扩展关系。</li>
+            <li>下划线后面紧跟小写，代表直接父子关系，如：
+              <div class="dm_column_item_info dm_column_item_info_Single dm_column_item_info_HasMarginTop">
+                <div class="dm_column_item_info_code">
+<xmp class="prettyprint"><div class="dm_toolbar">
+  <div class="dm_toolbar_header">
+    <div class="dm_toolbar_header_title"></div>
+  </div>
+</div>
+<div class="resume_mod">
+  <div class="resume_mod_header"></div>
+  <div class="resume_mod_footer"></div>
+</div></xmp>
+                </div>
+              </div>
+              <div>对应的 CSS 选择器格式：</div>
+              <div class="dm_column_item_info dm_column_item_info_Single dm_column_item_info_HasMarginTop">
+                <div class="dm_column_item_info_code">
+<xmp class="prettyprint">.dm_toolbar {
+  ...
+}
+.dm_toolbar_header {
+  ...
+}
+.dm_toolbar_header_title {
+  ...
+}
+.resume_mod {
+  ...
+}
+.resume_mod_header {
+  ...
+}
+.resume_mod_footer {
+  ...
+}</xmp>
+                </div>
+              </div>
+            </li>
+            <li>下划线后面紧跟大写，代表扩展关系，如：
+              <div class="dm_column_item_info dm_column_item_info_Single dm_column_item_info_HasMarginTop">
+                <div class="dm_column_item_info_code">
+<xmp class="prettyprint"><a href="javascript:;" class="dm_btn"></a>
+<a href="javascript:;" class="dm_btn dm_btn_Big"></a>
+<div class="resume_mod resume_mod_List">
+ <div class="resume_mod_cnt"></div>
+</div></xmp>
+                </div>
+              </div>
+              <div>对应的CSS选择器格式：</div>
+              <div class="dm_column_item_info dm_column_item_info_Single dm_column_item_info_HasMarginTop">
+                <div class="dm_column_item_info_code">
+<xmp class="prettyprint">.dm_btn {
+  ...
+}
+.dm_btn_Big {
+  ...
+}
+.resume_mod {
+  ...
+}
+.resume_mod_List {
+  ...
+}
+.resume_mod_cnt {
+  ...
+}
+.resume_mod_List .resume_mod_cnt {
+  ...
+}</xmp>
+                </div>
+              </div>
+            </li>
+            <li>若一个样式名由多个单词组成，则从第二个单词起，每个单词的第一个字母大写，如：
+              <div class="dm_column_item_info dm_column_item_info_Single dm_column_item_info_HasMarginTop">
+                <div class="dm_column_item_info_code">
+                  <xmp class="prettyprint"><div class="resume_txtErrWrap"></div></xmp>
+                </div>
+              </div>
+            </li>
+          </ol>
+        </div>
+
+      </div>
+      <!-- 格式规范 end -->
+		
+		</div>
+    <!-- HTML/CSS 编写规范 end -->
+		
+    <!-- SCSS/CSS 文件注释规范 start -->
+		<div class="dm_column">
+
+			<div class="dm_column_item">
+
+				<h2 id="qui_scssAndCSSNorm" class="dm_column_title">SCSS/CSS 文件注释规范</h2>
+
+        <div class="dm_column_tip">CSS 注释按照等级划分，包括文件级注释、模块级注释、行内级注释3种。注释的目的是让代码阅读者了解到代码本身所不能表达的信息，关键在于“why”，尽量避免“how”，因为如何实现是看代码即可明白的，不需要多此一举（除非实现方式难以看懂），而为什么这么实现就需要注释写明了。 注释的原则是表达清晰，让人一言既明为什么这么做、如何使用。</div>
+
+      </div>
+
+      <!-- 注释的格式 start -->
+			<div class="dm_column_item">
+
+				<h3 id="qui_cssCommentary" class="dm_column_item_title">注释的格式</h3>
+
+        <div class="dm_column_tip">单行注释，以“/* */”包裹注释内容，注意内容与注释符之间有头尾的空格隔开。例如：</div>
+
+        <div class="dm_column_item_info dm_column_item_info_Single">
+          <div class="dm_column_item_info_code">
+<xmp class="prettyprint">正确示范：/* 注释内容 */
+错误示范：/*注释内容和注释符头尾要有空格*/ 
+</xmp>
+          </div>
+        </div>
+
+        <div class="dm_column_tip">多行注释，以“/**”开头，紧接着换行符。从第二行开始，每一行的开头都是“空格”+“*”+“空格”，最后一行以“空格”+“*”+“/”结尾。 如有必要，用“@”+关键词+“空格”注明关键信息。例如：</div>
+
+        <div class="dm_column_item_info dm_column_item_info_Single dm_column_item_info_HasMarginTop">
+          <div class="dm_column_item_info_code">
+<xmp class="prettyprint">正确示范：
+/**
+ * 注释内容
+ * @author xxx<xxx@tencent.com>
+ */
+
+错误示范：
+/*
+ 注释符第一行应该是“/**”，每一行开头是“* ”
+ */
+
+/**
+ *每一行注释内容与开头的“*”之间要有空格
+ */
+
+/**
+ * 注释符结尾只需要“*/”即可
+ **/
+</xmp>
+          </div>
+        </div>
+          
+
+      </div>
+      <!-- 注释的格式 end -->
+
+      <!-- 文件级注释 start -->
+			<div class="dm_column_item">
+
+				<h3 id="qui_cssFileCommentary" class="dm_column_item_title">文件级注释</h3>
+
+        <div class="dm_column_tip">对于文件而言，最关键的信息在于代码维护者是谁？这份文件是什么时候的版本？文件内容包含什么？ 因此推荐的注释模板如下：
+          <div class="dm_column_item_info dm_column_item_info_Single">
+            <div class="dm_column_item_info_code">
+<xmp class="prettyprint">/**
+ * ftnlist.css 中转站列表的样式文件，同时也用于写信超大附件的文件列表样式
+ * @author molice
+ * @date 2014-08-27
+ * 
+ * #reset
+ * 
+ * #layout 主框架布局
+ * #list 文件列表
+ * #function 公共方法函数
+ * #...
+ */
+
+/* #reset */
+body {
+  font-size: 14px;
+}
+...
+</xmp>
+            </div>
+          </div>
+
+          <div class="dm_column_tip">上述推荐模板中，在文件头注释里用“#”列出了当前文件的内容结构，在某个代码段开始处又注明了当前代码段的“#”标志，从而实现类似于文件目录的形式。 为什么使用“#”来标志，一方面是“#”在url内属于hash部分，本身是用来做锚点定位的，其次vim默认配置里，当使用“#”或“*”快捷键搜索当前光标所处的单词时，“#”能和字母一起被识别为一个完整单词，这样整个文件里某个“#”标志只可能出现两次：一次在文件头目录内，一次在实际代码段位置开头。这样就能实现目录搜索定位功能了。</div>
+
+        </div>
+
+      </div>
+      <!-- 文件级注释 end -->
+
+      <!-- 模块级注释 start -->
+			<div class="dm_column_item">
+
+				<h3 id="qui_cssModuleCommentary" class="dm_column_item_title">模块级注释</h3>
+
+        <div class="dm_column_tip">当某个模块有较多分类/拓展的情况，需要一定的说明才能正确使用时，推荐为它加上模块级注释。 模块级注释类似面向对象编程里对某个类进行注释，说明它的作用、使用时有什么依赖、提供哪些方法、class如何嵌套。 以下是一个推荐模板：</div>
+
+        <div class="dm_column_item_info dm_column_item_info_Single">
+          <div class="dm_column_item_info_code">
+<xmp class="prettyprint">/**
+ * ftnlist.css 中转站列表的样式文件，同时也用于写信超大附件的文件列表样式
+ * @author molice
+ * @date 2014-08-27
+ * 
+ * #reset
+ * 
+ * #layout 主框架布局
+ * #list 文件列表
+ * #function 公共方法函数
+ * #...
+ */
+
+/* #reset */
+body {
+  font-size: 14px;
+}
+...
+</xmp>
+          </div>
+        </div>
+
+        <div class="dm_column_tip">其中第一行指明当前模块的名称，一般以根className命名。 从第二行开始，用相邻选择器“+”表示与根className同级的className，一般是一些当前模块的拓展选项。例如模块默认带底部边框线，但又提供一个拓展选项“.qm_list_item_BorderNone”可以在需要时去掉底部边框线。 若要表达“父-子”嵌套的关系，则缩进两个空格，用后代选择器“>”引出子级className。例如上述模板表达了使用模块时html结构应该如何嵌套：</div>
+
+        <div class="dm_column_item_info dm_column_item_info_Single">
+          <div class="dm_column_item_info_code">
+<xmp class="prettyprint"><div class="qm_list_item">
+  <div class="qm_list_item_control">这个节点可选，所以注释里用中括号“[]”包起来</div>
+  <div class="qm_list_item_content">
+    <div class="qm_list_item_textWrapper">
+      <div class="qm_list_item_title">这个节点必须放在textWrapper内，所以注释里有缩进和“>”关系</div>
+      <div class="qm_list_item_subtitle"></div>
+    </div>
+  </div>
+</div></xmp>
+          </div>
+        </div>
+
+      </div>
+      <!-- 模块级注释 end -->
+
+      <!-- 行内注释 start -->
+			<div class="dm_column_item">
+
+				<h3 id="qui_cssInlineCommentary" class="dm_column_item_title">行内注释</h3>
+
+        <div class="dm_column_tip">当某句语句比较特殊，或实现方式与标准的实现方式不同，为了避免阅读时产生疑惑，就必须为语句添加说明。 行内注释紧跟写在需要注释的语句的后面，语句和注释之间不需要有空格。行内注释以“/* ”开始，以“ */”结束。注意开头、结尾均有空格隔开注释内容。</div>
+
+        <div class="dm_column_item_info dm_column_item_info_Single">
+          <div class="dm_column_item_info_code">
+<xmp class="prettyprint">.layout_left {
+  float: left;
+  margin-right: 10px;
+}
+.layout_right {
+  overflow: hidden; /* 产生BFC，隔开左右两部分内容 */
+}</xmp>
+          </div>
+        </div>
+
+      </div>
+      <!-- 行内注释 end -->
+
+    </div>
+    <!-- SCSS/CSS 文件注释规范 end -->
+
+	</div><!-- content end -->
+
+	<script type="text/javascript" src="../public/js/all.js"></script>
+	
+	
+</body>
+</html>
+

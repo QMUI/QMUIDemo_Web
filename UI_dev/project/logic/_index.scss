@@ -1,0 +1,334 @@
+@charset "UTF-8";
+/**
+ * _index.scss 主页 
+ * @author Kayo 
+ * @date 2015-07-04
+ *
+ * #common 通用部分
+ * #banner 头部大 Banner
+ * #cnt 主体内容
+ * #foot 页脚
+ * #responsive 响应式
+ */
+
+
+// #common 通用部分
+
+// 通用栏目
+.index_column {
+  position: relative;
+  margin-bottom: 58px;
+
+  &:before { // 不用 after，避免跟 clear 里面的 after 冲突
+    content: ".";
+    position: absolute;
+    bottom: 0;
+    left: 283px;
+    right: 283px;
+    font-size: 0;
+    border-top: 1px solid $common_color_separator;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+
+    &:before {
+      content: normal; 
+    }
+  }
+}
+.index_column_title {
+  margin-bottom: 22px;
+  font-size: 34px;
+}
+.index_column_desc {
+  color: $common_color_lightGray;
+  font-size: 16px;
+  line-height: 36px;
+}
+.index_column_mobileDesc {
+  display: none;
+  line-height: 28px;
+  font-size: 16px;
+  text-align: left;
+
+  p {
+    margin-top: 31px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
+
+// 通用按钮
+@mixin ghostBtn($borderColor: #fff, $textColor: #fff) {
+  display: inline-block;
+  min-width: 100px;
+  margin-bottom: 20px;
+  padding: 5px 29px;
+  font-size: 22px;
+  text-align: center;
+  @extend %disabledUserSelect;
+  border: 1px solid $borderColor;
+  border-radius: 6px;
+  color: $textColor;
+  @extend %commonAnimation;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  @include forMobile() {
+    padding-left: 25px;
+    padding-right: 25px;
+    font-size: 18px;
+  }
+}
+.index_downloadBtn {
+  @include ghostBtn(#474860, #4E4F66);
+
+  &:hover {
+    border-color: #676884;
+    background-color: #676884;
+    color: #fff;
+  }
+  &:active {
+    border-color: #474860;
+    background-color: #474860;
+  }
+}
+
+
+// #banner 头部大 Banner
+.index_banner {
+  padding: 75px 0 85px;
+  @include gradient_vertical($start-color: $frame_head_background, $end-color: #06DCE9, $start-percent: 0%, $end-percent: 100%);
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+
+  .dm_icon {
+    margin-bottom: 48px;
+    vertical-align: top;
+  }
+  .dm_icon_BannerMobileLogo {
+    display: none;
+  }
+}
+.index_banner_desc {
+  margin-bottom: 49px;
+  color: #fff;
+  font-size: 30px;
+  line-height: 52px;
+}
+.index_banner_startBtn {
+  @include ghostBtn();
+
+  &:hover {
+    background-color: rgba(255, 255, 255, .2);
+    color: #fff;
+  }
+  &:acitve {
+    background-color: #fff;
+    color: #04DACD;
+  }
+}
+.index_banner_version {
+  color: #fff;
+  font-size: 14px;
+}
+
+// #cnt 主体内容
+.index_cnt {
+  margin-bottom: 74px;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+}
+.index_cnt_inside {
+  width: $frame_base_width;
+  margin: 0 auto;
+  padding-top: 88px;
+}
+.index_cnt_purpose {
+  padding-bottom: 58px;
+}
+
+.index_cnt_ability {
+  padding-bottom: 42px;
+}
+.index_cnt_ability_list {
+  @extend %clear;
+}
+.index_ability_item {
+  float: left;
+  width: 49.9%;
+  margin-bottom: 40px;
+  padding-left: 60px;
+  vertical-align: top;
+  text-align: left;
+  @include box_sizing(border-box);
+}
+.index_ability_item_title {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: $common_color_darkGray;
+}
+.index_ability_item_cnt {
+  color: $common_color_lightGray;
+}
+.index_ability_item_list_item {
+  list-style: disc;
+}
+
+.index_appIntro {
+  margin-bottom: 52px;
+  padding-bottom: 50px;
+}
+.index_appIntro_desc {
+  margin-bottom: 46px;
+}
+.index_appIntro_img {
+  display: block;
+  width: $index_appIntro_img_width;
+  height: $index_appIntro_img_height;
+  margin: 0 auto 80px;
+  background: url($images_path + "App.png") no-repeat;
+  background-size: 100%;
+  @include box_shadow(0 20px 30px 0 #CFDCE6);
+
+  @include screenResolution(2) {
+    background-image: url($images_path + "App_2x.png");
+  }
+}
+@supports (-webkit-filter: drop-shadow($index_appIntro_img_dropShadow)) or (filter: drop-shadow($index_appIntro_img_dropShadow)) {
+  .index_appIntro_img {
+    @include box_shadow(none);
+    -webkit-filter: drop-shadow($index_appIntro_img_dropShadow);
+    filter: drop-shadow($index_appIntro_img_dropShadow);
+  }
+}
+
+.index_project_desc {
+  margin-bottom: 45px;
+}
+.index_project_list_item {
+  margin-left: 78px;
+  line-height: 0;
+  vertical-align: top;
+
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+// #foot 页脚
+.index_foot {
+  padding: 72px 0;
+  background-color: #f8f9fa;
+  color: $common_color_lightGray;
+  text-align: center;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+
+  .dm_icon {
+    margin-bottom: 13px;
+  }
+}
+
+// #responsive 响应式
+@include forMobile() {
+  .index_banner {
+    padding: 30px $frame_base_mobile_paddingHorizontal 25px $frame_base_mobile_paddingHorizontal;
+
+    .dm_icon {
+      margin-bottom: 21px;
+    }
+  }
+  .index_banner .dm_icon_BannerLogo {
+    display: none;
+  }
+  .index_banner .dm_icon_BannerMobileLogo {
+    display: inline-block;
+  }
+  .index_banner_desc {
+    margin-bottom: 33px;
+    font-size: 18px;
+    line-height: 26px;
+  }
+  .index_banner_startBtn {
+    margin-bottom: 44px;
+  }
+
+  .index_cnt {
+    margin-bottom: 50px;
+  }
+  .index_cnt_inside {
+    width: auto;
+    padding-top: 40px;
+    padding-left: $frame_base_mobile_paddingHorizontal;
+    padding-right: $frame_base_mobile_paddingHorizontal;
+  }
+  .index_column {
+    margin-bottom: 50px;
+
+    &:before { // 不用 after，避免跟 clear 里面的 after 冲突
+      left: 50%;
+      right: auto;
+      width: 100px;
+      margin-left: -50px;
+    }
+  }
+
+  .index_column_title {
+    margin-bottom: 30px;
+    font-size: 22px;
+  }
+  .index_column_desc {
+    display: none;
+  }
+  .index_column_mobileDesc {
+    display: block;
+  }
+  
+  .index_appIntro_img {
+    height: auto;
+    width: $index_appIntro_img_mobile_width;
+    padding-bottom: $index_appIntro_img_height / $index_appIntro_img_width * $index_appIntro_img_mobile_width;
+  }
+  .index_appIntro_desc {
+    margin-bottom: 30px;
+  }
+
+  .index_ability_item {
+    float: none;
+    width: auto;
+    margin-bottom: 35px;
+    padding-left: 0;
+  }
+  .index_ability_item_title {
+    font-size: 16px;
+  }
+  .index_ability_item_cnt {
+    font-size: 16px;
+  }
+  .index_ability_item_list {
+    margin-left: 18px;
+  }
+
+  .index_appIntro_downloadDirect {
+    display: none;
+  }
+
+  .index_project_desc {
+    margin-bottom: 35px;
+  }
+  .index_project_list_item {
+    margin-left: 20px;
+  }
+
+  .index_foot {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
