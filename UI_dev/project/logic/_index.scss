@@ -8,6 +8,7 @@
  * #banner 头部大 Banner
  * #cnt 主体内容
  * #foot 页脚
+ * #star Github Star 引导
  * #responsive 响应式
  */
 
@@ -121,7 +122,8 @@
   font-size: 30px;
   line-height: 52px;
 }
-.index_banner_startBtn {
+.index_banner_startBtn,
+.index_banner_demoBtn {
   @include ghostBtn();
 
   &:hover {
@@ -132,6 +134,9 @@
     background-color: #fff;
     color: #04DACD;
   }
+}
+.index_banner_demoBtn {
+  margin-left: 15px;
 }
 .index_banner_version {
   color: #fff;
@@ -236,6 +241,36 @@
   }
 }
 
+
+// #star Github Star 引导
+.index_star {
+  position: absolute;
+  right: -$index_star_width / 4;
+  top: $index_star_width / 4 - 15;
+  z-index: $common_zIndex_10;
+  width: $index_star_width;
+  padding: 2px 0;
+  background-color: #fff;
+  @include box_shadow(0, 0, 0, .15);
+  @include rotate(45deg);
+}
+.index_star_inner {
+  display: block;
+  height: 28px;
+  border: 1px dashed #7FD0E8;
+  border-width: 1px 0;
+  line-height: 28px; 
+  font-size: 16px;
+  color: #01AAE1;
+  text-align: center;
+
+  &:hover {
+    text-decoration: none;
+    color: #01AAE1;
+  }
+}
+
+
 // #responsive 响应式
 @include forMobile() {
   .index_banner {
@@ -256,7 +291,13 @@
     font-size: 18px;
     line-height: 26px;
   }
-  .index_banner_startBtn {
+  .index_banner_startBtn,
+  .index_banner_demoBtn {
+    margin-left: 5px;
+    margin-right: 5px; // 为了确保按钮竖排时可以居中对齐，因此左右都加 margin
+    margin-bottom: 15px;
+  }
+  .index_banner_demoBtn {
     margin-bottom: 44px;
   }
 
