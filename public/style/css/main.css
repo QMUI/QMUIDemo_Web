@@ -1772,7 +1772,7 @@ pre.dm_column_tip {
 /* line 19, ../../../UI_dev/project/logic/_index.scss */
 .index_wrap {
   width: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 /* line 25, ../../../UI_dev/project/logic/_index.scss */
