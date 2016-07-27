@@ -2237,6 +2237,19 @@ pre.dm_column_tip {
     padding-top: 50px;
     padding-bottom: 50px;
   }
+
+  /* line 376, ../../../UI_dev/project/logic/_index.scss */
+  .index_star {
+    right: -52px;
+    top: 37px;
+    width: 208px;
+  }
+
+  /* line 381, ../../../UI_dev/project/logic/_index.scss */
+  .index_star_inner {
+    height: 24px;
+    line-height: 24px;
+  }
 }
 /**
  * _tool.scss 工具方法页面 

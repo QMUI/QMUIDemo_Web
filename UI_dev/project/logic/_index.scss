@@ -372,4 +372,14 @@
     padding-top: 50px;
     padding-bottom: 50px;
   }
+
+  .index_star {
+    right: -$index_star_mobile_width / 4;
+    top: $index_star_mobile_width / 4 - 15;
+    width: $index_star_mobile_width;
+  }
+  .index_star_inner {
+    height: 24px;
+    line-height: 24px; 
+  }
 }
