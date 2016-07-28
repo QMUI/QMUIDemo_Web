@@ -275,10 +275,10 @@ var wxConfigData = Lib.get({
   callback: function(result) {
     wx.config({
     debug: false,
-    appId: data.appId,
-    timestamp: data.timestamp,
-    nonceStr: data.nonceStr,
-    signature: data.signature,
+    appId: result.appId,
+    timestamp: result.timestamp,
+    nonceStr: result.nonceStr,
+    signature: result.signature,
     jsApiList: [
       'checkJsApi',
       'onMenuShareTimeline',
