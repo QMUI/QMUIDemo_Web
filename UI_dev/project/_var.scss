@@ -167,5 +167,15 @@ $index_appIntro_img_width: 501px;
 $index_appIntro_img_height: 601px;
 $index_appIntro_img_mobile_width: 90%;
 
+$index_star_rotate: 45deg;
+$index_star_padding: 2px 0;
+// PC 下
 $index_star_width: 268px;
+$index_star_right: -(floor($index_star_width / 4));
+$index_star_top: abs($index_star_right) - 15;
+$index_star_inner_height: 28px;
+// 响应移动端
 $index_star_mobile_width: 208px;
+$index_star_mobile_right: -(floor($index_star_mobile_width / 4));
+$index_star_mobile_top: abs($index_star_mobile_right) - 15;
+$index_star_inner_mobile_height: 24px;
