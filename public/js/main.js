@@ -100,7 +100,7 @@ if(showMask && maskWrap) {
 
 // 微信接口
 var wxConfigData = Lib.get({
-  url: 'http://qmuiteam.com/wechat-api/get_js_token.php?url=http://qmuiteam.com',
+  url: 'http://qmuiteam.com/wxapi/signature.php',
   noCache: true,
   callback: function(result) {
     wx.config({
