@@ -97,3 +97,40 @@ if(showMask && maskWrap) {
     maskWrap.style.display = 'none';
   }
 }
+
+// 微信接口
+var wxConfigData = Lib.get({
+  url: 'http://qmuiteam.com/wechat-api/get_js_token.php?url=http://qmuiteam.com',
+  noCache: true,
+  callback: function(result) {
+    wx.config({
+    debug: false,
+    appId: data.appId,
+    timestamp: data.timestamp,
+    nonceStr: data.nonceStr,
+    signature: data.signature,
+    jsApiList: [
+      'checkJsApi',
+      'onMenuShareTimeline',
+      'onMenuShareAppMessage'
+      ]
+    });
+  }
+});
+
+wx.ready(function() {
+  var config = {
+    title: document.title, // 分享标题
+    desc: '一个旨在提高 UI 开发效率，快速产生项目 UI 的前端工作流', // 分享描述
+    link: window.location.href, // 分享链接
+    imgUrl: 'http://qmuiteam.com/public/style/images/independent/share/ShareLogo.png', // 分享图标
+    success: function() {
+      console.log('分享成功');
+    },
+    cancel: function() {
+      console.log('分享失败');
+    }
+  };
+  wx.onMenuShareTimeline(config);
+  wx.onMenuShareAppMessage(config);
+});

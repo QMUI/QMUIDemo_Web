@@ -32,6 +32,142 @@ h={};g()}};typeof define==="function"&&define.amd&&define("google-code-prettify"
 PR.registerLangHandler(PR.createSimpleLexer([["pln",/^[\t\n\f\r ]+/,null," \t\r\n\u000c"]],[["str",/^"(?:[^\n\f\r"\\]|\\(?:\r\n?|\n|\f)|\\[\S\s])*"/,null],["str",/^'(?:[^\n\f\r'\\]|\\(?:\r\n?|\n|\f)|\\[\S\s])*'/,null],["lang-css-str",/^url\(([^"')]+)\)/i],["kwd",/^(?:url|rgb|!important|@import|@page|@media|@charset|inherit)(?=[^\w-]|$)/i,null],["lang-css-kw",/^(-?(?:[_a-z]|\\[\da-f]+ ?)(?:[\w-]|\\\\[\da-f]+ ?)*)\s*:/i],["com",/^\/\*[^*]*\*+(?:[^*/][^*]*\*+)*\//],
 ["com",/^(?:<\!--|--\>)/],["lit",/^(?:\d+|\d*\.\d+)(?:%|[a-z]+)?/i],["lit",/^#[\da-f]{3,6}\b/i],["pln",/^-?(?:[_a-z]|\\[\da-f]+ ?)(?:[\w-]|\\\\[\da-f]+ ?)*/i],["pun",/^[^\s\w"']+/]]),["css"]);PR.registerLangHandler(PR.createSimpleLexer([],[["kwd",/^-?(?:[_a-z]|\\[\da-f]+ ?)(?:[\w-]|\\\\[\da-f]+ ?)*/i]]),["css-kw"]);PR.registerLangHandler(PR.createSimpleLexer([],[["str",/^[^"')]+/]]),["css-str"]);
 
+Lib = {};
+Lib.createXHR = function(){
+
+  if ( 'XMLHttpRequest' in window ){
+
+    /**
+     * @ignore
+     * @supported For Modern Browers
+     */
+    Lib.createXHR = function(){
+      return new XMLHttpRequest();
+    };
+
+  } else if( 'ActiveXObject' in window ){
+
+    /**
+     * @ignore
+     * @supported IE6-7
+     */
+    Lib.createXHR = function(){
+
+      return new ActiveXObject("Msxml2.XMLHTTP");
+    };
+
+  } else {
+
+    /**
+     * @ignore
+     * @supported IE5
+     */
+    Lib.createXHR = function(){
+      throw new Error("Ajax is not supported by this browser");
+    };
+
+  }
+
+  return Lib.createXHR();
+
+};
+
+/**
+ * Ajax 请求方法
+ * 
+ * @method ajax
+ * 
+ * @param {Object} ajaxData Ajax 的请求选项，包括 type, data, dataType, url, noCache, before, error, callback
+ * @return {Object} 返回一个 xhr 对象
+ */
+
+Lib.request = function(ajaxData){
+
+  var xhr = Lib.createXHR();
+
+  ajaxData.before && ajaxData.before();
+
+  /**
+   * 通过事件来处理异步请求
+   * @ignore
+   */
+  xhr.onreadystatechange = function(){
+
+    if( xhr.readyState == 4 ){
+
+      if( xhr.status == 200 ){
+
+        if( ajaxData.dataType == 'json' ){
+
+          // 获取服务器返回的 json 对象
+          jsonStr = xhr.responseText;
+          json1 = eval('(' + jsonStr + ')'),
+                json2 = (new Function('return ' + jsonStr))();
+          ajaxData.callback(json2);
+          // ajaxData.callback(JSON.parse(xhr.responseText)); // 原生方法，IE6/7 不支持
+
+        } else
+
+          ajaxData.callback(xhr.responseText);
+
+      } else {
+
+        ajaxData.error && ajaxData.error(xhr.responseText);
+      }
+    }
+  };
+
+  // 设置请求参数
+  xhr.open(ajaxData.type, ajaxData.url);
+
+  if( ajaxData.noCache == true ) xhr.setRequestHeader('If-Modified-Since', '0');
+
+  if( ajaxData.data ){
+
+    xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
+    xhr.send( ajaxData.data );
+
+  } else {
+
+    xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+    xhr.send( null );
+  }
+
+  return xhr;
+};
+
+/**
+ * Ajax 的 post 请求方法，从 ajax 方法中封装出来
+ * @param {Object} ajaxData Ajax 的请求选项，包括 data, dataType, url, noCache, before, error, callback
+ * 另外 type 会在该方法中被覆盖为 'POST'
+ */
+
+Lib.post = function(ajaxData){
+
+  ajaxData.type = 'POST';
+
+  var _result = Lib.request(ajaxData);
+
+  return _result;
+};
+
+/**
+ * Ajax 的 get 请求方法，从 ajax 方法中封装出来
+ * @param {Object} ajaxData Ajax 的请求选项，包括 dataType, url, noCache, before, error, callback
+ * 另外 type 和 data 会在该方法中分别被覆盖为 'GET' 和 null(get 方法不能发送数据)
+ */
+
+Lib.get = function(ajaxData){
+
+  ajaxData.type = 'GET';
+
+  ajaxData.data = null;
+
+  var _result = Lib.request(ajaxData);
+
+  return _result;
+};
+
 'use strict';
 
 /**
@@ -131,3 +267,40 @@ if(showMask && maskWrap) {
     maskWrap.style.display = 'none';
   }
 }
+
+// 微信接口
+var wxConfigData = Lib.get({
+  url: 'http://qmuiteam.com/wechat-api/get_js_token.php?url=http://qmuiteam.com',
+  noCache: true,
+  callback: function(result) {
+    wx.config({
+    debug: false,
+    appId: data.appId,
+    timestamp: data.timestamp,
+    nonceStr: data.nonceStr,
+    signature: data.signature,
+    jsApiList: [
+      'checkJsApi',
+      'onMenuShareTimeline',
+      'onMenuShareAppMessage'
+      ]
+    });
+  }
+});
+
+wx.ready(function() {
+  var config = {
+    title: document.title, // 分享标题
+    desc: '一个旨在提高 UI 开发效率，快速产生项目 UI 的前端工作流', // 分享描述
+    link: window.location.href, // 分享链接
+    imgUrl: 'http://qmuiteam.com/public/style/images/independent/share/ShareLogo.png', // 分享图标
+    success: function() {
+      console.log('分享成功');
+    },
+    cancel: function() {
+      console.log('分享失败');
+    }
+  };
+  wx.onMenuShareTimeline(config);
+  wx.onMenuShareAppMessage(config);
+});
