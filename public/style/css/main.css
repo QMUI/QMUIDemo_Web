@@ -300,9 +300,18 @@ audio, canvas, video {
   _overflow-y: hidden;
 }
 
+/* line 32, ../../../UI_dev/qmui_web/qmui/component/_button.scss */
+a.qui_btn {
+  text-decoration: none;
+}
+/* line 35, ../../../UI_dev/qmui_web/qmui/component/_button.scss */
+a.qui_btn:hover {
+  text-decoration: none;
+}
+
 /* 在低版本 ie 下，带有 border 的 submit 类型的 input 或 button 会有一条黑边，无法去除,
  * 所以如果按钮样式的 border 不为 none，项目又需要考虑兼容低版本 ie，则建议使用 a 标签代替 */
-/* line 34, ../../../UI_dev/qmui_web/qmui/component/_button.scss */
+/* line 42, ../../../UI_dev/qmui_web/qmui/component/_button.scss */
 button.qui_btn,
 input.qui_btn {
   *overflow: visible;
@@ -1827,8 +1836,8 @@ pre.dm_column_tip {
   display: inline-block;
   min-width: 100px;
   margin-bottom: 20px;
-  padding: 5px 29px;
-  font-size: 22px;
+  padding: 8px 32px;
+  font-size: 18px;
   text-align: center;
   border: 1px solid #474860;
   border-radius: 6px;
@@ -1895,8 +1904,8 @@ pre.dm_column_tip {
   display: inline-block;
   min-width: 100px;
   margin-bottom: 20px;
-  padding: 5px 29px;
-  font-size: 22px;
+  padding: 8px 32px;
+  font-size: 18px;
   text-align: center;
   border: 1px solid #fff;
   border-radius: 6px;

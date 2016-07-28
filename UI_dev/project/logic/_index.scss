@@ -67,8 +67,8 @@
   display: inline-block;
   min-width: 100px;
   margin-bottom: 20px;
-  padding: 5px 29px;
-  font-size: 22px;
+  padding: 8px 32px; 
+  font-size: 18px;
   text-align: center;
   @extend %disabledUserSelect;
   border: 1px solid $borderColor;
