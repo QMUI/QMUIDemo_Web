@@ -116,21 +116,25 @@ $.getJSON('http://qmuiteam.com/wxapi/signature.php?url=' + encodeURIComponent(cu
 
 wx.ready(function() {
   var currentUrl = window.location.href,
-  isIndex = currentUrl.indexOf('index') != -1 || currentUrl.indexOf('html') == -1,
-  config = {
-    title: isIndex ? 'QMUI Web' : document.title, // 分享标题
-    desc: '一个旨在提高 UI 开发效率，快速产生项目 UI 的前端工作流', // 分享描述
-    link: currentUrl, // 分享链接
-    imgUrl: 'http://qmuiteam.com/public/style/images/independent/share/ShareLogo.png', // 分享图标
-    success: function() {
-      console.log('分享成功');
-    },
-    cancel: function() {
-      console.log('分享失败');
-    }
-  };
-  wx.onMenuShareTimeline(config);
-  wx.onMenuShareAppMessage(config);
+      isIndex = currentUrl.indexOf('index') != -1 || currentUrl.indexOf('html') == -1,
+      config = {
+        desc: '一个旨在提高 UI 开发效率，快速产生项目 UI 的前端工作流', // 分享描述
+        link: currentUrl, // 分享链接
+        imgUrl: 'http://qmuiteam.com/public/style/images/independent/share/ShareLogo.png', // 分享图标
+        success: function() {
+          console.log('分享成功');
+        },
+        cancel: function() {
+          console.log('分享失败');
+        }
+      },
+      timelineConfig = $.extend(true, {}, config),
+      shareAppMessageConfig = $.extend(true, {}, config); 
+
+  timelineConfig.title = document.title; 
+  shareAppMessageConfig.title = isIndex ? 'QMUI Web' : document.title; 
+  wx.onMenuShareTimeline(timelineConfig);
+  wx.onMenuShareAppMessage(shareAppMessageConfig);
 });
 
 // Eruda
