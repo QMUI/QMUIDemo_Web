@@ -99,23 +99,19 @@ if(showMask && maskWrap) {
 }
 
 // 微信接口
-var wxConfigData = Lib.get({
-  url: 'http://qmuiteam.com/wxapi/signature.php',
-  noCache: true,
-  callback: function(result) {
-    wx.config({
+var currentUrlWithoutHash = window.location.href.replace(window.location.hash, '');
+$.getJSON('http://qmuiteam.com/wxapi/signature.php?url=' + encodeURIComponent(currentUrlWithoutHash)).done(function(result) {
+  wx.config({
     debug: false,
     appId: result.appId,
     timestamp: result.timestamp,
     nonceStr: result.nonceStr,
     signature: result.signature,
     jsApiList: [
-      'checkJsApi',
-      'onMenuShareTimeline',
-      'onMenuShareAppMessage'
-      ]
-    });
-  }
+    'onMenuShareTimeline',
+    'onMenuShareAppMessage'
+    ]
+  });
 });
 
 wx.ready(function() {
@@ -139,7 +135,7 @@ wx.ready(function() {
 
 // Eruda
 (function () {
-  var src = '//cdn.jsdelivr.net/eruda/1.0.4/eruda.min.js';
+  var src = 'node_modules/eruda/eruda.min.js';
   if (!/eruda=true/.test(window.location) && localStorage.getItem('active-eruda') != 'true') return;
   document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
   document.write('<scr' + 'ipt>eruda.init();</scr' + 'ipt>');
