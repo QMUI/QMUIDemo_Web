@@ -290,7 +290,7 @@ var wxConfigData = Lib.get({
 
 wx.ready(function() {
   var currentUrl = window.location.href,
-  isIndex = currentUrl.indexOf('index') || currentUrl.indexOf('html') == -1,
+  isIndex = currentUrl.indexOf('index') != -1 || currentUrl.indexOf('html') == -1,
   config = {
     title: isIndex ? 'QMUI Web' : document.title, // 分享标题
     desc: '一个旨在提高 UI 开发效率，快速产生项目 UI 的前端工作流', // 分享描述
@@ -306,3 +306,11 @@ wx.ready(function() {
   wx.onMenuShareTimeline(config);
   wx.onMenuShareAppMessage(config);
 });
+
+// Eruda
+(function () {
+  var src = '//cdn.jsdelivr.net/eruda/1.0.4/eruda.min.js';
+  if (!/eruda=true/.test(window.location) && localStorage.getItem('active-eruda') != 'true') return;
+  document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
+  document.write('<scr' + 'ipt>eruda.init();</scr' + 'ipt>');
+})();
