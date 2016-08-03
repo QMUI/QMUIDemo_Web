@@ -119,10 +119,12 @@ var wxConfigData = Lib.get({
 });
 
 wx.ready(function() {
-  var config = {
-    title: document.title, // 分享标题
+  var currentUrl = window.location.href,
+  isIndex = currentUrl.indexOf('index') || currentUrl.indexOf('html') == -1,
+  config = {
+    title: isIndex ? 'QMUI Web' : document.title, // 分享标题
     desc: '一个旨在提高 UI 开发效率，快速产生项目 UI 的前端工作流', // 分享描述
-    link: window.location.href, // 分享链接
+    link: currentUrl, // 分享链接
     imgUrl: 'http://qmuiteam.com/public/style/images/independent/share/ShareLogo.png', // 分享图标
     success: function() {
       console.log('分享成功');
