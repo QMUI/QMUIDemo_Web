@@ -144,3 +144,12 @@ wx.ready(function() {
   document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
   document.write('<scr' + 'ipt>eruda.init();</scr' + 'ipt>');
 })();
+
+// 统计
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?b0246dc2e24129a9a91fc47e6f5a9d9f";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
