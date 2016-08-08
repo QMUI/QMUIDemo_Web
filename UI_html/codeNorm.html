@@ -277,23 +277,27 @@ body {
         <div class="dm_column_item_info dm_column_item_info_Single">
           <div class="dm_column_item_info_code">
 <xmp class="prettyprint">/**
- * ftnlist.css 中转站列表的样式文件，同时也用于写信超大附件的文件列表样式
- * @author molice
- * @date 2014-08-27
- * 
- * #reset
- * 
- * #layout 主框架布局
- * #list 文件列表
- * #function 公共方法函数
- * #...
+ * .qm_list_item
+ * + .qm_list_item_BorderNone 不显示item底部的分隔线
+ * + .qm_list_item_Accessory 在item右边显示向右箭头
+ * + .qm_list_item_Style2 标题、副标题上下排列
+ *
+ * > [.qm_list_item_control]      可选。在列表左边显示一个控制控件，例如checkbox、radio等
+ * > .qm_list_item_content        包裹item内容的容器
+ *   > [.qm_list_item_icon]       可选。在内容左边显示一个图片
+ *   > .qm_list_item_textWrapper  包裹item文字内容的容器，内部只能摆放文字
+ *     > .qm_list_item_title      item的标题，默认为黑色
+ *     > .qm_list_item_subtitle   item的副标题，默认会灰色
+ *
  */
-
-/* #reset */
-body {
-  font-size: 14px;
+.qm_list_item {
+  ...
+  border-bottom:1px solid #000;
+  ...
 }
-...
+.qm_list_item_BorderNone {
+  border-bottom:none;
+}
 </xmp>
           </div>
         </div>
