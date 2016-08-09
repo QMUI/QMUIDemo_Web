@@ -82,7 +82,7 @@
 
 /* line 467, ../../../UI_dev/qmui_web/qmui/helper/mixin/_compatible.scss */
 .qui_btn, .index_downloadBtn, .index_banner_startBtn,
-.index_banner_demoBtn {
+.index_banner_githubBtn {
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
@@ -580,7 +580,7 @@ a:hover {
 /* 全局动画 */
 /* line 30, ../../../UI_dev/project/_base.scss */
 .frame_nav_item, .index_downloadBtn, .index_banner_startBtn,
-.index_banner_demoBtn {
+.index_banner_githubBtn {
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
@@ -1158,7 +1158,7 @@ pre.dm_column_tip {
   float: left !important;
 }
 
-@media handheld and (max-width: 826px), screen and (max-width: 826px) {
+@media handheld and (max-width: 846px), screen and (max-width: 846px) {
   /* line 159, ../../../UI_dev/project/widget/_column.scss */
   .dm_column {
     margin-bottom: 60px;
@@ -1603,7 +1603,7 @@ pre.dm_column_tip {
     margin-left: 320px;
   }
 }
-@media handheld and (max-width: 826px), screen and (max-width: 826px) {
+@media handheld and (max-width: 846px), screen and (max-width: 846px) {
   /* line 157, ../../../UI_dev/project/logic/_frame.scss */
   .frame_head {
     padding: 0 30px;
@@ -1683,7 +1683,7 @@ pre.dm_column_tip {
     border-radius: 0;
   }
 }
-@media handheld and (max-width: 826px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 826px) and (-webkit-min-device-pixel-ratio: 2), handheld and (max-width: 826px) and (min--moz-device-pixel-ratio: 2), screen and (max-width: 826px) and (min--moz-device-pixel-ratio: 2), handheld and (max-width: 826px) and (-o-min-device-pixel-ratio: 2), screen and (max-width: 826px) and (-o-min-device-pixel-ratio: 2), handheld and (max-width: 826px) and (min-device-pixel-ratio: 2), screen and (max-width: 826px) and (min-device-pixel-ratio: 2), handheld and (max-width: 826px) and (min-resolution: 2dppx), screen and (max-width: 826px) and (min-resolution: 2dppx), handheld and (max-width: 826px) and (min-resolution: 192dpi), screen and (max-width: 826px) and (min-resolution: 192dpi) {
+@media handheld and (max-width: 846px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 846px) and (-webkit-min-device-pixel-ratio: 2), handheld and (max-width: 846px) and (min--moz-device-pixel-ratio: 2), screen and (max-width: 846px) and (min--moz-device-pixel-ratio: 2), handheld and (max-width: 846px) and (-o-min-device-pixel-ratio: 2), screen and (max-width: 846px) and (-o-min-device-pixel-ratio: 2), handheld and (max-width: 846px) and (min-device-pixel-ratio: 2), screen and (max-width: 846px) and (min-device-pixel-ratio: 2), handheld and (max-width: 846px) and (min-resolution: 2dppx), screen and (max-width: 846px) and (min-resolution: 2dppx), handheld and (max-width: 846px) and (min-resolution: 192dpi), screen and (max-width: 846px) and (min-resolution: 192dpi) {
   /* line 202, ../../../UI_dev/project/logic/_frame.scss */
   .frame_nav_item {
     position: relative;
@@ -1713,7 +1713,7 @@ pre.dm_column_tip {
     pointer-events: none;
   }
 }
-@media handheld and (max-width: 826px) and (-webkit-min-device-pixel-ratio: 3), screen and (max-width: 826px) and (-webkit-min-device-pixel-ratio: 3), handheld and (max-width: 826px) and (min--moz-device-pixel-ratio: 3), screen and (max-width: 826px) and (min--moz-device-pixel-ratio: 3), handheld and (max-width: 826px) and (-o-min-device-pixel-ratio: 3), screen and (max-width: 826px) and (-o-min-device-pixel-ratio: 3), handheld and (max-width: 826px) and (min-device-pixel-ratio: 3), screen and (max-width: 826px) and (min-device-pixel-ratio: 3), handheld and (max-width: 826px) and (min-resolution: 3dppx), screen and (max-width: 826px) and (min-resolution: 3dppx), handheld and (max-width: 826px) and (min-resolution: 288dpi), screen and (max-width: 826px) and (min-resolution: 288dpi) {
+@media handheld and (max-width: 846px) and (-webkit-min-device-pixel-ratio: 3), screen and (max-width: 846px) and (-webkit-min-device-pixel-ratio: 3), handheld and (max-width: 846px) and (min--moz-device-pixel-ratio: 3), screen and (max-width: 846px) and (min--moz-device-pixel-ratio: 3), handheld and (max-width: 846px) and (-o-min-device-pixel-ratio: 3), screen and (max-width: 846px) and (-o-min-device-pixel-ratio: 3), handheld and (max-width: 846px) and (min-device-pixel-ratio: 3), screen and (max-width: 846px) and (min-device-pixel-ratio: 3), handheld and (max-width: 846px) and (min-resolution: 3dppx), screen and (max-width: 846px) and (min-resolution: 3dppx), handheld and (max-width: 846px) and (min-resolution: 288dpi), screen and (max-width: 846px) and (min-resolution: 288dpi) {
   /* line 149, ../../../UI_dev/qmui_web/qmui/helper/mixin/tool/_effect.scss */
   .frame_nav_item:after {
     width: 300%;
@@ -1727,7 +1727,7 @@ pre.dm_column_tip {
   }
 }
 
-@media handheld and (max-width: 826px), screen and (max-width: 826px) {
+@media handheld and (max-width: 846px), screen and (max-width: 846px) {
   /* line 217, ../../../UI_dev/project/logic/_frame.scss */
   .frame_head_ShowNav .frame_nav,
   .frame_head_ShowNav .frame_head_closeMenuBtn {
@@ -1847,7 +1847,7 @@ pre.dm_column_tip {
 .index_downloadBtn:hover {
   text-decoration: none;
 }
-@media handheld and (max-width: 826px), screen and (max-width: 826px) {
+@media handheld and (max-width: 846px), screen and (max-width: 846px) {
   /* line 89, ../../../UI_dev/project/logic/_index.scss */
   .index_downloadBtn {
     padding-left: 25px;
@@ -1900,7 +1900,7 @@ pre.dm_column_tip {
 
 /* line 125, ../../../UI_dev/project/logic/_index.scss */
 .index_banner_startBtn,
-.index_banner_demoBtn {
+.index_banner_githubBtn {
   display: inline-block;
   min-width: 100px;
   margin-bottom: 20px;
@@ -1910,75 +1910,89 @@ pre.dm_column_tip {
   border: 1px solid #fff;
   border-radius: 6px;
   color: #fff;
+  width: 166px;
+  height: 45px;
+  padding-top: 0;
+  padding-bottom: 0;
+  line-height: 44px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: top;
 }
 /* line 79, ../../../UI_dev/project/logic/_index.scss */
 .index_banner_startBtn:hover,
-.index_banner_demoBtn:hover {
+.index_banner_githubBtn:hover {
   text-decoration: none;
 }
-@media handheld and (max-width: 826px), screen and (max-width: 826px) {
+@media handheld and (max-width: 846px), screen and (max-width: 846px) {
   /* line 125, ../../../UI_dev/project/logic/_index.scss */
   .index_banner_startBtn,
-  .index_banner_demoBtn {
+  .index_banner_githubBtn {
     padding-left: 25px;
     padding-right: 25px;
     font-size: 18px;
   }
 }
-/* line 129, ../../../UI_dev/project/logic/_index.scss */
+/* line 136, ../../../UI_dev/project/logic/_index.scss */
 .index_banner_startBtn:hover,
-.index_banner_demoBtn:hover {
+.index_banner_githubBtn:hover {
   background-color: rgba(255, 255, 255, 0.2);
   color: #fff;
 }
-/* line 133, ../../../UI_dev/project/logic/_index.scss */
+/* line 140, ../../../UI_dev/project/logic/_index.scss */
 .index_banner_startBtn:acitve,
-.index_banner_demoBtn:acitve {
+.index_banner_githubBtn:acitve {
   background-color: #fff;
   color: #04DACD;
 }
 
-/* line 138, ../../../UI_dev/project/logic/_index.scss */
-.index_banner_demoBtn {
+/* line 145, ../../../UI_dev/project/logic/_index.scss */
+.index_banner_startBtn {
   margin-left: 15px;
 }
 
-/* line 141, ../../../UI_dev/project/logic/_index.scss */
+/* line 148, ../../../UI_dev/project/logic/_index.scss */
+.index_banner_githubBtn {
+  font-size: 20px;
+}
+
+/* line 151, ../../../UI_dev/project/logic/_index.scss */
 .index_banner_version {
   color: #fff;
   font-size: 14px;
 }
 
-/* line 147, ../../../UI_dev/project/logic/_index.scss */
+/* line 157, ../../../UI_dev/project/logic/_index.scss */
 .index_cnt {
   margin-bottom: 74px;
   text-align: center;
   -webkit-font-smoothing: antialiased;
 }
 
-/* line 152, ../../../UI_dev/project/logic/_index.scss */
+/* line 162, ../../../UI_dev/project/logic/_index.scss */
 .index_cnt_inside {
-  width: 766px;
+  width: 786px;
   margin: 0 auto;
   padding-top: 88px;
 }
 
-/* line 157, ../../../UI_dev/project/logic/_index.scss */
+/* line 167, ../../../UI_dev/project/logic/_index.scss */
 .index_cnt_purpose {
   padding-bottom: 58px;
 }
 
-/* line 161, ../../../UI_dev/project/logic/_index.scss */
+/* line 171, ../../../UI_dev/project/logic/_index.scss */
 .index_cnt_ability {
   padding-bottom: 42px;
 }
 
-/* line 167, ../../../UI_dev/project/logic/_index.scss */
+/* line 177, ../../../UI_dev/project/logic/_index.scss */
 .index_ability_item {
   float: left;
   width: 49.9%;
   margin-bottom: 40px;
-  padding-left: 60px;
+  padding-right: 35px;
   vertical-align: top;
   text-align: left;
   -webkit-box-sizing: border-box;
@@ -1986,36 +2000,39 @@ pre.dm_column_tip {
   box-sizing: border-box;
 }
 
-/* line 176, ../../../UI_dev/project/logic/_index.scss */
+/* line 186, ../../../UI_dev/project/logic/_index.scss */
 .index_ability_item_title {
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   font-size: 20px;
   font-weight: bold;
   color: #555557;
 }
 
-/* line 182, ../../../UI_dev/project/logic/_index.scss */
+/* line 192, ../../../UI_dev/project/logic/_index.scss */
 .index_ability_item_cnt {
   color: #9595A3;
+  font-size: 15px;
+  line-height: 1.7;
 }
 
-/* line 185, ../../../UI_dev/project/logic/_index.scss */
-.index_ability_item_list_item {
-  list-style: disc;
+/* line 198, ../../../UI_dev/project/logic/_index.scss */
+.index_ability_item_Even {
+  padding-right: 0;
+  padding-left: 35px;
 }
 
-/* line 189, ../../../UI_dev/project/logic/_index.scss */
+/* line 203, ../../../UI_dev/project/logic/_index.scss */
 .index_appIntro {
   margin-bottom: 52px;
   padding-bottom: 50px;
 }
 
-/* line 193, ../../../UI_dev/project/logic/_index.scss */
+/* line 207, ../../../UI_dev/project/logic/_index.scss */
 .index_appIntro_desc {
   margin-bottom: 46px;
 }
 
-/* line 196, ../../../UI_dev/project/logic/_index.scss */
+/* line 210, ../../../UI_dev/project/logic/_index.scss */
 .index_appIntro_img {
   display: block;
   width: 501px;
@@ -2028,14 +2045,14 @@ pre.dm_column_tip {
   box-shadow: 0 20px 30px 0 #CFDCE6;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2), (min-resolution: 2dppx), (min-resolution: 192dpi) {
-  /* line 196, ../../../UI_dev/project/logic/_index.scss */
+  /* line 210, ../../../UI_dev/project/logic/_index.scss */
   .index_appIntro_img {
     background-image: url("../images/independent/App_2x.png");
   }
 }
 
 @supports (-webkit-filter: drop-shadow(0 20px 20px #cfdce6)) or (filter: drop-shadow(0 20px 20px #cfdce6)) {
-  /* line 210, ../../../UI_dev/project/logic/_index.scss */
+  /* line 224, ../../../UI_dev/project/logic/_index.scss */
   .index_appIntro_img {
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
@@ -2044,23 +2061,23 @@ pre.dm_column_tip {
     filter: drop-shadow(0 20px 20px #cfdce6);
   }
 }
-/* line 217, ../../../UI_dev/project/logic/_index.scss */
+/* line 231, ../../../UI_dev/project/logic/_index.scss */
 .index_project_desc {
   margin-bottom: 45px;
 }
 
-/* line 220, ../../../UI_dev/project/logic/_index.scss */
+/* line 234, ../../../UI_dev/project/logic/_index.scss */
 .index_project_list_item {
   margin-left: 78px;
   line-height: 0;
   vertical-align: top;
 }
-/* line 225, ../../../UI_dev/project/logic/_index.scss */
+/* line 239, ../../../UI_dev/project/logic/_index.scss */
 .index_project_list_item:first-child {
   margin-left: 0;
 }
 
-/* line 231, ../../../UI_dev/project/logic/_index.scss */
+/* line 245, ../../../UI_dev/project/logic/_index.scss */
 .index_foot {
   padding: 72px 0;
   background-color: #f8f9fa;
@@ -2069,12 +2086,12 @@ pre.dm_column_tip {
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
 }
-/* line 239, ../../../UI_dev/project/logic/_index.scss */
+/* line 253, ../../../UI_dev/project/logic/_index.scss */
 .index_foot .dm_icon {
   margin-bottom: 13px;
 }
 
-/* line 246, ../../../UI_dev/project/logic/_index.scss */
+/* line 260, ../../../UI_dev/project/logic/_index.scss */
 .index_starWrap {
   position: absolute;
   right: 0;
@@ -2085,7 +2102,7 @@ pre.dm_column_tip {
   overflow: hidden;
 }
 
-/* line 257, ../../../UI_dev/project/logic/_index.scss */
+/* line 271, ../../../UI_dev/project/logic/_index.scss */
 .index_star {
   position: absolute;
   right: -67px;
@@ -2103,7 +2120,7 @@ pre.dm_column_tip {
   transform: rotate(45deg);
 }
 
-/* line 267, ../../../UI_dev/project/logic/_index.scss */
+/* line 281, ../../../UI_dev/project/logic/_index.scss */
 .index_star_inner {
   display: block;
   height: 28px;
@@ -2114,58 +2131,58 @@ pre.dm_column_tip {
   color: #01AAE1;
   text-align: center;
 }
-/* line 277, ../../../UI_dev/project/logic/_index.scss */
+/* line 291, ../../../UI_dev/project/logic/_index.scss */
 .index_star_inner:hover {
   text-decoration: none;
   color: #01AAE1;
 }
 
-@media handheld and (max-width: 826px), screen and (max-width: 826px) {
-  /* line 286, ../../../UI_dev/project/logic/_index.scss */
+@media handheld and (max-width: 846px), screen and (max-width: 846px) {
+  /* line 300, ../../../UI_dev/project/logic/_index.scss */
   .index_banner {
     padding: 30px 30px 25px 30px;
   }
-  /* line 289, ../../../UI_dev/project/logic/_index.scss */
+  /* line 303, ../../../UI_dev/project/logic/_index.scss */
   .index_banner .dm_icon {
     margin-bottom: 21px;
   }
 
-  /* line 293, ../../../UI_dev/project/logic/_index.scss */
+  /* line 307, ../../../UI_dev/project/logic/_index.scss */
   .index_banner .dm_icon_BannerLogo {
     display: none;
   }
 
-  /* line 296, ../../../UI_dev/project/logic/_index.scss */
+  /* line 310, ../../../UI_dev/project/logic/_index.scss */
   .index_banner .dm_icon_BannerMobileLogo {
     display: inline-block;
   }
 
-  /* line 299, ../../../UI_dev/project/logic/_index.scss */
+  /* line 313, ../../../UI_dev/project/logic/_index.scss */
   .index_banner_desc {
     margin-bottom: 33px;
     font-size: 18px;
     line-height: 26px;
   }
 
-  /* line 304, ../../../UI_dev/project/logic/_index.scss */
+  /* line 318, ../../../UI_dev/project/logic/_index.scss */
   .index_banner_startBtn,
-  .index_banner_demoBtn {
+  .index_banner_githubBtn {
     margin-left: 5px;
     margin-right: 5px;
     margin-bottom: 15px;
   }
 
-  /* line 310, ../../../UI_dev/project/logic/_index.scss */
-  .index_banner_demoBtn {
+  /* line 324, ../../../UI_dev/project/logic/_index.scss */
+  .index_banner_startBtn {
     margin-bottom: 44px;
   }
 
-  /* line 314, ../../../UI_dev/project/logic/_index.scss */
+  /* line 328, ../../../UI_dev/project/logic/_index.scss */
   .index_cnt {
     margin-bottom: 50px;
   }
 
-  /* line 317, ../../../UI_dev/project/logic/_index.scss */
+  /* line 331, ../../../UI_dev/project/logic/_index.scss */
   .index_cnt_inside {
     width: auto;
     padding-top: 40px;
@@ -2173,11 +2190,11 @@ pre.dm_column_tip {
     padding-right: 30px;
   }
 
-  /* line 323, ../../../UI_dev/project/logic/_index.scss */
+  /* line 337, ../../../UI_dev/project/logic/_index.scss */
   .index_column {
     margin-bottom: 50px;
   }
-  /* line 326, ../../../UI_dev/project/logic/_index.scss */
+  /* line 340, ../../../UI_dev/project/logic/_index.scss */
   .index_column:before {
     left: 50%;
     right: auto;
@@ -2185,35 +2202,35 @@ pre.dm_column_tip {
     margin-left: -50px;
   }
 
-  /* line 334, ../../../UI_dev/project/logic/_index.scss */
+  /* line 348, ../../../UI_dev/project/logic/_index.scss */
   .index_column_title {
     margin-bottom: 30px;
     font-size: 22px;
   }
 
-  /* line 338, ../../../UI_dev/project/logic/_index.scss */
+  /* line 352, ../../../UI_dev/project/logic/_index.scss */
   .index_column_desc {
     display: none;
   }
 
-  /* line 341, ../../../UI_dev/project/logic/_index.scss */
+  /* line 355, ../../../UI_dev/project/logic/_index.scss */
   .index_column_mobileDesc {
     display: block;
   }
 
-  /* line 345, ../../../UI_dev/project/logic/_index.scss */
+  /* line 359, ../../../UI_dev/project/logic/_index.scss */
   .index_appIntro_img {
     height: auto;
     width: 90%;
     padding-bottom: 107.96407%;
   }
 
-  /* line 350, ../../../UI_dev/project/logic/_index.scss */
+  /* line 364, ../../../UI_dev/project/logic/_index.scss */
   .index_appIntro_desc {
     margin-bottom: 30px;
   }
 
-  /* line 354, ../../../UI_dev/project/logic/_index.scss */
+  /* line 368, ../../../UI_dev/project/logic/_index.scss */
   .index_ability_item {
     float: none;
     width: auto;
@@ -2221,56 +2238,51 @@ pre.dm_column_tip {
     padding-left: 0;
   }
 
-  /* line 360, ../../../UI_dev/project/logic/_index.scss */
+  /* line 374, ../../../UI_dev/project/logic/_index.scss */
   .index_ability_item_title {
     font-size: 16px;
   }
 
-  /* line 363, ../../../UI_dev/project/logic/_index.scss */
+  /* line 377, ../../../UI_dev/project/logic/_index.scss */
   .index_ability_item_cnt {
     font-size: 16px;
   }
 
-  /* line 366, ../../../UI_dev/project/logic/_index.scss */
-  .index_ability_item_list {
-    margin-left: 18px;
-  }
-
-  /* line 370, ../../../UI_dev/project/logic/_index.scss */
+  /* line 381, ../../../UI_dev/project/logic/_index.scss */
   .index_appIntro_downloadDirect {
     display: none;
   }
 
-  /* line 374, ../../../UI_dev/project/logic/_index.scss */
+  /* line 385, ../../../UI_dev/project/logic/_index.scss */
   .index_project_desc {
     margin-bottom: 35px;
   }
 
-  /* line 377, ../../../UI_dev/project/logic/_index.scss */
+  /* line 388, ../../../UI_dev/project/logic/_index.scss */
   .index_project_list_item {
     margin-left: 20px;
   }
 
-  /* line 381, ../../../UI_dev/project/logic/_index.scss */
+  /* line 392, ../../../UI_dev/project/logic/_index.scss */
   .index_foot {
     padding-top: 50px;
     padding-bottom: 50px;
   }
 
-  /* line 386, ../../../UI_dev/project/logic/_index.scss */
+  /* line 397, ../../../UI_dev/project/logic/_index.scss */
   .index_starWrap {
     width: 126px;
     height: 125px;
   }
 
-  /* line 392, ../../../UI_dev/project/logic/_index.scss */
+  /* line 403, ../../../UI_dev/project/logic/_index.scss */
   .index_star {
     right: -52px;
     top: 37px;
     width: 208px;
   }
 
-  /* line 397, ../../../UI_dev/project/logic/_index.scss */
+  /* line 408, ../../../UI_dev/project/logic/_index.scss */
   .index_star_inner {
     height: 24px;
     line-height: 24px;

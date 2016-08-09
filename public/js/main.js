@@ -118,7 +118,7 @@ wx.ready(function() {
   var currentUrl = window.location.href,
       isIndex = currentUrl.indexOf('index') != -1 || currentUrl.indexOf('html') == -1,
       config = {
-        desc: '一个旨在提高 UI 开发效率，快速产生项目 UI 的前端工作流', // 分享描述
+        desc: '一个旨在提高 UI 开发效率，快速产生项目 UI 的前端框架', // 分享描述
         link: currentUrl, // 分享链接
         imgUrl: 'http://qmuiteam.com/public/style/images/independent/share/ShareLogo.png', // 分享图标
         success: function() {
