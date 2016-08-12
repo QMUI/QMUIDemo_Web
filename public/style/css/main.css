@@ -2040,8 +2040,8 @@ pre.dm_column_tip {
 /* line 210, ../../../UI_dev/project/logic/_index.scss */
 .index_appIntro_img {
   display: block;
-  width: 501px;
-  height: 601px;
+  width: 440px;
+  height: 640px;
   margin: 0 auto 80px;
   background: url("../images/independent/App.png") no-repeat;
   background-size: 100%;
@@ -2227,7 +2227,7 @@ pre.dm_column_tip {
   .index_appIntro_img {
     height: auto;
     width: 90%;
-    padding-bottom: 107.96407%;
+    padding-bottom: 130.90909%;
   }
 
   /* line 364, ../../../UI_dev/project/logic/_index.scss */
