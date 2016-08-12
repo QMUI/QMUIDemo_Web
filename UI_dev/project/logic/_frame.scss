@@ -42,11 +42,9 @@
   font-size: $frame_head_title_fontSize;
 }
 .frame_head_title_link {
-  display: block;
-  padding-top: ($frame_head_height - $frame_head_title_fontSize) / 2;
-  color: #fff;
-  line-height: 1;
-  font-weight: bold;
+  margin-top: ($frame_head_height - 20) / 2;
+  line-height: 200;
+  overflow: hidden;
 
   &:hover {
     text-decoration: none;
