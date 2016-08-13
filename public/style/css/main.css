@@ -1636,7 +1636,7 @@ pre.dm_column_tip {
   /* line 176, ../../../UI_dev/project/logic/_frame.scss */
   .frame_head .frame_head_closeMenuBtn {
     left: 11px;
-    top: 12px;
+    top: 5px;
   }
 
   /* line 181, ../../../UI_dev/project/logic/_frame.scss */
@@ -1656,6 +1656,28 @@ pre.dm_column_tip {
   }
 
   /* line 193, ../../../UI_dev/project/logic/_frame.scss */
+  .frame_nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 80;
+    display: none;
+    height: 100vh;
+    width: 100%;
+    padding: 74px 48px 24px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #00A3E1), color-stop(100%, #06DCE9));
+    background-image: -webkit-linear-gradient(top, #00A3E1 0%, #06DCE9 100%);
+    background-image: -moz-linear-gradient(top, #00A3E1 0%, #06DCE9 100%);
+    background-image: -o-linear-gradient(top, #00A3E1 0%, #06DCE9 100%);
+    background-image: linear-gradient(to bottom, #00A3E1 0%, #06DCE9 100%);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF00A3E1', endColorstr='#FF06DCE9', GradientType=0);
+  }
+
+  /* line 205, ../../../UI_dev/project/logic/_frame.scss */
   .frame_nav_item {
     float: none;
     display: block;
@@ -1674,7 +1696,7 @@ pre.dm_column_tip {
   }
 }
 @media handheld and (max-width: 846px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 846px) and (-webkit-min-device-pixel-ratio: 2), handheld and (max-width: 846px) and (min--moz-device-pixel-ratio: 2), screen and (max-width: 846px) and (min--moz-device-pixel-ratio: 2), handheld and (max-width: 846px) and (-o-min-device-pixel-ratio: 2), screen and (max-width: 846px) and (-o-min-device-pixel-ratio: 2), handheld and (max-width: 846px) and (min-device-pixel-ratio: 2), screen and (max-width: 846px) and (min-device-pixel-ratio: 2), handheld and (max-width: 846px) and (min-resolution: 2dppx), screen and (max-width: 846px) and (min-resolution: 2dppx), handheld and (max-width: 846px) and (min-resolution: 192dpi), screen and (max-width: 846px) and (min-resolution: 192dpi) {
-  /* line 193, ../../../UI_dev/project/logic/_frame.scss */
+  /* line 205, ../../../UI_dev/project/logic/_frame.scss */
   .frame_nav_item {
     position: relative;
     border: none;
@@ -1718,22 +1740,22 @@ pre.dm_column_tip {
 }
 
 @media handheld and (max-width: 846px), screen and (max-width: 846px) {
-  /* line 208, ../../../UI_dev/project/logic/_frame.scss */
+  /* line 220, ../../../UI_dev/project/logic/_frame.scss */
   .frame_head_ShowNav .frame_nav,
   .frame_head_ShowNav .frame_head_closeMenuBtn {
     display: block;
   }
-  /* line 212, ../../../UI_dev/project/logic/_frame.scss */
+  /* line 224, ../../../UI_dev/project/logic/_frame.scss */
   .frame_head_ShowNav .frame_head_showMenuBtn {
     display: none;
   }
 
-  /* line 217, ../../../UI_dev/project/logic/_frame.scss */
+  /* line 229, ../../../UI_dev/project/logic/_frame.scss */
   .frame_sidebar {
     display: none;
   }
 
-  /* line 220, ../../../UI_dev/project/logic/_frame.scss */
+  /* line 232, ../../../UI_dev/project/logic/_frame.scss */
   .frame_cnt {
     margin-left: 0;
     padding-left: 30px;
