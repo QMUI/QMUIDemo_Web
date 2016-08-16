@@ -80,7 +80,7 @@
   word-wrap: normal;
 }
 
-/* line 467, ../../../UI_dev/qmui_web/qmui/helper/mixin/_compatible.scss */
+/* line 475, ../../../UI_dev/qmui_web/qmui/helper/mixin/_compatible.scss */
 .qui_btn, .index_downloadBtn, .index_banner_startBtn,
 .index_banner_githubBtn {
   -moz-user-select: none;
