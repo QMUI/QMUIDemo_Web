@@ -6,8 +6,8 @@
   <meta name="renderer" content="webkit" />
   <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
   <meta content="no-siteapp" http-equiv="Cache-Control" />
-  <meta name="description" content="一个旨在提高 UI 开发效率，快速产生项目 UI 的前端工作流" />
-  <meta name="keywords" content="QMUI Web,QMUI,UI 开发,QMUI Web 官网,前端工作流, UI 开发工作流" />
+  <meta name="description" content="一个旨在提高 UI 开发效率，快速产生项目 UI 的前端框架" />
+  <meta name="keywords" content="QMUI Web,QMUI,UI 开发,QMUI Web 官网,前端工作流,UI 开发框架" />
 	<title>脚手架 - QMUI Web</title>
   <link rel="icon" type="image/png" sizes="16x16" href="../public/style/images/independent/favicon/favicon_16h.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="../public/style/images/independent/favicon/favicon_32h.png" />
@@ -85,7 +85,7 @@
 
       <p class="dm_column_tip">QMUI 的 gulp 中预先写好的脚手架方法分为两类，一类是工具方法，例如监控 SASS 文件并自动编译（代替不稳定的 Compass Watch），模板 include 能力（可以传参和使用条件判断），图片压缩，文件清理等功能。另一类是针对 QMUI 工作流所作出的辅助性功能，例如在修改需要做雪碧图的原图后自动触发 Compass 编译新的雪碧图等。</p>
 
-      <p class="dm_column_tip"><strong>各个命令都是在 qmui_web 文件夹中调用对应的 gulp 命令即可</strong>，部分命令依赖于 config.json 的配置。<strong>但实际使用时大部分操作都无需手工调用，QMUI 中已经根据工作流程设置好对应 Watch（文件监控）</strong>，包括上面提到的 Compass 编译，模板 include 编译，图片压缩以及同步图片文件夹等大部分的功能。除了创建新项目，清理文件和合并变更文件三个任务，这三个任务的使用会在下面额外详述。</p>
+      <p class="dm_column_tip"><strong>各个命令都是在 qmui_web 文件夹中调用对应的 gulp 命令即可</strong>，部分命令依赖于 config.js 的配置。<strong>但实际使用时大部分操作都无需手工调用，QMUI 中已经根据工作流程设置好对应 Watch（文件监控）</strong>，包括上面提到的 Compass 编译，模板 include 编译，图片压缩以及同步图片文件夹等大部分的功能。除了创建新项目，清理文件和合并变更文件三个任务，这三个任务的使用会在下面额外详述。</p>
 
       <p class="dm_column_tip">因此常规的使用流程只需要一句命令</p>
 
@@ -153,7 +153,7 @@ gulp main</xmp>
           </div>
         </div>
 
-        <p class="dm_column_tip">这个例子中，header.html 作为一个公共模块，被 start.html include，然后再由 gulp 处理生成最终的页面。这里为了避免 gulp 起效，使用了"&&"代替"@@"，实际上 QMUI 中使用的 include 引擎的默认前缀为 @@，即所有的方法和变量都以 @@ 开头。这个前缀以及是否开启 include 引擎都可以在 config.json 中配置。</p>
+        <p class="dm_column_tip">这个例子中，header.html 作为一个公共模块，被 start.html include，然后再由 gulp 处理生成最终的页面。这里为了避免 gulp 起效，使用了"&&"代替"@@"，实际上 QMUI 中使用的 include 引擎的默认前缀为 @@，即所有的方法和变量都以 @@ 开头。这个前缀以及是否开启 include 引擎都可以在 config.js 中配置。</p>
 
         <p class="dm_column_tip"><strong>另外值得注意的是，如果一个变量在某些模板中需要省略不写（例如一个布尔值，默认设定为 false，大部分的页面按需求都是 false 因此都不写），那么在使用这个变量进行条件判断时，需要先用 javascript 的 typeof 方法判断变量是否 undefined 再进行其他判断，否则 gulp 会报 warning。</strong></p>
 
@@ -165,7 +165,7 @@ gulp main</xmp>
 
 				<h3 id="qui_scaffoldClean" class="dm_column_item_title">清理文件</h3>
 
-        <p class="dm_column_tip">清理文件任务用于快速删除一些无用文件，需要手工调用。默认的配置是删除 UI_dev（qmui_web 上一层目录）的 .sass-cache 目录。config.json 中的 <code>cleanFileType</code> 可以控制具体要删除的文件。</p>
+        <p class="dm_column_tip">清理文件任务用于快速删除一些无用文件，需要手工调用。默认的配置是删除 UI_dev（qmui_web 上一层目录）的 .sass-cache 目录。config.js 中的 <code>cleanFileType</code> 可以控制具体要删除的文件。</p>
 
 				<div class="dm_column_item_info dm_column_item_info_Single">
 					<div class="dm_column_item_info_code">
@@ -186,8 +186,8 @@ gulp clean</xmp>
 
         <div class="dm_column_tip">
           <ol>
-            <li>把 qmui_web 目录中的 mergeRule.json 复制到上一层目录（即 UI_dev）</li>
-            <li>按自身项目需要在 mergeRule.json 中写好文件合并规则，其中 key 为合并得到的最终文件（格式为字符串），value 为需要被合并的文件（格式为 glob），<strong>所有的路径均以模板中实际的文件引用路径为准（可参考下面的例子）</strong></li>
+            <li>把 qmui_web 目录中的 mergeRule.js 复制到上一层目录（即 UI_dev）</li>
+            <li>按自身项目需要在 mergeRule.js 中写好文件合并规则，其中 key 为合并得到的最终文件（格式为字符串），value 为需要被合并的文件（格式为 glob），<strong>所有的路径均以模板中实际的文件引用路径为准（可参考下面的例子）</strong></li>
             <li>在 qmui_web 目录执行命令 gulp merge 即可合并</li>
           </ol>
         </div>
@@ -196,7 +196,7 @@ gulp clean</xmp>
 
 				<div class="dm_column_item_info dm_column_item_info_Single">
 					<div class="dm_column_item_info_code">
-<xmp class="prettyprint">#mergeRule.json
+<xmp class="prettyprint">#mergeRule.js
 {
   "../public/js/all.js" : ["../public/js/lib.js", "../public/js/function.js", "../public/js/index.js"]
 }

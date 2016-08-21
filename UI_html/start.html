@@ -148,13 +148,13 @@ gem install compass
 
       <p class="dm_column_tip">这些目录 QMUI 会提供工具帮助完成创建，开发者并不需要手工创建这些目录。</p>
 	
-      <p class="dm_column_tip">另外这些目录结构只是层次上要求如此，即不建议修改目录的层级，但目录名如果与其他模块或组件冲突，可以自行修改目录名，记得修改 config.json 和 config.rb 的相关设置就好（这两个文件需要复制到 UI_dev 中修改，如果直接修改 QMUI 源码中的配置文件，会影响框架的独立性，详细请参考“<a href="#qui_useConfig" title="使用配置文件">使用配置文件”）</a></p>
+      <p class="dm_column_tip">另外这些目录结构只是层次上要求如此，即不建议修改目录的层级，但目录名如果与其他模块或组件冲突，可以自行修改目录名，记得修改 config.js 和 config.rb 的相关设置就好（这两个文件需要复制到 UI_dev 中修改，如果直接修改 QMUI 源码中的配置文件，会影响框架的独立性，详细请参考“<a href="#qui_useConfig" title="使用配置文件">使用配置文件”）</a></p>
 
       <!-- 图片文件管理 start -->
 			<div class="dm_column_item">
 
 				<h3 id="qui_imagesManage" class="dm_column_item_title">图片文件管理</h3>
-        <p class="dm_column_tip">为了解决 CSS Sprite 造成的重复劳动工作以及管理图片，QMUI 提供了一套图片文件管理的方案。图片文件统一放置在一个目录中（project/images），其中，需要做雪碧图的图片应该在 images 下建立子目录统一放置，QMUI 会根据相应的规则合成雪碧图，关于这一点的详细情况，请参考<a href="widget.html#qui_widget_autoSprite">这里</a>。而不需要做成雪碧图的独立图片，应该放置在 images/independent（由 config.json 中的 independentImagesDirectory 选项控制）目录中，该目录中也可以再建立子目录。无论是雪碧图还是独立图片，QMUI 都会统一管理这些图片，输出到静态资源目录（public/images），并自动进行图片压缩。</p>
+        <p class="dm_column_tip">为了解决 CSS Sprite 造成的重复劳动工作以及管理图片，QMUI 提供了一套图片文件管理的方案。图片文件统一放置在一个目录中（project/images），其中，需要做雪碧图的图片应该在 images 下建立子目录统一放置，QMUI 会根据相应的规则合成雪碧图，关于这一点的详细情况，请参考<a href="widget.html#qui_widget_autoSprite">这里</a>。而不需要做成雪碧图的独立图片，应该放置在 images/independent（由 config.js 中的 independentImagesDirectory 选项控制）目录中，该目录中也可以再建立子目录。无论是雪碧图还是独立图片，QMUI 都会统一管理这些图片，输出到静态资源目录（public/images），并自动进行图片压缩。</p>
       </div>
       <!-- 图片文件管理 end -->
 		</div>
@@ -213,7 +213,7 @@ yo qmui
 
 				<h3 id="qui_scaffold" class="dm_column_item_title">脚手架</h3>
 
-        <div class="dm_column_tip">QMUI 中的脚手架由 gulp 充当，<strong>所谓的脚手架，一般都是用于快速解决大量重复劳动力的工作，从而提升效率。</strong>QMUI 的 gulp 中预先实现了监控 SASS 文件并自动编译（代替不稳定的 Compass Watch），模板 include 能力（可以传参和使用条件判断），图片压缩，文件清理，集中管理图片，文件合并以及自动变更路径的能力。各个命令都是在 qmui_web 文件夹中调用对应的 gulp 命令即可，部分命令依赖于 config.json 的配置。具体命令列表及功能可以参考<a href="./scaffold.html">脚手架</a>页面。</div>
+        <div class="dm_column_tip">QMUI 中的脚手架由 gulp 充当，<strong>所谓的脚手架，一般都是用于快速解决大量重复劳动力的工作，从而提升效率。</strong>QMUI 的 gulp 中预先实现了监控 SASS 文件并自动编译（代替不稳定的 Compass Watch），模板 include 能力（可以传参和使用条件判断），图片压缩，文件清理，集中管理图片，文件合并以及自动变更路径的能力。各个命令都是在 qmui_web 文件夹中调用对应的 gulp 命令即可，部分命令依赖于 config.js 的配置。具体命令列表及功能可以参考<a href="./scaffold.html">脚手架</a>页面。</div>
 
         <div class="dm_column_tip">
           <img src="../public/style/images/independent/Gulp.gif" alt="Gulp 任务效果图" />
@@ -297,9 +297,9 @@ sudo npm install</xmp>
 
 				<h3 id="qui_useConfig" class="dm_column_item_title">使用配置文件</h3>
 
-        <p class="dm_column_tip">在 qmui_web（QMUI Web 框架根目录）中，有两个配置文件 config.rb 和 config.json，<strong>在项目开始之前应该把这两个文件复制到 qmui_web 的上一层目录（按推荐的文件结构，应该是 UI_dev 目录）</strong>，这两个配置文件分别用于框架在 Compass 和 gulp 两种能力下的配置。</p>
+        <p class="dm_column_tip">在 qmui_web（QMUI Web 框架根目录）中，有两个配置文件 config.rb 和 config.js，<strong>在项目开始之前应该把这两个文件复制到 qmui_web 的上一层目录（按推荐的文件结构，应该是 UI_dev 目录）</strong>，这两个配置文件分别用于框架在 Compass 和 gulp 两种能力下的配置。</p>
         <p class="dm_column_tip">具体的说，config.rb 会配置静态资源最终输出的路径，输出的样式文件是否需要压缩等 Compass 和 SASS 相关配置。如果开发时使用的就是框架所推荐的文件结构，那么这个配置文件基本可以不用调整。</p>
-        <p class="dm_column_tip">而 config.json 则配置 gulp 在使用时的一些依赖的变量，与 config.rb 相似，如果开发时使用的就是框架所推荐的文件结构，那么基本上只需要配置 <code>project</code> 和 <code>prefix</code> 两个参数即可。详细的配置选项如下：</p>
+        <p class="dm_column_tip">而 config.js 则配置 gulp 在使用时的一些依赖的变量，与 config.rb 相似，如果开发时使用的就是框架所推荐的文件结构，那么基本上只需要配置 <code>project</code> 和 <code>prefix</code> 两个参数即可。详细的配置选项如下：</p>
 
         <div class="dm_column_tip">
           <ul>

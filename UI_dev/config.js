@@ -1,4 +1,4 @@
-{
+module.exports = {
   "commentBase" : "项目相关部分代码，复制后应首先进行这些配置",
   "project" : "Demo",     
   "prefix" : "dm",
@@ -15,4 +15,4 @@
   "commentTemplate" : "模板 include 引擎的相关配置",
   "openIncludeFunction" : true,
   "includePrefix" : "@@"
-}   
+};   
