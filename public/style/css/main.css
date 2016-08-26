@@ -80,7 +80,7 @@
   word-wrap: normal;
 }
 
-/* line 475, ../../../UI_dev/qmui_web/qmui/helper/mixin/_compatible.scss */
+/* line 467, ../../../UI_dev/qmui_web/qmui/helper/mixin/_compatible.scss */
 .qui_btn, .index_downloadBtn, .index_banner_startBtn,
 .index_banner_githubBtn {
   -moz-user-select: none;
@@ -1385,10 +1385,10 @@ pre.dm_column_tip {
   float: left;
   margin-top: 9px;
   margin-right: 5px;
-  border-width: 5px 5px;
   _border-color: #f00;
   _filter: chroma(color=#f00);
   /* 向上小三角 */
+  border-width: 5px 5px;
   border-right: 0;
   border-left-color: #787878;
   _border-left-color: #787878;
@@ -1397,10 +1397,10 @@ pre.dm_column_tip {
 .dm_treeMenu .dm_treeMenu_item.dm_treeMenu_item_Unfolded:before {
   margin-top: 12px;
   margin-left: -3px;
-  border-width: 5px 5px;
   _border-color: #f00;
   _filter: chroma(color=#f00);
   /* 向上小三角 */
+  border-width: 5px 5px;
   border-bottom: 0;
   border-top-color: #787878;
   _border-top-color: #787878;
@@ -1701,7 +1701,7 @@ pre.dm_column_tip {
     position: relative;
     border: none;
   }
-  /* line 131, ../../../UI_dev/qmui_web/qmui/helper/mixin/tool/_effect.scss */
+  /* line 134, ../../../UI_dev/qmui_web/qmui/helper/mixin/tool/_effect.scss */
   .frame_nav_item:after {
     content: "";
     position: absolute;
@@ -1726,7 +1726,7 @@ pre.dm_column_tip {
   }
 }
 @media handheld and (max-width: 846px) and (-webkit-min-device-pixel-ratio: 3), screen and (max-width: 846px) and (-webkit-min-device-pixel-ratio: 3), handheld and (max-width: 846px) and (min--moz-device-pixel-ratio: 3), screen and (max-width: 846px) and (min--moz-device-pixel-ratio: 3), handheld and (max-width: 846px) and (-o-min-device-pixel-ratio: 3), screen and (max-width: 846px) and (-o-min-device-pixel-ratio: 3), handheld and (max-width: 846px) and (min-device-pixel-ratio: 3), screen and (max-width: 846px) and (min-device-pixel-ratio: 3), handheld and (max-width: 846px) and (min-resolution: 3dppx), screen and (max-width: 846px) and (min-resolution: 3dppx), handheld and (max-width: 846px) and (min-resolution: 288dpi), screen and (max-width: 846px) and (min-resolution: 288dpi) {
-  /* line 149, ../../../UI_dev/qmui_web/qmui/helper/mixin/tool/_effect.scss */
+  /* line 152, ../../../UI_dev/qmui_web/qmui/helper/mixin/tool/_effect.scss */
   .frame_nav_item:after {
     width: 300%;
     height: 300%;
