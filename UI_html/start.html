@@ -1,4 +1,4 @@
-@@include('./header.html', {
+@@include('./_header.html', {
   "title": "开始使用 - QMUI Web",
   "currentPage": "start"
 })
@@ -213,7 +213,7 @@ yo qmui
 
 				<h3 id="qui_scaffold" class="dm_column_item_title">脚手架</h3>
 
-        <div class="dm_column_tip">QMUI 中的脚手架由 gulp 充当，<strong>所谓的脚手架，一般都是用于快速解决大量重复劳动力的工作，从而提升效率。</strong>QMUI 的 gulp 中预先实现了监控 SASS 文件并自动编译（代替不稳定的 Compass Watch），模板 include 能力（可以传参和使用条件判断），图片压缩，文件清理，集中管理图片，文件合并以及自动变更路径的能力。各个命令都是在 qmui_web 文件夹中调用对应的 gulp 命令即可，部分命令依赖于 config.js 的配置。具体命令列表及功能可以参考<a href="./scaffold.html">脚手架</a>页面。</div>
+        <div class="dm_column_tip">QMUI 中的脚手架由 gulp 充当，<strong>所谓的脚手架，一般都是用于快速解决大量重复劳动力的工作，从而提升效率。</strong>QMUI 的 gulp 中预先实现了监控 SASS 文件并自动编译（代替不稳定的 Compass Watch），模板 include 能力（可以传参和使用条件判断），浏览器自动刷新，图片压缩，文件清理，集中管理图片，文件合并以及自动变更路径的能力。各个命令都是在 qmui_web 文件夹中调用对应的 gulp 命令即可，部分命令依赖于 config.js 的配置。具体命令列表及功能可以参考<a href="./scaffold.html">脚手架</a>页面。</div>
 
         <div class="dm_column_tip">
           <img src="../public/style/images/independent/Gulp.gif" alt="Gulp 任务效果图" />
@@ -307,6 +307,14 @@ sudo npm install</xmp>
             <li><code>prefix</code> 代码前缀，用于在样式和 HTML 中创建 class 的命名前缀，即命名空间，必须根据项目名称定好一个清晰不容易与其他项目冲突的前缀</li>
             <li><code>resultCssFileName</code> 项目主样式文件的名称，在创建新项目时会被用到，一般来说，QMUI 建议如果项目不是非常大的量级，都只使用一个样式表，方便代码管理</li>
             <li><code>cleanFileType</code> 执行gulp clean 命令时需要清除的文件</li>
+            <li><code>browserSyncMod</code> BrowserSync 的运行模式，默认为 'server'，即本地服务器模式，'proxy' 为代理模式，'close' 表示不开启本功能。</li>
+            <li><code>browserSyncPort</code> 自定义端口，默认为3030。请注意避免使用常用端口以及其他本地已占用的端口，包括在代理模式（proxy）下不能与代理对象使用相同的端口。</li>
+            <li><code>browserSyncShowLog</code> 是否在显示 BrowserSync 的日志，默认为 false，即不显示日志。</li>
+            <li><code>browserSyncStartPath</code> 开启 BrowserSync 后的默认打开的路径。</li>
+            <li><code>browserSyncHost</code> 自定义开启 BrowserSync 后的默认 IP，可填写域名。为空则默认为 localhost。开启 BrowserSync 后，浏览器地址栏会自动打开 browserSyncHost + browserSyncStartPath 合并后的网址。</li>
+            <li><code>browserSyncWatchPath</code> 要监控变动的文件目录，一旦该目录下文件产生变动则自动刷新浏览器。</li>
+            <li><code>browserSyncServerRoute</code> 自定义路由，把项目中的目录结构定义成指定的路由，本地服务器模式（server）下方可产生作用。</li>
+            <li><code>browserSyncProxy</code> 需要进行代理的代理地址，代理模式（proxy）下方可产生作用。</li>
             <li><code>htmlSourcePath</code> 静态模板来源目录，即模板开发的目录</li>
             <li><code>imagesSourcePath</code> 图片文件来源目录，即图片开发的目录</li>
             <li><code>htmlResultPath</code> 静态模板经 gulp 处理后输出的目录，即把 include 合并后的输出版本</li>
@@ -317,7 +325,7 @@ sudo npm install</xmp>
           </ul>
         </div>
 
-        <p class="dm_column_tip">其中 <code>htmlSourcePath</code> <code>imagesSourcePath</code> <code>htmlResultPath</code> <code>imagesResultPath</code> <strong>这四个选项都是项目资源的路径配置选项，若要修改，请与 config.rb 中相关选项指向的目录保持一致，但需要注意因为相对位置不同（这里是以 qmui_web 目录为 Base Path），因此这几个属性值应该比 config.rb 中的对应值多一个 "../"。</strong></p>
+        <p class="dm_column_tip">其中 <code>htmlSourcePath</code> <code>imagesSourcePath</code> <code>htmlResultPath</code> <code>imagesResultPath</code> <code>browserSyncWatchPath</code> <code>browserSyncServerRoute</code> <strong>这六个选项都是项目资源的路径配置选项，若要修改，请与 config.rb 中相关选项指向的目录保持一致，但需要注意因为相对位置不同（这里是以 qmui_web 目录为 Base Path），因此这几个属性值应该比 config.rb 中的对应值多一个 "../"。</strong></p>
 
       </div>
       <!-- 使用配置文件 end -->
@@ -347,4 +355,4 @@ sudo npm install</xmp>
 
 	</div><!-- content end -->
 
-@@include('./footer.html')
+@@include('./_footer.html')

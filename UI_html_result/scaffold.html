@@ -61,7 +61,10 @@
 					<a class="frame_sidebar_nav_link" href="#qui_scaffold">脚手架的使用</a>
 					<ul class="frame_sidebar_nav frame_sidebar_nav_Children">
 						<li class="frame_sidebar_nav_item">
-							<a class="frame_sidebar_nav_link" href="#qui_scaffoldInclude">模板 include 能力</a>
+							<a class="frame_sidebar_nav_link" href="#qui_scaffoldInclude">模板引擎</a>
+						</li>
+						<li class="frame_sidebar_nav_item">
+							<a class="frame_sidebar_nav_link" href="#qui_scaffoldBrowserSync">浏览器自动刷新</a>
 						</li>
 						<li class="frame_sidebar_nav_item">
 							<a class="frame_sidebar_nav_link" href="#qui_scaffoldClean">清理文件</a>
@@ -85,17 +88,14 @@
 
       <p class="dm_column_tip">QMUI 的 gulp 中预先写好的脚手架方法分为两类，一类是工具方法，例如监控 SASS 文件并自动编译（代替不稳定的 Compass Watch），模板 include 能力（可以传参和使用条件判断），图片压缩，文件清理等功能。另一类是针对 QMUI 工作流所作出的辅助性功能，例如在修改需要做雪碧图的原图后自动触发 Compass 编译新的雪碧图等。</p>
 
-      <p class="dm_column_tip"><strong>各个命令都是在 qmui_web 文件夹中调用对应的 gulp 命令即可</strong>，部分命令依赖于 config.js 的配置。<strong>但实际使用时大部分操作都无需手工调用，QMUI 中已经根据工作流程设置好对应 Watch（文件监控）</strong>，包括上面提到的 Compass 编译，模板 include 编译，图片压缩以及同步图片文件夹等大部分的功能。除了创建新项目，清理文件和合并变更文件三个任务，这三个任务的使用会在下面额外详述。</p>
+      <p class="dm_column_tip"><strong>各个命令都是在 qmui_web 文件夹中调用对应的 gulp 命令即可</strong>，部分命令依赖于 config.js 的配置。<strong>但实际使用时大部分操作都无需手工调用，QMUI 中已经根据工作流程设置好对应 Watch（文件监控）</strong>，包括上面提到的 Compass 编译，模板 include 编译，浏览器自动刷新，图片压缩以及同步图片文件夹等大部分的功能。除了清理文件和合并变更文件两个任务，这两个任务的使用会在下面额外详述。</p>
 
       <p class="dm_column_tip">因此常规的使用流程只需要一句命令</p>
 
       <div class="dm_column_item_info dm_column_item_info_Single">
         <div class="dm_column_item_info_code">
 <xmp class="prettyprint">#开启默认任务，文件监控会自动完成绝大部分常规操作
-#Mac
-gulp
-#Windows
-gulp main</xmp>
+gulp</xmp>
         </div>
       </div>
 
@@ -108,30 +108,32 @@ gulp main</xmp>
       <!-- 模板 include 能力 start -->
       <div class="dm_column_item">
 
-        <h3 id="qui_scaffoldInclude" class="dm_column_item_title">模板 include 能力</h3>
+        <h3 id="qui_scaffoldInclude" class="dm_column_item_title">模板引擎</h3>
 
-        <p class="dm_column_tip">QMUI 提供了模板 include 的能力，除了支持基础的 include 功能以外，还支持条件判断以及变量传递，即在调用 include 方法时可以传递任意自定义的变量，在被 include 的模板中可以获取这些变量对应的值，并利用这些值来进行条件判断。例如：</p>
+        <p class="dm_column_tip">QMUI 提供了轻量实用的模板引擎，除了支持基础的 include 功能以外，还支持条件判断以及变量传递，即在调用 include 方法时可以传递任意自定义的变量，在被 include 的模板中可以获取这些变量对应的值，并利用这些值来进行条件判断，支持 Number，Boolean, String，Object 几种变量类型。另外，不希望被编译输出的文件（例如被 include 的文件通常不希望被编译输出），使用 _ 作为文件名开头即可，例如：
 
         <div class="dm_column_item_info dm_column_item_info_Single">
           <div class="dm_column_item_info_code">
-<xmp class="prettyprint">#header.html
+<xmp class="prettyprint">#_header.html
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="UTF-8" />
   <title>&&title</title>
   
+  <meta name="description" content="&&meta.description" />
+  <meta name="keywords" content="&&meta.keywork" />
 </head>
 <body class="frame_wrap">
   <div class="frame_head">
     &&if ( typeof index !== 'undefined') {
     <h1 class="frame_head_title">
-      <a class="frame_head_title_link" href="./start.html">QMUI for SASS</a>
+      <a class="frame_head_title_link" href="./start.html">QMUI Web</a>
     </h1>
     }
     &&if ( typeof index === 'undefined') {
     <div class="frame_head_title">
-      <a class="frame_head_title_link" href="./start.html">QMUI for SASS</a>
+      <a class="frame_head_title_link" href="./start.html">QMUI Web</a>
     </div>
     }
   </div></xmp>
@@ -141,9 +143,13 @@ gulp main</xmp>
         <div class="dm_column_item_info dm_column_item_info_Single">
           <div class="dm_column_item_info_code">
 <xmp class="prettyprint">#start.html
-&&include('./header.html', {
+&&include('./_header.html', {
   "index" : true,
-  "title": "QMUI for SASS Demo"
+  "title": "QMUI Web",
+  "meta": {
+    "keywork": "QMUI Web,QMUI,UI 开发,QMUI Web 官网,前端工作流,UI 开发框架",
+    "description": "一个旨在提高 UI 开发效率，快速产生项目 UI 的前端框架"
+  }
 })
   <div class="frame_cnt">正文内容</div>
   <div>页脚</div>
@@ -153,12 +159,62 @@ gulp main</xmp>
           </div>
         </div>
 
-        <p class="dm_column_tip">这个例子中，header.html 作为一个公共模块，被 start.html include，然后再由 gulp 处理生成最终的页面。这里为了避免 gulp 起效，使用了"&&"代替"@@"，实际上 QMUI 中使用的 include 引擎的默认前缀为 @@，即所有的方法和变量都以 @@ 开头。这个前缀以及是否开启 include 引擎都可以在 config.js 中配置。</p>
+        <div class="dm_column_item_info dm_column_item_info_Single">
+          <div class="dm_column_item_info_code">
+<xmp class="prettyprint">#start.html（输出结果）
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>QMUI Web</title>
+  
+  <meta name="description" content="一个旨在提高 UI 开发效率，快速产生项目 UI 的前端框架" />
+  <meta name="keywords" content="QMUI Web,QMUI,UI 开发,QMUI Web 官网,前端工作流,UI 开发框架" />
+</head>
+<body class="frame_wrap">
+  <div class="frame_head">
+    <h1 class="frame_head_title">
+      <a class="frame_head_title_link" href="./start.html">QMUI Web</a>
+    </h1>
+  </div>
+  <div class="frame_cnt">正文内容</div>
+  <div>页脚</div>
+</body>
+</html></xmp>
+          </div>
+        </div>
+
+        <p class="dm_column_tip">这个例子中，_header.html 作为一个公共模块，被 start.html include，然后再由 gulp 处理生成最终的页面。这里为了避免 gulp 起效，使用了"&&"代替"@@"，实际上 QMUI 中使用的 include 引擎的默认前缀为 @@，即所有的方法和变量都以 @@ 开头。这个前缀以及是否开启 include 引擎都可以在 config.js 中配置。</p>
 
         <p class="dm_column_tip"><strong>另外值得注意的是，如果一个变量在某些模板中需要省略不写（例如一个布尔值，默认设定为 false，大部分的页面按需求都是 false 因此都不写），那么在使用这个变量进行条件判断时，需要先用 javascript 的 typeof 方法判断变量是否 undefined 再进行其他判断，否则 gulp 会报 warning。</strong></p>
 
       </div>
       <!-- 模板 include 能力 end -->
+		
+      <!-- 浏览器自动刷新 start -->
+			<div class="dm_column_item">
+
+				<h3 id="qui_scaffoldBrowserSync" class="dm_column_item_title">浏览器自动刷新</h3>
+
+        <div class="dm_column_tip">QMUI 带有基于 <a href="https://www.browsersync.io/" target="_blank">BrowserSync</a> 的浏览器自动刷新功能，同时支持本地服务器模式（server）和代理模式（proxy）。</div>
+
+        <div class="dm_column_tip">本地服务器模式（server）适合静态页面的开发，也是默认的模式，代理模式（proxy）则适合本身有本地服务的动态页面的开发（如本地的 Node.js 服务，PHP 本地开发）。详细的配置可以通过调整 config.js 中对应的配置项，相关配置条目说明如下：</div>
+
+        <div class="dm_column_tip">
+          <ul>
+            <li><code>browserSyncMod</code> BrowserSync 的运行模式，默认为 'server'，即本地服务器模式，'proxy' 为代理模式，'close' 表示不开启本功能。</li>
+            <li><code>browserSyncPort</code> 自定义端口，默认为3030。请注意避免使用常用端口以及其他本地已占用的端口，包括在代理模式（proxy）下不能与代理对象使用相同的端口。</li>
+            <li><code>browserSyncShowLog</code> 是否在显示 BrowserSync 的日志，默认为 false，即不显示日志。</li>
+            <li><code>browserSyncStartPath</code> 开启 BrowserSync 后的默认打开的路径。</li>
+            <li><code>browserSyncHost</code> 自定义开启 BrowserSync 后的默认 IP，可填写域名。为空则默认为 localhost。开启 BrowserSync 后，浏览器地址栏会自动打开 browserSyncHost + browserSyncStartPath 合并后的网址。</li>
+            <li><code>browserSyncWatchPath</code> 要监控变动的文件目录，一旦该目录下文件产生变动则自动刷新浏览器。</li>
+            <li><code>browserSyncServerRoute</code> 自定义路由，把项目中的目录结构定义成指定的路由，本地服务器模式（server）下方可产生作用。</li>
+            <li><code>browserSyncProxy</code> 需要进行代理的代理地址，代理模式（proxy）下方可产生作用。</li>
+          </ul>
+        </div>
+
+      </div>
+      <!-- 浏览器自动刷新 end -->
 		
       <!-- 清理文件 start -->
 			<div class="dm_column_item">
