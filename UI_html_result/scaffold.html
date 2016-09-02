@@ -86,7 +86,7 @@
 
 			<h2 id="qui_scaffold" class="dm_column_title">脚手架的使用</h2>
 
-      <p class="dm_column_tip">QMUI 的 gulp 中预先写好的脚手架方法分为两类，一类是工具方法，例如监控 SASS 文件并自动编译（代替不稳定的 Compass Watch），模板 include 能力（可以传参和使用条件判断），图片压缩，文件清理等功能。另一类是针对 QMUI 工作流所作出的辅助性功能，例如在修改需要做雪碧图的原图后自动触发 Compass 编译新的雪碧图等。</p>
+      <p class="dm_column_tip">QMUI 的 gulp 中预先写好的脚手架方法分为两类，一类是工具方法，例如监控 Sass 文件并自动编译（代替不稳定的 Compass Watch），模板 include 能力（可以传参和使用条件判断），图片压缩，文件清理等功能。另一类是针对 QMUI 工作流所作出的辅助性功能，例如在修改需要做雪碧图的原图后自动触发 Compass 编译新的雪碧图等。</p>
 
       <p class="dm_column_tip"><strong>各个命令都是在 qmui_web 文件夹中调用对应的 gulp 命令即可</strong>，部分命令依赖于 config.js 的配置。<strong>但实际使用时大部分操作都无需手工调用，QMUI 中已经根据工作流程设置好对应 Watch（文件监控）</strong>，包括上面提到的 Compass 编译，模板 include 编译，浏览器自动刷新，图片压缩以及同步图片文件夹等大部分的功能。除了清理文件和合并变更文件两个任务，这两个任务的使用会在下面额外详述。</p>
 

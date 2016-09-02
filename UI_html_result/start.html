@@ -84,7 +84,7 @@
 							<a class="frame_sidebar_nav_link" href="#qui_scaffold">脚手架</a>
 						</li>
 						<li class="frame_sidebar_nav_item">
-							<a class="frame_sidebar_nav_link" href="#qui_sassSupport">SASS 与 Compass 支持</a>
+							<a class="frame_sidebar_nav_link" href="#qui_SassSupport">Sass 与 Compass 支持</a>
 						</li>
 						<li class="frame_sidebar_nav_item">
 							<a class="frame_sidebar_nav_link" href="#qui_expandWidget">扩展组件</a>
@@ -96,6 +96,11 @@
 				</li>
 				<li class="frame_sidebar_nav_item">
 					<a class="frame_sidebar_nav_link" href="#qui_frameworkImprove">完善框架</a>
+					<ul class="frame_sidebar_nav frame_sidebar_nav_Children">
+						<li class="frame_sidebar_nav_item">
+							<a class="frame_sidebar_nav_link" href="#qui_workflowDebug">内置工作流调试辅助</a>
+						</li>
+					</ul>
 				</li>
 				<li class="frame_sidebar_nav_item">
 					<a class="frame_sidebar_nav_link" href="#qui_createProject">创建新项目（高级）</a>
@@ -127,7 +132,7 @@
 
       <p class="dm_column_tip">QMUI Web 遵循 <a href="./codeNorm.html" target="_blank" title="QMUI 编码规范">QMUI 编码规范</a>，因此框架中提供的样式除 Reset 外都以 qui_ 作开头，以充当框架的命名空间。业务上的样式也应该有自己的命名空间，例如本 Demo 中的样式的公共部分都以 dm_ 开头，各细致的业务就以业务的功能作开头（例如组件页面的非公共代码都以 widget_ 开头），从而以不同的命名空间划分不同的样式，避免样式的互相干扰。</p>
 
-      <p class="dm_column_tip">除此以外，QMUI 封装了大量 SASS 和 Compass 方法供使用，另外还在 Demo 中以参考组件的形式收录了一些结构较复杂的扩展组件，供使用者参考。</p>
+      <p class="dm_column_tip">除此以外，QMUI 封装了大量 Sass 和 Compass 方法供使用，另外还在 Demo 中以参考组件的形式收录了一些结构较复杂的扩展组件，供使用者参考。</p>
 
 		
 		</div>
@@ -138,7 +143,7 @@
 
       <h2 id="qui_environment" class="dm_column_title">环境配置</h2>
 
-      <p class="dm_column_tip">QMUI Web 需要依赖一些第三方框架或工具才能运行，分别是 gulp，SASS，Compass，Node.js（gulp 需要依赖），Ruby（SASS 和 Compass 需要依赖）</p>
+      <p class="dm_column_tip">QMUI Web 需要依赖一些第三方框架或工具才能运行，分别是 gulp，Sass，Compass，Node.js（gulp 需要依赖），Ruby（Sass 和 Compass 需要依赖）</p>
 
       <div class="dm_column_item">
 
@@ -156,7 +161,7 @@
           <div class="dm_column_item_info_code">
 <xmp class="prettyprint">#安装 gulp
 npm install --global gulp
-#安装 SASS 
+#安装 Sass 
 gem install sass
 #安装 Compass
 gem update --system
@@ -186,7 +191,7 @@ gem install compass
 │  │  └─images    // 静态资源 images 文件
 │  └─template     // 最终的模板目录，原则上是前端去建立和管理
 ├─UI_dev          // 实际进行开发的样式目录
-│  ├─project      // 项目相关 SASS 与 images 文件，由 gulp 生成，请参考“<a href="#qui_createProject" title="创建新项目">创建新项目</a>”
+│  ├─project      // 项目相关 Sass 与 images 文件，由 gulp 生成，请参考“<a href="#qui_createProject" title="创建新项目">创建新项目</a>”
 │  │  ├─images    // 项目相关图片文件
 │  │  ├─logic     // 项目相关逻辑样式
 │  │  └─widget    // 项目相关公共组件样式
@@ -249,7 +254,7 @@ yo qmui
 
 				<h3 id="qui_configAndWidget" class="dm_column_item_title">基础配置与组件</h3>
 
-        <div class="dm_column_tip">框架中会有一份配置表，是各种 SASS 的变量，这些变量控制了一个网页基本的字体样式，链接颜色，以及6个通用组件的样式配置，在创建一个新项目时，应该先根据设计稿配置好这些信息，<strong>当这些信息配置完成，那么一个项目的基本样式就可以快速实现了。</strong>例如下图中这些配置属于 QMUI 通用配置，通过修改这些配置则可以快速修改项目的字体策略、正文字体大小，链接颜色等 UI 常用的 CSS 属性。</div>
+        <div class="dm_column_tip">框架中会有一份配置表，是各种 Sass 的变量，这些变量控制了一个网页基本的字体样式，链接颜色，以及6个通用组件的样式配置，在创建一个新项目时，应该先根据设计稿配置好这些信息，<strong>当这些信息配置完成，那么一个项目的基本样式就可以快速实现了。</strong>例如下图中这些配置属于 QMUI 通用配置，通过修改这些配置则可以快速修改项目的字体策略、正文字体大小，链接颜色等 UI 常用的 CSS 属性。</div>
 
         <div class="dm_column_tip">
           <img src="../public/style/images/independent/Var.png" alt="基础配置与组件" />
@@ -263,7 +268,7 @@ yo qmui
 
 				<h3 id="qui_scaffold" class="dm_column_item_title">脚手架</h3>
 
-        <div class="dm_column_tip">QMUI 中的脚手架由 gulp 充当，<strong>所谓的脚手架，一般都是用于快速解决大量重复劳动力的工作，从而提升效率。</strong>QMUI 的 gulp 中预先实现了监控 SASS 文件并自动编译（代替不稳定的 Compass Watch），模板 include 能力（可以传参和使用条件判断），浏览器自动刷新，图片压缩，文件清理，集中管理图片，文件合并以及自动变更路径的能力。各个命令都是在 qmui_web 文件夹中调用对应的 gulp 命令即可，部分命令依赖于 config.js 的配置。具体命令列表及功能可以参考<a href="./scaffold.html">脚手架</a>页面。</div>
+        <div class="dm_column_tip">QMUI 中的脚手架由 gulp 充当，<strong>所谓的脚手架，一般都是用于快速解决大量重复劳动力的工作，从而提升效率。</strong>QMUI 的 gulp 中预先实现了监控 Sass 文件并自动编译（代替不稳定的 Compass Watch），模板 include 能力（可以传参和使用条件判断），浏览器自动刷新，图片压缩，文件清理，集中管理图片，文件合并以及自动变更路径的能力。各个命令都是在 qmui_web 文件夹中调用对应的 gulp 命令即可，部分命令依赖于 config.js 的配置。具体命令列表及功能可以参考<a href="./scaffold.html">脚手架</a>页面。</div>
 
         <div class="dm_column_tip">
           <img src="../public/style/images/independent/Gulp.gif" alt="Gulp 任务效果图" />
@@ -272,15 +277,15 @@ yo qmui
       </div>
       <!-- 脚手架 end -->
 		
-      <!-- SASS 与 Compass 支持 start -->
+      <!-- Sass 与 Compass 支持 start -->
 			<div class="dm_column_item">
 
-				<h3 id="qui_sassSupport" class="dm_column_item_title">SASS 与 Compass 支持</h3>
+				<h3 id="qui_SassSupport" class="dm_column_item_title">Sass 与 Compass 支持</h3>
 
-        <div class="dm_column_tip">QMUI 中提供了大量基于 SASS 和 Compass 的 CSS 预处理的方法，包括 CSS Reset，一些常见的 CSS 类（例如清除浮动），已经封装处理好 CSS 属性兼容性的方法，计算长度值的简便方法（例如获取 padding 在某个方向的值，计算两个长度值的中间值），快速实现一些样式效果的工具方法（例如实现 border 三角形，适应多倍屏幕的 1px 边框等）。这些都是<strong>用于提高样式开发的效率和质量。</strong>详细请参考<a href="./tools.html">工具方法</a>页面。</div>
+        <div class="dm_column_tip">QMUI 中提供了大量基于 Sass 和 Compass 的 CSS 预处理的方法，包括 CSS Reset，一些常见的 CSS 类（例如清除浮动），已经封装处理好 CSS 属性兼容性的方法，计算长度值的简便方法（例如获取 padding 在某个方向的值，计算两个长度值的中间值），快速实现一些样式效果的工具方法（例如实现 border 三角形，适应多倍屏幕的 1px 边框等）。这些都是<strong>用于提高样式开发的效率和质量。</strong>详细请参考<a href="./tools.html">工具方法</a>页面。</div>
 
       </div>
-      <!-- SASS 与 Compass 支持 end -->
+      <!-- Sass 与 Compass 支持 end -->
 		
       <!-- 扩展组件 start -->
 			<div class="dm_column_item">
@@ -300,7 +305,7 @@ yo qmui
 
 			<h2 id="qui_browserCompatibility" class="dm_column_title">兼容性策略</h2>
 
-			<p class="dm_column_tip">QMUI 提供的几个能力里面，基于 gulp 的脚手架都是开发过程的辅助工具，与浏览器兼容无关。而 QMUI 的提供的 SASS 和 Compass 方法、公共组件都兼容 IE6+。扩展组件由于是从不同的业务中抽取出来，因此兼容性并没有统一的标准，请参考每个扩展组件的标注。</p>
+			<p class="dm_column_tip">QMUI 提供的几个能力里面，基于 gulp 的脚手架都是开发过程的辅助工具，与浏览器兼容无关。而 QMUI 的提供的 Sass 和 Compass 方法、公共组件都兼容 IE6+。扩展组件由于是从不同的业务中抽取出来，因此兼容性并没有统一的标准，请参考每个扩展组件的标注。</p>
 		
 		</div>
     <!-- 兼容性策略 end -->
@@ -310,8 +315,26 @@ yo qmui
 
 			<h2 id="qui_frameworkImprove" class="dm_column_title">完善框架</h2>
 
-      <p class="dm_column_tip"><a href="https://github.com/QMUI/qmui_web/issues" target="_blank">QMUI Web Issues</a></p>
-      <p class="dm_column_tip"><a href="https://github.com/QMUI/qmui_web_desktop/issues" target="_blank">QMUI Web Desktop Issues</a></p>
+      <p class="dm_column_tip">如果有意见反馈或者功能建议，欢迎创建 <a href="https://github.com/QMUI/qmui_web/issues" target="_blank">Issue</a> 或发送 <a href="https://github.com/QMUI/qmui_web/pulls" target="_blank">Pull Request</a>，感谢你的支持和贡献。</p>
+
+      <!-- 内置工作流调试辅助 start -->
+			<div class="dm_column_item">
+
+				<h3 id="qui_workflowDebug" class="dm_column_item_title">内置工作流调试辅助</h3>
+
+        <p class="dm_column_tip">当 QMUI Web 工作流在工作时，会自动检测工作流源码是否有更新并在有更新时发出通知，包括日志通知以及声音通知。</p>
+
+        <p class="dm_column_tip">另外为了方便调试，QMUI Web 带有 Debug 模式，通过 Debug 模式开启工作流后，当 QMUI Web 检测到工作流源码有更新时会发出通知并自行重启工作流，方便调试。</p>
+
+        <div class="dm_column_item_info dm_column_item_info_Single">
+          <div class="dm_column_item_info_code">
+            <xmp class="prettyprint">#在 qmui_web 目录中执行以下命令可以开启 Debug 模式工作流
+gulp --debug</xmp>
+          </div>
+        </div>
+
+      </div>
+      <!-- 内置工作流调试辅助 end -->
 		
 		</div>
     <!-- 完善框架end -->
@@ -348,7 +371,7 @@ sudo npm install</xmp>
 				<h3 id="qui_useConfig" class="dm_column_item_title">使用配置文件</h3>
 
         <p class="dm_column_tip">在 qmui_web（QMUI Web 框架根目录）中，有两个配置文件 config.rb 和 config.js，<strong>在项目开始之前应该把这两个文件复制到 qmui_web 的上一层目录（按推荐的文件结构，应该是 UI_dev 目录）</strong>，这两个配置文件分别用于框架在 Compass 和 gulp 两种能力下的配置。</p>
-        <p class="dm_column_tip">具体的说，config.rb 会配置静态资源最终输出的路径，输出的样式文件是否需要压缩等 Compass 和 SASS 相关配置。如果开发时使用的就是框架所推荐的文件结构，那么这个配置文件基本可以不用调整。</p>
+        <p class="dm_column_tip">具体的说，config.rb 会配置静态资源最终输出的路径，输出的样式文件是否需要压缩等 Compass 和 Sass 相关配置。如果开发时使用的就是框架所推荐的文件结构，那么这个配置文件基本可以不用调整。</p>
         <p class="dm_column_tip">而 config.js 则配置 gulp 在使用时的一些依赖的变量，与 config.rb 相似，如果开发时使用的就是框架所推荐的文件结构，那么基本上只需要配置 <code>project</code> 和 <code>prefix</code> 两个参数即可。详细的配置选项如下：</p>
 
         <div class="dm_column_tip">

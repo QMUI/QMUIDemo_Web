@@ -175,7 +175,7 @@ input, textarea, select, button {
 
 /* line 25, ../../../UI_dev/qmui_web/qmui/helper/_reset.scss */
 a {
-  color: #36ACFF;
+  color: #00A3E1;
   text-decoration: none;
   -webkit-tap-highlight-color: rgba(105, 186, 255, 0.13);
 }
@@ -2379,8 +2379,8 @@ pre.dm_column_tip {
   display: inline-block;
   padding: 1px 10px;
   border-radius: 12px;
-  border: 1px solid #36ACFF;
-  color: #36ACFF;
+  border: 1px solid #00A3E1;
+  color: #00A3E1;
   font-size: 12px;
   margin-left: 4px;
 }
