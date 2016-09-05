@@ -12,7 +12,7 @@
   <link rel="icon" type="image/png" sizes="16x16" href="../public/style/images/independent/favicon/favicon_16h.png" />
   <link rel="icon" type="image/png" sizes="32x32" href="../public/style/images/independent/favicon/favicon_32h.png" />
   <link rel="icon" type="image/png" sizes="48x48" href="../public/style/images/independent/favicon/favicon_48h.png" />
-	<link rel="stylesheet" href="../public/style/css/main_release.css"/>
+	<link rel="stylesheet" type="text/css" href="../public/style/css/main.css" />
   <!--[if lte IE 8]>
   <script type="text/javascript">
     (function(elements) {
@@ -109,6 +109,8 @@
 			<h2 id="qui_widgetCommon" class="dm_column_title">通用组件</h2>
 
 			<p class="dm_column_tip">QMUI Web 的通用组件与 Bootstrap 这类组件库框架中的组件并不相同，通用组件本身只有实现了很少的必要样式，而通过 Sass 配置表的方式预留了大量可配置的接口，在创建一个新项目后，应该先根据设计配置好这些信息，当这些信息配置完成，那么一个项目的基本样式就可以快速实现了。当然，也可以直接使用默认样式用于快速开发。</p>
+
+      <p class="dm_column_tip"><strong>以下是 Demo 的组件展示效果，在实际项目中，你无需另外复制这些 HTML 来产生组件，当开发者使用 <a href="https://github.com/QMUI/generator-qmui" target="_blank">generator-qmui</a> 安装 QMUI Web 时，该工具会自动按默认配置生成一个组件列表。</strong></p>
 			
 			<div class="dm_column_item">
 
@@ -121,10 +123,16 @@
 						<div class="dm_column_display_title">展示:</div>
 						<div class="dm_column_display_cnt">
 							<a class="qui_btn dm_btn" href="javascript:;">按钮</a>
+							<a class="qui_btn dm_btn dm_btn_Ghost" href="javascript:;">按钮</a>
+							<a class="qui_btn dm_btn" href="javascript:;" disabled>按钮禁用</a>
+							<a class="qui_btn dm_btn dm_btn_Ghost" href="javascript:;" disabled>按钮禁用</a>
 						</div>
 					</div>
 					<div class="dm_column_item_info_code">
-						<xmp class="prettyprint"><a class="qui_btn dm_btn" href="javascript:;">按钮</a></xmp>
+<xmp class="prettyprint"><a class="qui_btn dm_btn" href="javascript:;">按钮</a>
+<a class="qui_btn dm_btn dm_btn_Ghost" href="javascript:;">按钮</a>
+<a class="qui_btn dm_btn" href="javascript:;" disabled>按钮禁用</a>
+<a class="qui_btn dm_btn dm_btn_Ghost" href="javascript:;" disabled>按钮禁用</a></xmp>
 					</div>
 				</div>
 
@@ -139,32 +147,32 @@
 				<div class="dm_column_item_info">
 					<div class="dm_column_display">
 						<div class="dm_column_display_title">展示:</div>
-						<div class="dm_column_display_cnt">
+						<div class="dm_column_display_cnt" style="padding: 0 0 15px 15px;">
 							<div class="qui_dialog dm_dialog dm_columnDisplayControl">
-								<a class="qui_dialog_close dm_dialog_close" href="javascript:;">
-                  <span class="dm_icon dm_icon_closeDialog"></span>
-                </a>
+                <a class="qui_dialog_close dm_dialog_close" href="javascript:;">X</a>
 								<div class="qui_dialog_head dm_dialog_head">
 									<div class="qui_dialog_title dm_dialog_title">对话框标题</div>
 								</div>
-								<div class="qui_dialog_body dm_dialog_body">我是对话框柔软的身体</div>
+                <div class="qui_dialog_body dm_dialog_body">
+                  这里是对话框的主体内容。<br />
+                  通常一个对话框由头部、主体内容和底部栏三部分组成。
+                </div>
 								<div class="qui_dialog_foot dm_dialog_foot">
-									<a class="qui_btn dm_btn dm_btn_Blue" href="javascript:;">是</a>
-                  <a class="qui_btn dm_btn" href="javascript:;">否</a>
-                  <a class="qui_btn dm_btn dm_btn_Blue dm_btn_Blue_Disabled" href="javascript:;">否</a>
+									<a class="qui_btn dm_btn" href="javascript:;">确认</a><a class="qui_btn dm_btn dm_btn_Ghost" href="javascript:;">取消</a>
 								</div>
 							</div>
 						</div>
 					</div>
 					<div class="dm_column_item_info_code">
 <xmp class="prettyprint"><div class="qui_dialog dm_dialog">
-  <a class="qui_dialog_close dm_dialog_close" href="javascript:;">
-    <span class="dm_dialog_colseIcon"></span>
-  </a>
+  <a class="qui_dialog_close dm_dialog_close" href="javascript:;">X</a>
   <div class="qui_dialog_head dm_dialog_head">
     <div class="qui_dialog_title dm_dialog_title">对话框标题</div>
   </div>
-  <div class="qui_dialog_body dm_dialog_body">我是对话框柔软的身体</div>
+  <div class="qui_dialog_body dm_dialog_body">
+    这里是对话框的主体内容。<br />
+    通常一个对话框由头部、主体内容和底部栏三部分组成。
+  </div>
   <div class="qui_dialog_foot dm_dialog_foot">
     <a class="qui_btn dm_btn dm_btn_Blue" href="javascript:;">是</a>
     <a class="qui_btn dm_btn" href="javascript:;">否</a>
@@ -263,13 +271,13 @@
                 <div class="qui_tab_title dm_tab_title">
                   <ul class="qui_tabNav dm_tabNav">
                     <li class="qui_tabNav_item dm_tabNav_item dm_tabNav_item_Curr">
-                    <a href="javascript:;" class="qui_tabNav_itemLink dm_tabNav_itemLink">选项卡一</a>
+                      <a href="javascript:;" class="qui_tabNav_itemLink dm_tabNav_itemLink">选项卡一</a>
                     </li>
                     <li class="qui_tabNav_item dm_tabNav_item">
-                    <a href="javascript:;" class="qui_tabNav_itemLink dm_tabNav_itemLink">选项卡二</a>
+                      <a href="javascript:;" class="qui_tabNav_itemLink dm_tabNav_itemLink">选项卡二</a>
                     </li>
                     <li class="qui_tabNav_item dm_tabNav_item">
-                    <a href="javascript:;" class="qui_tabNav_itemLink dm_tabNav_itemLink">选项卡三</a>
+                      <a href="javascript:;" class="qui_tabNav_itemLink dm_tabNav_itemLink">选项卡三</a>
                     </li>
                   </ul>
                 </div>
@@ -397,7 +405,7 @@
 					<div class="dm_column_display">
 						<div class="dm_column_display_title">展示:</div>
 			            <div class="dm_column_display_cnt">
-			            	<a class="qui_btn dm_fileUpload" href="javascript:;">上传
+			            	<a class="qui_btn dm_btn dm_fileUpload" href="javascript:;">上传
 			            		<input class="dm_fileUpload_input" type="file">
 			            	</a>
 			            </div>
@@ -470,21 +478,20 @@
 		<div class="qui_dialog dm_dialog widget_dialogInMask">
 			<div class="qui_dialog_head dm_dialog_head">
 				<div class="qui_dialog_title dm_dialog_title">对话框标题</div>
-				<a class="qui_dialog_close dm_dialog_close dm_icon dm_icon_CloseDialog" href="javascript:;"></a>
+        <a class="qui_dialog_close dm_dialog_close" href="javascript:;">X</a>
 			</div>
 			<div class="qui_dialog_body dm_dialog_body">点击任意处关闭</div>
 			<div class="qui_dialog_foot dm_dialog_foot">
-				<a class="qui_btn dm_btn dm_btn_Blue" href="javascript:;">确认</a>
-				<a class="qui_btn dm_btn" href="javascript:;">取消</a>
+			  <a class="qui_btn dm_btn" href="javascript:;">确认</a><a class="qui_btn dm_btn dm_btn_Ghost" href="javascript:;">取消</a>
 			</div>
 		</div>
 	</div>
 	
   <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
-	<script type="text/javascript" src="../public/js/all.js"></script>
-	
-	
-	
+	<script src="../public/js/prettify.js"></script>
+	<script src="../public/js/lang-css.js"></script>
+	<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+	<script src="../public/js/main.js"></script>
 </body>
 </html>
 

@@ -286,17 +286,17 @@ audio, canvas, video {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
-  min-width: 24px;
-  height: 22px;
+  min-width: 46px;
+  height: 30px;
   padding: 0 12px;
-  background: #f4f4f4;
-  border: 1px solid #888;
-  line-height: 22px;
+  background: #04C9E8;
+  border: 1px solid transparent;
+  line-height: 30px;
   outline: none;
   cursor: pointer;
   text-align: center;
-  font-size: 12px;
-  color: #000;
+  font-size: 13px;
+  color: #fff;
   _overflow-y: hidden;
 }
 
@@ -337,34 +337,34 @@ input.qui_btn {
 .qui_dialog {
   position: absolute;
   z-index: 100;
-  min-width: 440px;
-  _width: 440px;
-  background: #eaeaea;
-  border: 1px solid #aaa;
+  min-width: 420px;
+  _width: 420px;
+  background: #fff;
+  border: none;
   border-radius: 5px;
 }
 
 /* line 27, ../../../UI_dev/qmui_web/qmui/component/_dialog.scss */
 .qui_dialog_head {
-  background: #eaeaea;
-  border-bottom: 1px solid #ccc;
+  background: #00C0E1;
+  border-bottom: none;
   border-radius: 5px 5px 0 0;
 }
 
 /* line 33, ../../../UI_dev/qmui_web/qmui/component/_dialog.scss */
 .qui_dialog_title {
-  height: 25px;
-  line-height: 25px;
-  font-size: 12px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 14px;
   font-weight: bold;
-  color: #000;
+  color: #fff;
 }
 
 /* line 41, ../../../UI_dev/qmui_web/qmui/component/_dialog.scss */
 .qui_dialog_close {
   position: absolute;
-  top: 12px;
-  right: 10px;
+  top: 9px;
+  right: 6px;
 }
 
 /* line 47, ../../../UI_dev/qmui_web/qmui/component/_dialog.scss */
@@ -379,8 +379,8 @@ input.qui_btn {
 
 /* line 54, ../../../UI_dev/qmui_web/qmui/component/_dialog.scss */
 .qui_dialog_foot {
-  background: #eaeaea;
-  border-top: 1px solid #ccc;
+  background: #fff;
+  border-top: none;
   border-radius: 0 0 5px 5px;
 }
 
@@ -431,20 +431,20 @@ input.qui_btn {
   position: absolute;
   z-index: 30;
   background: #fff;
-  border: 1px solid #a0a0a0;
+  border: 1px solid #DEE0E2;
 }
 
 /* line 18, ../../../UI_dev/qmui_web/qmui/component/_dropdownMenu.scss */
 .qui_dropdownMenu ul {
-  padding: 5px 0;
+  padding: 12px 0;
 }
 
 /* line 21, ../../../UI_dev/qmui_web/qmui/component/_dropdownMenu.scss */
 .qui_dropdownMenu_itemLink {
   display: block;
-  height: 22px;
-  line-height: 22px;
-  padding: 0 14px;
+  height: 32px;
+  line-height: 32px;
+  padding: 0 15px;
   color: #000;
 }
 
@@ -475,33 +475,33 @@ input.qui_btn {
 /* .qui_tab */
 /* line 17, ../../../UI_dev/qmui_web/qmui/component/_tab.scss */
 .qui_tab {
-  background: #ecf9ff;
+  background: #fff;
 }
 
 /* line 20, ../../../UI_dev/qmui_web/qmui/component/_tab.scss */
 .qui_tab_title {
-  background: #a5d9f0;
+  background: #fff;
 }
 
 /* line 23, ../../../UI_dev/qmui_web/qmui/component/_tab.scss */
 .qui_tabNav {
-  padding: 5px 5px 0;
+  padding: 0 16px;
 }
 
 /* line 27, ../../../UI_dev/qmui_web/qmui/component/_tab.scss */
 .qui_tabNav_item {
   float: left;
-  margin: 0;
+  margin: 0 24px 0 0;
 }
 
 /* line 31, ../../../UI_dev/qmui_web/qmui/component/_tab.scss */
 .qui_tabNav_itemLink {
   display: block;
-  height: 28px;
-  line-height: 28px;
-  padding: 5px 10px;
+  height: 43px;
+  line-height: 43px;
+  padding: 0;
   background: transparent;
-  color: #006091;
+  color: #858C96;
 }
 
 /* #textField */
@@ -518,11 +518,11 @@ input.qui_btn {
 .qui_inputText, .qui_textarea {
   display: block;
   width: 270px;
-  line-height: 18px;
-  padding: 5px;
+  line-height: 22px;
+  padding: 12px 16px;
   background: #fff;
-  border: 1px solid #96a5b4;
-  border-radius: 2px;
+  border: 1px solid #DEE0E2;
+  border-radius: 5px;
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
@@ -531,7 +531,7 @@ input.qui_btn {
 /* .qui_inputText */
 /* line 24, ../../../UI_dev/qmui_web/qmui/component/_textField.scss */
 .qui_inputText {
-  height: 18px;
+  height: 22px;
 }
 /* line 27, ../../../UI_dev/qmui_web/qmui/component/_textField.scss */
 .qui_inputText::-ms-clear {
@@ -541,7 +541,56 @@ input.qui_btn {
 /* .qui_textarea */
 /* line 32, ../../../UI_dev/qmui_web/qmui/component/_textField.scss */
 .qui_textarea {
-  height: 54px;
+  height: 66px;
+}
+
+/* placeholder 颜色重置 */
+/* line 39, ../../../UI_dev/qmui_web/qmui/component/_textField.scss */
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #ADB4BE;
+}
+
+/* line 43, ../../../UI_dev/qmui_web/qmui/component/_textField.scss */
+input:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder {
+  color: #ADB4BE;
+}
+
+/* line 48, ../../../UI_dev/qmui_web/qmui/component/_textField.scss */
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+  color: #ADB4BE;
+}
+
+/* line 52, ../../../UI_dev/qmui_web/qmui/component/_textField.scss */
+input:focus:-moz-placeholder,
+textarea:focus:-moz-placeholder {
+  color: #ADB4BE;
+}
+
+/* line 57, ../../../UI_dev/qmui_web/qmui/component/_textField.scss */
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+  color: #ADB4BE;
+}
+
+/* line 61, ../../../UI_dev/qmui_web/qmui/component/_textField.scss */
+input:focus::-moz-placeholder,
+textarea:focus::-moz-placeholder {
+  color: #ADB4BE;
+}
+
+/* line 66, ../../../UI_dev/qmui_web/qmui/component/_textField.scss */
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: #ADB4BE;
+}
+
+/* line 70, ../../../UI_dev/qmui_web/qmui/component/_textField.scss */
+input:focus:-ms-input-placeholder,
+textarea:focus:-ms-input-placeholder {
+  color: #ADB4BE;
 }
 
 /**
@@ -606,87 +655,55 @@ a:hover {
 /* .dm_btn */
 /* line 14, ../../../UI_dev/project/widget/_button.scss */
 .dm_btn {
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fff), color-stop(90%, #ebebeb), color-stop(100%, #f3f3f3));
-  background-image: -webkit-linear-gradient(top, #fff 0%, #ebebeb 90%, #f3f3f3 100%);
-  background-image: -moz-linear-gradient(top, #fff 0%, #ebebeb 90%, #f3f3f3 100%);
-  background-image: -o-linear-gradient(top, #fff 0%, #ebebeb 90%, #f3f3f3 100%);
-  background-image: linear-gradient(to bottom, #fff 0%, #ebebeb 90%, #f3f3f3 100%);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFFFF', endColorstr='#FFF3F3F3', GradientType=0);
-  border-radius: 4px;
+  background-color: #04C9E8;
+  border-radius: 2px;
   /* line-height 的偏移值依赖于不同字体 */
-  line-height: 24px;
-  line-height: 23px \9\0;
-  _line-height: 26px;
+  line-height: 32px;
+  line-height: 31px \9\0;
+  _line-height: 34px;
 }
 /* line 22, ../../../UI_dev/project/widget/_button.scss */
-.dm_btn:focus {
-  border-color: #0074bc;
+.dm_btn:hover {
+  background-color: #05D7F7;
 }
 /* line 25, ../../../UI_dev/project/widget/_button.scss */
 .dm_btn:active, .dm_btn_Active {
-  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2);
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2);
-  border-color: #7e7e7e;
-  background: #F3F3F3;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ebebeb), color-stop(100%, #f3f3f3));
-  background-image: -webkit-linear-gradient(top, #ebebeb 0%, #f3f3f3 100%);
-  background-image: -moz-linear-gradient(top, #ebebeb 0%, #f3f3f3 100%);
-  background-image: -o-linear-gradient(top, #ebebeb 0%, #f3f3f3 100%);
-  background-image: linear-gradient(to bottom, #ebebeb 0%, #f3f3f3 100%);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFEBEBEB', endColorstr='#FFF3F3F3', GradientType=0);
+  background-color: #04B1CC;
 }
-/* line 32, ../../../UI_dev/project/widget/_button.scss */
-.dm_btn:disabled, .dm_btn_Disabled {
-  background: #ececec;
-  filter: none;
-  border-color: #c3c3c3;
-  color: #a8a8a8 !important;
-  box-shadow: none;
+/* line 29, ../../../UI_dev/project/widget/_button.scss */
+.dm_btn[Disabled] {
+  -webkit-opacity: 0.5;
+  -moz-opacity: 0.5;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  -khtml-opacity: 0.5;
 }
 
-/* line 43, ../../../UI_dev/project/widget/_button.scss */
+/* line 35, ../../../UI_dev/project/widget/_button.scss */
 button.dm_btn,
 input.dm_btn {
-  *height: 24px;
-  *line-height: 19px;
-  _line-height: 21px;
+  *height: 32px;
+  *line-height: 27px;
+  _line-height: 29px;
 }
 
-/* line 50, ../../../UI_dev/project/widget/_button.scss */
-.dm_btn_Blue {
-  border: 1px solid #1d567d;
-  color: #fff !important;
-  background: #2e89c5;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #2a96d8), color-stop(90%, #257db9), color-stop(100%, #2e89c5));
-  background-image: -webkit-linear-gradient(top, #2a96d8 0%, #257db9 90%, #2e89c5 100%);
-  background-image: -moz-linear-gradient(top, #2a96d8 0%, #257db9 90%, #2e89c5 100%);
-  background-image: -o-linear-gradient(top, #2a96d8 0%, #257db9 90%, #2e89c5 100%);
-  background-image: linear-gradient(to bottom, #2a96d8 0%, #257db9 90%, #2e89c5 100%);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF2A96D8', endColorstr='#FF2E89C5', GradientType=0);
+/* line 42, ../../../UI_dev/project/widget/_button.scss */
+.dm_btn_Ghost {
+  background-color: transparent;
+  border: 1px solid #04C9E8;
+  color: #04C9E8;
 }
-/* line 56, ../../../UI_dev/project/widget/_button.scss */
-.dm_btn_Blue:active, .dm_btn_Blue_Active {
-  border-color: #1d567d;
-  background: #0074bc;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #0074bc), color-stop(100%, #238aca));
-  background-image: -webkit-linear-gradient(top, #0074bc 0%, #238aca 100%);
-  background-image: -moz-linear-gradient(top, #0074bc 0%, #238aca 100%);
-  background-image: -o-linear-gradient(top, #0074bc 0%, #238aca 100%);
-  background-image: linear-gradient(to bottom, #0074bc 0%, #238aca 100%);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF0074BC', endColorstr='#FF238ACA', GradientType=0);
+/* line 47, ../../../UI_dev/project/widget/_button.scss */
+.dm_btn_Ghost:hover {
+  background-color: transparent;
+  border-color: #05D7F7;
+  color: #05D7F7;
 }
-/* line 62, ../../../UI_dev/project/widget/_button.scss */
-.dm_btn_Blue:disabled, .dm_btn_Blue_Disabled {
-  background: #98c3e2;
-  filter: none;
-  border-color: #a2b6c5;
-  color: #f9fcfe !important;
-  box-shadow: none;
+/* line 52, ../../../UI_dev/project/widget/_button.scss */
+.dm_btn_Ghost:active, .dm_btn_Ghost_Active {
+  background-color: transparent;
+  border-color: #04B1CC;
+  color: #04B1CC;
 }
 
 /* 对话框 */
@@ -700,43 +717,50 @@ input.dm_btn {
 /* .dm_dialog */
 /* line 12, ../../../UI_dev/project/widget/_dialog.scss */
 .dm_dialog {
-  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.15);
 }
 
 /* line 16, ../../../UI_dev/project/widget/_dialog.scss */
 .dm_dialog_head {
-  padding: 5px 15px;
+  padding: 0 12px;
 }
 
-/* line 20, ../../../UI_dev/project/widget/_dialog.scss */
-.dm_dialog_title {
-  font-weight: bold;
-}
-
-/* line 24, ../../../UI_dev/project/widget/_dialog.scss */
+/* line 19, ../../../UI_dev/project/widget/_dialog.scss */
 .dm_dialog_close {
-  font-size: 0;
-  line-height: 0;
+  padding: 5px;
+  line-height: 1;
+  font-size: 12px;
+  color: #fff;
 }
-
+/* line 25, ../../../UI_dev/project/widget/_dialog.scss */
+.dm_dialog_close:hover {
+  color: #d6d9de;
+  text-decoration: none;
+}
 /* line 29, ../../../UI_dev/project/widget/_dialog.scss */
-.dm_dialog_body {
-  padding: 23px 30px 30px 37px;
-  font-size: 14px;
+.dm_dialog_close:active {
+  color: #eaecee;
 }
 
 /* line 34, ../../../UI_dev/project/widget/_dialog.scss */
+.dm_dialog_body {
+  padding: 23px 30px 30px 37px;
+  font-size: 14px;
+  color: #353C46;
+}
+
+/* line 40, ../../../UI_dev/project/widget/_dialog.scss */
 .dm_dialog_foot {
-  padding: 5px 12px;
+  padding: 17px 12px;
   text-align: right;
   line-height: 25px;
 }
 
-/* line 40, ../../../UI_dev/project/widget/_dialog.scss */
+/* line 46, ../../../UI_dev/project/widget/_dialog.scss */
 .dm_dialog_foot .dm_btn {
-  margin-left: 3px;
+  margin-left: 12px;
 }
 
 /* 遮罩层 */
@@ -760,16 +784,21 @@ input.dm_btn {
 /* .dm_dropdownMenu */
 /* line 12, ../../../UI_dev/project/widget/_dropdownMenu.scss */
 .dm_dropdownMenu {
+  min-width: 206px;
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 }
 
-/* line 16, ../../../UI_dev/project/widget/_dropdownMenu.scss */
+/* line 18, ../../../UI_dev/project/widget/_dropdownMenu.scss */
 .dm_dropdownMenu_itemLink:hover {
-  background-color: #3470cc;
-  color: #fff;
+  background-color: #f5f5f5;
+  text-decoration: none;
+}
+/* line 22, ../../../UI_dev/project/widget/_dropdownMenu.scss */
+.dm_dropdownMenu_itemLink:active {
+  background-color: #ebebeb;
 }
 
 /* 选项卡 */
@@ -783,14 +812,40 @@ input.dm_btn {
  */
 /* .dm_tab */
 /* line 12, ../../../UI_dev/project/widget/_tab.scss */
-.dm_tabNav_item_Curr {
-  background: #ecf9ff;
+.dm_tab {
+  border: 1px solid #DEE0E2;
 }
 
 /* line 15, ../../../UI_dev/project/widget/_tab.scss */
+.dm_tabNav {
+  border-bottom: 1px solid #DEE0E2;
+}
+
+/* line 18, ../../../UI_dev/project/widget/_tab.scss */
+.dm_tabNav_item {
+  margin-bottom: -1px;
+  border-bottom: 3px solid transparent;
+  font-size: 16px;
+}
+/* line 23, ../../../UI_dev/project/widget/_tab.scss */
+.dm_tabNav_item_Curr {
+  border-color: #04C9E8;
+}
+/* line 26, ../../../UI_dev/project/widget/_tab.scss */
+.dm_tabNav_item_Curr .dm_tabNav_itemLink {
+  color: #04C9E8;
+}
+
+/* line 31, ../../../UI_dev/project/widget/_tab.scss */
 .dm_tabNav_itemLink:hover {
-  color: #0087ca;
-  text-decoration: underline;
+  color: #04C9E8;
+  text-decoration: none;
+}
+
+/* line 36, ../../../UI_dev/project/widget/_tab.scss */
+.dm_tab_cnt {
+  min-height: 100px;
+  padding: 16px 24px;
 }
 
 /* 文本输入 */
@@ -799,12 +854,19 @@ input.dm_btn {
  * @author clearwu
  * @date 2015-08-17
  *
- * .qui_inputText
- * .qui_textarea
+ * .dm_inputText
+ * .dm_textarea
  *
  */
-/* .qui_inputText */
-/* .qui_textarea */
+/* line 12, ../../../UI_dev/project/widget/_textField.scss */
+.dm_inputText,
+.dm_textarea {
+  font-size: 15px;
+  color: #353C46;
+}
+
+/* .dm_inputText */
+/* .dm_textarea */
 /* 第三方插件相关样式 */
 /**
  * _3rd.scss 第三方插件的相关样式 
@@ -1192,19 +1254,19 @@ pre.dm_column_tip {
   *zoom: 1;
   font-size: 0;
   background-repeat: no-repeat;
-  background-image: url('../images/icons-sb5acab4ce9.png');
-  background-size: 160px 450px;
+  background-image: url('../images/icons-s79b46d0459.png');
+  background-size: 160px 440px;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2), (min-resolution: 2dppx), (min-resolution: 192dpi) {
   /* line 19, ../../../UI_dev/project/widget/_images.scss */
   .dm_icon {
-    background-image: url('../images/icons_2x-s93ec932b56.png');
+    background-image: url('../images/icons_2x-s28fe254cde.png');
   }
 }
 @media (-webkit-min-device-pixel-ratio: 3), (min--moz-device-pixel-ratio: 3), (-o-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3), (min-resolution: 3dppx), (min-resolution: 288dpi) {
   /* line 19, ../../../UI_dev/project/widget/_images.scss */
   .dm_icon {
-    background-image: url('../images/icons_3x-s6869258367.png');
+    background-image: url('../images/icons_3x-sf84464c53b.png');
   }
 }
 
@@ -1269,13 +1331,6 @@ pre.dm_column_tip {
   background-position: 0 -414px;
   height: 26px;
   width: 104px;
-}
-
-/* line 38, ../../../UI_dev/project/widget/_images.scss */
-.dm_icon_closeDialog {
-  background-position: 0 -440px;
-  height: 10px;
-  width: 10px;
 }
 
 /* 扩展组件 */
