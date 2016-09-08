@@ -363,7 +363,7 @@ input.qui_btn {
 /* line 41, ../../../UI_dev/qmui_web/qmui/component/_dialog.scss */
 .qui_dialog_close {
   position: absolute;
-  top: 9px;
+  top: 5px;
   right: 6px;
 }
 
@@ -731,7 +731,7 @@ input.dm_btn {
 .dm_dialog_close {
   padding: 5px;
   line-height: 1;
-  font-size: 12px;
+  font-size: 18px;
   color: #fff;
 }
 /* line 25, ../../../UI_dev/project/widget/_dialog.scss */
