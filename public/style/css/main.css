@@ -1755,7 +1755,7 @@ pre.dm_column_tip {
     position: relative;
     border: none;
   }
-  /* line 134, ../../../UI_dev/qmui_web/qmui/helper/mixin/tool/_effect.scss */
+  /* line 165, ../../../UI_dev/qmui_web/qmui/helper/mixin/tool/_effect.scss */
   .frame_nav_item:after {
     content: "";
     position: absolute;
@@ -1780,7 +1780,7 @@ pre.dm_column_tip {
   }
 }
 @media handheld and (max-width: 846px) and (-webkit-min-device-pixel-ratio: 3), screen and (max-width: 846px) and (-webkit-min-device-pixel-ratio: 3), handheld and (max-width: 846px) and (min--moz-device-pixel-ratio: 3), screen and (max-width: 846px) and (min--moz-device-pixel-ratio: 3), handheld and (max-width: 846px) and (-o-min-device-pixel-ratio: 3), screen and (max-width: 846px) and (-o-min-device-pixel-ratio: 3), handheld and (max-width: 846px) and (min-device-pixel-ratio: 3), screen and (max-width: 846px) and (min-device-pixel-ratio: 3), handheld and (max-width: 846px) and (min-resolution: 3dppx), screen and (max-width: 846px) and (min-resolution: 3dppx), handheld and (max-width: 846px) and (min-resolution: 288dpi), screen and (max-width: 846px) and (min-resolution: 288dpi) {
-  /* line 152, ../../../UI_dev/qmui_web/qmui/helper/mixin/tool/_effect.scss */
+  /* line 183, ../../../UI_dev/qmui_web/qmui/helper/mixin/tool/_effect.scss */
   .frame_nav_item:after {
     width: 300%;
     height: 300%;
