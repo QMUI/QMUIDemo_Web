@@ -124,6 +124,12 @@
   text-decoration: none;
 }
 
+.frame_sidebar_nav_Tool {
+	.frame_sidebar_nav_link {
+		text-transform: none;
+	}
+}
+
 /* #cnt 右侧主体 */
 .frame_cnt {
 	position: absolute;

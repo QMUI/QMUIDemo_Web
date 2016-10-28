@@ -106,7 +106,9 @@ pre.dm_column_tip {
   }
 }
 
-.dm_column_item_info_code, .dm_column_item_info_tips, .dm_column_item_info_list {
+.dm_column_item_info_code,
+.dm_column_item_info_tips,
+.dm_column_item_info_list {
   padding: 15px;
   font-size: 14px;
   background-color: $common_color_code_background;
@@ -121,11 +123,16 @@ pre.dm_column_tip {
   font-size: 12px;
   color: #707070;
 }
-.dm_column_item_info_code xmp {
-  @include inlineBlock;
+.dm_column_item_info_code {
+	cursor: pointer;
+
+	xmp {
+		@include inlineBlock;
+	}
 }
 
-.dm_column_item_info_Single .dm_column_item_info_code, .dm_column_item_info_list {
+.dm_column_item_info_Single .dm_column_item_info_code,
+.dm_column_item_info_list {
   border-top-width: 1px;
   border-radius: 4px;
 }

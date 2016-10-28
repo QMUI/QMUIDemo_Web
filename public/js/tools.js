@@ -3,9 +3,8 @@
 /**
  * @hughkli, Kayo 动态生成工具方法tools.html的DOM内容
  */
-
 // 利用 SASS 方法的 item 数据拼接方法声明
-var makeCompleteMethodWithItem = function(item) {
+var makeCompleteMethodWithItem = function(item, content) {
   var result = '',
       itemType = null;
 
@@ -35,7 +34,12 @@ var makeCompleteMethodWithItem = function(item) {
     }
     result += ')';
   }
-  result += ' { ... }';
+
+	if (content) {
+		result += ' {\n' + content + '}';
+	} else {
+		result += ' { ... }';
+	}
 
   return result;
 };
@@ -69,7 +73,7 @@ for (var i = 0, llength = comments.length; i < llength; i++) {
   for (var itemIndex = 0; itemIndex < tool.length; itemIndex++) {
     var item = tool[itemIndex],
 				itemId = 'qui_' + item.context.name;
-    mainHtml.push('<div class="dm_column_item tool_stage_item">');
+    mainHtml.push('<div class="dm_column_item tool_stage_item" data-groupIndex="' + i + '" data-itemIndex="' + itemIndex + '">');
     mainHtml.push('<h3 class="dm_column_item_title" id="' + itemId + '">' + item.context.name + '</h3>');
     mainHtml.push('<p class="tool_stage_item_desc">' + item.description + '</p>');
     mainHtml.push('<div class="dm_column_item_info dm_column_item_info_Single">');
@@ -120,3 +124,17 @@ for (var i = 0, llength = comments.length; i < llength; i++) {
 
 document.getElementById('toolSidebarNav').innerHTML = document.getElementById('toolSidebarNav').innerHTML + siderHtml.join('');
 document.getElementById('toolMain').innerHTML = document.getElementById('toolMain').innerHTML + mainHtml.join('');
+
+// 展开/收起方法实现详情
+$('.tool_stage .dm_column_item_info_code').on('click', function() {
+	var groupIndex = $(this).parent().parent().data('groupindex'),
+			itemIndex = $(this).parent().parent().data('itemindex'),
+			item = comments[groupIndex][itemIndex],
+			itemCode = comments[groupIndex][itemIndex].context.code;
+
+	$(this).html('<xmp class="prettyprint">' + makeCompleteMethodWithItem(item, itemCode) + '</xmp>');
+	prettyPrint();
+});
+
+// 默认调用一次代码高亮方法
+prettyPrint();
