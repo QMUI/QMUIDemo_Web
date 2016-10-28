@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /**
- * _index.scss 主页 
- * @author Kayo 
+ * _index.scss 主页
+ * @author Kayo
  * @date 2015-07-04
  *
  * #common 通用部分
@@ -34,7 +34,7 @@
     margin-bottom: 0;
 
     &:before {
-      content: normal; 
+      content: normal;
     }
   }
 }
@@ -67,7 +67,7 @@
   display: inline-block;
   min-width: 100px;
   margin-bottom: 20px;
-  padding: 8px 32px; 
+  padding: 8px 32px;
   font-size: 18px;
   text-align: center;
   @extend %disabledUserSelect;
@@ -180,8 +180,11 @@
   margin-bottom: 40px;
   padding-right: 35px;
   vertical-align: top;
-  text-align: left;
   @include box_sizing(border-box);
+
+	.dm_icon {
+		margin-bottom: 10px;
+	}
 }
 .index_ability_item_title {
   margin-bottom: 12px;
@@ -283,7 +286,7 @@
   height: $index_star_inner_height;
   border: 1px dashed #7FD0E8;
   border-width: 1px 0;
-  line-height: $index_star_inner_height; 
+  line-height: $index_star_inner_height;
   font-size: 16px;
   color: #01AAE1;
   text-align: center;
@@ -355,7 +358,7 @@
   .index_column_mobileDesc {
     display: block;
   }
-  
+
   .index_appIntro_img {
     height: auto;
     width: $index_appIntro_img_mobile_width;
@@ -407,6 +410,6 @@
   }
   .index_star_inner {
     height: $index_star_inner_mobile_height;
-    line-height: $index_star_inner_mobile_height; 
+    line-height: $index_star_inner_mobile_height;
   }
 }

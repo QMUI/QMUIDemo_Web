@@ -1,3 +1,5 @@
 UI_dev/qmui_web/node_modules/
+UI_dev/project/images/qmui-images-distribution/
+UI_dev/project/images/config.json
 .DS_Store
 .sass-cache
