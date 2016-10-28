@@ -33,7 +33,7 @@
  * #column 栏目，用于展示组件及其介绍
  * #index 首页
  */
-/* 
+/*
  * #function QMUI 功能相关
  * 由于移动页面也有大量渠道流向 PC，最终在 PC 上浏览，因此综合考虑这里 Mobile Only 仅仅会抛弃 IE6/7 相关的属性
  */
@@ -1515,12 +1515,12 @@ pre.dm_column_tip {
  *
  */
 /**
- * _frame.scss 外层框架 
- * @author Kayo 
+ * _frame.scss 外层框架
+ * @author Kayo
  * @date 2015-08-17
  *
  * #wrap 外层框架
- * #head 页头 
+ * #head 页头
  *   #title 网站标题
  *   #nav 网站导航
  * #sidebar 左侧栏
@@ -1610,30 +1610,24 @@ pre.dm_column_tip {
 }
 
 /* line 89, ../../../UI_dev/project/logic/_frame.scss */
-.frame_sidebar_Fixed {
-  position: fixed;
-  top: 0;
-}
-
-/* line 93, ../../../UI_dev/project/logic/_frame.scss */
 .frame_sidebar_inner {
   float: right;
   width: 240px;
-  padding: 43px 22px 0 0;
+  padding: 43px 22px 50px 0;
 }
 
 /* #sidebar_nav 侧栏导航 */
-/* line 100, ../../../UI_dev/project/logic/_frame.scss */
+/* line 96, ../../../UI_dev/project/logic/_frame.scss */
 .frame_sidebar_nav {
   font-size: 14px;
 }
 
-/* line 103, ../../../UI_dev/project/logic/_frame.scss */
+/* line 99, ../../../UI_dev/project/logic/_frame.scss */
 .frame_sidebar_nav_Children {
   margin-bottom: 12px;
 }
 
-/* line 106, ../../../UI_dev/project/logic/_frame.scss */
+/* line 102, ../../../UI_dev/project/logic/_frame.scss */
 .frame_sidebar_nav_link {
   display: block;
   height: 30px;
@@ -1646,7 +1640,7 @@ pre.dm_column_tip {
   text-transform: capitalize;
 }
 
-/* line 117, ../../../UI_dev/project/logic/_frame.scss */
+/* line 113, ../../../UI_dev/project/logic/_frame.scss */
 .frame_sidebar_nav_Children .frame_sidebar_nav_link {
   height: 24px;
   margin-bottom: 0;
@@ -1656,7 +1650,7 @@ pre.dm_column_tip {
   font-size: 13px;
 }
 
-/* line 125, ../../../UI_dev/project/logic/_frame.scss */
+/* line 121, ../../../UI_dev/project/logic/_frame.scss */
 .frame_sidebar_nav_link:hover {
   background-color: #e8ebee;
   border-right: 1px solid #d8dde2;
@@ -1664,43 +1658,48 @@ pre.dm_column_tip {
 }
 
 /* #cnt 右侧主体 */
-/* line 132, ../../../UI_dev/project/logic/_frame.scss */
+/* line 128, ../../../UI_dev/project/logic/_frame.scss */
 .frame_cnt {
-  margin-left: 450px;
+  position: absolute;
+  top: 46px;
+  left: 450px;
+  right: 0;
+  bottom: 0;
   padding: 35px;
+  overflow: auto;
 }
 
 /* #media 小屏幕适配 */
 @media screen and (max-width: 1366px) {
-  /* line 140, ../../../UI_dev/project/logic/_frame.scss */
+  /* line 141, ../../../UI_dev/project/logic/_frame.scss */
   .frame_head {
     padding-left: 98px;
   }
 
-  /* line 143, ../../../UI_dev/project/logic/_frame.scss */
+  /* line 144, ../../../UI_dev/project/logic/_frame.scss */
   .frame_sidebar {
     width: 320px;
   }
 
-  /* line 146, ../../../UI_dev/project/logic/_frame.scss */
+  /* line 147, ../../../UI_dev/project/logic/_frame.scss */
   .frame_sidebar_inner {
     width: 200px;
   }
 
-  /* line 149, ../../../UI_dev/project/logic/_frame.scss */
+  /* line 150, ../../../UI_dev/project/logic/_frame.scss */
   .frame_cnt {
-    margin-left: 320px;
+    left: 320px;
   }
 }
 @media handheld and (max-width: 846px), screen and (max-width: 846px) {
-  /* line 156, ../../../UI_dev/project/logic/_frame.scss */
+  /* line 157, ../../../UI_dev/project/logic/_frame.scss */
   .frame_head {
     padding: 0 30px;
     text-align: center;
     height: 50px;
     line-height: 50px;
   }
-  /* line 162, ../../../UI_dev/project/logic/_frame.scss */
+  /* line 163, ../../../UI_dev/project/logic/_frame.scss */
   .frame_head .frame_head_showMenuBtn,
   .frame_head .frame_head_closeMenuBtn {
     position: absolute;
@@ -1709,19 +1708,19 @@ pre.dm_column_tip {
     font-size: 0;
     padding: 7px;
   }
-  /* line 170, ../../../UI_dev/project/logic/_frame.scss */
+  /* line 171, ../../../UI_dev/project/logic/_frame.scss */
   .frame_head .frame_head_showMenuBtn {
     left: 9px;
     top: 10px;
     display: block;
   }
-  /* line 175, ../../../UI_dev/project/logic/_frame.scss */
+  /* line 176, ../../../UI_dev/project/logic/_frame.scss */
   .frame_head .frame_head_closeMenuBtn {
     left: 11px;
     top: 5px;
   }
 
-  /* line 180, ../../../UI_dev/project/logic/_frame.scss */
+  /* line 181, ../../../UI_dev/project/logic/_frame.scss */
   .frame_head_title {
     position: relative;
     z-index: 90;
@@ -1732,12 +1731,12 @@ pre.dm_column_tip {
     -webkit-font-smoothing: antialiased;
   }
 
-  /* line 189, ../../../UI_dev/project/logic/_frame.scss */
+  /* line 190, ../../../UI_dev/project/logic/_frame.scss */
   .frame_head_title_link {
     margin-top: 14px;
   }
 
-  /* line 192, ../../../UI_dev/project/logic/_frame.scss */
+  /* line 193, ../../../UI_dev/project/logic/_frame.scss */
   .frame_nav {
     position: absolute;
     top: 0;
@@ -1759,7 +1758,7 @@ pre.dm_column_tip {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF00A3E1', endColorstr='#FF06DCE9', GradientType=0);
   }
 
-  /* line 204, ../../../UI_dev/project/logic/_frame.scss */
+  /* line 205, ../../../UI_dev/project/logic/_frame.scss */
   .frame_nav_item {
     float: none;
     display: block;
@@ -1778,7 +1777,7 @@ pre.dm_column_tip {
   }
 }
 @media handheld and (max-width: 846px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 846px) and (-webkit-min-device-pixel-ratio: 2), handheld and (max-width: 846px) and (min--moz-device-pixel-ratio: 2), screen and (max-width: 846px) and (min--moz-device-pixel-ratio: 2), handheld and (max-width: 846px) and (-o-min-device-pixel-ratio: 2), screen and (max-width: 846px) and (-o-min-device-pixel-ratio: 2), handheld and (max-width: 846px) and (min-device-pixel-ratio: 2), screen and (max-width: 846px) and (min-device-pixel-ratio: 2), handheld and (max-width: 846px) and (min-resolution: 2dppx), screen and (max-width: 846px) and (min-resolution: 2dppx), handheld and (max-width: 846px) and (min-resolution: 192dpi), screen and (max-width: 846px) and (min-resolution: 192dpi) {
-  /* line 204, ../../../UI_dev/project/logic/_frame.scss */
+  /* line 205, ../../../UI_dev/project/logic/_frame.scss */
   .frame_nav_item {
     position: relative;
     border: none;
@@ -1822,24 +1821,24 @@ pre.dm_column_tip {
 }
 
 @media handheld and (max-width: 846px), screen and (max-width: 846px) {
-  /* line 219, ../../../UI_dev/project/logic/_frame.scss */
+  /* line 220, ../../../UI_dev/project/logic/_frame.scss */
   .frame_head_ShowNav .frame_nav,
   .frame_head_ShowNav .frame_head_closeMenuBtn {
     display: block;
   }
-  /* line 223, ../../../UI_dev/project/logic/_frame.scss */
+  /* line 224, ../../../UI_dev/project/logic/_frame.scss */
   .frame_head_ShowNav .frame_head_showMenuBtn {
     display: none;
   }
 
-  /* line 228, ../../../UI_dev/project/logic/_frame.scss */
+  /* line 229, ../../../UI_dev/project/logic/_frame.scss */
   .frame_sidebar {
     display: none;
   }
 
-  /* line 231, ../../../UI_dev/project/logic/_frame.scss */
+  /* line 232, ../../../UI_dev/project/logic/_frame.scss */
   .frame_cnt {
-    margin-left: 0;
+    position: static;
     padding-left: 30px;
     padding-right: 30px;
   }
@@ -2333,53 +2332,54 @@ pre.dm_column_tip {
     width: auto;
     margin-bottom: 35px;
     padding-left: 0;
+    padding-right: 0;
   }
 
-  /* line 377, ../../../UI_dev/project/logic/_index.scss */
+  /* line 378, ../../../UI_dev/project/logic/_index.scss */
   .index_ability_item_title {
     font-size: 16px;
   }
 
-  /* line 380, ../../../UI_dev/project/logic/_index.scss */
+  /* line 381, ../../../UI_dev/project/logic/_index.scss */
   .index_ability_item_cnt {
     font-size: 16px;
   }
 
-  /* line 384, ../../../UI_dev/project/logic/_index.scss */
+  /* line 385, ../../../UI_dev/project/logic/_index.scss */
   .index_appIntro_downloadDirect {
     display: none;
   }
 
-  /* line 388, ../../../UI_dev/project/logic/_index.scss */
+  /* line 389, ../../../UI_dev/project/logic/_index.scss */
   .index_project_desc {
     margin-bottom: 35px;
   }
 
-  /* line 391, ../../../UI_dev/project/logic/_index.scss */
+  /* line 392, ../../../UI_dev/project/logic/_index.scss */
   .index_project_list_item {
     margin-left: 20px;
   }
 
-  /* line 395, ../../../UI_dev/project/logic/_index.scss */
+  /* line 396, ../../../UI_dev/project/logic/_index.scss */
   .index_foot {
     padding-top: 50px;
     padding-bottom: 50px;
   }
 
-  /* line 400, ../../../UI_dev/project/logic/_index.scss */
+  /* line 401, ../../../UI_dev/project/logic/_index.scss */
   .index_starWrap {
     width: 126px;
     height: 125px;
   }
 
-  /* line 406, ../../../UI_dev/project/logic/_index.scss */
+  /* line 407, ../../../UI_dev/project/logic/_index.scss */
   .index_star {
     right: -52px;
     top: 37px;
     width: 208px;
   }
 
-  /* line 411, ../../../UI_dev/project/logic/_index.scss */
+  /* line 412, ../../../UI_dev/project/logic/_index.scss */
   .index_star_inner {
     height: 24px;
     line-height: 24px;

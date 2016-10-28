@@ -46,9 +46,20 @@ var siderHtml = [],     // 侧栏
 for (var i = 0, llength = comments.length; i < llength; i++) {
 	var tool = comments[i],
       title = tool[0].group, // 使用第一个方法的分组作为该组标题
-      id = 'qui_' + tool[0].context.name; // 使用第一个方法的名称加 qui 前缀作为该组 id
+      id = 'qui_' + tool[0].context.name + 'Parent'; // 使用第一个方法的名称加 qui 前缀作为该组 id
 	siderHtml.push('<li class="frame_sidebar_nav_item">');
 	siderHtml.push('<a class="frame_sidebar_nav_link" href="#' + id + '">' + title + '</a>');
+
+	siderHtml.push('<ul class="frame_sidebar_nav frame_sidebar_nav_Children">');
+  for (var itemIndex = 0; itemIndex < tool.length; itemIndex++) {
+    var item = tool[itemIndex],
+				itemId = 'qui_' + item.context.name;
+		siderHtml.push('  <li class="frame_sidebar_nav_item">');
+		siderHtml.push('    <a class="frame_sidebar_nav_link" href="#' + itemId + '">' + item.context.name + '</a>');
+		siderHtml.push('  </li>');
+	}
+	siderHtml.push('</ul>');
+
 	siderHtml.push('</li>');
 
 
@@ -56,9 +67,10 @@ for (var i = 0, llength = comments.length; i < llength; i++) {
   mainHtml.push('  <h2 class="dm_column_title" id="' + id + '">' + title + '</h2>');
 
   for (var itemIndex = 0; itemIndex < tool.length; itemIndex++) {
-    var item = tool[itemIndex];
+    var item = tool[itemIndex],
+				itemId = 'qui_' + item.context.name;
     mainHtml.push('<div class="dm_column_item tool_stage_item">');
-    mainHtml.push('<h3 class="dm_column_item_title">' + item.context.name + '</h3>');
+    mainHtml.push('<h3 class="dm_column_item_title" id="' + itemId + '">' + item.context.name + '</h3>');
     mainHtml.push('<p class="tool_stage_item_desc">' + item.description + '</p>');
     mainHtml.push('<div class="dm_column_item_info dm_column_item_info_Single">');
     mainHtml.push('  <div class="dm_column_item_info_code"><xmp class="prettyprint">' + makeCompleteMethodWithItem(item) + '</xmp></div>');

@@ -57,20 +57,6 @@ var removeClass = function(e, c) {
 
 // 业务逻辑
 
-// 左侧栏在页面滚动时保持可视的效果
-var sidebar = document.getElementById('frame_sidebar'),
-    sidebarOriginTop = 60;
-
-if (sidebar) {
-  window.onscroll = function() {
-    if(document.body.scrollTop > sidebarOriginTop) {
-      addClass(sidebar, 'frame_sidebar_Fixed');
-    } else {
-      removeClass(sidebar, 'frame_sidebar_Fixed');
-    }
-  }
-}
-
 // 移动版菜单交互
 var showMenuBtn = document.getElementById('showMenuBtn'),
     closeMenuBtn = document.getElementById('closeMenuBtn'),
@@ -129,10 +115,10 @@ wx.ready(function() {
         }
       },
       timelineConfig = $.extend(true, {}, config),
-      shareAppMessageConfig = $.extend(true, {}, config); 
+      shareAppMessageConfig = $.extend(true, {}, config);
 
-  timelineConfig.title = document.title; 
-  shareAppMessageConfig.title = isIndex ? 'QMUI Web' : document.title; 
+  timelineConfig.title = document.title;
+  shareAppMessageConfig.title = isIndex ? 'QMUI Web' : document.title;
   wx.onMenuShareTimeline(timelineConfig);
   wx.onMenuShareAppMessage(shareAppMessageConfig);
 });
@@ -150,6 +136,6 @@ var _hmt = _hmt || [];
 (function() {
   var hm = document.createElement("script");
   hm.src = "//hm.baidu.com/hm.js?b0246dc2e24129a9a91fc47e6f5a9d9f";
-  var s = document.getElementsByTagName("script")[0]; 
+  var s = document.getElementsByTagName("script")[0];
   s.parentNode.insertBefore(hm, s);
 })();

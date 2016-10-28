@@ -1,11 +1,11 @@
 @charset "UTF-8";
 /**
- * _frame.scss 外层框架 
- * @author Kayo 
+ * _frame.scss 外层框架
+ * @author Kayo
  * @date 2015-08-17
  *
  * #wrap 外层框架
- * #head 页头 
+ * #head 页头
  *   #title 网站标题
  *   #nav 网站导航
  * #sidebar 左侧栏
@@ -86,10 +86,6 @@
   background-color: $frame_sidebar_background;
   overflow: auto;
 }
-.frame_sidebar_Fixed {
-  position: fixed;
-  top: 0;
-}
 .frame_sidebar_inner {
   float: right;
   width: $frame_sidebar_inner_width;
@@ -113,7 +109,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   text-transform: capitalize; // 因为部分内容的标题需要经过各种处理，可能会统一转成小写，因此这里保护一下
-} 
+}
 .frame_sidebar_nav_Children .frame_sidebar_nav_link {
   height: 24px;
   margin-bottom: 0;
@@ -121,7 +117,7 @@
   line-height: 24px;
   font-weight: normal;
   font-size: 13px;
-} 
+}
 .frame_sidebar_nav_link:hover {
   background-color: #e8ebee;
   border-right: 1px solid #d8dde2;
@@ -130,8 +126,13 @@
 
 /* #cnt 右侧主体 */
 .frame_cnt {
-  margin-left: $frame_sidebar_width;
+	position: absolute;
+  top: $frame_head_height;
+  left: $frame_sidebar_width;
+	right: 0;
+  bottom: 0;
   padding: 35px;
+	overflow: auto;
 }
 
 
@@ -147,7 +148,7 @@
     width: $frame_sidebar_inner_widthSmall;
   }
   .frame_cnt {
-    margin-left: $frame_sidebar_widthSmall;
+    left: $frame_sidebar_widthSmall;
   }
 }
 
@@ -158,7 +159,7 @@
     text-align: center;
     height: $frame_head_mobile_height;
     line-height: $frame_head_mobile_height;
-    
+
     .frame_head_showMenuBtn,
     .frame_head_closeMenuBtn {
       position: absolute;
@@ -181,7 +182,7 @@
     position: relative;
     z-index: $common_zIndex_9;
     float: none;
-    display: inline-block; 
+    display: inline-block;
     margin-right: 0;
     font-size: 17px;
     -webkit-font-smoothing: antialiased;
@@ -228,8 +229,8 @@
   .frame_sidebar {
     display: none;
   }
-  .frame_cnt {
-    margin-left: 0;
+	.frame_cnt {
+		position: static;
     padding-left: $frame_base_mobile_paddingHorizontal;
     padding-right: $frame_base_mobile_paddingHorizontal;
   }

@@ -22,7 +22,7 @@
  * #index 首页
  */
 
-/* 
+/*
  * #function QMUI 功能相关
  * 由于移动页面也有大量渠道流向 PC，最终在 PC 上浏览，因此综合考虑这里 Mobile Only 仅仅会抛弃 IE6/7 相关的属性
  */
@@ -149,7 +149,7 @@ $frame_sidebar_widthSmall: 320px;
 $frame_sidebar_background: #f7f7f7;
 $frame_sidebar_inner_width: 240px;
 $frame_sidebar_inner_widthSmall: 200px;
-$frame_sidebar_inner_padding: 43px 22px 0 0;
+$frame_sidebar_inner_padding: 43px 22px 50px 0;
 
 $frame_base_mobile_paddingHorizontal: 30px;
 $frame_head_mobile_height: 50px;
