@@ -142,3 +142,6 @@ $('.tool_stage .dm_column_item_info_code').on('click', function() {
 
 	prettyPrint();
 });
+
+// 默认调用一次代码高亮方法
+prettyPrint();

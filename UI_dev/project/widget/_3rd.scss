@@ -1,9 +1,9 @@
 @charset "utf-8";
 /**
- * _3rd.scss 第三方插件的相关样式 
- * @author Kayo 
+ * _3rd.scss 第三方插件的相关样式
+ * @author Kayo
  * @date 2015-08-17
- * 
+ *
  * #prettify 适合 QMUI demo 风格的代码高亮配色（配合 google 高亮代码插件使用）
  */
 
@@ -28,7 +28,7 @@ xmp.prettyprint, pre.prettyprint, code.prettyprint {
   -ms-border-radius: 8px;
   -khtml-border-radius: 8px;
   border-radius: 8px;
-  line-height: 1.4;
+  line-height: 20px;
   font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
