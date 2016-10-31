@@ -73,7 +73,7 @@ for (var i = 0, llength = comments.length; i < llength; i++) {
   for (var itemIndex = 0; itemIndex < tool.length; itemIndex++) {
     var item = tool[itemIndex],
 				itemId = 'qui_' + item.context.name;
-    mainHtml.push('<div class="dm_column_item tool_stage_item" data-groupIndex="' + i + '" data-itemIndex="' + itemIndex + '">');
+    mainHtml.push('<div class="dm_column_item tool_stage_item" data-showDetail=false data-groupIndex="' + i + '" data-itemIndex="' + itemIndex + '">');
     mainHtml.push('<h3 class="dm_column_item_title" id="' + itemId + '">' + item.context.name + '</h3>');
     mainHtml.push('<p class="tool_stage_item_desc">' + item.description + '</p>');
     mainHtml.push('<div class="dm_column_item_info dm_column_item_info_Single">');
@@ -129,12 +129,16 @@ document.getElementById('toolMain').innerHTML = document.getElementById('toolMai
 $('.tool_stage .dm_column_item_info_code').on('click', function() {
 	var groupIndex = $(this).parent().parent().data('groupindex'),
 			itemIndex = $(this).parent().parent().data('itemindex'),
-			item = comments[groupIndex][itemIndex],
-			itemCode = comments[groupIndex][itemIndex].context.code;
+			item = comments[groupIndex][itemIndex];
 
-	$(this).html('<xmp class="prettyprint">' + makeCompleteMethodWithItem(item, itemCode) + '</xmp>');
+	if (!$(this).data('showDetail')) {
+		var itemCode = comments[groupIndex][itemIndex].context.code.replace(/^\n/, '');
+		$(this).html('<xmp class="prettyprint">' + makeCompleteMethodWithItem(item, itemCode) + '</xmp>');
+		$(this).data('showDetail', true);
+	} else {
+		$(this).html('<xmp class="prettyprint">' + makeCompleteMethodWithItem(item) + '</xmp>');
+		$(this).data('showDetail', false);
+	}
+
 	prettyPrint();
 });
-
-// 默认调用一次代码高亮方法
-prettyPrint();
