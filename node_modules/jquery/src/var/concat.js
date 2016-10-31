@@ -1,7 +1,5 @@
 define( [
-	"./arr"
-], function( arr ) {
-	"use strict";
-
-	return arr.concat;
+	"./deletedIds"
+], function( deletedIds ) {
+	return deletedIds.concat;
 } );
