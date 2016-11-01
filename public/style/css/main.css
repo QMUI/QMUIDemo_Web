@@ -1261,19 +1261,19 @@ pre.dm_column_tip {
   *zoom: 1;
   font-size: 0;
   background-repeat: no-repeat;
-  background-image: url('../images/icons-s1bcf0b2223.png');
+  background-image: url('../images/icons-s2469b0756a.png');
   background-size: 160px 1080px;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2), (min-resolution: 2dppx), (min-resolution: 192dpi) {
   /* line 19, ../../../UI_dev/project/widget/_images.scss */
   .dm_icon {
-    background-image: url('../images/icons_2x-se1c1a72f9e.png');
+    background-image: url('../images/icons_2x-s370860e855.png');
   }
 }
 @media (-webkit-min-device-pixel-ratio: 3), (min--moz-device-pixel-ratio: 3), (-o-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3), (min-resolution: 3dppx), (min-resolution: 288dpi) {
   /* line 19, ../../../UI_dev/project/widget/_images.scss */
   .dm_icon {
-    background-image: url('../images/icons_3x-sb0b3d46bc6.png');
+    background-image: url('../images/icons_3x-s55dc402b9f.png');
   }
 }
 
