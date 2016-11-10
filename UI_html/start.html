@@ -49,6 +49,7 @@
 					<ul class="frame_sidebar_nav frame_sidebar_nav_Children">
 						<li class="frame_sidebar_nav_item">
 							<a class="frame_sidebar_nav_link" href="#qui_workflowDebug">内置工作流调试辅助</a>
+							<a class="frame_sidebar_nav_link" href="#qui_workflowLog">日志方法</a>
 						</li>
 					</ul>
 				</li>
@@ -84,7 +85,7 @@
 
       <p class="dm_column_tip">除此以外，QMUI 封装了大量 Sass 和 Compass 方法供使用，另外还在 Demo 中以参考组件的形式收录了一些结构较复杂的扩展组件，供使用者参考。</p>
 
-		
+
 		</div>
     <!-- 概况 end -->
 
@@ -101,7 +102,7 @@
 
         <div class="dm_column_tip">
           <ul>
-            <li>Node.js 的安装可以参考 <a href="https://nodejs.org/" target="_blank" title="Node.js 官网">Node.js 官网</a></li> 
+            <li>Node.js 的安装可以参考 <a href="https://nodejs.org/" target="_blank" title="Node.js 官网">Node.js 官网</a></li>
             <li>Ruby 的安装可以参考 <a href="https://www.ruby-lang.org/zh_cn/downloads/" target="_blank" title="Ruby 官方网站">Ruby 官网</a>。</li>
             <li>以下的安装命令建议在 Mac 下都加上 sudo。</li>
           </ul>
@@ -111,7 +112,7 @@
           <div class="dm_column_item_info_code">
 <xmp class="prettyprint">#安装 gulp
 npm install --global gulp
-#安装 Sass 
+#安装 Sass
 gem install sass
 #安装 Compass
 gem update --system
@@ -152,7 +153,7 @@ gem install compass
       </p>
 
       <p class="dm_column_tip">这些目录 QMUI 会提供工具帮助完成创建，开发者并不需要手工创建这些目录。</p>
-	
+
       <p class="dm_column_tip">另外这些目录结构只是层次上要求如此，即不建议修改目录的层级，但目录名如果与其他模块或组件冲突，可以自行修改目录名，记得修改 config.js 和 config.rb 的相关设置就好（这两个文件需要复制到 UI_dev 中修改，如果直接修改 QMUI 源码中的配置文件，会影响框架的独立性，详细请参考“<a href="#qui_useConfig" title="使用配置文件">使用配置文件”</a>）</p>
 
       <!-- 图片文件管理 start -->
@@ -191,14 +192,14 @@ yo qmui
 
     </div>
     <!-- 快速开始 end -->
-    
+
     <!-- 框架的使用 start -->
 		<div class="dm_column">
 
 			<h2 id="qui_useFramework" class="dm_column_title">框架的使用</h2>
 
       <p class="dm_column_tip">作为一个框架，QMUI Web 主要提供了四种能力来提升 UI 开发的效率与质量。<strong>分别用于快速实现项目 UI，快速解决重复劳动力工作，CSS 的预处理和复杂的组件参考四个方面，这也是 QMUI Web  的使用目标。</strong></p>
-		
+
       <!-- 基础配置与组件 start -->
 			<div class="dm_column_item">
 
@@ -212,7 +213,7 @@ yo qmui
 
       </div>
       <!-- 基础配置与组件 end -->
-		
+
       <!-- 脚手架 start -->
 			<div class="dm_column_item">
 
@@ -226,7 +227,7 @@ yo qmui
 
       </div>
       <!-- 脚手架 end -->
-		
+
       <!-- Sass 与 Compass 支持 start -->
 			<div class="dm_column_item">
 
@@ -236,7 +237,7 @@ yo qmui
 
       </div>
       <!-- Sass 与 Compass 支持 end -->
-		
+
       <!-- 扩展组件 start -->
 			<div class="dm_column_item">
 
@@ -246,7 +247,7 @@ yo qmui
 
       </div>
       <!-- 扩展组件 end -->
-		
+
 		</div>
     <!-- 框架的使用 end -->
 
@@ -256,7 +257,7 @@ yo qmui
 			<h2 id="qui_browserCompatibility" class="dm_column_title">兼容性策略</h2>
 
 			<p class="dm_column_tip">QMUI 提供的几个能力里面，基于 gulp 的脚手架都是开发过程的辅助工具，与浏览器兼容无关。而 QMUI 的提供的 Sass 和 Compass 方法、公共组件都兼容 IE6+。扩展组件由于是从不同的业务中抽取出来，因此兼容性并没有统一的标准，请参考每个扩展组件的标注。</p>
-		
+
 		</div>
     <!-- 兼容性策略 end -->
 
@@ -285,7 +286,26 @@ gulp --debug</xmp>
 
       </div>
       <!-- 内置工作流调试辅助 end -->
-		
+
+      <!-- 日志方法 start -->
+			<div class="dm_column_item">
+
+				<h3 id="qui_workflowLog" class="dm_column_item_title">日志方法</h3>
+
+        <p class="dm_column_tip">修改 QMUI Web 工作流时，应当使用 QMUI 提供的公共日志方法而不是 console：</p>
+
+        <div class="dm_column_item_info dm_column_item_info_Single">
+          <div class="dm_column_item_info_code">
+            <xmp class="prettyprint">// 示例
+common.log('Tag', '普通消息')
+common.warn('Tag', '警告消息')
+common.error('Tag', '错误消息')</xmp>
+          </div>
+        </div>
+
+      </div>
+      <!-- 内置工作流调试辅助 end -->
+
 		</div>
     <!-- 完善框架end -->
 
@@ -295,7 +315,7 @@ gulp --debug</xmp>
 			<h2 id="qui_createProject" class="dm_column_title">创建新项目（高级）</h2>
 
 			<p class="dm_column_tip">对于需要有更强定制性的开发者，可以采取自行配置的方式引入 QMUI Web。自行配置的方式适用于需要修改项目目录名等定制性较强的情况。如果使用这种开发方式，那么项目中的目录结构需要手工创建，但目录名可以自行取名，只需要修改配置表即可（下面会介绍如何使用配置表）。</p>
-		
+
       <!-- 挂载 QMUI 为 SVN 外部库 start -->
 			<div class="dm_column_item">
 
@@ -314,7 +334,7 @@ sudo npm install</xmp>
 
       </div>
       <!-- 挂载 QMUI 为 SVN 外部库 end -->
-		
+
       <!-- 使用配置文件 start -->
 			<div class="dm_column_item">
 
@@ -352,7 +372,7 @@ sudo npm install</xmp>
 
       </div>
       <!-- 使用配置文件 end -->
-		
+
       <!-- 执行创建新项目命令 start -->
 			<div class="dm_column_item">
 
@@ -372,7 +392,7 @@ sudo npm install</xmp>
 
       </div>
       <!-- 执行创建新项目命令 end -->
-		
+
 		</div>
     <!-- 创建新项目（高级） end -->
 
