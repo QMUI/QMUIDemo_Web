@@ -100,14 +100,12 @@
   margin-bottom: 12px;
 }
 .frame_sidebar_nav_link {
+  @extend %text-ellipsis;
   display: block;
   height: 30px;
   margin-bottom: 2px;
   padding-left: 20px;
   line-height: 28px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
   text-transform: capitalize; // 因为部分内容的标题需要经过各种处理，可能会统一转成小写，因此这里保护一下
 }
 .frame_sidebar_nav_Children .frame_sidebar_nav_link {
