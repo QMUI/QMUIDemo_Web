@@ -2395,8 +2395,8 @@ pre.dm_column_tip {
   }
 }
 /**
- * _tool.scss 工具方法页面 
- * @author Kayo 
+ * _tool.scss 工具方法页面
+ * @author Kayo
  * @date 2016-07-18
  *
  * #common 通用部分
@@ -2418,7 +2418,7 @@ pre.dm_column_tip {
 /* line 32, ../../../UI_dev/project/logic/_tool.scss */
 .tool_stage_item_desc {
   max-width: 840px;
-  margin-bottom: 12px;
+  margin-bottom: 15px;
   font-size: 15px;
   line-height: 1.5;
 }

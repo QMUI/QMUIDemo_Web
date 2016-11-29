@@ -73,9 +73,15 @@ for (var i = 0, llength = comments.length; i < llength; i++) {
   for (var itemIndex = 0; itemIndex < tool.length; itemIndex++) {
     var item = tool[itemIndex],
 				itemId = 'qui_' + item.context.name;
+
     mainHtml.push('<div class="dm_column_item tool_stage_item" data-showDetail=false data-groupIndex="' + i + '" data-itemIndex="' + itemIndex + '">');
     mainHtml.push('<h3 class="dm_column_item_title" id="' + itemId + '">' + item.context.name + '</h3>');
     mainHtml.push('<p class="tool_stage_item_desc">' + item.description + '</p>');
+
+    if (item.throw) {
+      mainHtml.push('<p class="tool_stage_item_desc"><strong>注意：</strong>' + item.throw + '</p>');
+    }
+
     mainHtml.push('<div class="dm_column_item_info dm_column_item_info_Single">');
     mainHtml.push('  <div class="dm_column_item_info_code"><xmp class="prettyprint">' + makeCompleteMethodWithItem(item) + '</xmp></div>');
     mainHtml.push('</div>');

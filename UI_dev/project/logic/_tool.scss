@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /**
- * _tool.scss 工具方法页面 
- * @author Kayo 
+ * _tool.scss 工具方法页面
+ * @author Kayo
  * @date 2016-07-18
  *
  * #common 通用部分
@@ -31,7 +31,7 @@
 }
 .tool_stage_item_desc {
   max-width: $column_base_maxWidth;
-  margin-bottom: 12px;
+  margin-bottom: 15px;
   font-size: 15px;
   line-height: 1.5;
 }
@@ -67,7 +67,7 @@
   @include toolGhostText(#d44950);
   margin-left: 10px;
 }
-.tool_stage_paraDefaultValue { 
+.tool_stage_paraDefaultValue {
   @include toolGhostText();
   margin-left: 4px;
 }
