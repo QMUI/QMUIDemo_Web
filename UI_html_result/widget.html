@@ -57,42 +57,42 @@
 		<div class="frame_sidebar_inner">
 
 			<ul class="frame_sidebar_nav">
-				<li class="frame_sidebar_nav_item">
+				<li class="frame_sidebar_nav_item js_sidebar_group">
 					<a class="frame_sidebar_nav_link" href="#qui_widgetCommon">通用组件</a>
 					<ul class="frame_sidebar_nav frame_sidebar_nav_Children">
-						<li class="frame_sidebar_nav_item">
+						<li class="frame_sidebar_nav_item js_sidebar_item">
 							<a class="frame_sidebar_nav_link" href="#qui_widget_btn">按钮</a>
 						</li>
-						<li class="frame_sidebar_nav_item">
+						<li class="frame_sidebar_nav_item js_sidebar_item">
 							<a class="frame_sidebar_nav_link" href="#qui_widget_dialog">对话框</a>
 						</li>
-						<li class="frame_sidebar_nav_item">
+						<li class="frame_sidebar_nav_item js_sidebar_item">
 							<a class="frame_sidebar_nav_link" href="#qui_widget_mask">遮罩层</a>
 						</li>
-						<li class="frame_sidebar_nav_item">
+						<li class="frame_sidebar_nav_item js_sidebar_item">
 							<a class="frame_sidebar_nav_link" href="#qui_widget_dropdownMenu">下拉菜单</a>
 						</li>
-						<li class="frame_sidebar_nav_item">
+						<li class="frame_sidebar_nav_item js_sidebar_item">
 							<a class="frame_sidebar_nav_link" href="#qui_widget_tab">选项卡</a>
 						</li>
-						<li class="frame_sidebar_nav_item">
+						<li class="frame_sidebar_nav_item js_sidebar_item">
 							<a class="frame_sidebar_nav_link" href="#qui_widget_ipt">文本输入</a>
 						</li>
 					</ul>
 				</li>
-				<li class="frame_sidebar_nav_item">
+				<li class="frame_sidebar_nav_item js_sidebar_group">
 					<a class="frame_sidebar_nav_link" href="#qui_widgetExpand">扩展组件</a>
 					<ul class="frame_sidebar_nav frame_sidebar_nav_Children">
-						<li class="frame_sidebar_nav_item">
+						<li class="frame_sidebar_nav_item js_sidebar_item">
 							<a class="frame_sidebar_nav_link" href="#qui_widget_autoSprite">CSS Sprite 自动合并</a>
 						</li>
-						<li class="frame_sidebar_nav_item">
+						<li class="frame_sidebar_nav_item js_sidebar_item">
 							<a class="frame_sidebar_nav_link" href="#qui_widget_dualCols">等高左右双栏</a>
 						</li>
-						<li class="frame_sidebar_nav_item">
+						<li class="frame_sidebar_nav_item js_sidebar_item">
 							<a class="frame_sidebar_nav_link" href="#qui_widget_fileUpload">文件上传按钮</a>
 						</li>
-						<li class="frame_sidebar_nav_item">
+						<li class="frame_sidebar_nav_item js_sidebar_item">
 							<a class="frame_sidebar_nav_link" href="#qui_widget_treeMenu">树状选择菜单</a>
 						</li>
 			        </ul>
@@ -111,7 +111,7 @@
 			<p class="dm_column_tip">QMUI Web 的通用组件与 Bootstrap 这类组件库框架中的组件并不相同，通用组件本身只有实现了很少的必要样式，而通过 Sass 配置表的方式预留了大量可配置的接口，在创建一个新项目后，应该先根据设计配置好这些信息，当这些信息配置完成，那么一个项目的基本样式就可以快速实现了。当然，也可以直接使用默认样式用于快速开发。</p>
 
       <p class="dm_column_tip"><strong>以下是 Demo 的组件展示效果，在实际项目中，你无需另外复制这些 HTML 来产生组件，当开发者使用 <a href="https://github.com/QMUI/generator-qmui" target="_blank">generator-qmui</a> 安装 QMUI Web 时，该工具会自动按默认配置生成一个组件列表。</strong></p>
-			
+
 			<div class="dm_column_item">
 
 				<h3 id="qui_widget_btn" class="dm_column_item_title">按钮</h3>
@@ -137,7 +137,7 @@
 				</div>
 
 			</div>
-			
+
 			<div class="dm_column_item">
 
 				<h3 id="qui_widget_dialog" class="dm_column_item_title">对话框</h3>
@@ -183,7 +183,7 @@
 				</div>
 
 			</div>
-			
+
 			<div class="dm_column_item">
 
 				<h3 id="qui_widget_mask" class="dm_column_item_title">遮罩层</h3>
@@ -206,7 +206,7 @@
 				</div>
 
 			</div>
-			
+
 			<div class="dm_column_item">
 
 				<h3 id="qui_widget_dropdownMenu" class="dm_column_item_title">下拉菜单</h3>
@@ -256,7 +256,7 @@
 				</div>
 
 			</div>
-			
+
 			<div class="dm_column_item">
 
 				<h3 id="qui_widget_tab" class="dm_column_item_title">选项卡</h3>
@@ -307,7 +307,7 @@
 				</div>
 
 			</div>
-			
+
 			<div class="dm_column_item">
 
 				<h3 id="qui_widget_ipt" class="dm_column_item_title">文本输入</h3>
@@ -329,7 +329,7 @@
 				</div>
 
 			</div>
-				
+
 		</div><!-- common widget end -->
 
 
@@ -338,7 +338,7 @@
 			<h2 id="qui_widgetExpand" class="dm_column_title">扩展组件</h2>
 
 			<p class="dm_column_tip">扩展组件是指那些不便于收录到通用组件中（通常是因为组件的业务性无法完全剥离，或者是组件只有在某些项目下才会被用到，通用性不大），但因为结构复杂，或者有一些技术难点的存在，仍值得参考的组件。因此这里展示的扩展组件都仅作参考作用，QMUI 主源码中并不提供这些组件。</p>
-		
+
       <!-- CSS Sprite 自动合并 start -->
 			<div class="dm_column_item">
 
@@ -358,7 +358,7 @@
 
 		    </div>
       <!-- CSS Sprite 自动合并 end -->
-		
+
 			<!-- 等高左右双栏 start -->
 			<div class="dm_column_item">
 				<h3 id="qui_widget_dualCols" class="dm_column_item_title">等高左右双栏</h3>
@@ -486,7 +486,7 @@
 			</div>
 		</div>
 	</div>
-	
+
   <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 	<script type="text/javascript" src="../public/js/all.js"></script>
 	

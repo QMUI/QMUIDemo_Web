@@ -51,14 +51,14 @@ for (var i = 0, llength = comments.length; i < llength; i++) {
 	var tool = comments[i],
       title = tool[0].group, // 使用第一个方法的分组作为该组标题
       id = 'qui_' + tool[0].context.name + 'Parent'; // 使用第一个方法的名称加 qui 前缀作为该组 id
-	siderHtml.push('<li class="frame_sidebar_nav_item">');
+	siderHtml.push('<li class="frame_sidebar_nav_item js_sidebar_group">');
 	siderHtml.push('<a class="frame_sidebar_nav_link" href="#' + id + '">' + title + '</a>');
 
 	siderHtml.push('<ul class="frame_sidebar_nav frame_sidebar_nav_Children">');
   for (var itemIndex = 0; itemIndex < tool.length; itemIndex++) {
     var item = tool[itemIndex],
 				itemId = 'qui_' + item.context.name;
-		siderHtml.push('  <li class="frame_sidebar_nav_item">');
+		siderHtml.push('  <li class="frame_sidebar_nav_item js_sidebar_item">');
 		siderHtml.push('    <a class="frame_sidebar_nav_link" href="#' + itemId + '">' + item.context.name + '</a>');
 		siderHtml.push('  </li>');
 	}
@@ -151,3 +151,4 @@ $('.tool_stage .dm_column_item_info_code').on('click', function() {
 
 // 默认调用一次代码高亮方法
 prettyPrint();
+

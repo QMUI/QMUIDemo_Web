@@ -57,34 +57,35 @@
 		<div class="frame_sidebar_inner">
 
 			<ul class="frame_sidebar_nav">
-				<li class="frame_sidebar_nav_item">
+				<li class="frame_sidebar_nav_item js_sidebar_group">
 			    <a class="frame_sidebar_nav_link" href="#qui_codeNorm">编码规范说明</a>
 				</li>
-				<li class="frame_sidebar_nav_item">
+				<li class="frame_sidebar_nav_item js_sidebar_group">
 			    <a class="frame_sidebar_nav_link" href="#qui_htmlAndCSSNorm">HTML/CSS 编写规范</a>
 					<ul class="frame_sidebar_nav frame_sidebar_nav_Children">
-						<li class="frame_sidebar_nav_item">
+						<li class="frame_sidebar_nav_item js_sidebar_item">
 							<a class="frame_sidebar_nav_link" href="#qui_classPrefix">前缀规范</a>
 						</li>
-						<li class="frame_sidebar_nav_item">
+						<li class="frame_sidebar_nav_item js_sidebar_item">
 							<a class="frame_sidebar_nav_link" href="#qui_classFormat">格式规范</a>
 						</li>
 					</ul>
 				</li>
-				<li class="frame_sidebar_nav_item">
+				<li class="frame_sidebar_nav_item js_sidebar_group">
 				  <a class="frame_sidebar_nav_link" href="#qui_scssAndCSSNorm">SCSS/CSS 文件注释规范</a>
 					<ul class="frame_sidebar_nav frame_sidebar_nav_Children">
-						<li class="frame_sidebar_nav_item">
-            <a class="frame_sidebar_nav_link" href="#qui_cssCommentary">注释的格式</a>
+
+						<li class="frame_sidebar_nav_item js_sidebar_item">
+              <a class="frame_sidebar_nav_link" href="#qui_cssCommentary">注释的格式</a>
 						</li>
-						<li class="frame_sidebar_nav_item">
+						<li class="frame_sidebar_nav_item js_sidebar_item">
 							<a class="frame_sidebar_nav_link" href="#qui_cssFileCommentary">文件级注释</a>
 						</li>
-						<li class="frame_sidebar_nav_item">
+						<li class="frame_sidebar_nav_item js_sidebar_item">
 							<a class="frame_sidebar_nav_link" href="#qui_cssModuleCommentary">模块级注释</a>
 						</li>
-						<li class="frame_sidebar_nav_item">
-							<a class="frame_sidebar_nav_link" href="#qui_cssInlineCommentary">行内注释</a>
+						<li class="frame_sidebar_nav_item js_sidebar_item">
+              <a class="frame_sidebar_nav_link" href="#qui_cssInlineCommentary">行内注释</a>
 						</li>
 					</ul>
 				</li>
@@ -101,7 +102,7 @@
 			<h2 id="qui_codeNorm" class="dm_column_title">编码规范说明</h2>
 
 			<p class="dm_column_tip">QMUI 本身的代码遵循一系列的规范编写，这是由于 Web UI 代码（CSS 与 HTML 为主）语法较为松散，引入编码规范有助于提高团队内协助的效率以及代码的可维护性。</p>
-		
+
 		</div>
     <!-- 编码规范 end -->
 
@@ -220,20 +221,16 @@
 
       </div>
       <!-- 格式规范 end -->
-		
+
 		</div>
     <!-- HTML/CSS 编写规范 end -->
-		
+
     <!-- SCSS/CSS 文件注释规范 start -->
 		<div class="dm_column">
 
-			<div class="dm_column_item">
+      <h2 id="qui_scssAndCSSNorm" class="dm_column_title">SCSS/CSS 文件注释规范</h2>
 
-				<h2 id="qui_scssAndCSSNorm" class="dm_column_title">SCSS/CSS 文件注释规范</h2>
-
-        <div class="dm_column_tip">CSS 注释按照等级划分，包括文件级注释、模块级注释、行内级注释3种。注释的目的是让代码阅读者了解到代码本身所不能表达的信息，关键在于“why”，尽量避免“how”，因为如何实现是看代码即可明白的，不需要多此一举（除非实现方式难以看懂），而为什么这么实现就需要注释写明了。 注释的原则是表达清晰，让人一言既明为什么这么做、如何使用。</div>
-
-      </div>
+      <div class="dm_column_tip">CSS 注释按照等级划分，包括文件级注释、模块级注释、行内级注释3种。注释的目的是让代码阅读者了解到代码本身所不能表达的信息，关键在于“why”，尽量避免“how”，因为如何实现是看代码即可明白的，不需要多此一举（除非实现方式难以看懂），而为什么这么实现就需要注释写明了。 注释的原则是表达清晰，让人一言既明为什么这么做、如何使用。</div>
 
       <!-- 注释的格式 start -->
 			<div class="dm_column_item">
@@ -245,7 +242,7 @@
         <div class="dm_column_item_info dm_column_item_info_Single">
           <div class="dm_column_item_info_code">
 <xmp class="prettyprint">正确示范：/* 注释内容 */
-错误示范：/*注释内容和注释符头尾要有空格*/ 
+错误示范：/*注释内容和注释符头尾要有空格*/
 </xmp>
           </div>
         </div>
@@ -275,7 +272,7 @@
 </xmp>
           </div>
         </div>
-          
+
 
       </div>
       <!-- 注释的格式 end -->
@@ -292,9 +289,9 @@
  * ftnlist.css 中转站列表的样式文件，同时也用于写信超大附件的文件列表样式
  * @author molice
  * @date 2014-08-27
- * 
+ *
  * #reset
- * 
+ *
  * #layout 主框架布局
  * #list 文件列表
  * #function 公共方法函数
