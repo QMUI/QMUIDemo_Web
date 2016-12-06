@@ -141,3 +141,85 @@ var _hmt = _hmt || [];
   var s = document.getElementsByTagName("script")[0];
   s.parentNode.insertBefore(hm, s);
 })();
+
+
+//侧边导航栏滚动处理
+var isNavInClick = false;
+
+//确认导航栏上的目录是否已经进入active态
+function FrameSidebarItemIsInActive(that){
+  var offsetTop = $(that).offset().top,
+    height = $(that).outerHeight();
+  if(offsetTop > -height + 46){  //46为顶部bar的高度
+    return true;
+  }
+  return false;
+}
+
+//触发导航栏进入active态
+function makeFrameSidebarActive(columnIndex,itemIndex){
+  var group = $('.js_sidebar_group').removeClass('frame_sidebar_nav_item_Open').eq(columnIndex).addClass('frame_sidebar_nav_item_Open');
+  $('.js_sidebar_item').removeClass('frame_sidebar_nav_item_Active');
+  if(group.size()>0){
+    group.find('.js_sidebar_item').eq(itemIndex).addClass('frame_sidebar_nav_item_Active');
+  }
+}
+
+//确认导航栏是否被点击
+function confirmNavIsInClick(){
+  var timerAtClickNav = null; //由于导航栏点击的时候,也会触发页面滚动条滚动,这个标志位是为了当导航栏点击之后的100ms内不触发页面滚动条事件
+  isNavInClick = true;
+  clearTimeout(timerAtClickNav);
+  timerAtClickNav = setTimeout(function(){
+    isNavInClick = false;
+  },100);
+}
+
+makeFrameSidebarActive(0,0); //初始化导航栏
+
+//为导航栏绑定滚动事件
+$('.frame_cnt').on('scroll',function(){
+  if(!isNavInClick){  //当用户进行点击时,不响应滚动事件
+    console.log("come in");
+     var frameCntHeight =$(this).outerHeight(true),//可见高度
+       frameCntContentHeight =$(this).get(0).scrollHeight,//内容高度
+       frameCntScrollTop =$(this).scrollTop(),//滚动高度
+       columnIndex = 0,
+       itemIndex = 0;
+     if(frameCntHeight+frameCntScrollTop>=frameCntContentHeight){  //到达页面底部的特殊处理
+       columnIndex = $('.dm_column').size() -1;
+       itemIndex = ($('.dm_column').last().find('.dm_column_item').size()) - 1;
+     }else{  //页面滚动的处理
+       $('.dm_column').each(function(i){
+         if(FrameSidebarItemIsInActive(this)){
+           columnIndex = i;
+           $(this).children('.dm_column_item').each(function(j){
+             if(FrameSidebarItemIsInActive(this)){
+               itemIndex = j;
+               return false;
+             }
+           });
+           return false;
+         }
+       });
+     }
+     makeFrameSidebarActive(columnIndex,itemIndex);
+  }
+});
+
+
+//为导航栏一级目录绑定点击事件
+$('.frame_sidebar_nav').delegate('.js_sidebar_group','click',function(){
+  confirmNavIsInClick();
+  makeFrameSidebarActive($('.js_sidebar_group').index(this),0);
+});
+
+//为导航栏二级目录绑定点击事件
+$('.frame_sidebar_nav').delegate('.js_sidebar_item','click',function(event){
+  confirmNavIsInClick();
+  console.log($(this).html());
+  $(this).addClass('frame_sidebar_nav_item_Active')
+     .siblings('.js_sidebar_item').removeClass('frame_sidebar_nav_item_Active');
+  event.stopPropagation();
+});
+

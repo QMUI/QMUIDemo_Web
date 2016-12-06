@@ -96,8 +96,21 @@
 .frame_sidebar_nav {
   font-size: 14px;
 }
+.frame_sidebar_nav_item{
+    margin-bottom: 12px;
+}
 .frame_sidebar_nav_Children {
-  margin-bottom: 12px;
+  display: none;
+  .frame_sidebar_nav_link {
+    margin-bottom: 0;
+    padding-left: 35px;
+    line-height: 24px;
+    height: 24px;
+    font-weight: normal;
+  }
+  .frame_sidebar_nav_item{
+    margin-bottom: 0;
+  }
 }
 .frame_sidebar_nav_link {
   display: block;
@@ -108,26 +121,32 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  text-decoration: none;
   text-transform: capitalize; // 因为部分内容的标题需要经过各种处理，可能会统一转成小写，因此这里保护一下
+  &:hover{
+    text-decoration: none;
+  }
 }
-.frame_sidebar_nav_Children .frame_sidebar_nav_link {
-  height: 24px;
-  margin-bottom: 0;
-  padding-left: 35px;
-  line-height: 24px;
-  font-weight: normal;
-  font-size: 13px;
-}
-.frame_sidebar_nav_link:hover {
+
+.frame_sidebar_nav_item_Active{
   background-color: #e8ebee;
-  border-right: 1px solid #d8dde2;
+  border-right: 2px solid #d8dde2;
   text-decoration: none;
 }
 
+.frame_sidebar_nav_item_Open{
+  .frame_sidebar_nav_Children{
+    display: block;
+  }
+  > .frame_sidebar_nav_link{
+    @extend .frame_sidebar_nav_item_Active;
+  }
+}
+
 .frame_sidebar_nav_Tool {
-	.frame_sidebar_nav_link {
-		text-transform: none;
-	}
+  .frame_sidebar_nav_link {
+    text-transform: none;
+  }
 }
 
 /* #cnt 右侧主体 */
