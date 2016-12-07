@@ -1630,64 +1630,76 @@ pre.dm_column_tip {
 }
 
 /* line 99, ../../../UI_dev/project/logic/_frame.scss */
-.frame_sidebar_nav_item {
-  margin-bottom: 12px;
-}
-
-/* line 102, ../../../UI_dev/project/logic/_frame.scss */
-.frame_sidebar_nav_Children {
-  display: none;
-}
-/* line 104, ../../../UI_dev/project/logic/_frame.scss */
-.frame_sidebar_nav_Children .frame_sidebar_nav_link {
-  margin-bottom: 0;
-  padding-left: 35px;
-  line-height: 24px;
-  height: 24px;
-  font-weight: normal;
-}
-/* line 111, ../../../UI_dev/project/logic/_frame.scss */
-.frame_sidebar_nav_Children .frame_sidebar_nav_item {
-  margin-bottom: 0;
-}
-
-/* line 115, ../../../UI_dev/project/logic/_frame.scss */
 .frame_sidebar_nav_link {
   display: block;
-  height: 30px;
   margin-bottom: 2px;
-  padding-left: 20px;
-  line-height: 28px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  padding: 7px 0 7px 20px;
+  border-left: 2px solid transparent;
+  line-height: 1;
+  color: #858C96;
   text-decoration: none;
   text-transform: capitalize;
 }
-/* line 127, ../../../UI_dev/project/logic/_frame.scss */
+/* line 110, ../../../UI_dev/project/logic/_frame.scss */
 .frame_sidebar_nav_link:hover {
+  padding-left: 21px;
+  border-width: 1px;
+  border-color: #00A3E1;
+  color: #00A3E1;
   text-decoration: none;
 }
 
+/* line 120, ../../../UI_dev/project/logic/_frame.scss */
+.frame_sidebar_nav_Children {
+  display: none;
+  padding-bottom: 4px;
+}
+/* line 124, ../../../UI_dev/project/logic/_frame.scss */
+.frame_sidebar_nav_Children .frame_sidebar_nav_link {
+  margin-bottom: 0;
+  padding-left: 35px;
+  line-height: 1;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-weight: normal;
+}
 /* line 132, ../../../UI_dev/project/logic/_frame.scss */
-.frame_sidebar_nav_item_Active, .frame_sidebar_nav_item_Open > .frame_sidebar_nav_link {
-  background-color: #e8ebee;
-  border-right: 2px solid #d8dde2;
-  text-decoration: none;
+.frame_sidebar_nav_Children .frame_sidebar_nav_link:hover {
+  padding-left: 36px;
 }
 
-/* line 139, ../../../UI_dev/project/logic/_frame.scss */
+/* line 141, ../../../UI_dev/project/logic/_frame.scss */
+.frame_sidebar_nav_Children .frame_sidebar_nav_item_Active .frame_sidebar_nav_link,
+.frame_sidebar_nav_item_Open > .frame_sidebar_nav_link {
+  margin-left: 0;
+  border-width: 2px;
+  border-color: #00A3E1;
+  color: #00A3E1;
+  font-weight: bold;
+}
+
+/* line 150, ../../../UI_dev/project/logic/_frame.scss */
+.frame_sidebar_nav_Children .frame_sidebar_nav_item_Active .frame_sidebar_nav_link {
+  padding-left: 35px;
+}
+
+/* line 155, ../../../UI_dev/project/logic/_frame.scss */
+.frame_sidebar_nav_item_Open > .frame_sidebar_nav_link {
+  padding-left: 20px;
+}
+
+/* line 163, ../../../UI_dev/project/logic/_frame.scss */
 .frame_sidebar_nav_item_Open .frame_sidebar_nav_Children {
   display: block;
 }
 
-/* line 148, ../../../UI_dev/project/logic/_frame.scss */
+/* line 170, ../../../UI_dev/project/logic/_frame.scss */
 .frame_sidebar_nav_Tool .frame_sidebar_nav_link {
   text-transform: none;
 }
 
 /* #cnt 右侧主体 */
-/* line 154, ../../../UI_dev/project/logic/_frame.scss */
+/* line 176, ../../../UI_dev/project/logic/_frame.scss */
 .frame_cnt {
   position: absolute;
   top: 46px;
@@ -1700,35 +1712,35 @@ pre.dm_column_tip {
 
 /* #media 小屏幕适配 */
 @media screen and (max-width: 1366px) {
-  /* line 167, ../../../UI_dev/project/logic/_frame.scss */
+  /* line 189, ../../../UI_dev/project/logic/_frame.scss */
   .frame_head {
     padding-left: 98px;
   }
 
-  /* line 170, ../../../UI_dev/project/logic/_frame.scss */
+  /* line 192, ../../../UI_dev/project/logic/_frame.scss */
   .frame_sidebar {
     width: 320px;
   }
 
-  /* line 173, ../../../UI_dev/project/logic/_frame.scss */
+  /* line 195, ../../../UI_dev/project/logic/_frame.scss */
   .frame_sidebar_inner {
     width: 200px;
   }
 
-  /* line 176, ../../../UI_dev/project/logic/_frame.scss */
+  /* line 198, ../../../UI_dev/project/logic/_frame.scss */
   .frame_cnt {
     left: 320px;
   }
 }
 @media handheld and (max-width: 846px), screen and (max-width: 846px) {
-  /* line 183, ../../../UI_dev/project/logic/_frame.scss */
+  /* line 205, ../../../UI_dev/project/logic/_frame.scss */
   .frame_head {
     padding: 0 30px;
     text-align: center;
     height: 50px;
     line-height: 50px;
   }
-  /* line 189, ../../../UI_dev/project/logic/_frame.scss */
+  /* line 211, ../../../UI_dev/project/logic/_frame.scss */
   .frame_head .frame_head_showMenuBtn,
   .frame_head .frame_head_closeMenuBtn {
     position: absolute;
@@ -1737,19 +1749,19 @@ pre.dm_column_tip {
     font-size: 0;
     padding: 7px;
   }
-  /* line 197, ../../../UI_dev/project/logic/_frame.scss */
+  /* line 219, ../../../UI_dev/project/logic/_frame.scss */
   .frame_head .frame_head_showMenuBtn {
     left: 9px;
     top: 10px;
     display: block;
   }
-  /* line 202, ../../../UI_dev/project/logic/_frame.scss */
+  /* line 224, ../../../UI_dev/project/logic/_frame.scss */
   .frame_head .frame_head_closeMenuBtn {
     left: 11px;
     top: 5px;
   }
 
-  /* line 207, ../../../UI_dev/project/logic/_frame.scss */
+  /* line 229, ../../../UI_dev/project/logic/_frame.scss */
   .frame_head_title {
     position: relative;
     z-index: 90;
@@ -1760,12 +1772,12 @@ pre.dm_column_tip {
     -webkit-font-smoothing: antialiased;
   }
 
-  /* line 216, ../../../UI_dev/project/logic/_frame.scss */
+  /* line 238, ../../../UI_dev/project/logic/_frame.scss */
   .frame_head_title_link {
     margin-top: 14px;
   }
 
-  /* line 219, ../../../UI_dev/project/logic/_frame.scss */
+  /* line 241, ../../../UI_dev/project/logic/_frame.scss */
   .frame_nav {
     position: absolute;
     top: 0;
@@ -1787,7 +1799,7 @@ pre.dm_column_tip {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF00A3E1', endColorstr='#FF06DCE9', GradientType=0);
   }
 
-  /* line 231, ../../../UI_dev/project/logic/_frame.scss */
+  /* line 253, ../../../UI_dev/project/logic/_frame.scss */
   .frame_nav_item {
     float: none;
     display: block;
@@ -1806,7 +1818,7 @@ pre.dm_column_tip {
   }
 }
 @media handheld and (max-width: 846px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 846px) and (-webkit-min-device-pixel-ratio: 2), handheld and (max-width: 846px) and (min--moz-device-pixel-ratio: 2), screen and (max-width: 846px) and (min--moz-device-pixel-ratio: 2), handheld and (max-width: 846px) and (-o-min-device-pixel-ratio: 2), screen and (max-width: 846px) and (-o-min-device-pixel-ratio: 2), handheld and (max-width: 846px) and (min-device-pixel-ratio: 2), screen and (max-width: 846px) and (min-device-pixel-ratio: 2), handheld and (max-width: 846px) and (min-resolution: 2dppx), screen and (max-width: 846px) and (min-resolution: 2dppx), handheld and (max-width: 846px) and (min-resolution: 192dpi), screen and (max-width: 846px) and (min-resolution: 192dpi) {
-  /* line 231, ../../../UI_dev/project/logic/_frame.scss */
+  /* line 253, ../../../UI_dev/project/logic/_frame.scss */
   .frame_nav_item {
     position: relative;
     border: none;
@@ -1850,22 +1862,22 @@ pre.dm_column_tip {
 }
 
 @media handheld and (max-width: 846px), screen and (max-width: 846px) {
-  /* line 246, ../../../UI_dev/project/logic/_frame.scss */
+  /* line 268, ../../../UI_dev/project/logic/_frame.scss */
   .frame_head_ShowNav .frame_nav,
   .frame_head_ShowNav .frame_head_closeMenuBtn {
     display: block;
   }
-  /* line 250, ../../../UI_dev/project/logic/_frame.scss */
+  /* line 272, ../../../UI_dev/project/logic/_frame.scss */
   .frame_head_ShowNav .frame_head_showMenuBtn {
     display: none;
   }
 
-  /* line 255, ../../../UI_dev/project/logic/_frame.scss */
+  /* line 277, ../../../UI_dev/project/logic/_frame.scss */
   .frame_sidebar {
     display: none;
   }
 
-  /* line 258, ../../../UI_dev/project/logic/_frame.scss */
+  /* line 280, ../../../UI_dev/project/logic/_frame.scss */
   .frame_cnt {
     position: static;
     padding-left: 30px;

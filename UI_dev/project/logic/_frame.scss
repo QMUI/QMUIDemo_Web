@@ -96,54 +96,76 @@
 .frame_sidebar_nav {
   font-size: 14px;
 }
-.frame_sidebar_nav_item{
-    margin-bottom: 12px;
-}
-.frame_sidebar_nav_Children {
-  display: none;
-  .frame_sidebar_nav_link {
-    margin-bottom: 0;
-    padding-left: 35px;
-    line-height: 24px;
-    height: 24px;
-    font-weight: normal;
-  }
-  .frame_sidebar_nav_item{
-    margin-bottom: 0;
-  }
-}
 .frame_sidebar_nav_link {
   @extend %text-ellipsis;
   display: block;
-  height: 30px;
   margin-bottom: 2px;
-  padding-left: 20px;
-  line-height: 28px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  padding: 7px 0 7px $frame_sidebar_nav_link_paddingLeft;
+  border-left: 2px solid transparent;
+  line-height: 1;
+  color: $frame_sidebar_nav_link_color;
   text-decoration: none;
   text-transform: capitalize; // 因为部分内容的标题需要经过各种处理，可能会统一转成小写，因此这里保护一下
-  &:hover{
+
+  &:hover {
+    padding-left: $frame_sidebar_nav_link_paddingLeft + 1; // 保持元素不跳动
+    border-width: 1px;
+    border-color: $common_color_link;
+    color: $common_color_link;
     text-decoration: none;
   }
 }
 
-.frame_sidebar_nav_item_Active{
-  background-color: #e8ebee;
-  border-right: 2px solid #d8dde2;
-  text-decoration: none;
+// 子菜单样式
+.frame_sidebar_nav_Children {
+  display: none;
+  padding-bottom: 4px;
+
+  .frame_sidebar_nav_link {
+    margin-bottom: 0;
+    padding-left: $frame_sidebar_nav_children_link_paddingLeft;
+    line-height: 1;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-weight: normal;
+
+    &:hover {
+      padding-left: $frame_sidebar_nav_children_link_paddingLeft + 1; // 保持元素不跳动
+    }
+  }
 }
 
-.frame_sidebar_nav_item_Open{
-  .frame_sidebar_nav_Children{
+// 当前选中的子菜单项以及展开子菜单的父菜单项
+.frame_sidebar_nav_Children .frame_sidebar_nav_item_Active,
+.frame_sidebar_nav_item_Open > {
+  .frame_sidebar_nav_link {
+    margin-left: 0;
+    border-width: 2px;
+    border-color: $common_color_link;
+    color: $common_color_link;
+    font-weight: bold;
+  }
+}
+.frame_sidebar_nav_Children .frame_sidebar_nav_item_Active {
+  .frame_sidebar_nav_link {
+    padding-left: $frame_sidebar_nav_children_link_paddingLeft; // 保持元素不跳动
+  }
+}
+.frame_sidebar_nav_item_Open > {
+  .frame_sidebar_nav_link {
+    padding-left: $frame_sidebar_nav_link_paddingLeft; // 保持元素不跳动
+  }
+}
+
+// 展开子菜单的父菜单项
+.frame_sidebar_nav_item_Open {
+
+  .frame_sidebar_nav_Children {
     display: block;
   }
-  > .frame_sidebar_nav_link{
-    @extend .frame_sidebar_nav_item_Active;
-  }
 }
 
+// 工具方法界面，去掉开头大写，方法名不能随意修改大小写
 .frame_sidebar_nav_Tool {
   .frame_sidebar_nav_link {
     text-transform: none;
