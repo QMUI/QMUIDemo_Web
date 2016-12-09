@@ -9,14 +9,10 @@
 
 
 // #common 通用部分
-
-@mixin toolGhostText($ghostColor: $common_color_link) {
-  display: inline-block;
-  padding: 1px 10px;
-  border-radius: 12px;
-  border: 1px solid $ghostColor;
-  color: $ghostColor;
-  font-size: 12px;
+.tool_stage {
+  .dm_column_item_info_code {
+    cursor: pointer;
+  }
 }
 .tool_stage_item {
   margin-bottom: 36px;
@@ -63,11 +59,18 @@
   }
 }
 
-.tool_stage_paraType {
-  @include toolGhostText(#d44950);
+.tool_stage_paraType,
+.tool_stage_paraDefaultValue {
+  display: inline-block;
   margin-left: 10px;
+  padding: 1px 10px;
+  border-radius: 12px;
+  border: 1px solid $common_color_link;
+  color: $common_color_link;
+  font-size: 12px;
 }
 .tool_stage_paraDefaultValue {
-  @include toolGhostText();
   margin-left: 4px;
+  border-color: #d44950;
+  color: #d44950;
 }

@@ -1182,45 +1182,41 @@ pre.dm_column_tip {
   color: #707070;
 }
 
-/* line 126, ../../../UI_dev/project/widget/_column.scss */
-.dm_column_item_info_code {
-  cursor: pointer;
-}
-/* line 129, ../../../UI_dev/project/widget/_column.scss */
+/* line 128, ../../../UI_dev/project/widget/_column.scss */
 .dm_column_item_info_code xmp {
   display: inline-block;
   *display: inline;
   *zoom: 1;
 }
 
-/* line 134, ../../../UI_dev/project/widget/_column.scss */
+/* line 133, ../../../UI_dev/project/widget/_column.scss */
 .dm_column_item_info_Single .dm_column_item_info_code,
 .dm_column_item_info_list {
   border-top-width: 1px;
   border-radius: 4px;
 }
 
-/* line 141, ../../../UI_dev/project/widget/_column.scss */
+/* line 140, ../../../UI_dev/project/widget/_column.scss */
 .dm_column_item_info_list ul ul {
   margin-bottom: 20px;
 }
-/* line 144, ../../../UI_dev/project/widget/_column.scss */
+/* line 143, ../../../UI_dev/project/widget/_column.scss */
 .dm_column_item_info_list .dm_column_item_info_list_item {
   color: #787878;
   font-size: 18px;
 }
-/* line 148, ../../../UI_dev/project/widget/_column.scss */
+/* line 147, ../../../UI_dev/project/widget/_column.scss */
 .dm_column_item_info_list .dm_column_item_info_list_item_subitem {
   padding-left: 30px;
 }
 
-/* line 153, ../../../UI_dev/project/widget/_column.scss */
+/* line 152, ../../../UI_dev/project/widget/_column.scss */
 .dm_column_item_info_HasMarginTop {
   margin-top: 20px;
 }
 
 /* 给组件外部使用的类 */
-/* line 158, ../../../UI_dev/project/widget/_column.scss */
+/* line 157, ../../../UI_dev/project/widget/_column.scss */
 .dm_columnDisplayControl {
   position: relative !important;
   z-index: 10;
@@ -1228,19 +1224,19 @@ pre.dm_column_tip {
 }
 
 @media handheld and (max-width: 846px), screen and (max-width: 846px) {
-  /* line 166, ../../../UI_dev/project/widget/_column.scss */
+  /* line 165, ../../../UI_dev/project/widget/_column.scss */
   .dm_column {
     margin-bottom: 60px;
   }
 
-  /* line 169, ../../../UI_dev/project/widget/_column.scss */
+  /* line 168, ../../../UI_dev/project/widget/_column.scss */
   .dm_column_title {
     margin-bottom: 20px;
     padding-bottom: 5px;
     font-size: 34px;
   }
 
-  /* line 174, ../../../UI_dev/project/widget/_column.scss */
+  /* line 173, ../../../UI_dev/project/widget/_column.scss */
   .dm_column_item_title {
     margin-bottom: 10px;
     font-size: 22px;
@@ -2433,21 +2429,26 @@ pre.dm_column_tip {
  *
  * #common 通用部分
  */
-/* line 21, ../../../UI_dev/project/logic/_tool.scss */
+/* line 13, ../../../UI_dev/project/logic/_tool.scss */
+.tool_stage .dm_column_item_info_code {
+  cursor: pointer;
+}
+
+/* line 17, ../../../UI_dev/project/logic/_tool.scss */
 .tool_stage_item {
   margin-bottom: 36px;
   padding-left: 30px;
 }
-/* line 25, ../../../UI_dev/project/logic/_tool.scss */
+/* line 21, ../../../UI_dev/project/logic/_tool.scss */
 .tool_stage_item .dm_column_item_title {
   margin-left: -30px;
 }
-/* line 28, ../../../UI_dev/project/logic/_tool.scss */
+/* line 24, ../../../UI_dev/project/logic/_tool.scss */
 .tool_stage_item .dm_column_item_info_Single {
   margin-bottom: 0;
 }
 
-/* line 32, ../../../UI_dev/project/logic/_tool.scss */
+/* line 28, ../../../UI_dev/project/logic/_tool.scss */
 .tool_stage_item_desc {
   max-width: 840px;
   margin-bottom: 15px;
@@ -2455,14 +2456,14 @@ pre.dm_column_tip {
   line-height: 1.5;
 }
 
-/* line 39, ../../../UI_dev/project/logic/_tool.scss */
+/* line 35, ../../../UI_dev/project/logic/_tool.scss */
 .tool_stage_para,
 .tool_stage_example {
   max-width: 840px;
   margin-top: 25px;
 }
 
-/* line 44, ../../../UI_dev/project/logic/_tool.scss */
+/* line 40, ../../../UI_dev/project/logic/_tool.scss */
 .tool_stage_para_title,
 .tool_stage_example_title {
   margin-bottom: 12px;
@@ -2471,42 +2472,39 @@ pre.dm_column_tip {
   font-size: 16px;
 }
 
-/* line 51, ../../../UI_dev/project/logic/_tool.scss */
+/* line 47, ../../../UI_dev/project/logic/_tool.scss */
 .tool_stage_para_item {
   margin-top: 12px;
 }
-/* line 54, ../../../UI_dev/project/logic/_tool.scss */
+/* line 50, ../../../UI_dev/project/logic/_tool.scss */
 .tool_stage_para_item:first-child {
   margin-top: 0;
 }
 
-/* line 58, ../../../UI_dev/project/logic/_tool.scss */
+/* line 54, ../../../UI_dev/project/logic/_tool.scss */
 .tool_stage_item_para_data {
   margin-top: 4px;
 }
-/* line 61, ../../../UI_dev/project/logic/_tool.scss */
+/* line 57, ../../../UI_dev/project/logic/_tool.scss */
 .tool_stage_item_para_data:first-child {
   margin-top: 0;
 }
 
-/* line 66, ../../../UI_dev/project/logic/_tool.scss */
-.tool_stage_paraType {
-  display: inline-block;
-  padding: 1px 10px;
-  border-radius: 12px;
-  border: 1px solid #d44950;
-  color: #d44950;
-  font-size: 12px;
-  margin-left: 10px;
-}
-
-/* line 70, ../../../UI_dev/project/logic/_tool.scss */
+/* line 62, ../../../UI_dev/project/logic/_tool.scss */
+.tool_stage_paraType,
 .tool_stage_paraDefaultValue {
   display: inline-block;
+  margin-left: 10px;
   padding: 1px 10px;
   border-radius: 12px;
   border: 1px solid #00A3E1;
   color: #00A3E1;
   font-size: 12px;
+}
+
+/* line 72, ../../../UI_dev/project/logic/_tool.scss */
+.tool_stage_paraDefaultValue {
   margin-left: 4px;
+  border-color: #d44950;
+  color: #d44950;
 }
