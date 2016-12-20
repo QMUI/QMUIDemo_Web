@@ -84,6 +84,8 @@ if(showMask && maskWrap) {
   }
 }
 
+/* eslint-disable */
+// 第三方框架调用，忽略检测
 // 微信接口
 var currentUrlWithoutHash = window.location.href.replace(window.location.hash, '');
 $.getJSON('http://qmuiteam.com/wxapi/signature.php?url=' + encodeURIComponent(currentUrlWithoutHash)).done(function(result) {
@@ -127,98 +129,108 @@ wx.ready(function() {
 if (window.localStorage) {
 	(function () {
 		var src = '../node_modules/eruda/eruda.min.js';
-		if (!/eruda=true/.test(window.location) && localStorage.getItem('active-eruda') != 'true') return;
-		document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
-		document.write('<scr' + 'ipt>eruda.init();</scr' + 'ipt>');
+		if (!(/eruda=true/).test(window.location) && localStorage.getItem('active-eruda') != 'true') return;
+		document.write('<scr' +
+        'ipt src="' +
+        src +
+        '"></scr'+
+        'ipt>');
+		document.write('<scr' +
+        'ipt>eruda.init();</scr' +
+        'ipt>');
 	})();
 }
 
 // 统计
 var _hmt = _hmt || [];
 (function() {
-  var hm = document.createElement("script");
-  hm.src = "//hm.baidu.com/hm.js?b0246dc2e24129a9a91fc47e6f5a9d9f";
-  var s = document.getElementsByTagName("script")[0];
+  var hm = document.createElement('script');
+  hm.src = '//hm.baidu.com/hm.js?b0246dc2e24129a9a91fc47e6f5a9d9f';
+  var s = document.getElementsByTagName('script')[0];
   s.parentNode.insertBefore(hm, s);
 })();
+/* eslint-enable */
 
 
 // 侧边栏滚动处理
 var isNavInClick = false;
 
 // 确认侧边栏上的目录是否已经进入 Active 态
-function FrameSidebarItemIsInActive(that){
-  var offsetTop = $(that).offset().top,
-    height = $(that).outerHeight();
-  if(offsetTop > -height + 46){  // 46为顶部bar的高度
+var frameSidebarItemIsInActive = function(target) {
+  var offsetTop = $(target).offset().top,
+    height = $(target).outerHeight();
+  if (offsetTop > -height + 46) { // 46为顶部bar的高度
+
     return true;
   }
+
   return false;
 }
 
 // 触发侧边栏进入 Active 态
-function makeFrameSidebarActive(columnIndex,itemIndex){
+var makeFrameSidebarActive = function(columnIndex, itemIndex) {
   var group = $('.js_sidebar_group').removeClass('frame_sidebar_nav_item_Open').eq(columnIndex).addClass('frame_sidebar_nav_item_Open');
   $('.js_sidebar_item').removeClass('frame_sidebar_nav_item_Active');
-  if(group.size()>0){
+  if (group.size() > 0) {
     group.find('.js_sidebar_item').eq(itemIndex).addClass('frame_sidebar_nav_item_Active');
   }
 }
 
 // 确认侧边栏是否被点击
-function confirmNavIsInClick(){
+var confirmNavIsInClick = function() {
   var timerAtClickNav = null; // 由于导航栏点击的时候,也会触发页面滚动条滚动，这个标志位是为了当导航栏点击之后的 100ms 内不触发页面滚动条事件
   isNavInClick = true;
   clearTimeout(timerAtClickNav);
-  timerAtClickNav = setTimeout(function(){
+  timerAtClickNav = setTimeout(function() {
     isNavInClick = false;
-  },100);
+  }, 100);
 }
 
-makeFrameSidebarActive(0,0); // 初始化侧边栏
+makeFrameSidebarActive(0, 0); // 初始化侧边栏
 
 // 为侧边栏绑定滚动事件
-$('.frame_cnt').on('scroll',function(){
+$('.frame_cnt').on('scroll', function() {
   if(!isNavInClick){  // 当用户进行点击时,不响应滚动事件
-    console.log("come in");
-     var frameCntHeight =$(this).outerHeight(true),// 可见高度
-       frameCntContentHeight =$(this).get(0).scrollHeight,// 内容高度
-       frameCntScrollTop =$(this).scrollTop(),// 滚动高度
+    console.log('come in');
+     var frameCntHeight = $(this).outerHeight(true), // 可见高度
+       frameCntContentHeight = $(this).get(0).scrollHeight, // 内容高度
+       frameCntScrollTop = $(this).scrollTop(), // 滚动高度
        columnIndex = 0,
        itemIndex = 0;
-     if(frameCntHeight+frameCntScrollTop>=frameCntContentHeight){  // 到达页面底部的特殊处理
-       columnIndex = $('.dm_column').size() -1;
-       itemIndex = ($('.dm_column').last().find('.dm_column_item').size()) - 1;
-     }else{  //页面滚动的处理
-       $('.dm_column').each(function(i){
-         if(FrameSidebarItemIsInActive(this)){
+     if (frameCntHeight + frameCntScrollTop >= frameCntContentHeight) { // 到达页面底部的特殊处理
+       columnIndex = $('.dm_column').size() - 1;
+       itemIndex = $('.dm_column').last().find('.dm_column_item').size() - 1;
+     } else {  // 页面滚动的处理
+       $('.dm_column').each(function(i) { // eslint-disable-line
+         if (frameSidebarItemIsInActive(this)) {
            columnIndex = i;
-           $(this).children('.dm_column_item').each(function(j){
-             if(FrameSidebarItemIsInActive(this)){
+           $(this).children('.dm_column_item').each(function(j) { // eslint-disable-line
+             if (frameSidebarItemIsInActive(this)) {
                itemIndex = j;
+
                return false;
              }
            });
+
            return false;
          }
        });
      }
-     makeFrameSidebarActive(columnIndex,itemIndex);
+     makeFrameSidebarActive(columnIndex, itemIndex);
   }
 });
 
 
 // 为侧边栏一级目录绑定点击事件
-$('.frame_sidebar_nav').delegate('.js_sidebar_group','click',function(){
+$('.frame_sidebar_nav').delegate('.js_sidebar_group', 'click', function() {
   confirmNavIsInClick();
-  makeFrameSidebarActive($('.js_sidebar_group').index(this),0);
+  makeFrameSidebarActive($('.js_sidebar_group').index(this), 0);
 });
 
-//为侧边栏二级目录绑定点击事件
-$('.frame_sidebar_nav').delegate('.js_sidebar_item','click',function(event){
+// 为侧边栏二级目录绑定点击事件
+$('.frame_sidebar_nav').delegate('.js_sidebar_item', 'click', function(event) {
   confirmNavIsInClick();
   console.log($(this).html());
-  $(this).addClass('frame_sidebar_nav_item_Active')
-     .siblings('.js_sidebar_item').removeClass('frame_sidebar_nav_item_Active');
+  $(this).addClass('frame_sidebar_nav_item_Active').siblings('.js_sidebar_item').removeClass('frame_sidebar_nav_item_Active');
   event.stopPropagation();
 });

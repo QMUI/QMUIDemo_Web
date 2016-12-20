@@ -4,7 +4,11 @@ module.exports = {
     },
     "extends": "eslint:recommended",
     "globals": {
-      // comments 由 node 生成，prettyPrint 为外部库引入，不方便在本文件内定义，因此这里排除检测 
+      // jQuery 框架的命名空间
+      "$": false,
+      // 微信 JSSDK 的封装对象
+      "wx": false,
+      // comments 由 node 生成，prettyPrint 为外部库引入，不方便在本文件内定义，因此这里排除检测
       "comments": false,
       "prettyPrint": false
     },
@@ -79,7 +83,7 @@ module.exports = {
         "new-parens": "error",
         "newline-after-var": "off",
         "newline-before-return": "error",
-        "newline-per-chained-call": "error",
+        "newline-per-chained-call": "off",
         "no-alert": "error",
         "no-array-constructor": "error",
         "no-bitwise": "error",
@@ -106,7 +110,7 @@ module.exports = {
             "error",
             "functions"
         ],
-        "no-invalid-this": "error",
+        "no-invalid-this": "off",
         "no-iterator": "error",
         "no-label-var": "error",
         "no-labels": "error",
@@ -119,7 +123,7 @@ module.exports = {
         "no-multi-str": "error",
         "no-multiple-empty-lines": "error",
         "no-native-reassign": "error",
-        "no-negated-condition": "error",
+        "no-negated-condition": "off",
         "no-nested-ternary": "error",
         "no-new": "error",
         "no-new-func": "error",
@@ -186,7 +190,7 @@ module.exports = {
         ],
         "operator-linebreak": "error",
         "padded-blocks": "off",
-        "prefer-arrow-callback": "error",
+        "prefer-arrow-callback": "off",
         "prefer-const": "error",
         "prefer-reflect": "error",
         "prefer-rest-params": "error",
