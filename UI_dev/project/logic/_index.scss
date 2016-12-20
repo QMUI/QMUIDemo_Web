@@ -155,7 +155,7 @@
 
 // #cnt 主体内容
 .index_cnt {
-  margin-bottom: 74px;
+  margin-bottom: 70px;
   text-align: center;
   -webkit-font-smoothing: antialiased;
 }
@@ -204,7 +204,7 @@
 }
 
 .index_appIntro {
-  margin-bottom: 52px;
+  margin-bottom: 53px;
   padding-bottom: 50px;
 }
 .index_appIntro_desc {
@@ -232,10 +232,10 @@
 }
 
 .index_project_desc {
-  margin-bottom: 45px;
+  margin-bottom: 42px;
 }
 .index_project_list_item {
-  margin-left: 78px;
+  margin-left: 44px;
   line-height: 0;
   vertical-align: top;
 
@@ -246,7 +246,7 @@
 
 // #foot 页脚
 .index_foot {
-  padding: 72px 0;
+  padding: 72px 0 75px;
   background-color: #f8f9fa;
   color: $common_color_lightGray;
   text-align: center;
@@ -254,7 +254,7 @@
   -webkit-font-smoothing: antialiased;
 
   .dm_icon {
-    margin-bottom: 13px;
+    margin-bottom: 22px;
   }
 }
 
@@ -329,7 +329,7 @@
   }
 
   .index_cnt {
-    margin-bottom: 50px;
+    margin-bottom: 38px;
   }
   .index_cnt_inside {
     width: auto;
@@ -387,15 +387,27 @@
   }
 
   .index_project_desc {
-    margin-bottom: 35px;
+    margin-bottom: 23px;
+    font-size: 16px;
   }
   .index_project_list_item {
-    margin-left: 20px;
+    display: block;
+    margin: 16px auto 0;
+
+    &:first-child {
+      margin-top: 0;
+      margin-left: auto; // 重置之前的 .index_project_list_item:first-child 样式
+    }
   }
 
   .index_foot {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+
+    .qw_icon {
+      margin-bottom: 28px;
+      vertical-align: top;
+    }
   }
 
   .index_starWrap {

@@ -1257,19 +1257,19 @@ pre.dm_column_tip {
   *zoom: 1;
   font-size: 0;
   background-repeat: no-repeat;
-  background-image: url('../images/icons-sffb70bccfc.png');
-  background-size: 160px 1080px;
+  background-image: url('../images/icons-s7236ec9062.png');
+  background-size: 160px 1124px;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2), (min-resolution: 2dppx), (min-resolution: 192dpi) {
   /* line 19, ../../../UI_dev/project/widget/_images.scss */
   .dm_icon {
-    background-image: url('../images/icons_2x-sf93c16e7a2.png');
+    background-image: url('../images/icons_2x-s25e3760042.png');
   }
 }
 @media (-webkit-min-device-pixel-ratio: 3), (min--moz-device-pixel-ratio: 3), (-o-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3), (min-resolution: 3dppx), (min-resolution: 288dpi) {
   /* line 19, ../../../UI_dev/project/widget/_images.scss */
   .dm_icon {
-    background-image: url('../images/icons_3x-s4633d9823e.png');
+    background-image: url('../images/icons_3x-sa82d878852.png');
   }
 }
 
@@ -1323,43 +1323,50 @@ pre.dm_column_tip {
 }
 
 /* line 38, ../../../UI_dev/project/widget/_images.scss */
-.dm_icon_Sass {
+.dm_icon_QQMailLogo {
   background-position: 0 -674px;
+  height: 32px;
+  width: 104px;
+}
+
+/* line 38, ../../../UI_dev/project/widget/_images.scss */
+.dm_icon_Sass {
+  background-position: 0 -706px;
   height: 160px;
   width: 160px;
 }
 
 /* line 38, ../../../UI_dev/project/widget/_images.scss */
 .dm_icon_TopLogo {
-  background-position: 0 -834px;
+  background-position: 0 -866px;
   height: 20px;
   width: 96px;
 }
 
 /* line 38, ../../../UI_dev/project/widget/_images.scss */
 .dm_icon_TreeMenuThumb {
-  background-position: 0 -854px;
+  background-position: 0 -886px;
   height: 14px;
   width: 14px;
 }
 
 /* line 38, ../../../UI_dev/project/widget/_images.scss */
 .dm_icon_WeReadLogo {
-  background-position: 0 -868px;
-  height: 26px;
+  background-position: 0 -900px;
+  height: 32px;
   width: 104px;
 }
 
 /* line 38, ../../../UI_dev/project/widget/_images.scss */
 .dm_icon_WeWorkLogo {
-  background-position: 0 -894px;
-  height: 26px;
+  background-position: 0 -932px;
+  height: 32px;
   width: 104px;
 }
 
 /* line 38, ../../../UI_dev/project/widget/_images.scss */
 .dm_icon_Workflow {
-  background-position: 0 -920px;
+  background-position: 0 -964px;
   height: 160px;
   width: 160px;
 }
@@ -2095,7 +2102,7 @@ pre.dm_column_tip {
 
 /* line 157, ../../../UI_dev/project/logic/_index.scss */
 .index_cnt {
-  margin-bottom: 74px;
+  margin-bottom: 70px;
   text-align: center;
   -webkit-font-smoothing: antialiased;
 }
@@ -2156,7 +2163,7 @@ pre.dm_column_tip {
 
 /* line 206, ../../../UI_dev/project/logic/_index.scss */
 .index_appIntro {
-  margin-bottom: 52px;
+  margin-bottom: 53px;
   padding-bottom: 50px;
 }
 
@@ -2196,12 +2203,12 @@ pre.dm_column_tip {
 }
 /* line 234, ../../../UI_dev/project/logic/_index.scss */
 .index_project_desc {
-  margin-bottom: 45px;
+  margin-bottom: 42px;
 }
 
 /* line 237, ../../../UI_dev/project/logic/_index.scss */
 .index_project_list_item {
-  margin-left: 78px;
+  margin-left: 44px;
   line-height: 0;
   vertical-align: top;
 }
@@ -2212,7 +2219,7 @@ pre.dm_column_tip {
 
 /* line 248, ../../../UI_dev/project/logic/_index.scss */
 .index_foot {
-  padding: 72px 0;
+  padding: 72px 0 75px;
   background-color: #f8f9fa;
   color: #9595A3;
   text-align: center;
@@ -2221,7 +2228,7 @@ pre.dm_column_tip {
 }
 /* line 256, ../../../UI_dev/project/logic/_index.scss */
 .index_foot .dm_icon {
-  margin-bottom: 13px;
+  margin-bottom: 22px;
 }
 
 /* line 263, ../../../UI_dev/project/logic/_index.scss */
@@ -2312,7 +2319,7 @@ pre.dm_column_tip {
 
   /* line 331, ../../../UI_dev/project/logic/_index.scss */
   .index_cnt {
-    margin-bottom: 50px;
+    margin-bottom: 38px;
   }
 
   /* line 334, ../../../UI_dev/project/logic/_index.scss */
@@ -2389,34 +2396,46 @@ pre.dm_column_tip {
 
   /* line 389, ../../../UI_dev/project/logic/_index.scss */
   .index_project_desc {
-    margin-bottom: 35px;
+    margin-bottom: 23px;
+    font-size: 16px;
   }
 
-  /* line 392, ../../../UI_dev/project/logic/_index.scss */
+  /* line 393, ../../../UI_dev/project/logic/_index.scss */
   .index_project_list_item {
-    margin-left: 20px;
+    display: block;
+    margin: 16px auto 0;
+  }
+  /* line 397, ../../../UI_dev/project/logic/_index.scss */
+  .index_project_list_item:first-child {
+    margin-top: 0;
+    margin-left: auto;
   }
 
-  /* line 396, ../../../UI_dev/project/logic/_index.scss */
+  /* line 403, ../../../UI_dev/project/logic/_index.scss */
   .index_foot {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  /* line 407, ../../../UI_dev/project/logic/_index.scss */
+  .index_foot .qw_icon {
+    margin-bottom: 28px;
+    vertical-align: top;
   }
 
-  /* line 401, ../../../UI_dev/project/logic/_index.scss */
+  /* line 413, ../../../UI_dev/project/logic/_index.scss */
   .index_starWrap {
     width: 126px;
     height: 125px;
   }
 
-  /* line 407, ../../../UI_dev/project/logic/_index.scss */
+  /* line 419, ../../../UI_dev/project/logic/_index.scss */
   .index_star {
     right: -52px;
     top: 37px;
     width: 208px;
   }
 
-  /* line 412, ../../../UI_dev/project/logic/_index.scss */
+  /* line 424, ../../../UI_dev/project/logic/_index.scss */
   .index_star_inner {
     height: 24px;
     line-height: 24px;

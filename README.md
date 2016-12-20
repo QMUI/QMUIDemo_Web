@@ -1,6 +1,6 @@
 # QMUI Web Demo
-> [QMUI Web](https://github.com/QMUI/qmui_web) 的示例项目及文档。如果需要了解基于 QMUI Web 的项目的完整目录结果，以及配置完成后的具体状况，可以下载本示例项目作为参考。
-> 本示例项目同时也是 QMUI Web 的[官网源码](http://qmuiteam.com/web/)。 
+> [QMUI Web](https://github.com/QMUI/QMUI_Web) 的示例项目及文档。如果需要了解基于 QMUI Web 的项目的完整目录结果，以及配置完成后的具体状况，可以下载本示例项目作为参考。
+> 本示例项目同时也是 QMUI Web 的[官网源码](http://qmuiteam.com/web/)。
 
 ## 本地运行
 ```
