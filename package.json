@@ -4,7 +4,7 @@
   "description": "QMUI Web 的示例项目及文档",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/QMUI/qmuidemo_web.git"
+    "url": "git+https://github.com/QMUI/QMUIDemo_Web.git"
   },
   "dependencies": {
     "eruda": "^1.1.3",
@@ -20,7 +20,7 @@
   "author": "QMUI Team",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/QMUI/qmuidemo_web/issues"
+    "url": "https://github.com/QMUI/QMUIDemo_Web/issues"
   },
   "homepage": "http://qmuiteam.com/web/"
 }
