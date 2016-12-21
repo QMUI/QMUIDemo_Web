@@ -218,12 +218,12 @@
     }
     .frame_head_showMenuBtn {
       left: 16px - getLengthDirectionValue($frame_head_mobile_btn_padding, left);
-      top: getLengthMaxIntegerCenter($frame_head_mobile_height, 16 + getLengthDirectionValue($frame_head_mobile_btn_padding, vertical) * 2);
+      top: getLengthMaxIntegerCenter($frame_head_mobile_height, sprite-height($dm_icon, "Menu") + getLengthDirectionValue($frame_head_mobile_btn_padding, vertical) * 2);
       display: block;
     }
     .frame_head_closeMenuBtn {
       left: 18px - getLengthDirectionValue($frame_head_mobile_btn_padding, left);
-      top: getLengthMaxIntegerCenter($frame_head_mobile_height, 26 + getLengthDirectionValue($frame_head_mobile_btn_padding, vertical) * 2);
+      top: getLengthMaxIntegerCenter($frame_head_mobile_height, sprite-height($dm_icon, "CloseMenu") + getLengthDirectionValue($frame_head_mobile_btn_padding, vertical) * 2);
     }
   }
   .frame_head_title {

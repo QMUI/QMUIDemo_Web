@@ -1257,19 +1257,19 @@ pre.dm_column_tip {
   *zoom: 1;
   font-size: 0;
   background-repeat: no-repeat;
-  background-image: url('../images/icons-s7236ec9062.png');
-  background-size: 160px 1124px;
+  background-image: url('../images/icons-s503aac5046.png');
+  background-size: 160px 1130px;
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2), (min-resolution: 2dppx), (min-resolution: 192dpi) {
   /* line 19, ../../../UI_dev/project/widget/_images.scss */
   .dm_icon {
-    background-image: url('../images/icons_2x-s25e3760042.png');
+    background-image: url('../images/icons_2x-s20eabdb5d0.png');
   }
 }
 @media (-webkit-min-device-pixel-ratio: 3), (min--moz-device-pixel-ratio: 3), (-o-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3), (min-resolution: 3dppx), (min-resolution: 288dpi) {
   /* line 19, ../../../UI_dev/project/widget/_images.scss */
   .dm_icon {
-    background-image: url('../images/icons_3x-sa82d878852.png');
+    background-image: url('../images/icons_3x-s58fe28d4c0.png');
   }
 }
 
@@ -1297,76 +1297,76 @@ pre.dm_column_tip {
 /* line 38, ../../../UI_dev/project/widget/_images.scss */
 .dm_icon_CloseMenu {
   background-position: 0 -312px;
-  height: 26px;
-  width: 26px;
+  height: 24px;
+  width: 24px;
 }
 
 /* line 38, ../../../UI_dev/project/widget/_images.scss */
 .dm_icon_Component {
-  background-position: 0 -338px;
+  background-position: 0 -336px;
   height: 160px;
   width: 160px;
 }
 
 /* line 38, ../../../UI_dev/project/widget/_images.scss */
 .dm_icon_Extension {
-  background-position: 0 -498px;
+  background-position: 0 -496px;
   height: 160px;
   width: 160px;
 }
 
 /* line 38, ../../../UI_dev/project/widget/_images.scss */
 .dm_icon_Menu {
-  background-position: 0 -658px;
-  height: 16px;
-  width: 34px;
+  background-position: 0 -656px;
+  height: 24px;
+  width: 24px;
 }
 
 /* line 38, ../../../UI_dev/project/widget/_images.scss */
 .dm_icon_QQMailLogo {
-  background-position: 0 -674px;
+  background-position: 0 -680px;
   height: 32px;
   width: 104px;
 }
 
 /* line 38, ../../../UI_dev/project/widget/_images.scss */
 .dm_icon_Sass {
-  background-position: 0 -706px;
+  background-position: 0 -712px;
   height: 160px;
   width: 160px;
 }
 
 /* line 38, ../../../UI_dev/project/widget/_images.scss */
 .dm_icon_TopLogo {
-  background-position: 0 -866px;
+  background-position: 0 -872px;
   height: 20px;
   width: 96px;
 }
 
 /* line 38, ../../../UI_dev/project/widget/_images.scss */
 .dm_icon_TreeMenuThumb {
-  background-position: 0 -886px;
+  background-position: 0 -892px;
   height: 14px;
   width: 14px;
 }
 
 /* line 38, ../../../UI_dev/project/widget/_images.scss */
 .dm_icon_WeReadLogo {
-  background-position: 0 -900px;
+  background-position: 0 -906px;
   height: 32px;
   width: 104px;
 }
 
 /* line 38, ../../../UI_dev/project/widget/_images.scss */
 .dm_icon_WeWorkLogo {
-  background-position: 0 -932px;
+  background-position: 0 -938px;
   height: 32px;
   width: 104px;
 }
 
 /* line 38, ../../../UI_dev/project/widget/_images.scss */
 .dm_icon_Workflow {
-  background-position: 0 -964px;
+  background-position: 0 -970px;
   height: 160px;
   width: 160px;
 }
@@ -1755,13 +1755,13 @@ pre.dm_column_tip {
   /* line 219, ../../../UI_dev/project/logic/_frame.scss */
   .frame_head .frame_head_showMenuBtn {
     left: 9px;
-    top: 10px;
+    top: 6px;
     display: block;
   }
   /* line 224, ../../../UI_dev/project/logic/_frame.scss */
   .frame_head .frame_head_closeMenuBtn {
     left: 11px;
-    top: 5px;
+    top: 6px;
   }
 
   /* line 229, ../../../UI_dev/project/logic/_frame.scss */
