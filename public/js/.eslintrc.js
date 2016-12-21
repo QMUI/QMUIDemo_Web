@@ -77,7 +77,7 @@ module.exports = {
         "max-len": "off",
         "max-nested-callbacks": "error",
         "max-params": "error",
-        "max-statements": ["error", 10, { "ignoreTopLevelFunctions": true }],
+        "max-statements": "off",
         "max-statements-per-line": "error",
         "new-cap": "error",
         "new-parens": "error",

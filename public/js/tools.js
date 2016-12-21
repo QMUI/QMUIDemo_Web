@@ -55,11 +55,11 @@ for (var i = 0, llength = comments.length; i < llength; i++) {
 	siderHtml.push('<a class="frame_sidebar_nav_link" href="#' + id + '">' + title + '</a>');
 
 	siderHtml.push('<ul class="frame_sidebar_nav frame_sidebar_nav_Children">');
-  for (var itemIndex = 0; itemIndex < tool.length; itemIndex++) {
-    var item = tool[itemIndex],
-				itemId = 'qui_' + item.context.name;
+  for (var sidebarItemIndex = 0; sidebarItemIndex < tool.length; sidebarItemIndex++) {
+    var sidebarItem = tool[sidebarItemIndex],
+				sidebarItemId = 'qui_' + sidebarItem.context.name;
 		siderHtml.push('  <li class="frame_sidebar_nav_item js_sidebar_item">');
-		siderHtml.push('    <a class="frame_sidebar_nav_link" href="#' + itemId + '">' + item.context.name + '</a>');
+		siderHtml.push('    <a class="frame_sidebar_nav_link" href="#' + sidebarItemId + '">' + sidebarItem.context.name + '</a>');
 		siderHtml.push('  </li>');
 	}
 	siderHtml.push('</ul>');
@@ -70,29 +70,29 @@ for (var i = 0, llength = comments.length; i < llength; i++) {
   mainHtml.push('<div class="dm_column">');
   mainHtml.push('  <h2 class="dm_column_title" id="' + id + '">' + title + '</h2>');
 
-  for (var itemIndex = 0; itemIndex < tool.length; itemIndex++) {
-    var item = tool[itemIndex],
-				itemId = 'qui_' + item.context.name;
+  for (var contentItemIndex = 0; contentItemIndex < tool.length; contentItemIndex++) {
+    var contentItem = tool[contentItemIndex],
+				contentItemId = 'qui_' + contentItem.context.name;
 
-    mainHtml.push('<div class="dm_column_item tool_stage_item" data-showDetail=false data-groupIndex="' + i + '" data-itemIndex="' + itemIndex + '">');
-    mainHtml.push('<h3 class="dm_column_item_title" id="' + itemId + '">' + item.context.name + '</h3>');
-    mainHtml.push('<p class="tool_stage_item_desc">' + item.description + '</p>');
+    mainHtml.push('<div class="dm_column_item tool_stage_item" data-showDetail=false data-groupIndex="' + i + '" data-itemIndex="' + contentItemIndex + '">');
+    mainHtml.push('<h3 class="dm_column_item_title" id="' + contentItemId + '">' + contentItem.context.name + '</h3>');
+    mainHtml.push('<p class="tool_stage_item_desc">' + contentItem.description + '</p>');
 
-    if (item.throw) {
-      mainHtml.push('<p class="tool_stage_item_desc"><strong>注意：</strong>' + item.throw + '</p>');
+    if (contentItem.throw) {
+      mainHtml.push('<p class="tool_stage_item_desc"><strong>注意：</strong>' + contentItem.throw + '</p>');
     }
 
     mainHtml.push('<div class="dm_column_item_info dm_column_item_info_Single">');
-    mainHtml.push('  <div class="dm_column_item_info_code"><xmp class="prettyprint">' + makeCompleteMethodWithItem(item) + '</xmp></div>');
+    mainHtml.push('  <div class="dm_column_item_info_code"><xmp class="prettyprint">' + makeCompleteMethodWithItem(contentItem) + '</xmp></div>');
     mainHtml.push('</div>');
 
     // 参数列表
-    if (item.parameter) {
+    if (contentItem.parameter) {
       mainHtml.push('<div class="tool_stage_para">');
       mainHtml.push('  <div class="tool_stage_para_title">参数列表</div>');
       mainHtml.push('  <div class="tool_stage_para_cnt">');
 
-      var paraList = item.parameter;
+      var paraList = contentItem.parameter;
       for (var paraIndex = 0; paraIndex < paraList.length; paraIndex++) {
         var paraItem = paraList[paraIndex];
         mainHtml.push('<div class="tool_stage_para_item">');
@@ -109,8 +109,8 @@ for (var i = 0, llength = comments.length; i < llength; i++) {
     }
 
     // 例子
-    if (item.example) {
-      var exampleList = item.example;
+    if (contentItem.example) {
+      var exampleList = contentItem.example;
       mainHtml.push('<div class="tool_stage_example">');
       mainHtml.push('  <div class="tool_stage_example_title">示例</div>');
       for (var exampleIndex = 0; exampleIndex < exampleList.length; exampleIndex++) {
