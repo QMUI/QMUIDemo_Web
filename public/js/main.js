@@ -108,7 +108,7 @@ wx.ready(function() {
       config = {
         desc: '一个旨在提高 UI 开发效率，快速产生项目 UI 的前端框架', // 分享描述
         link: currentUrl, // 分享链接
-        imgUrl: 'http://qmuiteam.com/public/style/images/independent/share/ShareLogo.png', // 分享图标
+        imgUrl: 'http://qmuiteam.com/web/public/style/images/independent/share/ShareLogo.png', // 分享图标
         success: function() {
           console.log('分享成功');
         },
