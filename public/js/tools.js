@@ -82,6 +82,11 @@ for (var i = 0, llength = comments.length; i < llength; i++) {
       mainHtml.push('<p class="tool_stage_item_desc"><strong>注意：</strong>' + contentItem.throw + '</p>');
     }
 
+    // 参数列表
+    if (contentItem.deprecated) {
+      mainHtml.push('<p class="tool_stage_item_desc"><strong>不推荐使用：</strong>' + contentItem.deprecated + '</p>');
+    }
+
     mainHtml.push('<div class="dm_column_item_info dm_column_item_info_Single">');
     mainHtml.push('  <div class="dm_column_item_info_code"><xmp class="prettyprint">' + makeCompleteMethodWithItem(contentItem) + '</xmp></div>');
     mainHtml.push('</div>');

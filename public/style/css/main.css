@@ -55,11 +55,11 @@
  * @date 2014-10-31
  *
  */
-/* line 230, ../../../UI_dev/qmui_web/qmui/helper/mixin/_compatible.scss */
+/* line 231, ../../../UI_dev/qmui_web/qmui/helper/mixin/_compatible.scss */
 .qui_clear, .qui_tabNav, .dm_column_display_cnt, .frame_head, .index_cnt_ability_list {
   *zoom: 1;
 }
-/* line 234, ../../../UI_dev/qmui_web/qmui/helper/mixin/_compatible.scss */
+/* line 235, ../../../UI_dev/qmui_web/qmui/helper/mixin/_compatible.scss */
 .qui_clear:after, .qui_tabNav:after, .dm_column_display_cnt:after, .frame_head:after, .index_cnt_ability_list:after {
   clear: both;
   content: ".";
@@ -70,7 +70,7 @@
   overflow: hidden;
 }
 
-/* line 274, ../../../UI_dev/qmui_web/qmui/helper/mixin/_compatible.scss */
+/* line 276, ../../../UI_dev/qmui_web/qmui/helper/mixin/_compatible.scss */
 .qui_txtOverflow, .frame_sidebar_nav_link {
   overflow: hidden;
   white-space: nowrap;
@@ -80,7 +80,7 @@
   word-wrap: normal;
 }
 
-/* line 459, ../../../UI_dev/qmui_web/qmui/helper/mixin/_compatible.scss */
+/* line 461, ../../../UI_dev/qmui_web/qmui/helper/mixin/_compatible.scss */
 .qui_btn, .index_downloadBtn, .index_banner_startBtn,
 .index_banner_githubBtn {
   -moz-user-select: none;
