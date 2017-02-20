@@ -1,11 +1,18 @@
 @charset "utf-8";
 /**
- * _3rd.scss 业务公共组件 
- * @author Kayo 
+ * _3rd.scss 业务公共组件
+ * @author Kayo
  * @date 2015-08-17
  *
  */
 
+@lazysprite "icons#icon";
+.dm_icon {
+  display: inline-block;
+  overflow: hidden;
+  font-size: 0;
+  line-height: 0;
+}
 
 /* 按钮 */
 @import "_button";
@@ -30,9 +37,6 @@
 
 /* 栏目，用于展示组件及介绍组件 */
 @import "_column";
-
-/* CSS Sprite 处理 */
-@import "_images";
 
 /* 扩展组件 */
 @import "_others";
