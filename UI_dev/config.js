@@ -1,5 +1,5 @@
 module.exports = {
-  "project" : "Demo",     
+  "project" : "Demo",
   "prefix" : "dm",
   "resultCssFileName" : "main.scss",
   "cleanFileType" : ["../.sass-cache", "../.sass-cache/**/*"],
@@ -19,11 +19,12 @@ module.exports = {
   "browserSyncProxy": "",
 
   "htmlSourcePath" : ["../../UI_html/**/*.html"],
-  "imagesSourcePath" : "../project/images", 
+  "imagesSourcePath" : "../project/images",
   "htmlResultPath" : "../../UI_html_result",
   "imagesResultPath" : "../../public/style/images",
-  "independentImagesDirectory" : "/independent", 
+  "independentImagesDirectory" : "/independent",
+  "styleResultPath": "../../public/style/css",
 
   "openIncludeFunction" : true,
   "includePrefix" : "@@"
-};   
+};
