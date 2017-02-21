@@ -84,7 +84,7 @@
 							<a class="frame_sidebar_nav_link" href="#qui_scaffold">脚手架</a>
 						</li>
 						<li class="frame_sidebar_nav_item js_sidebar_item">
-							<a class="frame_sidebar_nav_link" href="#qui_SassSupport">Sass 与 Compass 支持</a>
+							<a class="frame_sidebar_nav_link" href="#qui_SassSupport">Sass 支持</a>
 						</li>
 						<li class="frame_sidebar_nav_item js_sidebar_item">
 							<a class="frame_sidebar_nav_link" href="#qui_expandWidget">扩展组件</a>
@@ -134,7 +134,7 @@
 
       <p class="dm_column_tip">QMUI Web 遵循 <a href="./codeNorm.html" target="_blank" title="QMUI 编码规范">QMUI 编码规范</a>，因此框架中提供的样式除 Reset 外都以 qui_ 作开头，以充当框架的命名空间。业务上的样式也应该有自己的命名空间，例如本 Demo 中的样式的公共部分都以 dm_ 开头，各细致的业务就以业务的功能作开头（例如组件页面的非公共代码都以 widget_ 开头），从而以不同的命名空间划分不同的样式，避免样式的互相干扰。</p>
 
-      <p class="dm_column_tip">除此以外，QMUI 封装了大量 Sass 和 Compass 方法供使用，另外还在 Demo 中以参考组件的形式收录了一些结构较复杂的扩展组件，供使用者参考。</p>
+      <p class="dm_column_tip">除此以外，QMUI 封装了大量 Sass 方法供使用，另外还在 Demo 中以参考组件的形式收录了一些结构较复杂的扩展组件，供使用者参考。</p>
 
 
 		</div>
@@ -145,32 +145,20 @@
 
       <h2 id="qui_environment" class="dm_column_title">环境配置</h2>
 
-      <p class="dm_column_tip">QMUI Web 需要依赖一些第三方框架或工具才能运行，分别是 gulp，Sass，Compass，Node.js（gulp 需要依赖），Ruby（Sass 和 Compass 需要依赖）</p>
+      <p class="dm_column_tip">QMUI Web 基于 gulp 和 Node.js，请确保安装 <a href="https://nodejs.org/" target="_blank">Node.js</a>（4.0 以上版本），并用以下命令全局安装 gulp：</p>
 
       <div class="dm_column_item">
-
-        <h3 class="dm_column_item_title">安装步骤</h3>
-
-        <div class="dm_column_tip">
-          <ul>
-            <li>Node.js 的安装可以参考 <a href="https://nodejs.org/" target="_blank" title="Node.js 官网">Node.js 官网</a></li>
-            <li>Ruby 的安装可以参考 <a href="https://www.ruby-lang.org/zh_cn/downloads/" target="_blank" title="Ruby 官方网站">Ruby 官网</a>。</li>
-            <li>以下的安装命令建议在 Mac 下都加上 sudo。</li>
-            <li><a href="https://github.com/QMUI/QMUI_Web/wiki/Q&amp;A#%E9%81%87%E5%88%B0%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E9%97%AE%E9%A2%98">遇到环境配置问题？</a></li>
-          </ul>
-        </div>
 
         <div class="dm_column_item_info dm_column_item_info_Single">
           <div class="dm_column_item_info_code">
 <xmp class="prettyprint">#安装 gulp
 npm install --global gulp
-#安装 Sass
-gem install sass
-#安装 Compass
-gem update --system
-gem install compass
 </xmp>
           </div>
+        </div>
+
+        <div class="dm_column_tip">
+          1.x 版本的环境配置请参考<a href="https://github.com/QMUI/QMUI_Web/wiki/1.x-%E7%89%88%E6%9C%AC%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE#%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE" target="_blank">这里</a>。
         </div>
 
       </div>
@@ -187,7 +175,7 @@ gem install compass
 
 <pre class="dm_column_tip">
 项目根目录
-├─public          // 静态资源目录，由 Compass 和 gulp 生成
+├─public          // 静态资源目录，由 gulp 生成
 │  ├─js           // 静态资源 js 文件
 │  ├─style        // 静态资源 UI 文件
 │  │  ├─css       // 静态资源 css 文件
@@ -271,7 +259,7 @@ yo qmui
 
 				<h3 id="qui_scaffold" class="dm_column_item_title">脚手架</h3>
 
-        <div class="dm_column_tip">QMUI 中的脚手架由 gulp 充当，<strong>所谓的脚手架，一般都是用于快速解决大量重复劳动力的工作，从而提升效率。</strong>QMUI 的 gulp 中预先实现了监控 Sass 文件并自动编译（代替不稳定的 Compass Watch），模板 include 能力（可以传参和使用条件判断），浏览器自动刷新，图片压缩，文件清理，集中管理图片，文件合并以及自动变更路径的能力。各个命令都是在 qmui_web 文件夹中调用对应的 gulp 命令即可，部分命令依赖于 config.js 的配置。具体命令列表及功能可以参考<a href="./scaffold.html">脚手架</a>页面。</div>
+        <div class="dm_column_tip">QMUI 中的脚手架由 gulp 充当，<strong>所谓的脚手架，一般都是用于快速解决大量重复劳动力的工作，从而提升效率。</strong>QMUI 的 gulp 中预先实现了监控 Sass 文件并自动编译，模板 include 能力（可以传参和使用条件判断），浏览器自动刷新，图片压缩，文件清理，集中管理图片，文件合并以及自动变更路径的能力。各个命令都是在 qmui_web 文件夹中调用对应的 gulp 命令即可，部分命令依赖于 config.js 的配置。具体命令列表及功能可以参考<a href="./scaffold.html">脚手架</a>页面。</div>
 
         <div class="dm_column_tip">
           <img src="../public/style/images/independent/Gulp.gif" alt="Gulp 任务效果图" />
@@ -280,15 +268,15 @@ yo qmui
       </div>
       <!-- 脚手架 end -->
 
-      <!-- Sass 与 Compass 支持 start -->
+      <!-- Sass start -->
 			<div class="dm_column_item">
 
-				<h3 id="qui_SassSupport" class="dm_column_item_title">Sass 与 Compass 支持</h3>
+				<h3 id="qui_SassSupport" class="dm_column_item_title">Sass 支持</h3>
 
-        <div class="dm_column_tip">QMUI 中提供了大量基于 Sass 和 Compass 的 CSS 预处理的方法，包括 CSS Reset，一些常见的 CSS 类（例如清除浮动），已经封装处理好 CSS 属性兼容性的方法，计算长度值的简便方法（例如获取 padding 在某个方向的值，计算两个长度值的中间值），快速实现一些样式效果的工具方法（例如实现 border 三角形，适应多倍屏幕的 1px 边框等）。这些都是<strong>用于提高样式开发的效率和质量。</strong>详细请参考<a href="./tools.html">工具方法</a>页面。</div>
+        <div class="dm_column_tip">QMUI 中提供了大量基于 Sass 的 CSS 预处理的方法，包括 CSS Reset，一些常见的 CSS 类（例如清除浮动），已经封装处理好 CSS 属性兼容性的方法，计算长度值的简便方法（例如获取 padding 在某个方向的值，计算两个长度值的中间值），快速实现一些样式效果的工具方法（例如实现 border 三角形，适应多倍屏幕的 1px 边框等）。这些都是<strong>用于提高样式开发的效率和质量。</strong>详细请参考<a href="./tools.html">工具方法</a>页面。</div>
 
       </div>
-      <!-- Sass 与 Compass 支持 end -->
+      <!-- Sass 支持 end -->
 
       <!-- 扩展组件 start -->
 			<div class="dm_column_item">
@@ -308,7 +296,7 @@ yo qmui
 
 			<h2 id="qui_browserCompatibility" class="dm_column_title">兼容性策略</h2>
 
-			<p class="dm_column_tip">QMUI 提供的几个能力里面，基于 gulp 的脚手架都是开发过程的辅助工具，与浏览器兼容无关。而 QMUI 的提供的 Sass 和 Compass 方法、公共组件都兼容 IE6+。扩展组件由于是从不同的业务中抽取出来，因此兼容性并没有统一的标准，请参考每个扩展组件的标注。</p>
+			<p class="dm_column_tip">QMUI 提供的几个能力里面，基于 gulp 的脚手架都是开发过程的辅助工具，与浏览器兼容无关。而 QMUI 的提供的 Sass 方法、公共组件都兼容 IE6+。扩展组件由于是从不同的业务中抽取出来，因此兼容性并没有统一的标准，请参考每个扩展组件的标注。</p>
 
 		</div>
     <!-- 兼容性策略 end -->
@@ -392,9 +380,8 @@ sudo npm install</xmp>
 
 				<h3 id="qui_useConfig" class="dm_column_item_title">使用配置文件</h3>
 
-        <p class="dm_column_tip">在 qmui_web（QMUI Web 框架根目录）中，有两个配置文件 config.rb 和 config.js，<strong>在项目开始之前应该把这两个文件复制到 qmui_web 的上一层目录（按推荐的文件结构，应该是 UI_dev 目录）</strong>，这两个配置文件分别用于框架在 Compass 和 gulp 两种能力下的配置。</p>
-        <p class="dm_column_tip">具体的说，config.rb 会配置静态资源最终输出的路径，输出的样式文件是否需要压缩等 Compass 和 Sass 相关配置。如果开发时使用的就是框架所推荐的文件结构，那么这个配置文件基本可以不用调整。</p>
-        <p class="dm_column_tip">而 config.js 则配置 gulp 在使用时的一些依赖的变量，与 config.rb 相似，如果开发时使用的就是框架所推荐的文件结构，那么基本上只需要配置 <code>project</code> 和 <code>prefix</code> 两个参数即可。详细的配置选项如下：</p>
+        <p class="dm_column_tip">在 qmui_web（QMUI Web 框架根目录）中，有一个配置文件 config.js，<strong>在项目开始之前应该把配置文件复制到 qmui_web 的上一层目录（按推荐的文件结构，应该是 UI_dev 目录）</strong>，用于框架在 gulp 这一层的配置。</p>
+        <p class="dm_column_tip">具体地说，config.js 配置 gulp 在使用时的一些依赖的变量，如果开发时使用的就是框架所推荐的文件结构，那么基本上只需要配置 <code>project</code> 和 <code>prefix</code> 两个参数即可。详细的配置选项如下：</p>
 
         <div class="dm_column_tip">
           <ul>
@@ -413,14 +400,14 @@ sudo npm install</xmp>
             <li><code>htmlSourcePath</code> 静态模板来源目录，即模板开发的目录</li>
             <li><code>imagesSourcePath</code> 图片文件来源目录，即图片开发的目录</li>
             <li><code>htmlResultPath</code> 静态模板经 gulp 处理后输出的目录，即把 include 合并后的输出版本</li>
-            <li><code>imagesResultPath</code> 图片文件经 Compass 和 gulp 处理后输出的目录，即最终实际被项目使用的图片资源</li>
+            <li><code>imagesResultPath</code> 图片文件经 gulp 处理后输出的目录，即最终实际被项目使用的图片资源</li>
             <li><code>independentImagesDirectory</code> 独立图片的开发目录的目录名，QMUI 会根据这个目录名在 imagesSourcePath 目录中生成一个子目录</li>
             <li><code>openIncludeFunction</code> 是否开启模板 include 引擎，默认开启</li>
             <li><code>includePrefix</code> include 引擎所使用的前缀，它影响了所有 include 方法的使用，默认为 @@</li>
           </ul>
         </div>
 
-        <p class="dm_column_tip">其中 <code>htmlSourcePath</code> <code>imagesSourcePath</code> <code>htmlResultPath</code> <code>imagesResultPath</code> <code>browserSyncWatchPath</code> <code>browserSyncServerRoute</code> <strong>这六个选项都是项目资源的路径配置选项，若要修改，请与 config.rb 中相关选项指向的目录保持一致，但需要注意因为相对位置不同（这里是以 qmui_web 目录为 Base Path），因此这几个属性值应该比 config.rb 中的对应值多一个 "../"。</strong></p>
+        <p class="dm_column_tip">其中 <code>htmlSourcePath</code> <code>imagesSourcePath</code> <code>htmlResultPath</code> <code>imagesResultPath</code> <code>browserSyncWatchPath</code> <code>browserSyncServerRoute</code> <strong>这六个选项都是项目资源的路径配置选项，若要修改，请注意相对路径是以 qmui_web 目录为 Base Path。</strong></p>
 
       </div>
       <!-- 使用配置文件 end -->

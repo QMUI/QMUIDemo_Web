@@ -42,6 +42,10 @@
   margin-bottom: 22px;
   font-size: 15px;
   line-height: 1.5;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 pre.dm_column_tip {
   overflow: auto;

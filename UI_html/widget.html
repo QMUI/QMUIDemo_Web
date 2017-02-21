@@ -294,17 +294,7 @@
 
 				<h3 id="qui_widget_autoSprite" class="dm_column_item_title">CSS Sprite 自动合并</h3>
 
-		        <p class="dm_column_tip">QMUI 提供了一套自动 CSS Sprite 的方案，但由于该方案无法剥离业务耦合，因此无法抽成公共的方法，所以无法集成到 QMUI Web 源码中，这里使用示例的形式展示该方案。</p>
-
-            <p class="dm_column_tip">效果可以参考本站任意一个 icon（例如对话框的关闭按钮），相关的 scss 文是本 Demo 中的 <a href="https://github.com/QMUI/QMUIDemo_Web/blob/master/UI_dev/project/widget/_images.scss" target="_blank">UI_dev/project/widget/_images.scss</a>，里面有关于这套方案的详细注释。<strong>如果你已经通过代码大概了解了这套方案的机制，那么下面还有几点总结可以帮助了解这套方案：</strong></p>
-
-		        <div class="dm_column_tip">
-		          <ul>
-		            <li>总的思路是在图片目录内，为一张 Sprite 图所需的所有 icon 建立一个目录，Compass 会去遍历这个目录，并根据图片名和前缀生成对应的虚函数和 class。因此所有的 icon 都应该用一个独立的 span 去实现。</li>
-		            <li>如果是带有链接的 icon，应该使用 a 标签，通常这类 icon 还有 hover 的效果，需要在 hover 时切换另一张图，这时候应该用  a>span.icon 的形式实现，a:hover 时通过 Compass 的命令获取需要的图片，具体的写法可以参见 scss 文件。</li>
-		            <li>两倍图也是另外建立一个与存放一倍图的目录平级的目录，使用 Compass 遍历，与一倍图相似。这里要提醒的是，1倍图和2倍图的宽高必须保持严格的1:2的关系，因为 Compass 最终会以一倍图的尺寸计算每个 icon 的 background-position，再利用 background-size: 100% 控制2倍图的显示，如果尺寸不成比例，2倍图下的 icon 位置就会乱了。</li>
-		          </ul>
-		        </div>
+        <p class="dm_column_tip">QMUI 1.x 版本提供了一套基于 Compass 的自动 CSS Sprite 的扩展组件，从 2.0.0 版本开始弃用，改为更加方便使用的基于 Node.js 的雪碧图方案。若项目中仍需要使用该扩展组件，可以参考<a href="https://github.com/QMUI/QMUI_Web/wiki/1.x-%E7%89%88%E6%9C%AC%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE#%E9%9B%AA%E7%A2%A7%E5%9B%BE%E6%89%A9%E5%B1%95%E7%BB%84%E4%BB%B6" target="_blank">这里</a>。</p>
 
 		    </div>
       <!-- CSS Sprite 自动合并 end -->
