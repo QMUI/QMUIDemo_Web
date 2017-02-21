@@ -11,6 +11,9 @@
 					<a class="frame_sidebar_nav_link" href="#qui_scaffold">脚手架的使用</a>
 					<ul class="frame_sidebar_nav frame_sidebar_nav_Children">
 						<li class="frame_sidebar_nav_item js_sidebar_item">
+							<a class="frame_sidebar_nav_link" href="#qui_scaffoldSprite">雪碧图处理</a>
+						</li>
+						<li class="frame_sidebar_nav_item js_sidebar_item">
 							<a class="frame_sidebar_nav_link" href="#qui_scaffoldInclude">模板引擎</a>
 						</li>
 						<li class="frame_sidebar_nav_item js_sidebar_item">
@@ -36,9 +39,9 @@
 
 			<h2 id="qui_scaffold" class="dm_column_title">脚手架的使用</h2>
 
-      <p class="dm_column_tip">QMUI 的 gulp 中预先写好的脚手架主要是各种工具方法，例如监控 Sass 文件并自动编译，雪碧图处理，模板 include 能力（可以传参和使用条件判断），图片压缩，文件清理等功能。</p>
+      <p class="dm_column_tip">QMUI 中的各种工具方法已经预先集成为一个脚手架，包括监控 Sass 文件并自动编译，雪碧图处理，模板 include 能力（可以传参和使用条件判断），图片压缩，文件清理等功能。</p>
 
-      <p class="dm_column_tip"><strong>各个命令都是在 qmui_web 文件夹中调用对应的 gulp 命令即可</strong>，部分命令依赖于 config.js 的配置。<strong>但实际使用时大部分操作都无需手工调用，QMUI 中已经根据工作流程设置好对应 Watch（文件监控）</strong>，包括上面提到的 Sass 编译，雪碧图处理，模板 include 编译，浏览器自动刷新，图片压缩以及同步图片文件夹等大部分的功能。除了清理文件和合并变更文件两个任务，这两个任务的使用会在下面额外详述。</p>
+      <p class="dm_column_tip"><strong>各个命令都是在 qmui_web 文件夹中调用对应的 gulp 命令即可</strong>，部分命令依赖于 config.js 的配置。<strong>但实际使用时大部分操作都无需手工调用，QMUI 中已经根据工作流程设置好对应 Watch 机制（文件监控）</strong>，包括上面提到的 Sass 编译，雪碧图处理，模板 include 编译，浏览器自动刷新，图片压缩以及同步图片文件夹等大部分的功能。除了清理文件和合并变更文件两个任务，这两个任务的使用会在下面额外详述。</p>
 
       <p class="dm_column_tip">因此常规的使用流程只需要一句命令</p>
 
@@ -54,6 +57,53 @@ gulp</xmp>
       </p>
 
       <p class="dm_column_tip"><strong>如果有特殊情况，需要手工调用 gulp 中 Watch 会自动调用的方法，请务必先关闭 gulp 的监听，否则可能会产生冲突。</strong></p>
+
+      <!-- 雪碧图处理 start -->
+			<div class="dm_column_item">
+
+				<h3 id="qui_scaffoldSprite" class="dm_column_item_title">雪碧图处理</h3>
+
+        <p class="dm_column_tip">QMUI 中集成了基于 <a href="https://github.com/Jeff2Ma/postcss-lazysprite" target="_blank">postcss-lazysprite</a> 的雪碧图自动处理，使用时只需要在 UI_dev/images 中建立一个图片文件夹，把需要的图片放入，QMUI 会按规则生成所有的 CSS 以及雪碧图文件。以本 Demo 中使用到的雪碧图为例，创建时需要如下步骤：</p>
+
+        <div class="dm_column_tip">在 UI_dev/images 中建立一个 icons 文件夹。</div>
+
+        <div class="dm_column_tip">在样式文件需要输出雪碧图 CSS 的地方添加如下代码：</div>
+
+				<div class="dm_column_item_info dm_column_item_info_Single">
+					<div class="dm_column_item_info_code">
+<xmp class="prettyprint">@lazysprite "icons#icon";
+</xmp>
+          </div>
+        </div>
+
+        <div class="dm_column_tip">执行编译后会输出如下样式：</div>
+
+				<div class="dm_column_item_info dm_column_item_info_Single">
+					<div class="dm_column_item_info_code">
+<xmp class="prettyprint">.dm_icon_BannerLogo {
+  background-image: url(../images/icons.7fc7e2bab2.png);
+  background-position: 0 0;
+  width: 160px;
+  height: 160px;
+}
+
+.dm_icon_BannerMobileLogo {
+...
+}
+</xmp>
+          </div>
+        </div>
+
+        <div class="dm_column_tip">
+          <ol>
+            <li>可以看出输出的 Class-name 由项目前缀 + 目录名 + 图片名组成。</li>
+            <li>“icons#icon” 中的 icon 表示目录名缩写，设置了该目录名缩写则输出的 class 中使用该缩写，不设置则默认使用目录名。</li>
+            <li>多倍图处理只需要在 icons 目录中加入文件名带 "_2x/@2x"，“_3x/@3x” 这类后缀的多倍图文件即可，框架也会自动输出对应的样式以及雪碧图文件。</li>
+          </ol>
+        </div>
+
+      </div>
+      <!-- 雪碧图处理 end -->
 
       <!-- 模板 include 能力 start -->
       <div class="dm_column_item">
