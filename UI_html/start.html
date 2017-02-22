@@ -83,12 +83,23 @@
 
 			<h2 id="qui_upgrade" class="dm_column_title">更新</h2>
 
-      <p class="dm_column_tip">QMUI 框架目前已经升级到 2.0.0 版本，抛弃了 Compass 以及原生的 Sass 编译，采用完全基于 Node.js 的 Sass 编译处理，因此 1.x 版本升级到 2.0.0 后需要对项目进行一些处理才能适配。为了效率的提升，我们建议所有用户升级到 2.0.0 版本。目前升级到 2.0.0 后只需对项目执行两步修改：</p>
+      <p class="dm_column_tip">QMUI Web 目前以 Github Release 管理版本，使用<a href="#qui_quickStart">快速开始</a>安装 QMUI Web 的用户只需进入项目 UI_dev/qmui 目录执行 git pull 即可更新至最新版本。通过其他方式安装的用户可以直接在 <a href="https://github.com/QMUI/QMUI_Web/releases" target="_blank">Github</a> 中下载最新版本来进行更新。</p>
+
+      <p class="dm_column_tip">QMUI 框架目前已经推出 2.0.0 版本，抛弃了 Compass 以及原生的 Sass 编译，采用完全基于 Node.js 的 Sass 编译处理，因此 1.x 版本升级到 2.0.0 后需要对项目进行一些处理才能适配。为了效率的提升，我们建议所有用户升级到 2.0.0 版本。目前升级到 2.0.0 后只需对项目执行两步修改：</p>
 
       <div class="dm_column_tip">
         <ol>
           <li>在 UI_dev/config.js 中增加 <code>styleResultPath</code> 字段，字段的值为 CSS 输出目录相对 qmui_web 目录的路径，默认为“../../public/style/css”。</li>
+          <li>在 UI_dev/qmui_web 下执行一次 npm install，安装增加的依赖包。</li>
+        </ol>
+      </div>
+
+      <p class="dm_column_tip">如果还使用了 QMUI 的一些附加组件/工具，那么还需要注意以下两点：</p>
+
+      <div class="dm_column_tip">
+        <ol>
           <li>如果还使用了原 CSS Sprite 的扩展组件，还需要改为新的雪碧图语法，请参考<a href="./scaffold.html#qui_scaffoldSprite" target="_blank">这里</a>。</li>
+          <li>如果有使用 <a href="./app.html" target="_blank">QMUI Web Desktop</a>，请升级至 1.3.0 或以上版本。</li>
         </ol>
       </div>
 
