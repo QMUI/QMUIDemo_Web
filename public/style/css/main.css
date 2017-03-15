@@ -2061,6 +2061,10 @@ pre.dm_column_tip {
   cursor: pointer;
 }
 
+.tool_stage .tool_stage_example .dm_column_item_info_code {
+  cursor: default;
+}
+
 .tool_stage_item {
   margin-bottom: 36px;
   padding-left: 30px;

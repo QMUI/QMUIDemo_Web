@@ -139,19 +139,23 @@ document.getElementById('toolMain').innerHTML = document.getElementById('toolMai
 // 展开/收起方法实现详情
 $('.tool_stage .dm_column_item_info_code').on('click', function() {
 	var groupIndex = $(this).parent().parent().data('groupindex'),
-			itemIndex = $(this).parent().parent().data('itemindex'),
-			item = comments[groupIndex][itemIndex];
+			itemIndex = $(this).parent().parent().data('itemindex');
 
-	if (!$(this).data('showDetail')) {
-		var itemCode = comments[groupIndex][itemIndex].context.code.replace(/^\n/, '');
-		$(this).html('<xmp class="prettyprint">' + makeCompleteMethodWithItem(item, itemCode) + '</xmp>');
-		$(this).data('showDetail', true);
-	} else {
-		$(this).html('<xmp class="prettyprint">' + makeCompleteMethodWithItem(item) + '</xmp>');
-		$(this).data('showDetail', false);
-	}
+  if (groupIndex != undefined && itemIndex != undefined) {
+    // 序号允许为0，因此不能直接判断 groupIndex && itemIndex
+    var item = comments[groupIndex][itemIndex];
 
-	prettyPrint();
+    if (!$(this).data('showDetail')) {
+      var itemCode = comments[groupIndex][itemIndex].context.code.replace(/^\n/, '');
+      $(this).html('<xmp class="prettyprint">' + makeCompleteMethodWithItem(item, itemCode) + '</xmp>');
+      $(this).data('showDetail', true);
+    } else {
+      $(this).html('<xmp class="prettyprint">' + makeCompleteMethodWithItem(item) + '</xmp>');
+      $(this).data('showDetail', false);
+    }
+
+    prettyPrint();
+  }
 });
 
 // 默认调用一次代码高亮方法
