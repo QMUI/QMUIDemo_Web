@@ -68,7 +68,7 @@
   min-width: 100px;
   margin-bottom: 20px;
   padding: 8px 32px;
-  font-size: 18px;
+  font-size: 17px;
   text-align: center;
   @extend %disabledUserSelect;
   border: 1px solid $borderColor;
@@ -83,7 +83,6 @@
   @include forMobile() {
     padding-left: 25px;
     padding-right: 25px;
-    font-size: 18px;
   }
 }
 .index_downloadBtn {
@@ -123,9 +122,10 @@
   line-height: 52px;
 }
 .index_banner_startBtn,
-.index_banner_githubBtn {
+.index_banner_githubBtn,
+.index_banner_updateBtn {
   @include ghostBtn();
-  width: 166px;
+  width: $index_banner_smallBtn_width;
   height: 45px;
   padding-top: 0;
   padding-bottom: 0;
@@ -143,10 +143,13 @@
   }
 }
 .index_banner_startBtn {
-  margin-left: 15px;
+  margin-left: $index_banner_startBtn_marginLeft;
 }
 .index_banner_githubBtn {
   font-size: 20px;
+}
+.index_banner_updateBtn {
+  width: $index_banner_smallBtn_width * 2 + $index_banner_startBtn_marginLeft;
 }
 .index_banner_version {
   color: #fff;
@@ -320,12 +323,12 @@
   }
   .index_banner_startBtn,
   .index_banner_githubBtn {
-    margin-left: 5px;
-    margin-right: 5px; // 为了确保按钮竖排时可以居中对齐，因此左右都加 margin
+    margin-left: $index_banner_startBtn_mobile_marginHorizontal;
+    margin-right: $index_banner_startBtn_mobile_marginHorizontal; // 为了确保按钮竖排时可以居中对齐，因此左右都加 margin
     margin-bottom: 15px;
   }
-  .index_banner_startBtn {
-    margin-bottom: 44px;
+  .index_banner_updateBtn {
+    width: $index_banner_smallBtn_width * 2 + $index_banner_startBtn_mobile_marginHorizontal * 2; // 因为开始使用和 Github 按钮此时左右都有 margin，因此两个按钮的中间距离是 $index_banner_startBtn_mobile_marginHorizontal * 2
   }
 
   .index_cnt {
@@ -424,5 +427,18 @@
   .index_star_inner {
     height: $index_star_inner_mobile_height;
     line-height: $index_star_inner_mobile_height;
+  }
+}
+
+// 宽度不足以横排 Banner 两个按钮时
+@media handheld and (max-width: $index_banner_only_single_btn_screen_width), screen and (max-width: $index_banner_only_single_btn_screen_width) {
+  .index_banner_updateBtn {
+    width: $index_banner_smallBtn_width;
+    font-size: 0;
+
+    &:before {
+      content: "升级到 2.0";
+      font-size: 17px;
+    }
   }
 }

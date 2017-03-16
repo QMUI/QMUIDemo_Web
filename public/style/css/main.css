@@ -73,7 +73,8 @@
 }
 
 .qui_btn, .index_downloadBtn, .index_banner_startBtn,
-.index_banner_githubBtn {
+.index_banner_githubBtn,
+.index_banner_updateBtn {
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
@@ -558,7 +559,8 @@ a:hover {
 
 /* 全局动画 */
 .frame_nav_item, .index_downloadBtn, .index_banner_startBtn,
-.index_banner_githubBtn {
+.index_banner_githubBtn,
+.index_banner_updateBtn {
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
@@ -1656,7 +1658,7 @@ pre.dm_column_tip {
   min-width: 100px;
   margin-bottom: 20px;
   padding: 8px 32px;
-  font-size: 18px;
+  font-size: 17px;
   text-align: center;
   border: 1px solid #474860;
   border-radius: 6px;
@@ -1671,7 +1673,6 @@ pre.dm_column_tip {
   .index_downloadBtn {
     padding-left: 25px;
     padding-right: 25px;
-    font-size: 18px;
   }
 }
 
@@ -1716,12 +1717,13 @@ pre.dm_column_tip {
 }
 
 .index_banner_startBtn,
-.index_banner_githubBtn {
+.index_banner_githubBtn,
+.index_banner_updateBtn {
   display: inline-block;
   min-width: 100px;
   margin-bottom: 20px;
   padding: 8px 32px;
-  font-size: 18px;
+  font-size: 17px;
   text-align: center;
   border: 1px solid #fff;
   border-radius: 6px;
@@ -1738,27 +1740,30 @@ pre.dm_column_tip {
 }
 
 .index_banner_startBtn:hover,
-.index_banner_githubBtn:hover {
+.index_banner_githubBtn:hover,
+.index_banner_updateBtn:hover {
   text-decoration: none;
 }
 
 @media handheld and (max-width: 846px), screen and (max-width: 846px) {
   .index_banner_startBtn,
-  .index_banner_githubBtn {
+  .index_banner_githubBtn,
+  .index_banner_updateBtn {
     padding-left: 25px;
     padding-right: 25px;
-    font-size: 18px;
   }
 }
 
 .index_banner_startBtn:hover,
-.index_banner_githubBtn:hover {
+.index_banner_githubBtn:hover,
+.index_banner_updateBtn:hover {
   background-color: rgba(255, 255, 255, 0.2);
   color: #fff;
 }
 
 .index_banner_startBtn:acitve,
-.index_banner_githubBtn:acitve {
+.index_banner_githubBtn:acitve,
+.index_banner_updateBtn:acitve {
   background-color: #fff;
   color: #04DACD;
 }
@@ -1769,6 +1774,10 @@ pre.dm_column_tip {
 
 .index_banner_githubBtn {
   font-size: 20px;
+}
+
+.index_banner_updateBtn {
+  width: 347px;
 }
 
 .index_banner_version {
@@ -1960,8 +1969,8 @@ pre.dm_column_tip {
     margin-right: 5px;
     margin-bottom: 15px;
   }
-  .index_banner_startBtn {
-    margin-bottom: 44px;
+  .index_banner_updateBtn {
+    width: 342px;
   }
   .index_cnt {
     margin-bottom: 38px;
@@ -2047,6 +2056,17 @@ pre.dm_column_tip {
   .index_star_inner {
     height: 24px;
     line-height: 24px;
+  }
+}
+
+@media handheld and (max-width: 402px), screen and (max-width: 402px) {
+  .index_banner_updateBtn {
+    width: 166px;
+    font-size: 0;
+  }
+  .index_banner_updateBtn:before {
+    content: "升级到 2.0";
+    font-size: 17px;
   }
 }
 
