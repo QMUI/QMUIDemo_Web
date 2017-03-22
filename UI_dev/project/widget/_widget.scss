@@ -6,13 +6,8 @@
  *
  */
 
+/* 雪碧图 */
 @lazysprite "icons#icon";
-.dm_icon {
-  display: inline-block;
-  overflow: hidden;
-  font-size: 0;
-  line-height: 0;
-}
 
 /* 按钮 */
 @import "_button";
