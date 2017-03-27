@@ -120,6 +120,9 @@
 						<li class="frame_sidebar_nav_item js_sidebar_item">
 							<a class="frame_sidebar_nav_link" href="#qui_createCommand">执行创建新项目命令</a>
 						</li>
+						<li class="frame_sidebar_nav_item js_sidebar_item">
+							<a class="frame_sidebar_nav_link" href="#qui_configUser">用户个人配置</a>
+						</li>
 					</ul>
 				</li>
 			</ul>
@@ -464,6 +467,16 @@ sudo npm install</xmp>
 
       </div>
       <!-- 执行创建新项目命令 end -->
+
+      <!-- 用户个人配置 start -->
+			<div class="dm_column_item">
+
+				<h3 id="qui_configUser" class="dm_column_item_title">用户个人配置</h3>
+
+        <p class="dm_column_tip">考虑到每位开发者可能有自己的开发习惯，因此除了项目中的 config.js，QMUI 还支持每位开发者在本地建立个人的配置表，例如项目中的 config.js 的 <code>needsSourceMaps</code> 被统一设置为 true，因此这时所有开发这个项目的成员都会默认使用 Source Maps 的功能，但项目成员中有开发者希望关闭这个功能，那么这位成员可以在 config.js 平级建立一个 config.user.js 文件，把 <code>needsSourceMaps</code> 设置为 false，那么 QMUI 会优先以 config.user.js 中的值为准。需要注意的是，config.user.js 应当在本地建立和使用，不应该提交到版本管理中，否则也会影响其他项目成员。</p>
+
+      </div>
+      <!-- 用户个人配置 end -->
 
 		</div>
     <!-- 创建新项目（高级） end -->
