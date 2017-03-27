@@ -149,7 +149,7 @@ gulp</xmp>
             <li>可以看出输出的 Class-name 由项目前缀 + 目录名 + 图片名组成。</li>
             <li>“icons#icon” 中的 icon 表示目录名缩写，设置了该目录名缩写则输出的 class 中使用该缩写，不设置则默认使用目录名。</li>
             <li>多倍图处理只需要在 icons 目录中加入文件名带 "_2x/@2x"，“_3x/@3x” 这类后缀的多倍图文件即可，框架也会自动输出对应的样式以及雪碧图文件。</li>
-            <li>如果不需要雪碧图功能，可以在 config.js 中把 <code>needsCssSprite</code> 配置项设置为 false，可以稍微减少样式的编译耗时。</li>
+            <li>在 config.js 中把 <code>needsWatchingCssSprite</code> 配置项设置为 false，这样在雪碧图发生变化时不会触发雪碧图的重新生成，对于雪碧图改动比较少的项目，这样做可以减少日常开发时的样式编译耗时。</li>
           </ol>
         </div>
 

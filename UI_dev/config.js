@@ -3,8 +3,8 @@ module.exports = {
   "prefix" : "dm",
   "resultCssFileName" : "main.scss",
   "cleanFileType" : ["../.sass-cache", "../.sass-cache/**/*"],
-  "needsCssSprite": true,
   "needsSourceMaps": false,
+  "needsWatchingCssSprite": true,
 
   "browserSyncMod": "server",
   "browserSyncPort": 3030,
