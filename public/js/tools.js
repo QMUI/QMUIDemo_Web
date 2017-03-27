@@ -141,7 +141,7 @@ $('.tool_stage .dm_column_item_info_code').on('click', function() {
 	var groupIndex = $(this).parent().parent().data('groupindex'),
 			itemIndex = $(this).parent().parent().data('itemindex');
 
-  if (groupIndex != undefined && itemIndex != undefined) {
+  if (typeof groupIndex !== 'undefined' && typeof itemIndex !== 'undefined') {
     // 序号允许为0，因此不能直接判断 groupIndex && itemIndex
     var item = comments[groupIndex][itemIndex];
 
