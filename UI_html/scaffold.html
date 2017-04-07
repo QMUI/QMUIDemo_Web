@@ -47,8 +47,8 @@
 
       <div class="dm_column_item_info dm_column_item_info_Single">
         <div class="dm_column_item_info_code">
-<xmp class="prettyprint">#开启默认任务，文件监控会自动完成绝大部分常规操作
-gulp</xmp>
+<pre><code class="bash">#开启默认任务，文件监控会自动完成绝大部分常规操作
+gulp</code></pre>
         </div>
       </div>
 
@@ -71,8 +71,8 @@ gulp</xmp>
 
 				<div class="dm_column_item_info dm_column_item_info_Single">
 					<div class="dm_column_item_info_code">
-<xmp class="prettyprint">@lazysprite "icons#icon";
-</xmp>
+<pre><code class="scss">@lazysprite "icons#icon";
+</code></pre>
           </div>
         </div>
 
@@ -80,7 +80,7 @@ gulp</xmp>
 
 				<div class="dm_column_item_info dm_column_item_info_Single">
 					<div class="dm_column_item_info_code">
-<xmp class="prettyprint">.dm_icon_BannerLogo {
+<pre><code class="css">.dm_icon_BannerLogo {
   background-image: url(../images/icons.7fc7e2bab2.png);
   background-position: 0 0;
   width: 160px;
@@ -90,7 +90,7 @@ gulp</xmp>
 .dm_icon_BannerMobileLogo {
 ...
 }
-</xmp>
+</code></pre>
           </div>
         </div>
 
@@ -114,73 +114,72 @@ gulp</xmp>
 
         <div class="dm_column_item_info dm_column_item_info_Single">
           <div class="dm_column_item_info_code">
-<xmp class="prettyprint">#_header.html
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8" />
-  <title>&&title</title>
-  <link rel="stylesheet" type="text/css" href="../public/style/css/main.css" />
-  <meta name="description" content="&&meta.description" />
-  <meta name="keywords" content="&&meta.keywork" />
-</head>
-<body class="frame_wrap">
-  <div class="frame_head">
-    &&if ( typeof index !== 'undefined') {
-    <h1 class="frame_head_title">
-      <a class="frame_head_title_link" href="./start.html">QMUI Web</a>
-    </h1>
+<pre><code class="html">&lt;!-- _header.html --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot; /&gt;
+  &lt;title&gt;&amp;&amp;title&lt;/title&gt;
+  &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;../public/style/css/main.css&quot; /&gt;
+  &lt;meta name=&quot;description&quot; content=&quot;&amp;&amp;meta.description&quot; /&gt;
+  &lt;meta name=&quot;keywords&quot; content=&quot;&amp;&amp;meta.keywork&quot; /&gt;
+&lt;/head&gt;
+&lt;body class=&quot;frame_wrap&quot;&gt;
+  &lt;div class=&quot;frame_head&quot;&gt;
+    &amp;&amp;if ( typeof index !== &#x27;undefined&#x27;) {
+    &lt;h1 class=&quot;frame_head_title&quot;&gt;
+      &lt;a class=&quot;frame_head_title_link&quot; href=&quot;./start.html&quot;&gt;QMUI Web&lt;/a&gt;
+    &lt;/h1&gt;
     }
-    &&if ( typeof index === 'undefined') {
-    <div class="frame_head_title">
-      <a class="frame_head_title_link" href="./start.html">QMUI Web</a>
-    </div>
+    &amp;&amp;if ( typeof index === &#x27;undefined&#x27;) {
+    &lt;div class=&quot;frame_head_title&quot;&gt;
+      &lt;a class=&quot;frame_head_title_link&quot; href=&quot;./start.html&quot;&gt;QMUI Web&lt;/a&gt;
+    &lt;/div&gt;
     }
-  </div></xmp>
+  &lt;/div&gt;</code></pre>
           </div>
         </div>
 
         <div class="dm_column_item_info dm_column_item_info_Single">
           <div class="dm_column_item_info_code">
-<xmp class="prettyprint">#start.html
-&&include('./_header.html', {
-  "index" : true,
-  "title": "QMUI Web",
-  "meta": {
-    "keywork": "QMUI Web,QMUI,UI 开发,QMUI Web 官网,前端工作流,UI 开发框架",
-    "description": "一个旨在提高 UI 开发效率，快速产生项目 UI 的前端框架"
+<pre><code class="html">&lt;!-- start.html --&gt;
+&amp;&amp;include(&#x27;./_header.html&#x27;, {
+  &quot;index&quot; : true,
+  &quot;title&quot;: &quot;QMUI Web&quot;,
+  &quot;meta&quot;: {
+    &quot;keywork&quot;: &quot;QMUI Web,QMUI,UI 开发,QMUI Web 官网,前端工作流,UI 开发框架&quot;,
+    &quot;description&quot;: &quot;一个旨在提高 UI 开发效率，快速产生项目 UI 的前端框架&quot;
   }
 })
-  <div class="frame_cnt">正文内容</div>
-  <div>页脚</div>
-</body>
-</html>
-</xmp>
+  &lt;div class=&quot;frame_cnt&quot;&gt;正文内容&lt;/div&gt;
+  &lt;div&gt;页脚&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
           </div>
         </div>
 
         <div class="dm_column_item_info dm_column_item_info_Single">
           <div class="dm_column_item_info_code">
-<xmp class="prettyprint">#start.html（输出结果）
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8" />
-  <title>QMUI Web</title>
-  <link rel="stylesheet" type="text/css" href="../public/style/css/main.css" />
-  <meta name="description" content="一个旨在提高 UI 开发效率，快速产生项目 UI 的前端框架" />
-  <meta name="keywords" content="QMUI Web,QMUI,UI 开发,QMUI Web 官网,前端工作流,UI 开发框架" />
-</head>
-<body class="frame_wrap">
-  <div class="frame_head">
-    <h1 class="frame_head_title">
-      <a class="frame_head_title_link" href="./start.html">QMUI Web</a>
-    </h1>
-  </div>
-  <div class="frame_cnt">正文内容</div>
-  <div>页脚</div>
-</body>
-</html></xmp>
+<pre><code class="html">&lt;!-- start.html（输出结果） --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot; /&gt;
+  &lt;title&gt;QMUI Web&lt;/title&gt;
+  &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;../public/style/css/main.css&quot; /&gt;
+  &lt;meta name=&quot;description&quot; content=&quot;一个旨在提高 UI 开发效率，快速产生项目 UI 的前端框架&quot; /&gt;
+  &lt;meta name=&quot;keywords&quot; content=&quot;QMUI Web,QMUI,UI 开发,QMUI Web 官网,前端工作流,UI 开发框架&quot; /&gt;
+&lt;/head&gt;
+&lt;body class=&quot;frame_wrap&quot;&gt;
+  &lt;div class=&quot;frame_head&quot;&gt;
+    &lt;h1 class=&quot;frame_head_title&quot;&gt;
+      &lt;a class=&quot;frame_head_title_link&quot; href=&quot;./start.html&quot;&gt;QMUI Web&lt;/a&gt;
+    &lt;/h1&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;frame_cnt&quot;&gt;正文内容&lt;/div&gt;
+  &lt;div&gt;页脚&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
           </div>
         </div>
 
@@ -225,8 +224,8 @@ gulp</xmp>
 
 				<div class="dm_column_item_info dm_column_item_info_Single">
 					<div class="dm_column_item_info_code">
-<xmp class="prettyprint">#清理文件命令
-gulp clean</xmp>
+<pre><code class="bash">#清理文件命令
+gulp clean</code></pre>
           </div>
         </div>
 
@@ -252,45 +251,44 @@ gulp clean</xmp>
 
 				<div class="dm_column_item_info dm_column_item_info_Single">
 					<div class="dm_column_item_info_code">
-<xmp class="prettyprint">#mergeRule.js
+<pre><code class="javascript:;">// mergeRule.js
 {
   "../public/js/all.js" : ["../public/js/lib.js", "../public/js/function.js", "../public/js/index.js"]
-}
-</xmp>
+}</code></pre>
           </div>
         </div>
 
 				<div class="dm_column_item_info dm_column_item_info_Single">
 					<div class="dm_column_item_info_code">
-<xmp class="prettyprint">#test.html gulp merge 执行之前的页面
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Test</title>
-  </head>
-  <body class="frame_wrap">
-    <script src="../public/js/lib.js"></script>
-    <script src="../public/js/function.js"></script>
-    <script src="../public/js/index.js"></script>
-  </body>
-</html></xmp>
+<pre><code class="html">&lt;!-- test.html gulp merge 执行之前的页面 --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;title&gt;Test&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body class=&quot;frame_wrap&quot;&gt;
+    &lt;script src=&quot;../public/js/lib.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;../public/js/function.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;../public/js/index.js&quot;&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
           </div>
         </div>
 
 				<div class="dm_column_item_info dm_column_item_info_Single">
 					<div class="dm_column_item_info_code">
-<xmp class="prettyprint">#test.html gulp merge 执行之后的页面
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Test</title>
-  </head>
-  <body class="frame_wrap">
-    <script src="../public/js/all.js"></script>
-  </body>
-</html></xmp>
+<pre><code class="html">&lt;!-- test.html gulp merge 执行之后的页面 --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;title&gt;Test&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body class=&quot;frame_wrap&quot;&gt;
+    &lt;script src=&quot;../public/js/all.js&quot;&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
           </div>
         </div>
 

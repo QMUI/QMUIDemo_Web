@@ -140,7 +140,7 @@
             <li>下划线后面紧跟小写，代表直接父子关系，如：
               <div class="dm_column_item_info dm_column_item_info_Single dm_column_item_info_HasMarginTop">
                 <div class="dm_column_item_info_code">
-<xmp class="prettyprint"><div class="dm_toolbar">
+<pre><code class="html"><div class="dm_toolbar">
   <div class="dm_toolbar_header">
     <div class="dm_toolbar_header_title"></div>
   </div>
@@ -148,13 +148,13 @@
 <div class="resume_mod">
   <div class="resume_mod_header"></div>
   <div class="resume_mod_footer"></div>
-</div></xmp>
+</div></code></pre>
                 </div>
               </div>
               <div>对应的 CSS 选择器格式：</div>
               <div class="dm_column_item_info dm_column_item_info_Single dm_column_item_info_HasMarginTop">
                 <div class="dm_column_item_info_code">
-<xmp class="prettyprint">.dm_toolbar {
+<pre><code class="css">.dm_toolbar {
   ...
 }
 .dm_toolbar_header {
@@ -171,24 +171,24 @@
 }
 .resume_mod_footer {
   ...
-}</xmp>
+}</code></pre>
                 </div>
               </div>
             </li>
             <li>下划线后面紧跟大写，代表扩展关系，如：
               <div class="dm_column_item_info dm_column_item_info_Single dm_column_item_info_HasMarginTop">
                 <div class="dm_column_item_info_code">
-<xmp class="prettyprint"><a href="javascript:;" class="dm_btn"></a>
+<pre><code class="html"><a href="javascript:;" class="dm_btn"></a>
 <a href="javascript:;" class="dm_btn dm_btn_Big"></a>
 <div class="resume_mod resume_mod_List">
  <div class="resume_mod_cnt"></div>
-</div></xmp>
+</div></code></pre>
                 </div>
               </div>
               <div>对应的CSS选择器格式：</div>
               <div class="dm_column_item_info dm_column_item_info_Single dm_column_item_info_HasMarginTop">
                 <div class="dm_column_item_info_code">
-<xmp class="prettyprint">.dm_btn {
+<pre><code class="css">.dm_btn {
   ...
 }
 .dm_btn_Big {
@@ -205,14 +205,14 @@
 }
 .resume_mod_List .resume_mod_cnt {
   ...
-}</xmp>
+}</code></pre>
                 </div>
               </div>
             </li>
             <li>若一个样式名由多个单词组成，则从第二个单词起，每个单词的第一个字母大写，如：
               <div class="dm_column_item_info dm_column_item_info_Single dm_column_item_info_HasMarginTop">
                 <div class="dm_column_item_info_code">
-                  <xmp class="prettyprint"><div class="resume_txtErrWrap"></div></xmp>
+                  <pre><code class="html"><div class="resume_txtErrWrap"></div></code></pre>
                 </div>
               </div>
             </li>
@@ -241,9 +241,9 @@
 
         <div class="dm_column_item_info dm_column_item_info_Single">
           <div class="dm_column_item_info_code">
-<xmp class="prettyprint">正确示范：/* 注释内容 */
+<pre><code class="css">正确示范：/* 注释内容 */
 错误示范：/*注释内容和注释符头尾要有空格*/
-</xmp>
+</code></pre>
           </div>
         </div>
 
@@ -251,7 +251,7 @@
 
         <div class="dm_column_item_info dm_column_item_info_Single dm_column_item_info_HasMarginTop">
           <div class="dm_column_item_info_code">
-<xmp class="prettyprint">正确示范：
+<pre><code class="css">正确示范：
 /**
  * 注释内容
  * @author xxx<xxx@tencent.com>
@@ -269,7 +269,7 @@
 /**
  * 注释符结尾只需要“*/”即可
  **/
-</xmp>
+</code></pre>
           </div>
         </div>
 
@@ -285,7 +285,7 @@
         <div class="dm_column_tip">对于文件而言，最关键的信息在于代码维护者是谁？这份文件是什么时候的版本？文件内容包含什么？ 因此推荐的注释模板如下：
           <div class="dm_column_item_info dm_column_item_info_Single">
             <div class="dm_column_item_info_code">
-<xmp class="prettyprint">/**
+<pre><code class="css">/**
  * ftnlist.css 中转站列表的样式文件，同时也用于写信超大附件的文件列表样式
  * @author molice
  * @date 2014-08-27
@@ -303,7 +303,7 @@ body {
   font-size: 14px;
 }
 ...
-</xmp>
+</code></pre>
             </div>
           </div>
 
@@ -323,7 +323,7 @@ body {
 
         <div class="dm_column_item_info dm_column_item_info_Single">
           <div class="dm_column_item_info_code">
-<xmp class="prettyprint">/**
+<pre><code class="css">/**
  * .qm_list_item
  * + .qm_list_item_BorderNone 不显示item底部的分隔线
  * + .qm_list_item_Accessory 在item右边显示向右箭头
@@ -345,7 +345,7 @@ body {
 .qm_list_item_BorderNone {
   border-bottom:none;
 }
-</xmp>
+</code></pre>
           </div>
         </div>
 
@@ -353,7 +353,7 @@ body {
 
         <div class="dm_column_item_info dm_column_item_info_Single">
           <div class="dm_column_item_info_code">
-<xmp class="prettyprint"><div class="qm_list_item">
+<pre><code class="html"><div class="qm_list_item">
   <div class="qm_list_item_control">这个节点可选，所以注释里用中括号“[]”包起来</div>
   <div class="qm_list_item_content">
     <div class="qm_list_item_textWrapper">
@@ -361,7 +361,7 @@ body {
       <div class="qm_list_item_subtitle"></div>
     </div>
   </div>
-</div></xmp>
+</div></code></pre>
           </div>
         </div>
 
@@ -377,13 +377,13 @@ body {
 
         <div class="dm_column_item_info dm_column_item_info_Single">
           <div class="dm_column_item_info_code">
-<xmp class="prettyprint">.layout_left {
+<pre><code class="css">.layout_left {
   float: left;
   margin-right: 10px;
 }
 .layout_right {
   overflow: hidden; /* 产生BFC，隔开左右两部分内容 */
-}</xmp>
+}</code></pre>
           </div>
         </div>
 
@@ -396,9 +396,8 @@ body {
 	</div><!-- content end -->
 
   <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="../public/js/highlight.pack.js"></script>
 	<script type="text/javascript" src="../public/js/all.js"></script>
-	
-	
 	
 	
 </body>

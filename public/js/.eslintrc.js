@@ -8,9 +8,10 @@ module.exports = {
       "$": false,
       // 微信 JSSDK 的封装对象
       "wx": false,
-      // comments 由 node 生成，prettyPrint 为外部库引入，不方便在本文件内定义，因此这里排除检测
+      // 高亮框架 highlight.js 的命名空间
+      "hljs": false,
+      // comments 由 node 生成，因此这里排除检测
       "comments": false,
-      "prettyPrint": false
     },
     "rules": {
         "accessor-pairs": "error",

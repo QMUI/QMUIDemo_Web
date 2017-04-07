@@ -88,7 +88,7 @@ for (var i = 0, llength = comments.length; i < llength; i++) {
     }
 
     mainHtml.push('<div class="dm_column_item_info dm_column_item_info_Single">');
-    mainHtml.push('  <div class="dm_column_item_info_code"><xmp class="prettyprint">' + makeCompleteMethodWithItem(contentItem) + '</xmp></div>');
+    mainHtml.push('  <div class="dm_column_item_info_code"><pre><code class="scss">' + makeCompleteMethodWithItem(contentItem) + '</code></pre></div>');
     mainHtml.push('</div>');
 
     // 参数列表
@@ -121,7 +121,7 @@ for (var i = 0, llength = comments.length; i < llength; i++) {
       for (var exampleIndex = 0; exampleIndex < exampleList.length; exampleIndex++) {
         var exampleItem = exampleList[exampleIndex];
         mainHtml.push('  <div class="dm_column_item_info dm_column_item_info_Single">');
-        mainHtml.push('    <div class="dm_column_item_info_code"><xmp class="prettyprint">' + exampleItem.code + '</xmp></div>');
+        mainHtml.push('    <div class="dm_column_item_info_code"><pre><code class="scss">' + exampleItem.code + '</code></pre></div>');
       }
       mainHtml.push('  </div>');
       mainHtml.push('</div>');
@@ -143,21 +143,21 @@ $('.tool_stage .dm_column_item_info_code').on('click', function() {
 
   if (typeof groupIndex !== 'undefined' && typeof itemIndex !== 'undefined') {
     // 序号允许为0，因此不能直接判断 groupIndex && itemIndex
-    var item = comments[groupIndex][itemIndex];
+    var item = comments[groupIndex][itemIndex],
+        codeContent = null;
 
     if (!$(this).data('showDetail')) {
       var itemCode = comments[groupIndex][itemIndex].context.code.replace(/^\n/, '');
-      $(this).html('<xmp class="prettyprint">' + makeCompleteMethodWithItem(item, itemCode) + '</xmp>');
+      codeContent = hljs.highlight('scss', makeCompleteMethodWithItem(item, itemCode));
+      $(this).html('<pre><code class="scss hljs">' + codeContent.value + '</code></pre>');
       $(this).data('showDetail', true);
     } else {
-      $(this).html('<xmp class="prettyprint">' + makeCompleteMethodWithItem(item) + '</xmp>');
+      codeContent = hljs.highlight('scss', makeCompleteMethodWithItem(item));
+      $(this).html('<pre><code class="scss hljs">' + codeContent.value + '</code></pre>');
       $(this).data('showDetail', false);
     }
-
-    prettyPrint();
   }
 });
 
 // 默认调用一次代码高亮方法
-prettyPrint();
-
+hljs.initHighlightingOnLoad();

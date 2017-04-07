@@ -70,7 +70,18 @@ closeMenuBtn.onclick = function() {
 }
 
 // 调用代码高亮方法
-prettyPrint();
+var tagsToReplace = {
+  '<': '&lt;',
+  '>': '&gt;'
+};
+$('pre code').each(function(i, block) {
+  var result = $(block).html();
+  result = result.replace(/[&<>]/g, function(tag) {
+    return tagsToReplace[tag] || tag;
+  });
+  $(block).html(result);
+  hljs.highlightBlock(block);
+});
 
 // 公共组件遮罩层效果展示
 var showMask = document.getElementById('qui_showMask'),
