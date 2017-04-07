@@ -121,7 +121,7 @@ for (var i = 0, llength = comments.length; i < llength; i++) {
       for (var exampleIndex = 0; exampleIndex < exampleList.length; exampleIndex++) {
         var exampleItem = exampleList[exampleIndex];
         mainHtml.push('  <div class="dm_column_item_info dm_column_item_info_Single">');
-        mainHtml.push('    <div class="dm_column_item_info_code"><pre><code class="scss">' + exampleItem.code + '</code></pre></div>');
+        mainHtml.push('    <div class="dm_column_item_info_code"><pre><code class="bash">' + exampleItem.code + '</code></pre></div>');
       }
       mainHtml.push('  </div>');
       mainHtml.push('</div>');
