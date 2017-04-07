@@ -1022,9 +1022,8 @@ input.dm_btn {
  * @author Kayo
  * @date 2015-08-17
  *
- * #prettify 适合 QMUI demo 风格的代码高亮配色（配合 google 高亮代码插件使用）
+ * #hljs 代码高亮配色
  */
-/* #prettify 适合 QMUI demo 风格的代码高亮配色（配合 google 高亮代码插件使用） */
 .hljs {
   display: block;
   padding: 0;
