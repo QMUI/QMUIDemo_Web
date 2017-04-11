@@ -63,9 +63,9 @@ gulp</code></pre>
 
 				<h3 id="qui_scaffoldSprite" class="dm_column_item_title">雪碧图处理</h3>
 
-        <p class="dm_column_tip">QMUI 中集成了基于 <a href="https://github.com/Jeff2Ma/postcss-lazysprite" target="_blank">postcss-lazysprite</a> 的雪碧图自动处理，使用时只需要在 UI_dev/images 中建立一个图片文件夹，把需要的图片放入，QMUI 会按规则生成所有的 CSS 以及雪碧图文件。以本 Demo 中使用到的雪碧图为例，创建时需要如下步骤：</p>
+        <p class="dm_column_tip">QMUI 中集成了基于 <a href="https://github.com/Jeff2Ma/postcss-lazysprite" target="_blank">postcss-lazysprite</a> 的雪碧图自动处理，使用时只需要在 UI_dev/project/images 中建立一个图片文件夹，把需要的图片放入，QMUI 会按规则生成所有的 CSS 以及雪碧图文件。以本 Demo 中使用到的雪碧图为例，创建时需要如下步骤：</p>
 
-        <div class="dm_column_tip">在 UI_dev/images 中建立一个 icons 文件夹。</div>
+        <div class="dm_column_tip">在 UI_dev/project/images 中建立一个 icons 文件夹，把需要的图片放入。</div>
 
         <div class="dm_column_tip">在样式文件需要输出雪碧图 CSS 的地方添加如下代码：</div>
 
@@ -94,11 +94,22 @@ gulp</code></pre>
           </div>
         </div>
 
+        <div class="dm_column_tip">使用 icon 只需在 HTML 中使用对应的 class：</div>
+
+				<div class="dm_column_item_info dm_column_item_info_Single">
+					<div class="dm_column_item_info_code">
+<pre><code class="html"><span class="dm_icon dm_icon_BannerLogo"></span>
+<span class="dm_icon dm_icon_BannerMobileLogo"></span>
+</code></pre>
+          </div>
+        </div>
+
         <div class="dm_column_tip">
           <ol>
             <li>可以看出输出的 Class-name 由项目前缀 + 目录名 + 图片名组成。</li>
             <li>“icons#icon” 中的 icon 表示目录名缩写，设置了该目录名缩写则输出的 class 中使用该缩写，不设置则默认使用目录名。</li>
             <li>多倍图处理只需要在 icons 目录中加入文件名带 "_2x/@2x"，“_3x/@3x” 这类后缀的多倍图文件即可，框架也会自动输出对应的样式以及雪碧图文件。</li>
+            <li>如需定制雪碧图功能，可以查看 postcss-lazysprite 的 <a href="https://github.com/Jeff2Ma/postcss-lazysprite#options" target="_blank">options</a>，根据需要自行调整 QMUI 的相关源码。</li>
           </ol>
         </div>
 
