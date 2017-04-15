@@ -4,6 +4,7 @@ module.exports = {
   "resultCssFileName" : "main.scss",
   "cleanFileType" : ["../.sass-cache", "../.sass-cache/**/*"],
   "needsSourceMaps": false,
+  "needsImagesMinAndSync": false,
 
   "browserSyncMod": "server",
   "browserSyncPort": 3030,
