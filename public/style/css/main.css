@@ -27,10 +27,6 @@
  * #column 栏目，用于展示组件及其介绍
  * #index 首页
  */
-/*
- * #function QMUI 功能相关
- * 由于移动页面也有大量渠道流向 PC，最终在 PC 上浏览，因此综合考虑这里 Mobile Only 仅仅会抛弃 IE6/7 相关的属性
- */
 /**
  * _qmui.scss QMUI 总样式文件
  * @author Kayo 
@@ -49,10 +45,6 @@
  * @date 2014-10-31
  *
  */
-.qui_clear, .qui_tabNav, .dm_column_display_cnt, .frame_head, .index_cnt_ability_list {
-  *zoom: 1;
-}
-
 .qui_clear:after, .qui_tabNav:after, .dm_column_display_cnt:after, .frame_head:after, .index_cnt_ability_list:after {
   clear: both;
   content: ".";
@@ -60,7 +52,6 @@
   line-height: 0;
   font-size: 0;
   visibility: hidden;
-  overflow: hidden;
 }
 
 .qui_txtOverflow, .frame_sidebar_nav_link {
@@ -368,7 +359,6 @@ input.qui_btn {
   -moz-opacity: 0.5;
   opacity: 0.5;
   filter: alpha(opacity=50);
-  -khtml-opacity: 0.5;
 }
 
 /* #dropdownMenu */
@@ -841,7 +831,6 @@ a:hover {
   -moz-opacity: 0.5;
   opacity: 0.5;
   filter: alpha(opacity=50);
-  -khtml-opacity: 0.5;
 }
 
 button.dm_btn,
@@ -1221,8 +1210,6 @@ pre.dm_column_tip {
 
 .dm_column_item_info_code xmp {
   display: inline-block;
-  *display: inline;
-  *zoom: 1;
 }
 
 .dm_column_item_info_Single .dm_column_item_info_code,
@@ -1347,7 +1334,6 @@ pre.dm_column_tip {
   -moz-opacity: 0;
   opacity: 0;
   filter: alpha(opacity=0);
-  -khtml-opacity: 0;
   cursor: pointer;
 }
 
@@ -1372,25 +1358,19 @@ pre.dm_column_tip {
   float: left;
   margin-top: 9px;
   margin-right: 5px;
-  _border-color: #f00;
-  _filter: chroma(color=#f00);
   /* 向上小三角 */
   border-width: 5px 5px;
   border-right: 0;
   border-left-color: #787878;
-  _border-left-color: #787878;
 }
 
 .dm_treeMenu .dm_treeMenu_item.dm_treeMenu_item_Unfolded:before {
   margin-top: 12px;
   margin-left: -3px;
-  _border-color: #f00;
-  _filter: chroma(color=#f00);
   /* 向上小三角 */
   border-width: 5px 5px;
   border-bottom: 0;
   border-top-color: #787878;
-  _border-top-color: #787878;
 }
 
 .dm_treeMenu .dm_treeMenu_item.dm_treeMenu_item_NoChild:before {

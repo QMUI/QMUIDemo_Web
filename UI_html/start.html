@@ -280,7 +280,7 @@ yo qmui
 
 			<h2 id="qui_browserCompatibility" class="dm_column_title">兼容性策略</h2>
 
-			<p class="dm_column_tip">QMUI 提供的几个能力里面，基于 gulp 的脚手架都是开发过程的辅助工具，与浏览器兼容无关。而 QMUI 的提供的 Sass 方法、公共组件都兼容 IE6+。扩展组件由于是从不同的业务中抽取出来，因此兼容性并没有统一的标准，请参考每个扩展组件的标注。</p>
+      <p class="dm_column_tip">QMUI 提供的几个能力里面，内置工作流基于 Node.js，因此与浏览器兼容无关。而 QMUI 提供的 Sass 方法、公共组件都兼容 IE6+，但默认关闭对 IE6/7 的支持，若需要支持请在 <a href="https://github.com/QMUI/QMUIDemo_Web/blob/master/UI_dev/project/_var.scss#L26-L27" target="_blank">UI_dev/project/_var.scss</a> 中开启。扩展组件由于是从不同的业务中抽取，因此兼容性并没有统一的标准，请参考每个扩展组件的标注。</p>
 
 		</div>
     <!-- 兼容性策略 end -->
