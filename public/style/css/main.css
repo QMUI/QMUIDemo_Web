@@ -41,7 +41,7 @@
  */
 /**
  * _mixin.scss
- * @author Kayo 
+ * @author Kayo
  * @date 2014-10-31
  *
  */
@@ -57,8 +57,8 @@
 .qui_txtOverflow, .frame_sidebar_nav_link {
   overflow: hidden;
   white-space: nowrap;
-  text-overflow: ellipsis;
   -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
   word-break: break-all;
   word-wrap: normal;
 }
@@ -73,10 +73,10 @@
 }
 
 /**
- * _tool.scss 常用工具方法 
- * @author Kayo 
+ * _tool.scss 常用工具方法
+ * @author Kayo
  * @date 2015-08-23
- * 
+ *
  */
 .dm_treeMenu .dm_treeMenu_item:before, .dm_treeMenu .dm_treeMenu_item.dm_treeMenu_item_Unfolded:before {
   display: block;
@@ -215,11 +215,11 @@ audio, canvas, video {
 
 /**
  * _component.scss 业务公共组件
- * @author Kayo 
+ * @author Kayo
  * @date 2014-11-03
  *
  * #button 按钮
- * #dialog 对话框 
+ * #dialog 对话框
  * #mask 遮罩
  * #dropdownMenu 下拉菜单
  * #tab 选项卡
@@ -230,7 +230,7 @@ audio, canvas, video {
 /* #button */
 /**
  * _button.scss 按钮组件
- * @author Kayo 
+ * @author Kayo
  * @date 2014-11-04
  *
  * .qui_btn
@@ -241,8 +241,7 @@ audio, canvas, video {
   display: inline-block;
   margin: 0;
   -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
+          box-sizing: content-box;
   min-width: 46px;
   height: 30px;
   padding: 0 12px;
@@ -277,7 +276,7 @@ input.qui_btn {
 /* #dialog */
 /**
  * _dialog.scss 对话框组件
- * @author Kayo 
+ * @author Kayo
  * @date 2014-11-03
  *
  * .qui_dialog
@@ -334,14 +333,14 @@ input.qui_btn {
 
 /* #mask */
 /**
- * _mask.scss 遮罩层组件 
- * @author Kayo 
+ * _mask.scss 遮罩层组件
+ * @author Kayo
  * @date 2014-11-11
  *
  * .qui_maskWrap 遮罩层的包裹容器，包裹遮罩层以及需要弹出的内容（如对话框）
  * > .qui_mask
  */
-/* 遮罩层的包裹容器，包裹遮罩层以及需要弹出的内容（如对话框）*/
+/* 遮罩层的包裹容器，包裹遮罩层以及需要弹出的内容（如对话框） */
 .qui_maskWrap {
   position: relative;
   z-index: 90;
@@ -355,16 +354,13 @@ input.qui_btn {
   left: 0;
   z-index: 90;
   background: #000;
-  -webkit-opacity: 0.5;
-  -moz-opacity: 0.5;
   opacity: 0.5;
-  filter: alpha(opacity=50);
 }
 
 /* #dropdownMenu */
 /**
  * _dropdownMenu.scss 下拉菜单组件
- * @author clearwu 
+ * @author clearwu
  * @date 2014-11-11
  *
  * .qui_dropdownMenu
@@ -402,7 +398,7 @@ input.qui_btn {
 /* #tab */
 /**
  * _tab.scss 选项卡组件
- * @author clearwu 
+ * @author clearwu
  * @date 2014-11-12
  *
  * .qui_tab
@@ -443,7 +439,7 @@ input.qui_btn {
 /* #textField */
 /**
  * _textField.scss 文本输入组件
- * @author clearwu 
+ * @author clearwu
  * @date 2014-11-13
  *
  * .qui_inputText
@@ -459,8 +455,7 @@ input.qui_btn {
   border: 1px solid #DEE0E2;
   border-radius: 5px;
   -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
+          box-sizing: content-box;
 }
 
 /* .qui_inputText */
@@ -552,7 +547,6 @@ a:hover {
 .index_banner_githubBtn,
 .index_banner_updateBtn {
   -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
@@ -726,7 +720,7 @@ a:hover {
     background-size: 500px 412px;
   }
 }
-@media only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min-resolution: 3dppx){
+@media only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (-o-min-device-pixel-ratio: 3/1), only screen and (min-resolution: 3dppx){
   .dm_icon_BannerLogo{
     background-image: url(../images/icons_3x.7a6b0c4755.png);
     background-position: 0 0;
@@ -869,7 +863,6 @@ input.dm_btn {
 /* .dm_dialog */
 .dm_dialog {
   -webkit-box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.15);
   box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.15);
 }
 
@@ -931,7 +924,6 @@ input.dm_btn {
 .dm_dropdownMenu {
   min-width: 206px;
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 }
@@ -1136,7 +1128,6 @@ pre.dm_column_tip {
   max-width: 100%;
   vertical-align: top;
   -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.4);
-  -moz-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.4);
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.4);
 }
 
@@ -1631,15 +1622,13 @@ pre.dm_column_tip {
     width: 100%;
     padding: 74px 48px 24px;
     -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #00A3E1), color-stop(100%, #06DCE9));
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#00A3E1), to(#06DCE9));
     background-image: -webkit-linear-gradient(top, #00A3E1 0%, #06DCE9 100%);
-    background-image: -moz-linear-gradient(top, #00A3E1 0%, #06DCE9 100%);
     background-image: -o-linear-gradient(top, #00A3E1 0%, #06DCE9 100%);
     background-image: linear-gradient(to bottom, #00A3E1 0%, #06DCE9 100%);
     background-repeat: repeat-x;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF00A3E1', endColorstr='#FF06DCE9', GradientType=0);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#FF00A3E1", endColorstr="#FF06DCE9", GradientType=0);
   }
   .frame_nav_item {
     float: none;
@@ -1659,10 +1648,10 @@ pre.dm_column_tip {
   }
 }
 
-@media handheld and (max-width: 846px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 846px) and (-webkit-min-device-pixel-ratio: 2), handheld and (max-width: 846px) and (min--moz-device-pixel-ratio: 2), screen and (max-width: 846px) and (min--moz-device-pixel-ratio: 2), handheld and (max-width: 846px) and (-o-min-device-pixel-ratio: 2), screen and (max-width: 846px) and (-o-min-device-pixel-ratio: 2), handheld and (max-width: 846px) and (min-device-pixel-ratio: 2), screen and (max-width: 846px) and (min-device-pixel-ratio: 2), handheld and (max-width: 846px) and (min-resolution: 2dppx), screen and (max-width: 846px) and (min-resolution: 2dppx), handheld and (max-width: 846px) and (min-resolution: 192dpi), screen and (max-width: 846px) and (min-resolution: 192dpi) {
+@media handheld and (max-width: 846px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 846px) and (-webkit-min-device-pixel-ratio: 2), handheld and (max-width: 846px) and (min--moz-device-pixel-ratio: 2), screen and (max-width: 846px) and (min--moz-device-pixel-ratio: 2), handheld and (max-width: 846px) and (min-device-pixel-ratio: 2), screen and (max-width: 846px) and (min-device-pixel-ratio: 2), handheld and (max-width: 846px) and (-o-min-device-pixel-ratio: 2/1), handheld and (max-width: 846px) and (min-resolution: 2dppx), screen and (max-width: 846px) and (-o-min-device-pixel-ratio: 2/1), screen and (max-width: 846px) and (min-resolution: 2dppx), handheld and (max-width: 846px) and (min-resolution: 192dpi), screen and (max-width: 846px) and (min-resolution: 192dpi) {
   .frame_nav_item {
     position: relative;
-    border: none;
+    border: 0;
   }
   .frame_nav_item:after {
     content: "";
@@ -1675,29 +1664,24 @@ pre.dm_column_tip {
     border-style: solid;
     border-color: #fff;
     border-width: 0 0 1px 0;
-    -webkit-transform: scale(0.5, 0.5);
-    -moz-transform: scale(0.5, 0.5);
-    -ms-transform: scale(0.5, 0.5);
-    -o-transform: scale(0.5, 0.5);
-    transform: scale(0.5, 0.5);
+    -webkit-transform: scale(0.5);
+        -ms-transform: scale(0.5);
+            transform: scale(0.5);
     -webkit-transform-origin: 0 0;
-    -moz-transform-origin: 0 0;
-    -ms-transform-origin: 0 0;
-    transform-origin: 0 0;
+        -ms-transform-origin: 0 0;
+            transform-origin: 0 0;
     pointer-events: none;
   }
 }
 
-@media handheld and (max-width: 846px) and (-webkit-min-device-pixel-ratio: 3), screen and (max-width: 846px) and (-webkit-min-device-pixel-ratio: 3), handheld and (max-width: 846px) and (min--moz-device-pixel-ratio: 3), screen and (max-width: 846px) and (min--moz-device-pixel-ratio: 3), handheld and (max-width: 846px) and (-o-min-device-pixel-ratio: 3), screen and (max-width: 846px) and (-o-min-device-pixel-ratio: 3), handheld and (max-width: 846px) and (min-device-pixel-ratio: 3), screen and (max-width: 846px) and (min-device-pixel-ratio: 3), handheld and (max-width: 846px) and (min-resolution: 3dppx), screen and (max-width: 846px) and (min-resolution: 3dppx), handheld and (max-width: 846px) and (min-resolution: 288dpi), screen and (max-width: 846px) and (min-resolution: 288dpi) {
+@media handheld and (max-width: 846px) and (-webkit-min-device-pixel-ratio: 3), screen and (max-width: 846px) and (-webkit-min-device-pixel-ratio: 3), handheld and (max-width: 846px) and (min--moz-device-pixel-ratio: 3), screen and (max-width: 846px) and (min--moz-device-pixel-ratio: 3), handheld and (max-width: 846px) and (min-device-pixel-ratio: 3), screen and (max-width: 846px) and (min-device-pixel-ratio: 3), handheld and (max-width: 846px) and (-o-min-device-pixel-ratio: 3/1), handheld and (max-width: 846px) and (min-resolution: 3dppx), screen and (max-width: 846px) and (-o-min-device-pixel-ratio: 3/1), screen and (max-width: 846px) and (min-resolution: 3dppx), handheld and (max-width: 846px) and (min-resolution: 288dpi), screen and (max-width: 846px) and (min-resolution: 288dpi) {
   .frame_nav_item:after {
     width: 300%;
     height: 300%;
     border-radius: 0;
-    -webkit-transform: scale(0.3333, 0.3333);
-    -moz-transform: scale(0.3333, 0.3333);
-    -ms-transform: scale(0.3333, 0.3333);
-    -o-transform: scale(0.3333, 0.3333);
-    transform: scale(0.3333, 0.3333);
+    -webkit-transform: scale(0.3333);
+        -ms-transform: scale(0.3333);
+            transform: scale(0.3333);
   }
 }
 
@@ -1831,13 +1815,12 @@ pre.dm_column_tip {
 
 .index_banner {
   padding: 75px 0 85px;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #00A3E1), color-stop(100%, #06DCE9));
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#00A3E1), to(#06DCE9));
   background-image: -webkit-linear-gradient(top, #00A3E1 0%, #06DCE9 100%);
-  background-image: -moz-linear-gradient(top, #00A3E1 0%, #06DCE9 100%);
   background-image: -o-linear-gradient(top, #00A3E1 0%, #06DCE9 100%);
   background-image: linear-gradient(to bottom, #00A3E1 0%, #06DCE9 100%);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF00A3E1', endColorstr='#FF06DCE9', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#FF00A3E1", endColorstr="#FF06DCE9", GradientType=0);
   text-align: center;
   -webkit-font-smoothing: antialiased;
 }
@@ -1876,7 +1859,6 @@ pre.dm_column_tip {
   padding-bottom: 0;
   line-height: 44px;
   -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   vertical-align: top;
 }
@@ -1954,7 +1936,6 @@ pre.dm_column_tip {
   padding-right: 35px;
   vertical-align: top;
   -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -1997,20 +1978,18 @@ pre.dm_column_tip {
   background: url("../images/independent/App.png") no-repeat;
   background-size: 100%;
   -webkit-box-shadow: 0 20px 30px 0 #CFDCE6;
-  -moz-box-shadow: 0 20px 30px 0 #CFDCE6;
   box-shadow: 0 20px 30px 0 #CFDCE6;
 }
 
-@media (-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2), (min-resolution: 2dppx), (min-resolution: 192dpi) {
+@media (-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 2dppx), (min-resolution: 192dpi) {
   .index_appIntro_img {
     background-image: url("../images/independent/App_2x.png");
   }
 }
 
-@supports (-webkit-filter: drop-shadow(0 20px 20px #cfdce6)) or (filter: drop-shadow(0 20px 20px #cfdce6)) {
+@supports ((-webkit-filter: drop-shadow(0 20px 20px #cfdce6)) or (filter: drop-shadow(0 20px 20px #cfdce6))) {
   .index_appIntro_img {
     -webkit-box-shadow: none;
-    -moz-box-shadow: none;
     box-shadow: none;
     -webkit-filter: drop-shadow(0 20px 20px #cfdce6);
     filter: drop-shadow(0 20px 20px #cfdce6);
@@ -2062,12 +2041,9 @@ pre.dm_column_tip {
   padding: 2px 0;
   background-color: #fff;
   -webkit-box-shadow: 0, 0, 0, 0.15;
-  -moz-box-shadow: 0, 0, 0, 0.15;
   box-shadow: 0, 0, 0, 0.15;
   -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
