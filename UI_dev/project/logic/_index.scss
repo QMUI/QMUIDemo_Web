@@ -38,15 +38,18 @@
     }
   }
 }
+
 .index_column_title {
   margin-bottom: 22px;
   font-size: 34px;
 }
+
 .index_column_desc {
   color: $common_color_lightGray;
   font-size: 16px;
   line-height: 36px;
 }
+
 .index_column_mobileDesc {
   display: none;
   line-height: 28px;
@@ -85,6 +88,7 @@
     padding-right: 25px;
   }
 }
+
 .index_downloadBtn {
   @include ghostBtn(#474860, #4E4F66);
 
@@ -115,12 +119,14 @@
     display: none;
   }
 }
+
 .index_banner_desc {
   margin-bottom: 49px;
   color: #fff;
   font-size: 30px;
   line-height: 52px;
 }
+
 .index_banner_startBtn,
 .index_banner_githubBtn,
 .index_banner_updateBtn {
@@ -142,15 +148,19 @@
     color: #04DACD;
   }
 }
+
 .index_banner_startBtn {
   margin-left: $index_banner_startBtn_marginLeft;
 }
+
 .index_banner_githubBtn {
   font-size: 20px;
 }
+
 .index_banner_updateBtn {
   width: $index_banner_smallBtn_width * 2 + $index_banner_startBtn_marginLeft;
 }
+
 .index_banner_version {
   color: #fff;
   font-size: 14px;
@@ -162,11 +172,13 @@
   text-align: center;
   -webkit-font-smoothing: antialiased;
 }
+
 .index_cnt_inside {
   width: $frame_base_width;
   margin: 0 auto;
   padding-top: 88px;
 }
+
 .index_cnt_purpose {
   padding-bottom: 58px;
 }
@@ -174,27 +186,31 @@
 .index_cnt_ability {
   padding-bottom: 42px;
 }
+
 .index_cnt_ability_list {
   @extend %clear;
 }
+
 .index_ability_item {
   float: left;
   width: 50%;
   margin-bottom: 40px;
   padding-right: 35px;
   vertical-align: top;
-  @include box_sizing(border-box);
+  box-sizing: border-box;
 
-	.dm_icon {
-		margin-bottom: 10px;
-	}
+  .dm_icon {
+    margin-bottom: 10px;
+  }
 }
+
 .index_ability_item_title {
   margin-bottom: 12px;
   font-size: 20px;
   font-weight: bold;
   color: $common_color_darkGray;
 }
+
 .index_ability_item_cnt {
   color: $common_color_lightGray;
   font-size: 15px;
@@ -210,9 +226,11 @@
   margin-bottom: 53px;
   padding-bottom: 50px;
 }
+
 .index_appIntro_desc {
   margin-bottom: 46px;
 }
+
 .index_appIntro_img {
   display: block;
   width: $index_appIntro_img_width;
@@ -226,10 +244,10 @@
     background-image: url($images_path + "App_2x.png");
   }
 }
-@supports (-webkit-filter: drop-shadow($index_appIntro_img_dropShadow)) or (filter: drop-shadow($index_appIntro_img_dropShadow)) {
+
+@supports (filter: drop-shadow($index_appIntro_img_dropShadow)) {
   .index_appIntro_img {
-    @include box_shadow(none);
-    -webkit-filter: drop-shadow($index_appIntro_img_dropShadow);
+    box-shadow: none;
     filter: drop-shadow($index_appIntro_img_dropShadow);
   }
 }
@@ -237,6 +255,7 @@
 .index_project_desc {
   margin-bottom: 42px;
 }
+
 .index_project_list_item {
   margin-left: 44px;
   line-height: 0;
@@ -274,6 +293,7 @@
   height: ceil($index_star_width * cos($index_star_rotate)) / 2 + ($index_star_inner_height + getLengthDirectionValue($index_star_padding, vertical) * 2) / 2 + ($index_star_top);
   overflow: hidden;
 }
+
 .index_star {
   position: absolute;
   right: $index_star_right;
@@ -281,9 +301,10 @@
   width: $index_star_width;
   padding: $index_star_padding;
   background-color: #fff;
-  @include box_shadow(0, 0, 0, .15);
-  @include rotate($index_star_rotate);
+  box-shadow: 0, 0, 0, .15;
+  transform: rotate($index_star_rotate);
 }
+
 .index_star_inner {
   display: block;
   height: $index_star_inner_height;
@@ -376,8 +397,9 @@
     width: auto;
     margin-bottom: 35px;
     padding-left: 0;
-		padding-right: 0;
+    padding-right: 0;
   }
+
   .index_ability_item_title {
     font-size: 16px;
   }

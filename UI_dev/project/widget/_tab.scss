@@ -12,9 +12,11 @@
 .dm_tab {
   border: 1px solid #DEE0E2;
 }
+
 .dm_tabNav {
   border-bottom: 1px solid #DEE0E2;
 }
+
 .dm_tabNav_item {
   margin-bottom: -1px;
   border-bottom: 3px solid transparent;
@@ -28,6 +30,7 @@
     }
   }
 }
+
 .dm_tabNav_itemLink:hover {
   color: #04C9E8;
   text-decoration: none;

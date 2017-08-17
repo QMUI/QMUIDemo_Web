@@ -12,9 +12,11 @@ xmp,
 pre {
   margin: 0;
 }
+
 html {
   height: 100%;
 }
+
 code {
   padding: 2px 4px;
   font-size: 90%;
@@ -22,13 +24,14 @@ code {
   background-color: #f9f2f4;
   border-radius: 4px;
 }
+
 a:hover {
   text-decoration: underline;
 }
 
 /* 全局动画 */
 %commonAnimation {
-  @include transition(all 0.2s ease-in-out);
+  transition: all .2s ease-in-out;
 }
 
 // 移动版 Media

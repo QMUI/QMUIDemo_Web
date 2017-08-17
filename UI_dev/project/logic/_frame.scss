@@ -43,6 +43,7 @@
   line-height: 0;
   vertical-align: top;
 }
+
 .frame_head_title_link {
   margin-top: getLengthMaxIntegerCenter($frame_head_height, 20);
   line-height: 200;
@@ -58,6 +59,7 @@
   @include bfc;
   -webkit-font-smoothing: antialiased;
 }
+
 .frame_nav_item {
   float: left;
   height: $frame_nav_item_height;
@@ -86,6 +88,7 @@
   background-color: $frame_sidebar_background;
   overflow: auto;
 }
+
 .frame_sidebar_inner {
   float: right;
   width: $frame_sidebar_inner_width;
@@ -96,6 +99,7 @@
 .frame_sidebar_nav {
   font-size: 14px;
 }
+
 .frame_sidebar_nav_link {
   @extend %text-ellipsis;
   display: block;
@@ -146,11 +150,13 @@
     font-weight: bold;
   }
 }
+
 .frame_sidebar_nav_Children .frame_sidebar_nav_item_Active {
   .frame_sidebar_nav_link {
     padding-left: $frame_sidebar_nav_children_link_paddingLeft; // 保持元素不跳动
   }
 }
+
 .frame_sidebar_nav_item_Open > {
   .frame_sidebar_nav_link {
     padding-left: $frame_sidebar_nav_link_paddingLeft; // 保持元素不跳动
@@ -174,18 +180,18 @@
 
 /* #cnt 右侧主体 */
 .frame_cnt {
-	position: absolute;
+  position: absolute;
   top: $frame_head_height;
   left: $frame_sidebar_width;
-	right: 0;
+  right: 0;
   bottom: 0;
   padding: 40px;
-	overflow: auto;
+  overflow: auto;
 }
 
 
 /* #media 小屏幕适配 */
-@media screen and (max-width: 1366px){
+@media screen and (max-width: 1366px) {
   .frame_head {
     padding-left: $frame_sidebar_widthSmall - $frame_sidebar_inner_widthSmall - getLengthDirectionValue($frame_sidebar_inner_padding, "right");
   }
@@ -277,8 +283,9 @@
   .frame_sidebar {
     display: none;
   }
-	.frame_cnt {
-		position: static;
+
+  .frame_cnt {
+    position: static;
     padding-left: $frame_base_mobile_paddingHorizontal;
     padding-right: $frame_base_mobile_paddingHorizontal;
   }

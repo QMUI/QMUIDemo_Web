@@ -7,6 +7,8 @@
  * #hljs 代码高亮配色
  */
 
+// stylelint-disable
+// 第三方插件的相关样式不作检测
 // #hljs 代码高亮配色（配合 highlight.js 使用）
 .hljs {
   display: block;
@@ -52,3 +54,4 @@
 .hljs-strong {
   font-weight: bold;
 }
+// stylelint-enable

@@ -546,9 +546,9 @@ a:hover {
 .frame_nav_item, .index_downloadBtn, .index_banner_startBtn,
 .index_banner_githubBtn,
 .index_banner_updateBtn {
-  -webkit-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+  -webkit-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
 }
 
 /**
@@ -795,7 +795,7 @@ a:hover {
 /* 按钮 */
 /**
  * _button.scss
- * @author Kayo 
+ * @author Kayo
  * @date 2015-08-17
  *
  * .dm_btn
@@ -821,10 +821,7 @@ a:hover {
 }
 
 .dm_btn[Disabled] {
-  -webkit-opacity: 0.5;
-  -moz-opacity: 0.5;
-  opacity: 0.5;
-  filter: alpha(opacity=50);
+  opacity: .5;
 }
 
 button.dm_btn,
@@ -855,7 +852,7 @@ input.dm_btn {
 /* 对话框 */
 /**
  * _dialog.scss
- * @author Kayo 
+ * @author Kayo
  * @date 2015-08-17
  *
  * .dm_dialog
@@ -904,8 +901,8 @@ input.dm_btn {
 
 /* 遮罩层 */
 /**
- * _mask.scss 
- * @author Kayo 
+ * _mask.scss
+ * @author Kayo
  * @date 2015-08-17
  *
  * .dm_mask
@@ -924,7 +921,7 @@ input.dm_btn {
 .dm_dropdownMenu {
   min-width: 206px;
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 }
 
@@ -1175,8 +1172,8 @@ pre.dm_column_tip {
   overflow: auto;
 }
 
-.dm_column_display_cnt .qui_inputText,
-.dm_column_display_cnt .qui_textarea {
+.dm_column_display_cnt .dm_inputText,
+.dm_column_display_cnt .dm_textarea {
   margin-bottom: 10px;
 }
 
@@ -1255,12 +1252,12 @@ pre.dm_column_tip {
  * @date 2015-08-27
  *
  */
-.dm_verticalTab .qui_tab_title {
+.dm_verticalTab .dm_tab_title {
   float: left;
   width: 150px;
 }
 
-.dm_verticalTab .qui_tabNav_item {
+.dm_verticalTab .dm_tabNav_item {
   float: none;
 }
 
@@ -1268,7 +1265,7 @@ pre.dm_column_tip {
   background-color: #ecf9ff;
 }
 
-.dm_verticalTab .qui_tab_cnt {
+.dm_verticalTab .dm_tab_cnt {
   overflow: hidden;
   zoom: 1;
 }
@@ -1321,10 +1318,7 @@ pre.dm_column_tip {
   position: absolute;
   top: -100%;
   left: 0;
-  -webkit-opacity: 0;
-  -moz-opacity: 0;
   opacity: 0;
-  filter: alpha(opacity=0);
   cursor: pointer;
 }
 
@@ -1384,8 +1378,8 @@ pre.dm_column_tip {
 }
 
 /**
- * _logic.scss 业务逻辑代码 
- * @author Kayo 
+ * _logic.scss 业务逻辑代码
+ * @author Kayo
  * @date 2015-08-17
  *
  */
@@ -1705,7 +1699,7 @@ pre.dm_column_tip {
 
 /**
  * _widget.scss 组件展示页面
- * @author Kayo 
+ * @author Kayo
  * @date 2015-08-18
  *
  */
@@ -1936,7 +1930,7 @@ pre.dm_column_tip {
   padding-right: 35px;
   vertical-align: top;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .index_ability_item .dm_icon {
@@ -1990,9 +1984,9 @@ pre.dm_column_tip {
 @supports ((-webkit-filter: drop-shadow(0 20px 20px #cfdce6)) or (filter: drop-shadow(0 20px 20px #cfdce6))) {
   .index_appIntro_img {
     -webkit-box-shadow: none;
-    box-shadow: none;
+            box-shadow: none;
     -webkit-filter: drop-shadow(0 20px 20px #cfdce6);
-    filter: drop-shadow(0 20px 20px #cfdce6);
+            filter: drop-shadow(0 20px 20px #cfdce6);
   }
 }
 
@@ -2040,11 +2034,11 @@ pre.dm_column_tip {
   width: 268px;
   padding: 2px 0;
   background-color: #fff;
-  -webkit-box-shadow: 0, 0, 0, 0.15;
-  box-shadow: 0, 0, 0, 0.15;
+  -webkit-box-shadow: 0, 0, 0, .15;
+          box-shadow: 0, 0, 0, .15;
   -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 .index_star_inner {

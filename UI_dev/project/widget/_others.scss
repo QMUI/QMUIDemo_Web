@@ -7,17 +7,20 @@
  */
 
 .dm_verticalTab {
-  .qui_tab_title {
+  .dm_tab_title {
     float: left;
     width: 150px;
   }
-  .qui_tabNav_item {
+
+  .dm_tabNav_item {
     float: none;
   }
+
   .dm_verticalTabNav_item_Curr {
     background-color: #ecf9ff;
   }
-  .qui_tab_cnt {
+
+  .dm_tab_cnt {
     @include bfc;
   }
 }
@@ -63,7 +66,7 @@
     position: absolute;
     top: -100%;
     left: 0;
-    @include opacity(0);
+    opacity: 0;
     cursor: pointer;
   }
 }
