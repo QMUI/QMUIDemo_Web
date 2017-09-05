@@ -76,7 +76,7 @@
   word-wrap: normal;
 }
 
-.qui_btn, .index_downloadBtn, .index_banner_startBtn,
+.index_downloadBtn, .index_banner_startBtn,
 .index_banner_githubBtn,
 .index_banner_updateBtn {
   -moz-user-select: none;
@@ -266,7 +266,10 @@ audio, canvas, video {
   text-align: center;
   font-size: 13px;
   color: #fff;
-  _overflow-y: hidden;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 a.qui_btn {
@@ -279,13 +282,6 @@ a.qui_btn:hover {
 
 /* 在低版本 ie 下，带有 border 的 submit 类型的 input 或 button 会有一条黑边，无法去除,
  * 所以如果按钮样式的 border 不为 none，项目又需要考虑兼容低版本 ie，则建议使用 a 标签代替 */
-button.qui_btn,
-input.qui_btn {
-  *overflow: visible;
-  /* IE6/7的button需要设置此属性以使padding生效 */
-  *min-width: auto;
-}
-
 /* #dialog */
 /**
  * _dialog.scss 对话框组件
@@ -304,7 +300,6 @@ input.qui_btn {
   position: absolute;
   z-index: 100;
   min-width: 420px;
-  _width: 420px;
   background: #fff;
   border: none;
   border-radius: 5px;
@@ -822,7 +817,6 @@ a:hover {
   /* line-height 的偏移值依赖于不同字体 */
   line-height: 32px;
   line-height: 31px \9\0;
-  _line-height: 34px;
 }
 
 .dm_btn:hover {
@@ -835,13 +829,6 @@ a:hover {
 
 .dm_btn[Disabled] {
   opacity: .5;
-}
-
-button.dm_btn,
-input.dm_btn {
-  *height: 32px;
-  *line-height: 27px;
-  _line-height: 29px;
 }
 
 .dm_btn_Ghost {
@@ -873,7 +860,7 @@ input.dm_btn {
 /* .dm_dialog */
 .dm_dialog {
   -webkit-box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.15);
-  box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.15);
+          box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.15);
 }
 
 .dm_dialog_head {

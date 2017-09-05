@@ -17,7 +17,6 @@
   /* line-height 的偏移值依赖于不同字体 */
   line-height: $btn_lineHeight + 2;
   line-height: $btn_lineHeight + 1 \9\0;
-  _line-height: $btn_lineHeight + 4;
 
   &:hover {
     background-color: #05D7F7;
@@ -30,13 +29,6 @@
     opacity: .5;
   }
 
-}
-
-button.dm_btn,
-input.dm_btn {
-  *height: $btn_lineHeight + 2;
-  *line-height: $btn_lineHeight - 3;
-  _line-height: $btn_lineHeight - 1;
 }
 
 .dm_btn_Ghost {
