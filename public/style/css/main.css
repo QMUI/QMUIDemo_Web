@@ -363,6 +363,7 @@ a.qui_btn:hover {
   z-index: 90;
   background: #000;
   opacity: 0.5;
+  filter: alpha(opacity=50);
 }
 
 /* #dropdownMenu */
