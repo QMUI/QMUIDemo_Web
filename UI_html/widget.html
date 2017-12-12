@@ -66,23 +66,21 @@
 
 				<h3 id="qui_widget_btn" class="dm_column_item_title">按钮</h3>
 
-				<p class="dm_column_tip">主要的 CSS Selector <code>.qui_btn</code></p>
-
 				<div class="dm_column_item_info">
 					<div class="dm_column_display">
 						<div class="dm_column_display_title">展示:</div>
 						<div class="dm_column_display_cnt">
-							<a class="qui_btn dm_btn" href="javascript:;">按钮</a>
-							<a class="qui_btn dm_btn dm_btn_Ghost" href="javascript:;">按钮</a>
-							<a class="qui_btn dm_btn" href="javascript:;" disabled>按钮禁用</a>
-							<a class="qui_btn dm_btn dm_btn_Ghost" href="javascript:;" disabled>按钮禁用</a>
+							<a class="dm_btn" href="javascript:;">按钮</a>
+							<a class="dm_btn dm_btn_Ghost" href="javascript:;">按钮</a>
+							<a class="dm_btn" href="javascript:;" disabled>按钮禁用</a>
+							<a class="dm_btn dm_btn_Ghost" href="javascript:;" disabled>按钮禁用</a>
 						</div>
 					</div>
 					<div class="dm_column_item_info_code">
-<pre><code class="html"><a class="qui_btn dm_btn" href="javascript:;">按钮</a>
-<a class="qui_btn dm_btn dm_btn_Ghost" href="javascript:;">按钮</a>
-<a class="qui_btn dm_btn" href="javascript:;" disabled>按钮禁用</a>
-<a class="qui_btn dm_btn dm_btn_Ghost" href="javascript:;" disabled>按钮禁用</a></code></pre>
+<pre><code class="html"><a class="dm_btn" href="javascript:;">按钮</a>
+<a class="dm_btn dm_btn_Ghost" href="javascript:;">按钮</a>
+<a class="dm_btn" href="javascript:;" disabled>按钮禁用</a>
+<a class="dm_btn dm_btn_Ghost" href="javascript:;" disabled>按钮禁用</a></code></pre>
 					</div>
 				</div>
 
@@ -92,41 +90,39 @@
 
 				<h3 id="qui_widget_dialog" class="dm_column_item_title">对话框</h3>
 
-				<p class="dm_column_tip">主要的 CSS Selector <code>.qui_dialog</code></p>
-
 				<div class="dm_column_item_info">
 					<div class="dm_column_display">
 						<div class="dm_column_display_title">展示:</div>
 						<div class="dm_column_display_cnt" style="padding: 0 0 15px 15px;">
-							<div class="qui_dialog dm_dialog dm_columnDisplayControl">
-                <a class="qui_dialog_close dm_dialog_close" href="javascript:;">×</a>
-								<div class="qui_dialog_head dm_dialog_head">
-									<div class="qui_dialog_title dm_dialog_title">对话框标题</div>
+							<div class="dm_dialog dm_columnDisplayControl">
+                <a class="dm_dialog_close" href="javascript:;">×</a>
+								<div class="dm_dialog_head">
+									<div class="dm_dialog_title">对话框标题</div>
 								</div>
-                <div class="qui_dialog_body dm_dialog_body">
+                <div class="dm_dialog_body">
                   这里是对话框的主体内容。<br />
                   通常一个对话框由头部、主体内容和底部栏三部分组成。
                 </div>
-								<div class="qui_dialog_foot dm_dialog_foot">
-									<a class="qui_btn dm_btn" href="javascript:;">确认</a><a class="qui_btn dm_btn dm_btn_Ghost" href="javascript:;">取消</a>
+								<div class="dm_dialog_foot">
+									<a class="dm_btn" href="javascript:;">确认</a><a class="dm_btn dm_btn_Ghost" href="javascript:;">取消</a>
 								</div>
 							</div>
 						</div>
 					</div>
 					<div class="dm_column_item_info_code">
-<pre><code class="html"><div class="qui_dialog dm_dialog">
-  <a class="qui_dialog_close dm_dialog_close" href="javascript:;">×</a>
-  <div class="qui_dialog_head dm_dialog_head">
-    <div class="qui_dialog_title dm_dialog_title">对话框标题</div>
+<pre><code class="html"><div class="dm_dialog">
+  <a class="dm_dialog_close" href="javascript:;">×</a>
+  <div class="dm_dialog_head">
+    <div class="dm_dialog_title">对话框标题</div>
   </div>
-  <div class="qui_dialog_body dm_dialog_body">
+  <div class="dm_dialog_body">
     这里是对话框的主体内容。<br />
     通常一个对话框由头部、主体内容和底部栏三部分组成。
   </div>
-  <div class="qui_dialog_foot dm_dialog_foot">
-    <a class="qui_btn dm_btn dm_btn_Blue" href="javascript:;">是</a>
-    <a class="qui_btn dm_btn" href="javascript:;">否</a>
-    <a class="qui_btn dm_btn dm_btn_Blue dm_btn_Blue_Disabled" href="javascript:;">否</a>
+  <div class="dm_dialog_foot">
+    <a class="dm_btn dm_btn_Blue" href="javascript:;">是</a>
+    <a class="dm_btn" href="javascript:;">否</a>
+    <a class="dm_btn dm_btn_Blue dm_btn_Blue_Disabled" href="javascript:;">否</a>
   </div>
 </div></code></pre>
 					</div>
@@ -138,8 +134,6 @@
 
 				<h3 id="qui_widget_mask" class="dm_column_item_title">遮罩层</h3>
 
-				<p class="dm_column_tip">主要的 CSS Selector <code>.qui_mask</code></p>
-
 				<div class="dm_column_item_info">
 					<div class="dm_column_display">
 						<div class="dm_column_display_title">展示:</div>
@@ -149,7 +143,7 @@
 					</div>
 					<div class="dm_column_item_info_code">
 <pre><code class="html"><div id="maskWrap" style="display: none;"> <!-- 包裹遮罩层和主体元素的容器，由前端控制 -->
-  <div class="qui_mask dm_mask"></div>
+  <div class="dm_mask"></div>
   <!-- 这里是对话框或其他需要展示的主体元素 -->
 </div></code></pre>
 					</div>
@@ -161,44 +155,42 @@
 
 				<h3 id="qui_widget_dropdownMenu" class="dm_column_item_title">下拉菜单</h3>
 
-				<p class="dm_column_tip">主要的 CSS Selector <code>.qui_dropdownMenu</code></p>
-
 				<div class="dm_column_item_info">
 					<div class="dm_column_display">
 						<div class="dm_column_display_title">展示:</div>
             <div class="dm_column_display_cnt">
-              <div class="qui_dropdownMenu dm_dropdownMenu dm_columnDisplayControl">
+              <div class="dm_dropdownMenu dm_columnDisplayControl">
                 <ul>
-                  <li class="qui_dropdownMenu_item dm_dropdownMenu_item">
-                  <a href="javascript:;" class="qui_dropdownMenu_itemLink dm_dropdownMenu_itemLink">菜单选项一</a>
+                  <li class="dm_dropdownMenu_item">
+                  <a href="javascript:;" class="dm_dropdownMenu_itemLink">菜单选项一</a>
                   </li>
-                  <li class="qui_dropdownMenu_item dm_dropdownMenu_item">
-                  <a href="javascript:;" class="qui_dropdownMenu_itemLink dm_dropdownMenu_itemLink">菜单选项二</a>
+                  <li class="dm_dropdownMenu_item">
+                  <a href="javascript:;" class="dm_dropdownMenu_itemLink">菜单选项二</a>
                   </li>
-                  <li class="qui_dropdownMenu_item dm_dropdownMenu_item">
-                  <a href="javascript:;" class="qui_dropdownMenu_itemLink dm_dropdownMenu_itemLink">菜单选项三</a>
+                  <li class="dm_dropdownMenu_item">
+                  <a href="javascript:;" class="dm_dropdownMenu_itemLink">菜单选项三</a>
                   </li>
-                  <li class="qui_dropdownMenu_item dm_dropdownMenu_item">
-                  <a href="javascript:;" class="qui_dropdownMenu_itemLink dm_dropdownMenu_itemLink">菜单选项四</a>
+                  <li class="dm_dropdownMenu_item">
+                  <a href="javascript:;" class="dm_dropdownMenu_itemLink">菜单选项四</a>
                   </li>
                 </ul>
               </div>
             </div>
           </div>
 					<div class="dm_column_item_info_code">
-<pre><code class="html"><div class="qui_dropdownMenu dm_dropdownMenu">
+<pre><code class="html"><div class="dm_dropdownMenu">
   <ul>
-    <li class="qui_dropdownMenu_item dm_dropdownMenu_item">
-      <a href="javascript:;" class="qui_dropdownMenu_itemLink dm_dropdownMenu_itemLink">菜单选项一</a>
+    <li class="dm_dropdownMenu_item">
+      <a href="javascript:;" class="dm_dropdownMenu_itemLink">菜单选项一</a>
     </li>
-    <li class="qui_dropdownMenu_item dm_dropdownMenu_item">
-      <a href="javascript:;" class="qui_dropdownMenu_itemLink dm_dropdownMenu_itemLink">菜单选项二</a>
+    <li class="dm_dropdownMenu_item">
+      <a href="javascript:;" class="dm_dropdownMenu_itemLink">菜单选项二</a>
     </li>
-    <li class="qui_dropdownMenu_item dm_dropdownMenu_item">
-      <a href="javascript:;" class="qui_dropdownMenu_itemLink dm_dropdownMenu_itemLink">菜单选项三</a>
+    <li class="dm_dropdownMenu_item">
+      <a href="javascript:;" class="dm_dropdownMenu_itemLink">菜单选项三</a>
     </li>
-    <li class="qui_dropdownMenu_item dm_dropdownMenu_item">
-      <a href="javascript:;" class="qui_dropdownMenu_itemLink dm_dropdownMenu_itemLink">菜单选项四</a>
+    <li class="dm_dropdownMenu_item">
+      <a href="javascript:;" class="dm_dropdownMenu_itemLink">菜单选项四</a>
     </li>
   </ul>
 </div></code></pre>
@@ -211,47 +203,45 @@
 
 				<h3 id="qui_widget_tab" class="dm_column_item_title">选项卡</h3>
 
-				<p class="dm_column_tip">主要的 CSS Selector <code>.qui_tab</code></p>
-
 				<div class="dm_column_item_info">
 					<div class="dm_column_display">
 						<div class="dm_column_display_title">展示:</div>
             <div class="dm_column_display_cnt">
-              <div class="qui_tab dm_tab">
-                <div class="qui_tab_title dm_tab_title">
-                  <ul class="qui_tabNav dm_tabNav">
-                    <li class="qui_tabNav_item dm_tabNav_item dm_tabNav_item_Curr">
-                      <a href="javascript:;" class="qui_tabNav_itemLink dm_tabNav_itemLink">选项卡一</a>
+              <div class="dm_tab">
+                <div class="dm_tab_title">
+                  <ul class="dm_tabNav">
+                    <li class="dm_tabNav_item dm_tabNav_item_Curr">
+                      <a href="javascript:;" class="dm_tabNav_itemLink">选项卡一</a>
                     </li>
-                    <li class="qui_tabNav_item dm_tabNav_item">
-                      <a href="javascript:;" class="qui_tabNav_itemLink dm_tabNav_itemLink">选项卡二</a>
+                    <li class="dm_tabNav_item">
+                      <a href="javascript:;" class="dm_tabNav_itemLink">选项卡二</a>
                     </li>
-                    <li class="qui_tabNav_item dm_tabNav_item">
-                      <a href="javascript:;" class="qui_tabNav_itemLink dm_tabNav_itemLink">选项卡三</a>
+                    <li class="dm_tabNav_item">
+                      <a href="javascript:;" class="dm_tabNav_itemLink">选项卡三</a>
                     </li>
                   </ul>
                 </div>
-                <div class="qui_tab_cnt dm_tab_cnt">这里是选项卡的内容</div>
+                <div class="dm_tab_cnt">这里是选项卡的内容</div>
               </div>
 
             </div>
 					</div>
 					<div class="dm_column_item_info_code">
-<pre><code class="html"><div class="qui_tab dm_tab">
-  <div class="qui_tab_title dm_tab_title">
-    <ul class="qui_tabNav dm_tabNav">
-      <li class="qui_tabNav_item dm_tabNav_item dm_tabNav_item_Curr">
-        <a href="javascript:;" class="qui_tabNav_itemLink dm_tabNav_itemLink">选项卡一</a>
+<pre><code class="html"><div class="dm_tab">
+  <div class="dm_tab_title">
+    <ul class="dm_tabNav">
+      <li class="dm_tabNav_item dm_tabNav_item_Curr">
+        <a href="javascript:;" class="dm_tabNav_itemLink">选项卡一</a>
       </li>
-      <li class="qui_tabNav_item dm_tabNav_item">
-        <a href="javascript:;" class="qui_tabNav_itemLink dm_tabNav_itemLink">选项卡二</a>
+      <li class="dm_tabNav_item">
+        <a href="javascript:;" class="dm_tabNav_itemLink">选项卡二</a>
       </li>
-      <li class="qui_tabNav_item dm_tabNav_item">
-        <a href="javascript:;" class="qui_tabNav_itemLink dm_tabNav_itemLink">选项卡三</a>
+      <li class="dm_tabNav_item">
+        <a href="javascript:;" class="dm_tabNav_itemLink">选项卡三</a>
       </li>
     </ul>
   </div>
-  <div class="qui_tab_cnt dm_tab_cnt">这里是选项卡的内容</div>
+  <div class="dm_tab_cnt">这里是选项卡的内容</div>
 </div></code></pre>
 					</div>
 				</div>
@@ -262,19 +252,17 @@
 
 				<h3 id="qui_widget_ipt" class="dm_column_item_title">文本输入</h3>
 
-        <p class="dm_column_tip">主要的 CSS Selector <code>.qui_inputText</code> <code>.qui_textarea</code></p>
-
 				<div class="dm_column_item_info">
 					<div class="dm_column_display">
 						<div class="dm_column_display_title">展示:</div>
             <div class="dm_column_display_cnt">
-              <input type="text" class="qui_inputText dm_inputText" placeholder="普通文本框" />
-              <textarea class="qui_textarea dm_textarea" placeholder="长文本框"></textarea>
+              <input type="text" class="dm_inputText" placeholder="普通文本框" />
+              <textarea class="dm_textarea" placeholder="长文本框"></textarea>
             </div>
 					</div>
 					<div class="dm_column_item_info_code">
-<pre><code class="html"><input type="text" class="qui_inputText dm_inputText" placeholder="普通文本框" />
-<textarea class="qui_textarea dm_textarea" placeholder="可惜"></textarea></code></pre>
+<pre><code class="html"><input type="text" class="dm_inputText" placeholder="普通文本框" />
+<textarea class="dm_textarea" placeholder="可惜"></textarea></code></pre>
 					</div>
 				</div>
 
@@ -345,7 +333,7 @@
 					<div class="dm_column_display">
 						<div class="dm_column_display_title">展示:</div>
 			            <div class="dm_column_display_cnt">
-			            	<a class="qui_btn dm_btn dm_fileUpload" href="javascript:;">上传
+			            	<a class="dm_btn dm_fileUpload" href="javascript:;">上传
 			            		<input class="dm_fileUpload_input" type="file">
 			            	</a>
 			            </div>
@@ -414,15 +402,15 @@
 
   <!-- 遮罩层效果演示 -->
   <div id="qui_maskWrap" style="display: none;">
-		<div class="qui_mask dm_mask"></div>
-		<div class="qui_dialog dm_dialog widget_dialogInMask">
-			<div class="qui_dialog_head dm_dialog_head">
-				<div class="qui_dialog_title dm_dialog_title">对话框标题</div>
-        <a class="qui_dialog_close dm_dialog_close" href="javascript:;">×</a>
+		<div class="dm_mask"></div>
+		<div class="dm_dialog widget_dialogInMask">
+			<div class="dm_dialog_head">
+				<div class="dm_dialog_title">对话框标题</div>
+        <a class="dm_dialog_close" href="javascript:;">×</a>
 			</div>
-			<div class="qui_dialog_body dm_dialog_body">点击任意处关闭</div>
-			<div class="qui_dialog_foot dm_dialog_foot">
-			  <a class="qui_btn dm_btn" href="javascript:;">确认</a><a class="qui_btn dm_btn dm_btn_Ghost" href="javascript:;">取消</a>
+			<div class="dm_dialog_body">点击任意处关闭</div>
+			<div class="dm_dialog_foot">
+			  <a class="dm_btn" href="javascript:;">确认</a><a class="dm_btn dm_btn_Ghost" href="javascript:;">取消</a>
 			</div>
 		</div>
 	</div>
