@@ -47,18 +47,12 @@
  *
  */
 /**
- * _helper.scss 助手方法 helper（主要包含 CSS reset）
- * @author Kayo 
- * @date 2014-10-31
- *
- */
-/**
  * _mixin.scss
  * @author Kayo
  * @date 2014-10-31
  *
  */
-.qui_clear:after, .qui_tabNav:after, .dm_column_display_cnt:after, .frame_head:after, .index_cnt_ability_list:after {
+.qui_clear:after, .dm_tabNav:after, .dm_column_display_cnt:after, .frame_head:after, .index_cnt_ability_list:after {
   clear: both;
   content: ".";
   display: block;
@@ -224,302 +218,6 @@ audio, canvas, video {
 
 .qui_displayNone {
   display: none !important;
-}
-
-/**
- * _component.scss 业务公共组件
- * @author Kayo
- * @date 2014-11-03
- *
- * #button 按钮
- * #dialog 对话框
- * #mask 遮罩
- * #dropdownMenu 下拉菜单
- * #tab 选项卡
-  *#textField 文本输入
- *
- * /
-
-/* #button */
-/**
- * _button.scss 按钮组件
- * @author Kayo
- * @date 2014-11-04
- *
- * .qui_btn
- *
- */
-/* .qui_btn */
-.qui_btn {
-  display: inline-block;
-  margin: 0;
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
-  min-width: 46px;
-  height: 30px;
-  padding: 0 12px;
-  background: #04C9E8;
-  border: 1px solid transparent;
-  line-height: 30px;
-  outline: none;
-  cursor: pointer;
-  text-align: center;
-  font-size: 13px;
-  color: #fff;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
-
-a.qui_btn {
-  text-decoration: none;
-}
-
-a.qui_btn:hover {
-  text-decoration: none;
-}
-
-/* 在低版本 ie 下，带有 border 的 submit 类型的 input 或 button 会有一条黑边，无法去除,
- * 所以如果按钮样式的 border 不为 none，项目又需要考虑兼容低版本 ie，则建议使用 a 标签代替 */
-/* #dialog */
-/**
- * _dialog.scss 对话框组件
- * @author Kayo
- * @date 2014-11-03
- *
- * .qui_dialog
- * > .qui_dialog_head 对话框的头部
- *   > .qui_dialog_title 对话框的标题
- *   > [.qui_dialog_close] 可选。对话框的关闭按钮
- * > .qui_dialog_cnt 对话框的内容区域
- * > [.qui_dialog_foot] 可选。对话框的底部
- */
-/* .qui_dialog */
-.qui_dialog {
-  position: absolute;
-  z-index: 100;
-  min-width: 420px;
-  background: #fff;
-  border: none;
-  border-radius: 5px;
-}
-
-.qui_dialog_head {
-  background: #00C0E1;
-  border-bottom: none;
-  border-radius: 5px 5px 0 0;
-}
-
-.qui_dialog_title {
-  height: 40px;
-  line-height: 40px;
-  font-size: 14px;
-  font-weight: bold;
-  color: #fff;
-}
-
-.qui_dialog_close {
-  position: absolute;
-  top: 5px;
-  right: 6px;
-}
-
-.qui_dialog_body {
-  background: #fff;
-}
-
-.qui_dialog_body:last-child {
-  border-radius: 0 0 5px 5px;
-}
-
-.qui_dialog_foot {
-  background: #fff;
-  border-top: none;
-  border-radius: 0 0 5px 5px;
-}
-
-/* #mask */
-/**
- * _mask.scss 遮罩层组件
- * @author Kayo
- * @date 2014-11-11
- *
- * .qui_maskWrap 遮罩层的包裹容器，包裹遮罩层以及需要弹出的内容（如对话框）
- * > .qui_mask
- */
-/* 遮罩层的包裹容器，包裹遮罩层以及需要弹出的内容（如对话框） */
-.qui_maskWrap {
-  position: relative;
-  z-index: 90;
-}
-
-.qui_mask {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 90;
-  background: #000;
-  opacity: 0.5;
-  filter: alpha(opacity=50);
-}
-
-/* #dropdownMenu */
-/**
- * _dropdownMenu.scss 下拉菜单组件
- * @author clearwu
- * @date 2014-11-11
- *
- * .qui_dropdownMenu
- *
- */
-/* .qui_dropdownMenu */
-.qui_dropdownMenu {
-  position: absolute;
-  z-index: 30;
-  background: #fff;
-  border: 1px solid #DEE0E2;
-}
-
-.qui_dropdownMenu ul {
-  padding: 12px 0;
-}
-
-.qui_dropdownMenu_itemLink {
-  display: block;
-  height: 32px;
-  line-height: 32px;
-  padding: 0 15px;
-  color: #000;
-}
-
-.qui_dropdownMenu_split {
-  display: block;
-  height: 0;
-  line-height: 0;
-  font-size: 0;
-  margin: 5px 0;
-  border-top: 1px solid #ccc;
-}
-
-/* #tab */
-/**
- * _tab.scss 选项卡组件
- * @author clearwu
- * @date 2014-11-12
- *
- * .qui_tab
- * > .qui_tab_title
- *   > .qui_tabNav
- *     > .qui_tabNav_item
- *       > .qui_tabNav_itemLink
- * > .qui_tab_cnt
- *
- */
-/* .qui_tab */
-.qui_tab {
-  background: #fff;
-}
-
-.qui_tab_title {
-  background: #fff;
-}
-
-.qui_tabNav {
-  padding: 0 16px;
-}
-
-.qui_tabNav_item {
-  float: left;
-  margin: 0 24px 0 0;
-}
-
-.qui_tabNav_itemLink {
-  display: block;
-  height: 43px;
-  line-height: 43px;
-  padding: 0;
-  background: transparent;
-  color: #858C96;
-}
-
-/* #textField */
-/**
- * _textField.scss 文本输入组件
- * @author clearwu
- * @date 2014-11-13
- *
- * .qui_inputText
- * .qui_textarea
- *
- */
-.qui_inputText, .qui_textarea {
-  display: block;
-  width: 270px;
-  line-height: 22px;
-  padding: 12px 16px;
-  background: #fff;
-  border: 1px solid #DEE0E2;
-  border-radius: 5px;
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
-}
-
-/* .qui_inputText */
-.qui_inputText {
-  height: 22px;
-}
-
-.qui_inputText::-ms-clear {
-  display: none;
-}
-
-/* .qui_textarea */
-.qui_textarea {
-  height: 66px;
-}
-
-/* placeholder 颜色重置 */
-input::-webkit-input-placeholder,
-textarea::-webkit-input-placeholder {
-  color: #ADB4BE;
-}
-
-input:focus::-webkit-input-placeholder,
-textarea:focus::-webkit-input-placeholder {
-  color: #ADB4BE;
-}
-
-input:-moz-placeholder,
-textarea:-moz-placeholder {
-  color: #ADB4BE;
-}
-
-input:focus:-moz-placeholder,
-textarea:focus:-moz-placeholder {
-  color: #ADB4BE;
-}
-
-input::-moz-placeholder,
-textarea::-moz-placeholder {
-  color: #ADB4BE;
-}
-
-input:focus::-moz-placeholder,
-textarea:focus::-moz-placeholder {
-  color: #ADB4BE;
-}
-
-input:-ms-input-placeholder,
-textarea:-ms-input-placeholder {
-  color: #ADB4BE;
-}
-
-input:focus:-ms-input-placeholder,
-textarea:focus:-ms-input-placeholder {
-  color: #ADB4BE;
 }
 
 /**
@@ -803,21 +501,37 @@ a:hover {
 }
 /* 按钮 */
 /**
- * _button.scss
+ * _button.scss 按钮组件
  * @author Kayo
  * @date 2015-08-17
  *
  * .dm_btn
- *  + .dm_btn_Blue
+ *  + .dm_btn_Ghost
  *
  */
-/* .dm_btn */
 .dm_btn {
-  background-color: #04C9E8;
-  border-radius: 2px;
+  display: inline-block;
+  margin: 0;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  min-width: 46px;
+  height: 30px;
+  padding: 0 12px;
+  background: #04C9E8;
+  border: 1px solid transparent;
   /* line-height 的偏移值依赖于不同字体 */
   line-height: 32px;
   line-height: 31px \9\0;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+  font-size: 13px;
+  color: #fff;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  border-radius: 2px;
 }
 
 .dm_btn:hover {
@@ -830,6 +544,14 @@ a:hover {
 
 .dm_btn[Disabled] {
   opacity: .5;
+}
+
+a.dm_btn {
+  text-decoration: none;
+}
+
+a.dm_btn:hover {
+  text-decoration: none;
 }
 
 .dm_btn_Ghost {
@@ -852,23 +574,47 @@ a:hover {
 
 /* 对话框 */
 /**
- * _dialog.scss
+ * _dialog.scss 对话框组件
  * @author Kayo
  * @date 2015-08-17
  *
  * .dm_dialog
+ * > .dm_dialog_head 对话框的头部
+ *   > .dm_dialog_title 对话框的标题
+ *   > [.dm_dialog_close] 可选。对话框的关闭按钮
+ * > .dm_dialog_cnt 对话框的内容区域
+ * > [.dm_dialog_foot] 可选。对话框的底部
  */
-/* .dm_dialog */
 .dm_dialog {
+  position: absolute;
+  z-index: 100;
+  min-width: 420px;
+  background: #fff;
+  border: none;
+  border-radius: 5px;
   -webkit-box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.15);
           box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.15);
 }
 
 .dm_dialog_head {
   padding: 0 12px;
+  background: #00C0E1;
+  border-bottom: none;
+  border-radius: 5px 5px 0 0;
+}
+
+.dm_dialog_title {
+  height: 40px;
+  line-height: 40px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
 }
 
 .dm_dialog_close {
+  position: absolute;
+  top: 5px;
+  right: 6px;
   padding: 5px;
   line-height: 1;
   font-size: 18px;
@@ -886,12 +632,16 @@ a:hover {
 
 .dm_dialog_body {
   padding: 23px 30px 30px 37px;
+  background: #fff;
   font-size: 14px;
   color: #353C46;
 }
 
 .dm_dialog_foot {
   padding: 17px 12px;
+  background: #fff;
+  border-top: none;
+  border-radius: 0 0 5px 5px;
   text-align: right;
   line-height: 25px;
 }
@@ -902,28 +652,60 @@ a:hover {
 
 /* 遮罩层 */
 /**
- * _mask.scss
+ * _mask.scss 遮罩层组件
  * @author Kayo
  * @date 2015-08-17
  *
- * .dm_mask
+ * .dm_maskWrap 遮罩层的包裹容器，包裹遮罩层以及需要弹出的内容（如对话框）
+ * > .dm_mask
  */
-/* .dm_mask */
+.dm_maskWrap {
+  position: relative;
+  z-index: 90;
+}
+
+.dm_mask {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 90;
+  background: #000;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+
 /* 下拉菜单 */
 /**
- * _dropdownMenu.scss
- * @author clearwu
+ * _dropdownMenu.scss 下拉菜单组件
+ * @author Kayo
  * @date 2015-08-17
  *
  * .dm_dropdownMenu
  *
  */
-/* .dm_dropdownMenu */
 .dm_dropdownMenu {
+  position: absolute;
+  z-index: 30;
   min-width: 206px;
+  background: #fff;
+  border: 1px solid #DEE0E2;
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
           box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+}
+
+.dm_dropdownMenu ul {
+  padding: 12px 0;
+}
+
+.dm_dropdownMenu_itemLink {
+  display: block;
+  height: 32px;
+  line-height: 32px;
+  padding: 0 15px;
+  color: #000;
 }
 
 .dm_dropdownMenu_itemLink:hover {
@@ -935,25 +717,46 @@ a:hover {
   background-color: #ebebeb;
 }
 
+.dm_dropdownMenu_split {
+  display: block;
+  height: 0;
+  line-height: 0;
+  font-size: 0;
+  margin: 5px 0;
+  border-top: 1px solid #ccc;
+}
+
 /* 选项卡 */
 /**
- * _tab.scss
- * @author clearwu
+ * _tab.scss 选项卡组件
+ * @author Kayo
  * @date 2015-08-17
  *
  * .dm_tab
+ * > .dm_tab_title
+ *   > .dm_tabNav
+ *     > .dm_tabNav_item
+ *       > .dm_tabNav_itemLink
+ * > .dm_tab_cnt
  *
  */
-/* .dm_tab */
 .dm_tab {
+  background: #fff;
   border: 1px solid #DEE0E2;
 }
 
+.dm_tab_title {
+  background: #fff;
+}
+
 .dm_tabNav {
+  padding: 0 16px;
   border-bottom: 1px solid #DEE0E2;
 }
 
 .dm_tabNav_item {
+  float: left;
+  margin: 0 24px 0 0;
   margin-bottom: -1px;
   border-bottom: 3px solid transparent;
   font-size: 16px;
@@ -965,6 +768,15 @@ a:hover {
 
 .dm_tabNav_item_Curr .dm_tabNav_itemLink {
   color: #04C9E8;
+}
+
+.dm_tabNav_itemLink {
+  display: block;
+  height: 43px;
+  line-height: 43px;
+  padding: 0;
+  background: transparent;
+  color: #858C96;
 }
 
 .dm_tabNav_itemLink:hover {
@@ -979,22 +791,84 @@ a:hover {
 
 /* 文本输入 */
 /**
- * _textField.scss
- * @author clearwu
+ * _textField.scss 文本输入组件
+ * @author Kayo
  * @date 2015-08-17
  *
  * .dm_inputText
  * .dm_textarea
  *
  */
+.dm_inputText, .dm_textarea {
+  display: block;
+  width: 270px;
+  line-height: 22px;
+  padding: 12px 16px;
+  background: #fff;
+  border: 1px solid #DEE0E2;
+  border-radius: 5px;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
 .dm_inputText,
 .dm_textarea {
   font-size: 15px;
   color: #353C46;
 }
 
-/* .dm_inputText */
-/* .dm_textarea */
+.dm_inputText {
+  height: 22px;
+}
+
+.dm_inputText::-ms-clear {
+  display: none;
+}
+
+.dm_textarea {
+  height: 66px;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #ADB4BE;
+}
+
+input:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder {
+  color: #ADB4BE;
+}
+
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+  color: #ADB4BE;
+}
+
+input:focus:-moz-placeholder,
+textarea:focus:-moz-placeholder {
+  color: #ADB4BE;
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+  color: #ADB4BE;
+}
+
+input:focus::-moz-placeholder,
+textarea:focus::-moz-placeholder {
+  color: #ADB4BE;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: #ADB4BE;
+}
+
+input:focus:-ms-input-placeholder,
+textarea:focus:-ms-input-placeholder {
+  color: #ADB4BE;
+}
+
 /* 第三方插件相关样式 */
 /**
  * _3rd.scss 第三方插件的相关样式

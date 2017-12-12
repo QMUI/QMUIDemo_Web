@@ -1,16 +1,28 @@
 @charset "UTF-8";
 /**
- * _mask.scss
+ * _mask.scss 遮罩层组件
  * @author Kayo
  * @date 2015-08-17
  *
- * .dm_mask
+ * .dm_maskWrap 遮罩层的包裹容器，包裹遮罩层以及需要弹出的内容（如对话框）
+ * > .dm_mask
  */
 
 
-/* .dm_mask */
+// 遮罩层的包裹容器，包裹遮罩层以及需要弹出的内容（如对话框）
 .dm_maskWrap {
+  position: relative;
+  z-index: $maskWrap_zIndex;
 }
 
 .dm_mask {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: $mask_zIndex;
+  background: $mask_background;
+  opacity: $mask_opacity;
+  filter: alpha(opacity = $mask_opacity * 100);
 }
