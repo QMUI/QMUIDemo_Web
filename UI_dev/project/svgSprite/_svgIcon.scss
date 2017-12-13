@@ -1,0 +1,44 @@
+.dm_svgIcon {
+	background: url($sprite_path + "svgIcon.svg") no-repeat;
+	display: inline-block;
+	overflow: hidden;
+	font-size: 0;
+	line-height: 0;
+}
+
+.dm_svgIcon_AppExmail {
+	background-position: 69.1588785046729% 86.84210526315789%;
+	width: 60px;
+	height: 60px;
+}
+
+.dm_svgIcon_AppPermissionWorknote {
+	background-position: 100% 0;
+	width: 44px;
+	height: 44px;
+}
+
+.dm_svgIcon_CardClose {
+	background-position: 0 0;
+	width: 132px;
+	height: 132px;
+}
+
+.dm_svgIcon_ClaimFeatureApproval {
+	background-position: 75% 0;
+	width: 98px;
+	height: 98px;
+}
+
+.dm_svgIcon_CorpAuthErr {
+	background-position: 38.83495145631068% 95.65217391304348%;
+	width: 68px;
+	height: 74px;
+}
+
+.dm_svgIcon_Members {
+	background-position: 0 100%;
+	width: 80px;
+	height: 80px;
+}
+

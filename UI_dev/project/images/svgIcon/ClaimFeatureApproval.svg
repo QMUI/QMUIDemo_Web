@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="78px" height="78px" viewBox="0 0 78 78" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>ClaimFeatureApproval</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Web切图稿（暂未整理）" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="独立图标-independent/icons" transform="translate(-1150.000000, -741.000000)">
+            <g id="ClaimFeatureApproval" transform="translate(1150.000000, 741.000000)">
+                <rect id="Rectangle-319" fill="#67A0E6" opacity="0.900000036" x="0" y="0" width="78" height="78" rx="39"></rect>
+                <g id="icon_app_expenses_60" transform="translate(21.081081, 17.918919)" fill="#FFFFFF">
+                    <g id="icon_entrance_approval">
+                        <path d="M0.891891892,27.2355446 C0.891891892,25.5829422 2.22685117,24.2432432 3.88411594,24.2432432 L31.9537219,24.2432432 C33.6062816,24.2432432 34.9459459,25.57821 34.9459459,27.2355446 L34.9459459,34.7837838 L0.891891892,34.7837838 L0.891891892,27.2355446 Z M3.32432432,36.8918919 L32.5135135,36.8918919 L32.5135135,37.9459459 C32.5135135,38.5280839 32.0431984,39 31.4574105,39 L4.38042732,39 C3.79715774,39 3.32432432,38.5321425 3.32432432,37.9459459 L3.32432432,36.8918919 Z" id="Combined-Shape"></path>
+                        <path d="M17.9189189,32.1891892 C17.9189189,32.1891892 25.2162162,11.8950509 25.2162162,7.86486486 C25.2162162,3.83467885 21.9491049,0.567567568 17.9189189,0.567567568 C13.8887329,0.567567568 10.6216216,3.83467885 10.6216216,7.86486486 C10.6216216,11.8950509 17.9189189,32.1891892 17.9189189,32.1891892 Z" id="Oval-7"></path>
+                        <polygon id="Rectangle-28" points="10.6216216 7.86486486 25.2162162 7.86486486 21.5804839 29.7567568 14.2940245 29.7567568"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
