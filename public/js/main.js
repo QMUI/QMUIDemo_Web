@@ -202,7 +202,6 @@ makeFrameSidebarActive(0, 0); // 初始化侧边栏
 // 为侧边栏绑定滚动事件
 $('.frame_cnt').on('scroll', function () {
     if (!isNavInClick) {  // 当用户进行点击时,不响应滚动事件
-        console.log('come in');
         var frameCntHeight = $(this).outerHeight(true), // 可见高度
             frameCntContentHeight = $(this).get(0).scrollHeight, // 内容高度
             frameCntScrollTop = $(this).scrollTop(), // 滚动高度
