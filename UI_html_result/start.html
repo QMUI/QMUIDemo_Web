@@ -13,7 +13,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="../public/style/images/independent/favicon/favicon_16h.png"/>
     <link rel="icon" type="image/png" sizes="32x32" href="../public/style/images/independent/favicon/favicon_32h.png"/>
     <link rel="icon" type="image/png" sizes="48x48" href="../public/style/images/independent/favicon/favicon_48h.png"/>
-    <link rel="stylesheet" type="text/css" href="../public/style/css/main.css"/>
+    <link rel="stylesheet" href="../public/style/css/main_release.css"/>
     <!--[if lte IE 8]>
     <script type="text/javascript">
         (function (elements) {
@@ -190,16 +190,18 @@
 
             <div class="dm_column_item_info dm_column_item_info_Single">
                 <div class="dm_column_item_info_code">
-<pre><code class="bash">#安装 gulp
-npm install --global gulp
+<pre><code class="bash">#全局安装 gulp4
+npm install gulpjs/gulp#4.0 -g
 </code></pre>
                 </div>
             </div>
 
             <div class="dm_column_tip">
-                1.x 版本的环境配置请参考<a
-                href="https://github.com/Tencent/QMUI_Web/wiki/1.x-%E7%89%88%E6%9C%AC%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE#%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE"
-                target="_blank">这里</a>。
+                <ul>
+                    <li>Gulp 4 并未正式发布，目前安装需要依赖 Git 环境，Windows 用户需要先安装 git，然后在 Git Bash 下执行安装命令。</li>
+                    <li>1.x 版本的环境配置请参考<a href="https://github.com/Tencent/QMUI_Web/wiki/1.x-%E7%89%88%E6%9C%AC%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE#%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE"
+                target="_blank">这里</a>。</li>
+                </ul>
             </div>
 
         </div>
@@ -500,9 +502,9 @@ npm install</code></pre>
 </div><!-- content end -->
 
 <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
-<script src="../public/js/highlight.pack.js"></script>
-<script src="../node_modules/jquery/dist/jquery.min.js"></script>
-<script src="../public/js/main.js"></script>
+<script type="text/javascript" src="../public/js/all.js"></script>
+
+
 
 </body>
 </html>
