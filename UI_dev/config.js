@@ -4,7 +4,7 @@ module.exports = {
     'resultCssFileName': 'main.scss',
     'cleanFileType': ['../.sass-cache', '../.sass-cache/**/*'],
     'needsSourceMaps': false,
-    'needsImagesMinAndSync': false,
+    'needsImagesMinAndSync': true,
 
     'paths': {
         'htmlSourcePath': ['../../UI_html/**/*.html'],
