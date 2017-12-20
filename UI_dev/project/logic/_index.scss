@@ -73,10 +73,10 @@
   padding: 8px 32px;
   font-size: 17px;
   text-align: center;
-  @extend %disabledUserSelect;
   border: 1px solid $borderColor;
   border-radius: 6px;
   color: $textColor;
+  user-select: none;
   @extend %commonAnimation;
 
   &:hover {
@@ -136,14 +136,14 @@
   padding-top: 0;
   padding-bottom: 0;
   line-height: 44px;
-  @include box_sizing(border-box);
+  box-sizing: border-box;
   vertical-align: top;
 
   &:hover {
     background-color: rgba(255, 255, 255, .2);
     color: #fff;
   }
-  &:acitve {
+  &:active {
     background-color: #fff;
     color: #04DACD;
   }
@@ -238,7 +238,7 @@
   margin: 0 auto 80px;
   background: url($images_path + "App.png") no-repeat;
   background-size: 100%;
-  @include box_shadow(0 20px 30px 0 #CFDCE6);
+  box-shadow: 0 20px 30px 0 #CFDCE6;
 
   @include screenResolution(2) {
     background-image: url($images_path + "App_2x.png");
@@ -301,7 +301,7 @@
   width: $index_star_width;
   padding: $index_star_padding;
   background-color: #fff;
-  box-shadow: 0, 0, 0, .15;
+  box-shadow: rgba(0, 0, 0, .15);
   transform: rotate($index_star_rotate);
 }
 

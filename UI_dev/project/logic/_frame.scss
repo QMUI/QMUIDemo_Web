@@ -253,7 +253,7 @@
     height: 100vh;
     width: 100%;
     padding: $frame_head_mobile_height + 24px 48px 24px;
-    @include box_sizing(border-box);
+    box-sizing: border-box;
     @include gradient_vertical($start-color: $frame_head_background, $end-color: #06DCE9, $start-percent: 0%, $end-percent: 100%);
   }
   .frame_nav_item {

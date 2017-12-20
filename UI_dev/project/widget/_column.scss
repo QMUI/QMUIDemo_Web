@@ -64,7 +64,7 @@ pre.dm_column_tip {
 .dm_column_tip img {
   max-width: 100%;
   vertical-align: top;
-  @include box_shadow(0 0 5px 0 rgba(0, 0, 0, .4));
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, .4);
 }
 
 /* 栏目项 */

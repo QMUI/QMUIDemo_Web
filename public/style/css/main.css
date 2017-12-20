@@ -70,15 +70,6 @@
   word-wrap: normal;
 }
 
-.index_downloadBtn, .index_banner_startBtn,
-.index_banner_githubBtn,
-.index_banner_updateBtn {
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
 /**
  * _tool.scss 常用工具方法
  * @author Kayo
@@ -799,36 +790,6 @@ a.dm_btn:hover {
  * .dm_textarea
  *
  */
-.dm_inputText, .dm_textarea {
-  display: block;
-  width: 270px;
-  line-height: 22px;
-  padding: 12px 16px;
-  background: #fff;
-  border: 1px solid #DEE0E2;
-  border-radius: 5px;
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
-}
-
-.dm_inputText,
-.dm_textarea {
-  font-size: 15px;
-  color: #353C46;
-}
-
-.dm_inputText {
-  height: 22px;
-}
-
-.dm_inputText::-ms-clear {
-  display: none;
-}
-
-.dm_textarea {
-  height: 66px;
-}
-
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
   color: #ADB4BE;
@@ -867,6 +828,36 @@ textarea:-ms-input-placeholder {
 input:focus:-ms-input-placeholder,
 textarea:focus:-ms-input-placeholder {
   color: #ADB4BE;
+}
+
+.dm_inputText, .dm_textarea {
+  display: block;
+  width: 270px;
+  line-height: 22px;
+  padding: 12px 16px;
+  background: #fff;
+  border: 1px solid #DEE0E2;
+  border-radius: 5px;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
+.dm_inputText,
+.dm_textarea {
+  font-size: 15px;
+  color: #353C46;
+}
+
+.dm_inputText {
+  height: 22px;
+}
+
+.dm_inputText::-ms-clear {
+  display: none;
+}
+
+.dm_textarea {
+  height: 66px;
 }
 
 /* 第三方插件相关样式 */
@@ -1000,7 +991,7 @@ pre.dm_column_tip {
   max-width: 100%;
   vertical-align: top;
   -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.4);
-  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.4);
 }
 
 /* 栏目项 */
@@ -1491,7 +1482,7 @@ pre.dm_column_tip {
     width: 100%;
     padding: 74px 48px 24px;
     -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+            box-sizing: border-box;
     background-image: -webkit-gradient(linear, left top, left bottom, from(#00A3E1), to(#06DCE9));
     background-image: -webkit-linear-gradient(top, #00A3E1 0%, #06DCE9 100%);
     background-image: -o-linear-gradient(top, #00A3E1 0%, #06DCE9 100%);
@@ -1658,6 +1649,10 @@ pre.dm_column_tip {
   border: 1px solid #474860;
   border-radius: 6px;
   color: #4E4F66;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .index_downloadBtn:hover {
@@ -1722,13 +1717,17 @@ pre.dm_column_tip {
   border: 1px solid #fff;
   border-radius: 6px;
   color: #fff;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   width: 166px;
   height: 45px;
   padding-top: 0;
   padding-bottom: 0;
   line-height: 44px;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
   vertical-align: top;
 }
 
@@ -1754,9 +1753,9 @@ pre.dm_column_tip {
   color: #fff;
 }
 
-.index_banner_startBtn:acitve,
-.index_banner_githubBtn:acitve,
-.index_banner_updateBtn:acitve {
+.index_banner_startBtn:active,
+.index_banner_githubBtn:active,
+.index_banner_updateBtn:active {
   background-color: #fff;
   color: #04DACD;
 }
@@ -1847,7 +1846,7 @@ pre.dm_column_tip {
   background: url("../images/independent/App.png") no-repeat;
   background-size: 100%;
   -webkit-box-shadow: 0 20px 30px 0 #CFDCE6;
-  box-shadow: 0 20px 30px 0 #CFDCE6;
+          box-shadow: 0 20px 30px 0 #CFDCE6;
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 2dppx), (min-resolution: 192dpi) {
@@ -1909,8 +1908,8 @@ pre.dm_column_tip {
   width: 268px;
   padding: 2px 0;
   background-color: #fff;
-  -webkit-box-shadow: 0, 0, 0, .15;
-          box-shadow: 0, 0, 0, .15;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.15);
+          box-shadow: rgba(0, 0, 0, 0.15);
   -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
           transform: rotate(45deg);
