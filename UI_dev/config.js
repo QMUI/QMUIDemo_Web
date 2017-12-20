@@ -32,7 +32,7 @@ module.exports = {
     },
 
     'svgSprite': {
-        'openSvgSprite': false
+        'openSvgSprite': true
     },
 
     'template': {
