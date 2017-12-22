@@ -37,7 +37,7 @@ var addClass = function (e, c) {
     }
 
     e.className = t.replace(/(^\s*)|(\s*$)/g, ''); // 去掉首尾空白
-}
+};
 
 // 移除一个 class
 var removeClass = function (e, c) {
@@ -52,7 +52,7 @@ var removeClass = function (e, c) {
     }
 
     e.className = t.replace(/(^\s*)|(\s*$)/g, ''); // 去掉首尾空白
-}
+};
 
 
 // 业务逻辑
@@ -64,10 +64,10 @@ var showMenuBtn = document.getElementById('showMenuBtn'),
 
 showMenuBtn.onclick = function () {
     addClass(header, 'frame_head_ShowNav');
-}
+};
 closeMenuBtn.onclick = function () {
     removeClass(header, 'frame_head_ShowNav');
-}
+};
 
 // 调用代码高亮方法
 var tagsToReplace = {
@@ -89,10 +89,10 @@ var showMask = document.getElementById('qui_showMask'),
 if (showMask && maskWrap) {
     showMask.onclick = function () {
         maskWrap.style.display = 'block';
-    }
+    };
     maskWrap.onclick = function () {
         maskWrap.style.display = 'none';
-    }
+    };
 }
 
 /* eslint-disable */
@@ -170,13 +170,9 @@ var isNavInClick = false;
 var frameSidebarItemIsInActive = function (target) {
     var offsetTop = $(target).offset().top,
         height = $(target).outerHeight();
-    if (offsetTop > -height + 46) { // 46为顶部bar的高度
 
-        return true;
-    }
-
-    return false;
-}
+    return offsetTop > -height + 46;
+};
 
 // 触发侧边栏进入 Active 态
 var makeFrameSidebarActive = function (columnIndex, itemIndex) {
@@ -185,7 +181,7 @@ var makeFrameSidebarActive = function (columnIndex, itemIndex) {
     if (group.size() > 0) {
         group.find('.js_sidebar_item').eq(itemIndex).addClass('frame_sidebar_nav_item_Active');
     }
-}
+};
 
 // 确认侧边栏是否被点击
 var confirmNavIsInClick = function () {
@@ -195,7 +191,7 @@ var confirmNavIsInClick = function () {
     timerAtClickNav = setTimeout(function () {
         isNavInClick = false;
     }, 100);
-}
+};
 
 makeFrameSidebarActive(0, 0); // 初始化侧边栏
 

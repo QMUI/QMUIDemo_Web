@@ -123,7 +123,7 @@ ul, ol, li {
 body {
   font-size: 14px;
   line-height: 1.5;
-  background: #fff;
+  background: #FFF;
   color: #474860;
 }
 
@@ -517,7 +517,7 @@ a:hover {
   cursor: pointer;
   text-align: center;
   font-size: 13px;
-  color: #fff;
+  color: #FFF;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -580,7 +580,7 @@ a.dm_btn:hover {
   position: absolute;
   z-index: 100;
   min-width: 420px;
-  background: #fff;
+  background: #FFF;
   border: none;
   border-radius: 5px;
   -webkit-box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.15);
@@ -599,7 +599,7 @@ a.dm_btn:hover {
   line-height: 40px;
   font-size: 14px;
   font-weight: bold;
-  color: #fff;
+  color: #FFF;
 }
 
 .dm_dialog_close {
@@ -609,28 +609,28 @@ a.dm_btn:hover {
   padding: 5px;
   line-height: 1;
   font-size: 18px;
-  color: #fff;
+  color: #FFF;
 }
 
 .dm_dialog_close:hover {
-  color: #d6d9de;
+  color: #D6D9DE;
   text-decoration: none;
 }
 
 .dm_dialog_close:active {
-  color: #eaecee;
+  color: #EAECEE;
 }
 
 .dm_dialog_body {
   padding: 23px 30px 30px 37px;
-  background: #fff;
+  background: #FFF;
   font-size: 14px;
   color: #353C46;
 }
 
 .dm_dialog_foot {
   padding: 17px 12px;
-  background: #fff;
+  background: #FFF;
   border-top: none;
   border-radius: 0 0 5px 5px;
   text-align: right;
@@ -680,7 +680,7 @@ a.dm_btn:hover {
   position: absolute;
   z-index: 30;
   min-width: 206px;
-  background: #fff;
+  background: #FFF;
   border: 1px solid #DEE0E2;
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
           box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
@@ -700,12 +700,12 @@ a.dm_btn:hover {
 }
 
 .dm_dropdownMenu_itemLink:hover {
-  background-color: #f5f5f5;
+  background-color: #F5F5F5;
   text-decoration: none;
 }
 
 .dm_dropdownMenu_itemLink:active {
-  background-color: #ebebeb;
+  background-color: #EBEBEB;
 }
 
 .dm_dropdownMenu_split {
@@ -732,12 +732,12 @@ a.dm_btn:hover {
  *
  */
 .dm_tab {
-  background: #fff;
+  background: #FFF;
   border: 1px solid #DEE0E2;
 }
 
 .dm_tab_title {
-  background: #fff;
+  background: #FFF;
 }
 
 .dm_tabNav {
@@ -747,8 +747,7 @@ a.dm_btn:hover {
 
 .dm_tabNav_item {
   float: left;
-  margin: 0 24px 0 0;
-  margin-bottom: -1px;
+  margin: 0 24px 0 0 0 24px 0 0 -1px;
   border-bottom: 3px solid transparent;
   font-size: 16px;
 }
@@ -835,7 +834,7 @@ textarea:focus:-ms-input-placeholder {
   width: 270px;
   line-height: 22px;
   padding: 12px 16px;
-  background: #fff;
+  background: #FFF;
   border: 1px solid #DEE0E2;
   border-radius: 5px;
   -webkit-box-sizing: content-box;
@@ -1023,8 +1022,8 @@ pre.dm_column_tip {
 /* 栏目项的实际效果展示 */
 .dm_column_display {
   padding: 15px;
-  border: 1px solid #efe8d5;
-  border-bottom: 1px solid #efe8d5;
+  border: 1px solid #EFE8D5;
+  border-bottom: 1px solid #EFE8D5;
   border-radius: 4px 4px 0 0;
 }
 
@@ -1049,7 +1048,7 @@ pre.dm_column_tip {
   padding: 15px;
   font-size: 14px;
   background-color: #FAF8F2;
-  border: 1px solid #efe8d5;
+  border: 1px solid #EFE8D5;
   border-top-width: 0;
   border-radius: 0 0 4px 4px;
   overflow: auto;
@@ -1160,9 +1159,8 @@ pre.dm_column_tip {
 
 .dm_dualCols2 .dm_dualCols_left {
   border-right: 1px solid #c9c9c9;
-  padding: 10px;
+  padding: 10px 10px 3000px;
   float: left;
-  padding-bottom: 3000px;
   margin-bottom: -3000px;
 }
 
@@ -1317,7 +1315,7 @@ pre.dm_column_tip {
 }
 
 .frame_nav_item:hover {
-  color: #fff;
+  color: #FFF;
   text-decoration: none;
 }
 
@@ -2100,7 +2098,7 @@ pre.dm_column_tip {
 .tool_stage_para_title,
 .tool_stage_example_title {
   margin-bottom: 12px;
-  border-bottom: 1px solid #efe8d5;
+  border-bottom: 1px solid #EFE8D5;
   padding-bottom: 4px;
   font-size: 16px;
 }
