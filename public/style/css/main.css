@@ -1674,9 +1674,9 @@ pre.dm_column_tip {
     width: 300%;
     height: 300%;
     border-radius: 0;
-    -webkit-transform: scale(0.3333);
-        -ms-transform: scale(0.3333);
-            transform: scale(0.3333);
+    -webkit-transform: scale(0.333333);
+        -ms-transform: scale(0.333333);
+            transform: scale(0.333333);
   }
 }
 
@@ -2116,7 +2116,7 @@ pre.dm_column_tip {
   .index_appIntro_img {
     height: auto;
     width: 90%;
-    padding-bottom: 130.90909%;
+    padding-bottom: 130.909091%;
   }
   .index_appIntro_desc {
     margin-bottom: 30px;
