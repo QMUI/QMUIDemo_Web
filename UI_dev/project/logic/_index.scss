@@ -20,14 +20,21 @@
   position: relative;
   margin-bottom: 58px;
 
-  &:before { // 不用 after，避免跟 clear 里面的 after 冲突
+  &:before {
     content: ".";
     position: absolute;
     bottom: 0;
-    left: 283px;
-    right: 283px;
+    left: $index_column_separator_spacingHorizontal;
+    right: $index_column_separator_spacingHorizontal;
     font-size: 0;
     border-top: 1px solid $common_color_separator;
+
+    @include screenResolution(2) {
+      transform: scaleY(.5);
+    }
+    @include screenResolution(3) {
+      transform: scaleY((1 / 3));
+    }
   }
 
   &:last-child {
@@ -364,7 +371,7 @@
   .index_column {
     margin-bottom: 50px;
 
-    &:before { // 不用 after，避免跟 clear 里面的 after 冲突
+    &:before {
       left: 50%;
       right: auto;
       width: 100px;

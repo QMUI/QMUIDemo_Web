@@ -35,12 +35,12 @@ $common_color_linkTapHighlight: rgba(105, 186, 255, .13);
 $common_color_lightGray: #9595A3;
 $common_color_gray: #787878;
 $common_color_darkGray: #555557;
-$common_color_separator: #D8D8D8;
+$common_color_separator: #D4D6D8;
 $common_color_border: #DEE0E2;
 $common_color_placeholder: #ADB4BE;
 $common_color_placeholderFocus: $common_color_placeholder;
 $common_color_code_background: #FAF8F2;
-$common_color_code_borderColor: #EFE8D5;
+$common_color_code_borderColor: #e4dcc5;
 $common_zIndex_1: 10;
 $common_zIndex_2: 20;
 $common_zIndex_3: 30;
@@ -168,6 +168,8 @@ $column_base_maxWidth: 840px;
 $index_banner_smallBtn_width: 166px;
 $index_banner_startBtn_marginLeft: 15px;
 $index_banner_startBtn_mobile_marginHorizontal: 5px;
+
+$index_column_separator_spacingHorizontal: 283px;
 
 $index_appIntro_img_dropShadow: 0 20px 20px #cfdce6;
 $index_appIntro_img_width: 440px;

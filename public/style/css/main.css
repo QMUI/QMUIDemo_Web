@@ -952,13 +952,53 @@ textarea:focus:-ms-input-placeholder {
 
 /* 栏目标题（大组件的标题） */
 .dm_column_title {
+  border-style: solid;
+  border-color: #D4D6D8;
+  border-width: 0 0 1px 0;
+  border-radius: 0;
   margin-bottom: 30px;
   padding-bottom: 10px;
-  border-bottom: 1px solid #D8D8D8;
   font-size: 38px;
   color: #333;
   font-weight: bold;
   text-transform: capitalize;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 2dppx), (min-resolution: 192dpi) {
+  .dm_column_title {
+    position: relative;
+    border: 0;
+  }
+  .dm_column_title:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    border-radius: 0;
+    border-style: solid;
+    border-color: #D4D6D8;
+    border-width: 0 0 1px 0;
+    -webkit-transform: scale(0.5);
+        -ms-transform: scale(0.5);
+            transform: scale(0.5);
+    -webkit-transform-origin: 0 0;
+        -ms-transform-origin: 0 0;
+            transform-origin: 0 0;
+    pointer-events: none;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 3), (min--moz-device-pixel-ratio: 3), (min-device-pixel-ratio: 3), (-o-min-device-pixel-ratio: 3/1), (min-resolution: 3dppx), (min-resolution: 288dpi) {
+  .dm_column_title:after {
+    width: 300%;
+    height: 300%;
+    border-radius: 0;
+    -webkit-transform: scale(0.33333);
+        -ms-transform: scale(0.33333);
+            transform: scale(0.33333);
+  }
 }
 
 /* 提示语，可以用在栏目这一层，也可以用在栏目项中 */
@@ -1012,7 +1052,50 @@ pre.dm_column_tip {
 
 /* 栏目项的信息 */
 .dm_column_item_info {
+  border-style: solid;
+  border-color: #e4dcc5;
+  border-width: 1px;
+  border-radius: 4px;
   max-width: 840px;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 2dppx), (min-resolution: 192dpi) {
+  .dm_column_item_info {
+    position: relative;
+    border: 0;
+  }
+  .dm_column_item_info:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    border-radius: 8px;
+    border-style: solid;
+    border-color: #e4dcc5;
+    border-width: 1px;
+    -webkit-transform: scale(0.5);
+        -ms-transform: scale(0.5);
+            transform: scale(0.5);
+    -webkit-transform-origin: 0 0;
+        -ms-transform-origin: 0 0;
+            transform-origin: 0 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    pointer-events: none;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 3), (min--moz-device-pixel-ratio: 3), (min-device-pixel-ratio: 3), (-o-min-device-pixel-ratio: 3/1), (min-resolution: 3dppx), (min-resolution: 288dpi) {
+  .dm_column_item_info:after {
+    width: 300%;
+    height: 300%;
+    border-radius: 12px;
+    -webkit-transform: scale(0.33333);
+        -ms-transform: scale(0.33333);
+            transform: scale(0.33333);
+  }
 }
 
 .dm_column_item_info_Single {
@@ -1022,9 +1105,6 @@ pre.dm_column_tip {
 /* 栏目项的实际效果展示 */
 .dm_column_display {
   padding: 15px;
-  border: 1px solid #EFE8D5;
-  border-bottom: 1px solid #EFE8D5;
-  border-radius: 4px 4px 0 0;
 }
 
 .dm_column_display_title {
@@ -1043,15 +1123,57 @@ pre.dm_column_tip {
 }
 
 .dm_column_item_info_code,
-.dm_column_item_info_tips,
-.dm_column_item_info_list {
+.dm_column_item_info_tips {
+  border-style: solid;
+  border-color: #e4dcc5;
+  border-width: 1px 0 0 0;
+  border-radius: 0;
   padding: 15px;
   font-size: 14px;
   background-color: #FAF8F2;
-  border: 1px solid #EFE8D5;
-  border-top-width: 0;
-  border-radius: 0 0 4px 4px;
   overflow: auto;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 2dppx), (min-resolution: 192dpi) {
+  .dm_column_item_info_code,
+  .dm_column_item_info_tips {
+    position: relative;
+    border: 0;
+  }
+  .dm_column_item_info_code:after,
+  .dm_column_item_info_tips:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    border-radius: 0;
+    border-style: solid;
+    border-color: #e4dcc5;
+    border-width: 1px 0 0 0;
+    -webkit-transform: scale(0.5);
+        -ms-transform: scale(0.5);
+            transform: scale(0.5);
+    -webkit-transform-origin: 0 0;
+        -ms-transform-origin: 0 0;
+            transform-origin: 0 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    pointer-events: none;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 3), (min--moz-device-pixel-ratio: 3), (min-device-pixel-ratio: 3), (-o-min-device-pixel-ratio: 3/1), (min-resolution: 3dppx), (min-resolution: 288dpi) {
+  .dm_column_item_info_code:after,
+  .dm_column_item_info_tips:after {
+    width: 300%;
+    height: 300%;
+    border-radius: 0;
+    -webkit-transform: scale(0.33333);
+        -ms-transform: scale(0.33333);
+            transform: scale(0.33333);
+  }
 }
 
 .dm_column_item_info_tips {
@@ -1065,10 +1187,48 @@ pre.dm_column_tip {
   display: inline-block;
 }
 
-.dm_column_item_info_Single .dm_column_item_info_code,
-.dm_column_item_info_list {
-  border-top-width: 1px;
-  border-radius: 4px;
+.dm_column_item_info_Single .dm_column_item_info_code {
+  border-style: solid;
+  border-color: #DEE0E2;
+  border-width: 0;
+  border-radius: 0;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 2dppx), (min-resolution: 192dpi) {
+  .dm_column_item_info_Single .dm_column_item_info_code {
+    position: relative;
+    border: 0;
+  }
+  .dm_column_item_info_Single .dm_column_item_info_code:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    border-radius: 0;
+    border-style: solid;
+    border-color: #DEE0E2;
+    border-width: 0;
+    -webkit-transform: scale(0.5);
+        -ms-transform: scale(0.5);
+            transform: scale(0.5);
+    -webkit-transform-origin: 0 0;
+        -ms-transform-origin: 0 0;
+            transform-origin: 0 0;
+    pointer-events: none;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 3), (min--moz-device-pixel-ratio: 3), (min-device-pixel-ratio: 3), (-o-min-device-pixel-ratio: 3/1), (min-resolution: 3dppx), (min-resolution: 288dpi) {
+  .dm_column_item_info_Single .dm_column_item_info_code:after {
+    width: 300%;
+    height: 300%;
+    border-radius: 0;
+    -webkit-transform: scale(0.33333);
+        -ms-transform: scale(0.33333);
+            transform: scale(0.33333);
+  }
 }
 
 .dm_column_item_info_list ul ul {
@@ -1537,9 +1697,9 @@ pre.dm_column_tip {
     width: 300%;
     height: 300%;
     border-radius: 0;
-    -webkit-transform: scale(0.333333);
-        -ms-transform: scale(0.333333);
-            transform: scale(0.333333);
+    -webkit-transform: scale(0.33333);
+        -ms-transform: scale(0.33333);
+            transform: scale(0.33333);
   }
 }
 
@@ -1600,7 +1760,23 @@ pre.dm_column_tip {
   left: 283px;
   right: 283px;
   font-size: 0;
-  border-top: 1px solid #D8D8D8;
+  border-top: 1px solid #D4D6D8;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 2dppx), (min-resolution: 192dpi) {
+  .index_column:before {
+    -webkit-transform: scaleY(0.5);
+        -ms-transform: scaleY(0.5);
+            transform: scaleY(0.5);
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 3), (min--moz-device-pixel-ratio: 3), (min-device-pixel-ratio: 3), (-o-min-device-pixel-ratio: 3/1), (min-resolution: 3dppx), (min-resolution: 288dpi) {
+  .index_column:before {
+    -webkit-transform: scaleY(0.33333);
+        -ms-transform: scaleY(0.33333);
+            transform: scaleY(0.33333);
+  }
 }
 
 .index_column:last-child {
@@ -1987,7 +2163,7 @@ pre.dm_column_tip {
   .index_appIntro_img {
     height: auto;
     width: 90%;
-    padding-bottom: 130.909091%;
+    padding-bottom: 130.90909%;
   }
   .index_appIntro_desc {
     margin-bottom: 30px;
@@ -2098,7 +2274,7 @@ pre.dm_column_tip {
 .tool_stage_para_title,
 .tool_stage_example_title {
   margin-bottom: 12px;
-  border-bottom: 1px solid #EFE8D5;
+  border-bottom: 1px solid #e4dcc5;
   padding-bottom: 4px;
   font-size: 16px;
 }

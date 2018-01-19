@@ -27,9 +27,9 @@
 
 /* 栏目标题（大组件的标题） */
 .dm_column_title {
+  @include onePixelBorder(bottom, $common_color_separator);
   margin-bottom: 30px;
   padding-bottom: 10px;
-  border-bottom: 1px solid $common_color_separator;
   font-size: 38px;
   color: #333;
   font-weight: bold;
@@ -86,6 +86,7 @@ pre.dm_column_tip {
 
 /* 栏目项的信息 */
 .dm_column_item_info {
+  @include onePixelBorder(all, $common_color_code_borderColor, inside, 4px);
   max-width: 840px;
 }
 
@@ -96,9 +97,6 @@ pre.dm_column_tip {
 /* 栏目项的实际效果展示 */
 .dm_column_display {
   padding: 15px;
-  border: 1px solid $common_color_code_borderColor;
-  border-bottom: 1px solid $common_color_code_borderColor;
-  border-radius: 4px 4px 0 0;
 }
 
 .dm_column_display_title {
@@ -119,14 +117,11 @@ pre.dm_column_tip {
 }
 
 .dm_column_item_info_code,
-.dm_column_item_info_tips,
-.dm_column_item_info_list {
+.dm_column_item_info_tips {
+  @include onePixelBorder(top, $common_color_code_borderColor, inside);
   padding: 15px;
   font-size: 14px;
   background-color: $common_color_code_background;
-  border: 1px solid $common_color_code_borderColor;
-  border-top-width: 0;
-  border-radius: 0 0 4px 4px;
   overflow: auto;
 }
 
@@ -144,10 +139,8 @@ pre.dm_column_tip {
   }
 }
 
-.dm_column_item_info_Single .dm_column_item_info_code,
-.dm_column_item_info_list {
-  border-top-width: 1px;
-  border-radius: 4px;
+.dm_column_item_info_Single .dm_column_item_info_code {
+  @include onePixelBorder(none);
 }
 
 .dm_column_item_info_list {
