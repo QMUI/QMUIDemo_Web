@@ -18,275 +18,274 @@
 
 /* #wrap 外层框架 */
 .frame_wrap {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 /* #head 版头 */
 .frame_head {
-  @extend %clear;
-  // 保持 header 的内容左侧与侧栏内容左侧视觉上对齐
-  padding-left: $frame_sidebar_width - $frame_sidebar_inner_width - getLengthDirectionValue($frame_sidebar_inner_padding, "right");
-  background-color: $frame_head_background;
+    @extend %clear;
+    // 保持 header 的内容左侧与侧栏内容左侧视觉上对齐
+    padding-left: $frame_sidebar_width - $frame_sidebar_inner_width - getLengthDirectionValue($frame_sidebar_inner_padding, "right");
+    background-color: $frame_head_background;
 
-  .frame_head_showMenuBtn,
-  .frame_head_closeMenuBtn {
-    display: none;
-  }
+    .frame_head_showMenuBtn,
+    .frame_head_closeMenuBtn {
+        display: none;
+    }
 }
 
 /* #title 网站标题 */
 .frame_head_title {
-  float: left;
-  margin-right: $frame_nav_item_marginRight;
-  font-size: $frame_head_title_fontSize;
-  line-height: 0;
-  vertical-align: top;
+    float: left;
+    margin-right: $frame_nav_item_marginRight;
+    font-size: $frame_head_title_fontSize;
+    line-height: 0;
+    vertical-align: top;
 }
 
 .frame_head_title_link {
-  margin-top: getLengthMaxIntegerCenter($frame_head_height, 20);
-  line-height: 200;
-  overflow: hidden;
+    margin-top: getLengthMaxIntegerCenter($frame_head_height, 20);
+    line-height: 200;
+    overflow: hidden;
 
-  &:hover {
-    text-decoration: none;
-  }
+    &:hover {
+        text-decoration: none;
+    }
 }
 
 /* #nav 网站导航 */
 .frame_nav {
-  @include bfc;
-  -webkit-font-smoothing: antialiased;
+    @include bfc;
+    -webkit-font-smoothing: antialiased;
 }
 
 .frame_nav_item {
-  float: left;
-  height: $frame_nav_item_height;
-  margin-right: $frame_nav_item_marginRight;
-  line-height: $frame_nav_item_height;
-  color: $frame_nav_item_color;
-  @extend %commonAnimation;
+    float: left;
+    height: $frame_nav_item_height;
+    margin-right: $frame_nav_item_marginRight;
+    line-height: $frame_nav_item_height;
+    color: $frame_nav_item_color;
+    @extend %commonAnimation;
 
-  &:hover {
-    color: $frame_nav_item_hover_color;
-    text-decoration: none;
-  }
+    &:hover {
+        color: $frame_nav_item_hover_color;
+        text-decoration: none;
+    }
 }
 
 .frame_nav_item_Curr {
-  color: #fff;
+    color: #fff;
 }
 
 /* #sidebar 左侧栏 */
 .frame_sidebar {
-  position: absolute;
-  top: $frame_head_height;
-  bottom: 0;
-  left: 0;
-  width: $frame_sidebar_width;
-  background-color: $frame_sidebar_background;
-  overflow: auto;
+    position: absolute;
+    top: $frame_head_height;
+    bottom: 0;
+    left: 0;
+    width: $frame_sidebar_width;
+    background-color: $frame_sidebar_background;
+    overflow: auto;
 }
 
 .frame_sidebar_inner {
-  float: right;
-  width: $frame_sidebar_inner_width;
-  padding: $frame_sidebar_inner_padding;
+    float: right;
+    width: $frame_sidebar_inner_width;
+    padding: $frame_sidebar_inner_padding;
 }
 
 /* #sidebar_nav 侧栏导航 */
 .frame_sidebar_nav {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 .frame_sidebar_nav_link {
-  @extend %text-ellipsis;
-  display: block;
-  margin-bottom: 2px;
-  padding: 7px 0 7px $frame_sidebar_nav_link_paddingLeft;
-  border-left: 2px solid transparent;
-  line-height: 1;
-  color: $frame_sidebar_nav_link_color;
-  text-decoration: none;
-  text-transform: capitalize; // 因为部分内容的标题需要经过各种处理，可能会统一转成小写，因此这里保护一下
-
-  &:hover {
-    padding-left: $frame_sidebar_nav_link_paddingLeft + 1; // 保持元素不跳动
-    border-width: 1px;
-    border-color: $common_color_link;
-    color: $common_color_link;
+    @extend %text-ellipsis;
+    display: block;
+    margin-bottom: 2px;
+    padding: 7px 0 7px $frame_sidebar_nav_link_paddingLeft;
+    border-left: 2px solid transparent;
+    line-height: 1;
+    color: $frame_sidebar_nav_link_color;
     text-decoration: none;
-  }
+    text-transform: capitalize; // 因为部分内容的标题需要经过各种处理，可能会统一转成小写，因此这里保护一下
+
+    &:hover {
+        padding-left: $frame_sidebar_nav_link_paddingLeft + 1; // 保持元素不跳动
+        border-width: 1px;
+        border-color: $common_color_link;
+        color: $common_color_link;
+        text-decoration: none;
+    }
 }
 
 // 子菜单样式
 .frame_sidebar_nav_Children {
-  display: none;
-  padding-bottom: 4px;
+    display: none;
+    padding-bottom: 4px;
 
-  .frame_sidebar_nav_link {
-    margin-bottom: 0;
-    padding-left: $frame_sidebar_nav_children_link_paddingLeft;
-    line-height: 1;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    font-weight: normal;
+    .frame_sidebar_nav_link {
+        margin-bottom: 0;
+        padding-left: $frame_sidebar_nav_children_link_paddingLeft;
+        line-height: 1;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-weight: normal;
 
-    &:hover {
-      padding-left: $frame_sidebar_nav_children_link_paddingLeft + 1; // 保持元素不跳动
+        &:hover {
+            padding-left: $frame_sidebar_nav_children_link_paddingLeft + 1; // 保持元素不跳动
+        }
     }
-  }
 }
 
 // 当前选中的子菜单项以及展开子菜单的父菜单项
 .frame_sidebar_nav_Children .frame_sidebar_nav_item_Active,
 .frame_sidebar_nav_item_Open > {
-  .frame_sidebar_nav_link {
-    margin-left: 0;
-    border-width: 2px;
-    border-color: $common_color_link;
-    color: $common_color_link;
-    font-weight: bold;
-  }
+    .frame_sidebar_nav_link {
+        margin-left: 0;
+        border-width: 2px;
+        border-color: $common_color_link;
+        color: $common_color_link;
+        font-weight: bold;
+    }
 }
 
 .frame_sidebar_nav_Children .frame_sidebar_nav_item_Active {
-  .frame_sidebar_nav_link {
-    padding-left: $frame_sidebar_nav_children_link_paddingLeft; // 保持元素不跳动
-  }
+    .frame_sidebar_nav_link {
+        padding-left: $frame_sidebar_nav_children_link_paddingLeft; // 保持元素不跳动
+    }
 }
 
 .frame_sidebar_nav_item_Open > {
-  .frame_sidebar_nav_link {
-    padding-left: $frame_sidebar_nav_link_paddingLeft; // 保持元素不跳动
-  }
+    .frame_sidebar_nav_link {
+        padding-left: $frame_sidebar_nav_link_paddingLeft; // 保持元素不跳动
+    }
 }
 
 // 展开子菜单的父菜单项
 .frame_sidebar_nav_item_Open {
 
-  .frame_sidebar_nav_Children {
-    display: block;
-  }
+    .frame_sidebar_nav_Children {
+        display: block;
+    }
 }
 
 // 工具方法界面，去掉开头大写，方法名不能随意修改大小写
 .frame_sidebar_nav_Tool {
-  .frame_sidebar_nav_link {
-    text-transform: none;
-  }
+    .frame_sidebar_nav_link {
+        text-transform: none;
+    }
 }
 
 /* #cnt 右侧主体 */
 .frame_cnt {
-  position: absolute;
-  top: $frame_head_height;
-  left: $frame_sidebar_width;
-  right: 0;
-  bottom: 0;
-  padding: 40px;
-  overflow: auto;
+    position: absolute;
+    top: $frame_head_height;
+    left: $frame_sidebar_width;
+    right: 0;
+    bottom: 0;
+    padding: 40px;
+    overflow: auto;
 }
-
 
 /* #media 小屏幕适配 */
 @media screen and (max-width: 1366px) {
-  .frame_head {
-    padding-left: $frame_sidebar_widthSmall - $frame_sidebar_inner_widthSmall - getLengthDirectionValue($frame_sidebar_inner_padding, "right");
-  }
-  .frame_sidebar {
-    width: $frame_sidebar_widthSmall;
-  }
-  .frame_sidebar_inner {
-    width: $frame_sidebar_inner_widthSmall;
-  }
-  .frame_cnt {
-    left: $frame_sidebar_widthSmall;
-  }
+    .frame_head {
+        padding-left: $frame_sidebar_widthSmall - $frame_sidebar_inner_widthSmall - getLengthDirectionValue($frame_sidebar_inner_padding, "right");
+    }
+    .frame_sidebar {
+        width: $frame_sidebar_widthSmall;
+    }
+    .frame_sidebar_inner {
+        width: $frame_sidebar_inner_widthSmall;
+    }
+    .frame_cnt {
+        left: $frame_sidebar_widthSmall;
+    }
 }
 
 // #responsive 响应式
 @include forMobile() {
-  .frame_head {
-    padding: 0 $frame_base_mobile_paddingHorizontal;
-    text-align: center;
-    height: $frame_head_mobile_height;
-    line-height: $frame_head_mobile_height;
+    .frame_head {
+        padding: 0 $frame_base_mobile_paddingHorizontal;
+        text-align: center;
+        height: $frame_head_mobile_height;
+        line-height: $frame_head_mobile_height;
 
-    .frame_head_showMenuBtn,
-    .frame_head_closeMenuBtn {
-      position: absolute;
-      z-index: $common_zIndex_9;
-      line-height: 0;
-      font-size: 0;
-      padding: $frame_head_mobile_btn_padding;
+        .frame_head_showMenuBtn,
+        .frame_head_closeMenuBtn {
+            position: absolute;
+            z-index: $common_zIndex_9;
+            line-height: 0;
+            font-size: 0;
+            padding: $frame_head_mobile_btn_padding;
+        }
+        .frame_head_showMenuBtn {
+            left: 16px - getLengthDirectionValue($frame_head_mobile_btn_padding, left);
+            top: getLengthMaxIntegerCenter($frame_head_mobile_height, 24 + getLengthDirectionValue($frame_head_mobile_btn_padding, vertical) * 2);
+            display: block;
+        }
+        .frame_head_closeMenuBtn {
+            left: 18px - getLengthDirectionValue($frame_head_mobile_btn_padding, left);
+            top: getLengthMaxIntegerCenter($frame_head_mobile_height, 24 + getLengthDirectionValue($frame_head_mobile_btn_padding, vertical) * 2);
+        }
     }
-    .frame_head_showMenuBtn {
-      left: 16px - getLengthDirectionValue($frame_head_mobile_btn_padding, left);
-      top: getLengthMaxIntegerCenter($frame_head_mobile_height, 24 + getLengthDirectionValue($frame_head_mobile_btn_padding, vertical) * 2);
-      display: block;
+    .frame_head_title {
+        position: relative;
+        z-index: $common_zIndex_9;
+        float: none;
+        display: inline-block;
+        margin-right: 0;
+        font-size: 17px;
+        -webkit-font-smoothing: antialiased;
     }
-    .frame_head_closeMenuBtn {
-      left: 18px - getLengthDirectionValue($frame_head_mobile_btn_padding, left);
-      top: getLengthMaxIntegerCenter($frame_head_mobile_height, 24 + getLengthDirectionValue($frame_head_mobile_btn_padding, vertical) * 2);
+    .frame_head_title_link {
+        margin-top: getLengthMaxIntegerCenter($frame_head_height, 20) + 1;
     }
-  }
-  .frame_head_title {
-    position: relative;
-    z-index: $common_zIndex_9;
-    float: none;
-    display: inline-block;
-    margin-right: 0;
-    font-size: 17px;
-    -webkit-font-smoothing: antialiased;
-  }
-  .frame_head_title_link {
-    margin-top: getLengthMaxIntegerCenter($frame_head_height, 20) + 1;
-  }
-  .frame_nav {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: $common_zIndex_8;
-    display: none;
-    height: 100vh;
-    width: 100%;
-    padding: $frame_head_mobile_height + 24px 48px 24px;
-    box-sizing: border-box;
-    @include gradient_vertical($start-color: $frame_head_background, $end-color: #06DCE9, $start-percent: 0%, $end-percent: 100%);
-  }
-  .frame_nav_item {
-    float: none;
-    display: block;
-    height: auto;
-    margin-right: 0;
-    margin-bottom: 14px;
-    padding-bottom: 20px;
-    text-align: left;
-    font-size: 17px;
-    line-height: 1;
-    color: #fff;
-    @include onePixelBorder(bottom, #fff);
-  }
+    .frame_nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: $common_zIndex_8;
+        display: none;
+        height: 100vh;
+        width: 100%;
+        padding: $frame_head_mobile_height + 24px 48px 24px;
+        box-sizing: border-box;
+        @include gradient_vertical($start-color: $frame_head_background, $end-color: #06DCE9, $start-percent: 0%, $end-percent: 100%);
+    }
+    .frame_nav_item {
+        float: none;
+        display: block;
+        height: auto;
+        margin-right: 0;
+        margin-bottom: 14px;
+        padding-bottom: 20px;
+        text-align: left;
+        font-size: 17px;
+        line-height: 1;
+        color: #fff;
+        @include onePixelBorder(bottom, #fff);
+    }
 
-  .frame_head_ShowNav {
-    .frame_nav,
-    .frame_head_closeMenuBtn {
-      display: block;
+    .frame_head_ShowNav {
+        .frame_nav,
+        .frame_head_closeMenuBtn {
+            display: block;
+        }
+        .frame_head_showMenuBtn {
+            display: none;
+        }
     }
-    .frame_head_showMenuBtn {
-      display: none;
+
+    .frame_sidebar {
+        display: none;
     }
-  }
 
-  .frame_sidebar {
-    display: none;
-  }
-
-  .frame_cnt {
-    position: static;
-    padding-left: $frame_base_mobile_paddingHorizontal;
-    padding-right: $frame_base_mobile_paddingHorizontal;
-  }
+    .frame_cnt {
+        position: static;
+        padding-left: $frame_base_mobile_paddingHorizontal;
+        padding-right: $frame_base_mobile_paddingHorizontal;
+    }
 }

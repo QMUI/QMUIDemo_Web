@@ -7,79 +7,78 @@
  * #common 通用部分
  */
 
-
 // #common 通用部分
 .tool_stage {
-  .dm_column_item_info_code {
-    cursor: pointer;
-  }
-  .tool_stage_example .dm_column_item_info_code {
-    cursor: default;
-  }
+    .dm_column_item_info_code {
+        cursor: pointer;
+    }
+    .tool_stage_example .dm_column_item_info_code {
+        cursor: default;
+    }
 }
 
 .tool_stage_item {
-  margin-bottom: 36px;
-  padding-left: 30px;
+    margin-bottom: 36px;
+    padding-left: 30px;
 
-  .dm_column_item_title {
-    margin-left: -30px;
-  }
-  .dm_column_item_info_Single {
-    margin-bottom: 0;
-  }
+    .dm_column_item_title {
+        margin-left: -30px;
+    }
+    .dm_column_item_info_Single {
+        margin-bottom: 0;
+    }
 }
 
 .tool_stage_item_desc {
-  max-width: $column_base_maxWidth;
-  margin-bottom: 15px;
-  font-size: 15px;
-  line-height: 1.5;
+    max-width: $column_base_maxWidth;
+    margin-bottom: 15px;
+    font-size: 15px;
+    line-height: 1.5;
 }
 
 .tool_stage_para,
 .tool_stage_example {
-  max-width: $column_base_maxWidth;
-  margin-top: 25px;
+    max-width: $column_base_maxWidth;
+    margin-top: 25px;
 }
 
 .tool_stage_para_title,
 .tool_stage_example_title {
-  margin-bottom: 12px;
-  border-bottom: 1px solid $common_color_code_borderColor;
-  padding-bottom: 4px;
-  font-size: 16px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid $common_color_code_borderColor;
+    padding-bottom: 4px;
+    font-size: 16px;
 }
 
 .tool_stage_para_item {
-  margin-top: 12px;
+    margin-top: 12px;
 
-  &:first-child {
-    margin-top: 0;
-  }
+    &:first-child {
+        margin-top: 0;
+    }
 }
 
 .tool_stage_item_para_data {
-  margin-top: 4px;
+    margin-top: 4px;
 
-  &:first-child {
-    margin-top: 0;
-  }
+    &:first-child {
+        margin-top: 0;
+    }
 }
 
 .tool_stage_paraType,
 .tool_stage_paraDefaultValue {
-  display: inline-block;
-  margin-left: 10px;
-  padding: 1px 10px;
-  border-radius: 12px;
-  border: 1px solid $common_color_link;
-  color: $common_color_link;
-  font-size: 12px;
+    display: inline-block;
+    margin-left: 10px;
+    padding: 1px 10px;
+    border-radius: 12px;
+    border: 1px solid $common_color_link;
+    color: $common_color_link;
+    font-size: 12px;
 }
 
 .tool_stage_paraDefaultValue {
-  margin-left: 4px;
-  border-color: #d44950;
-  color: #d44950;
+    margin-left: 4px;
+    border-color: #d44950;
+    color: #d44950;
 }

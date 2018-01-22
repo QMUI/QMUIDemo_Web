@@ -22,163 +22,162 @@
  */
 
 .dm_column {
-  margin-bottom: 85px;
+    margin-bottom: 85px;
 }
 
 /* 栏目标题（大组件的标题） */
 .dm_column_title {
-  @include onePixelBorder(bottom, $common_color_separator);
-  margin-bottom: 30px;
-  padding-bottom: 10px;
-  font-size: 38px;
-  color: #333;
-  font-weight: bold;
-  text-transform: capitalize; // 因为部分内容的标题需要经过各种处理，可能会统一转成小写，因此这里保护一下
+    @include onePixelBorder(bottom, $common_color_separator);
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    font-size: 38px;
+    color: #333;
+    font-weight: bold;
+    text-transform: capitalize; // 因为部分内容的标题需要经过各种处理，可能会统一转成小写，因此这里保护一下
 }
 
 /* 提示语，可以用在栏目这一层，也可以用在栏目项中 */
 .dm_column_tip {
-  max-width: 840px;
-  margin-bottom: 22px;
-  font-size: 15px;
-  line-height: 1.5;
+    max-width: 840px;
+    margin-bottom: 22px;
+    font-size: 15px;
+    line-height: 1.5;
 
-  &:last-child {
-    margin-bottom: 0;
-  }
+    &:last-child {
+        margin-bottom: 0;
+    }
 }
 
 pre.dm_column_tip {
-  overflow: auto;
+    overflow: auto;
 }
 
 .dm_column_tip ul li {
-  list-style: disc inside;
+    list-style: disc inside;
 }
 
 .dm_column_tip ol li {
-  margin-bottom: 5px;
-  list-style: decimal inside;
+    margin-bottom: 5px;
+    list-style: decimal inside;
 }
 
 .dm_column_tip img {
-  max-width: 100%;
-  vertical-align: top;
-  box-shadow: 0 0 5px 0 rgba(0, 0, 0, .4);
+    max-width: 100%;
+    vertical-align: top;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, .4);
 }
 
 /* 栏目项 */
 .dm_column_item {
-  margin-bottom: 30px;
+    margin-bottom: 30px;
 }
 
 .dm_column_item:last-of-type {
-  margin-bottom: 0;
+    margin-bottom: 0;
 }
 
 /* 栏目项的标题（小组件的标题） */
 .dm_column_item_title {
-  margin-bottom: 20px;
-  font-size: 24px;
-  color: #333;
-  font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+    font-weight: bold;
 }
 
 /* 栏目项的信息 */
 .dm_column_item_info {
-  @include onePixelBorder(all, $common_color_code_borderColor, inside, 4px);
-  max-width: 840px;
+    @include onePixelBorder(all, $common_color_code_borderColor, inside, 4px);
+    max-width: 840px;
 }
 
 .dm_column_item_info_Single {
-  margin-bottom: 30px;
+    margin-bottom: 30px;
 }
 
 /* 栏目项的实际效果展示 */
 .dm_column_display {
-  padding: 15px;
+    padding: 15px;
 }
 
 .dm_column_display_title {
-  margin-bottom: 20px;
-  color: #999;
-  font-weight: bold;
+    margin-bottom: 20px;
+    color: #999;
+    font-weight: bold;
 }
 
 .dm_column_display_cnt {
-  @extend %clear; // 子元素可能有浮动元素，统一预先清除浮动
-  overflow: auto;
+    @extend %clear; // 子元素可能有浮动元素，统一预先清除浮动
+    overflow: auto;
 
-  // 展示文本输入组件时附加的样式
-  .dm_inputText,
-  .dm_textarea {
-    margin-bottom: 10px;
-  }
+    // 展示文本输入组件时附加的样式
+    .dm_inputText,
+    .dm_textarea {
+        margin-bottom: 10px;
+    }
 }
 
 .dm_column_item_info_code,
 .dm_column_item_info_tips {
-  @include onePixelBorder(top, $common_color_code_borderColor, inside);
-  padding: 15px;
-  font-size: 14px;
-  background-color: $common_color_code_background;
-  overflow: auto;
+    @include onePixelBorder(top, $common_color_code_borderColor, inside);
+    padding: 15px;
+    font-size: 14px;
+    background-color: $common_color_code_background;
+    overflow: auto;
 }
 
 .dm_column_item_info_tips {
-  background-color: #f3f8fc;
-  margin-bottom: 15px;
-  font-size: 12px;
-  color: #707070;
+    background-color: #f3f8fc;
+    margin-bottom: 15px;
+    font-size: 12px;
+    color: #707070;
 }
 
 .dm_column_item_info_code {
 
-  xmp {
-    display: inline-block;
-  }
+    xmp {
+        display: inline-block;
+    }
 }
 
 .dm_column_item_info_Single .dm_column_item_info_code {
-  @include onePixelBorder(none);
+    @include onePixelBorder(none);
 }
 
 .dm_column_item_info_list {
-  ul ul {
-    margin-bottom: 20px;
-  }
-  .dm_column_item_info_list_item {
-    color: $common_color_gray;
-    font-size: 18px;
-  }
-  .dm_column_item_info_list_item_subitem {
-    padding-left: 30px;
-  }
+    ul ul {
+        margin-bottom: 20px;
+    }
+    .dm_column_item_info_list_item {
+        color: $common_color_gray;
+        font-size: 18px;
+    }
+    .dm_column_item_info_list_item_subitem {
+        padding-left: 30px;
+    }
 }
 
 .dm_column_item_info_HasMarginTop {
-  margin-top: 20px;
+    margin-top: 20px;
 }
 
 /* 给组件外部使用的类 */
 .dm_columnDisplayControl {
-  position: relative!important;
-  z-index: $common_zIndex_1;
-  float: left!important;
+    position: relative !important;
+    z-index: $common_zIndex_1;
+    float: left !important;
 }
 
-
 @include forMobile() {
-  .dm_column {
-    margin-bottom: 60px;
-  }
-  .dm_column_title {
-    margin-bottom: 20px;
-    padding-bottom: 5px;
-    font-size: 34px;
-  }
-  .dm_column_item_title {
-    margin-bottom: 10px;
-    font-size: 22px;
-  }
+    .dm_column {
+        margin-bottom: 60px;
+    }
+    .dm_column_title {
+        margin-bottom: 20px;
+        padding-bottom: 5px;
+        font-size: 34px;
+    }
+    .dm_column_item_title {
+        margin-bottom: 10px;
+        font-size: 22px;
+    }
 }

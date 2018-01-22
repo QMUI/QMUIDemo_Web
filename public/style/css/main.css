@@ -113,7 +113,7 @@ table {
 }
 
 fieldset, img {
-  border: none;
+  border: 0;
 }
 
 ul, ol, li {
@@ -557,7 +557,7 @@ a.dm_btn:hover {
   color: #05D7F7;
 }
 
-.dm_btn_Ghost:active, .dm_btn_Ghost_Active {
+.dm_btn_Ghost:active, .dm_btn_Ghost a, .dm_btn_Ghost_Active {
   background-color: transparent;
   border-color: #04B1CC;
   color: #04B1CC;
@@ -747,7 +747,7 @@ a.dm_btn:hover {
 
 .dm_tabNav_item {
   float: left;
-  margin: 0 24px 0 0 0 24px 0 0 -1px;
+  margin: 0 24px -1px 0;
   border-bottom: 3px solid transparent;
   font-size: 16px;
 }

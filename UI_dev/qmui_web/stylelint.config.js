@@ -32,10 +32,9 @@ module.exports = {
             ],
         'wechat-work/comments-in-header': true, // 文件头部需要有注释 @date 和 @author
         'wechat-work/selector-namespace-follow-filename': [true, {
-            'fileDirWhiteList': [],
+            'fileDirWhiteList': ['widget', 'qmui'],
             'filenameWhitelist': []
-        }
-        ], // 业务CSS 的命名空间需要跟随文件名（关于命名空间请浏览器：http://qmuiteam.com/web/page/codeNorm.html#qui_htmlAndCSSNorm）
+        }], // 业务CSS 的命名空间需要跟随文件名（关于命名空间请浏览器：http://qmuiteam.com/web/page/codeNorm.html#qui_htmlAndCSSNorm）
         'wechat-work/unused-nested-selector-namespace': true, // 不建议在嵌套中使用 qui_ 开头的类
 
         /**
@@ -46,6 +45,11 @@ module.exports = {
         'color-named': ['never', {
             'ignore': ['inside-function']
         }],
+
+        /**
+         * Function
+         */
+        'function-comma-space-after': 'always', // 函数内的内容，逗号之后要求有一个空格或禁止有空白
 
         /**
          * Number
@@ -98,7 +102,7 @@ module.exports = {
          * Value
          */
         'value-no-vendor-prefix': true, // 禁止使用带浏览器前缀的属性值
-        'value-list-comma-space-after': 'always',
+        'value-list-comma-space-after': 'always', // 在属性值的内容中，逗号之后要求有一个空格或禁止有空白
 
         /**
          * At-rule

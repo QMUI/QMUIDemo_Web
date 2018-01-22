@@ -11,47 +11,60 @@
 // 第三方插件的相关样式不作检测
 // #hljs 代码高亮配色（配合 highlight.js 使用）
 .hljs {
-  display: block;
-  padding: 0;
-  background: transparent;
-  overflow-x: auto;
-  font-size: 14px;
+    display: block;
+    padding: 0;
+    background: transparent;
+    overflow-x: auto;
+    font-size: 14px;
 }
+
 .hljs, .hljs-subst {
-  color: #444;
+    color: #444;
 }
+
 .hljs-comment {
-  color: #888888;
+    color: #888888;
 }
+
 .hljs-keyword, .hljs-attribute, .hljs-selector-tag, .hljs-meta-keyword, .hljs-doctag, .hljs-name {
-  font-weight: bold;
+    font-weight: bold;
 }
+
 .hljs-type, .hljs-string, .hljs-number, .hljs-selector-id, .hljs-selector-class, .hljs-quote, .hljs-template-tag, .hljs-deletion {
-  color: #c10303;
+    color: #c10303;
 }
+
 .hljs-title, .hljs-section {
-  color: #880000;
-  font-weight: bold;
+    color: #880000;
+    font-weight: bold;
 }
+
 .hljs-regexp, .hljs-symbol, .hljs-variable, .hljs-template-variable, .hljs-link, .hljs-selector-attr, .hljs-selector-pseudo {
-  color: #BC6060;
+    color: #BC6060;
 }
+
 .hljs-literal {
-  color: #78A960;
+    color: #78A960;
 }
+
 .hljs-built_in, .hljs-bullet, .hljs-code, .hljs-addition {
-  color: #5cb900;
+    color: #5cb900;
 }
+
 .hljs-meta {
-  color: #1f7199;
+    color: #1f7199;
 }
+
 .hljs-meta-string {
-  color: #4d99bf;
+    color: #4d99bf;
 }
+
 .hljs-emphasis {
-  font-style: italic;
+    font-style: italic;
 }
+
 .hljs-strong {
-  font-weight: bold;
+    font-weight: bold;
 }
+
 // stylelint-enable
