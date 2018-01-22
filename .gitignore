@@ -1,8 +1,6 @@
 UI_dev/qmui_web/node_modules/
-UI_dev/project/images/qmui-images-distribution/
-UI_dev/project/images/config.json
+package-lock.json
+UI_dev/qmui_web/package-lock.json
+
 .DS_Store
 .idea
-UI_dev/qmui_web/package-lock.json
-node_modules/stylelint-qmui-css
-stylelint.config.js
