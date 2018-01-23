@@ -1,27 +1,27 @@
 {
-  "name": "qmuidemo_web",
-  "version": "1.0.0",
-  "description": "QMUI Web 的示例项目及文档",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/QMUI/QMUIDemo_Web.git"
-  },
-  "dependencies": {
-    "eruda": "^1.2.6",
-    "jquery": "~1.12.4",
-    "stylelint-wechat-work-css": "^0.2.5"
-  },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "QMUI,QMUI Demo"
-  ],
-  "author": "QMUI Team",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/QMUI/QMUIDemo_Web/issues"
-  },
-  "homepage": "http://qmuiteam.com/web/"
+    "name": "qmuidemo_web",
+    "version": "1.0.0",
+    "description": "QMUI Web 的示例项目及文档",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/QMUI/QMUIDemo_Web.git"
+    },
+    "dependencies": {
+        "eruda": "^1.2.6",
+        "jquery": "~1.12.4",
+        "stylelint-wechat-work-css": "^0.2.5"
+    },
+    "devDependencies": {},
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "QMUI,QMUI Demo"
+    ],
+    "author": "QMUI Team",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/QMUI/QMUIDemo_Web/issues"
+    },
+    "homepage": "http://qmuiteam.com/web/"
 }
