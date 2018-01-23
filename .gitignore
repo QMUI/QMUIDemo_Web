@@ -1,6 +1,4 @@
-UI_dev/qmui_web/node_modules/
-UI_dev/project/images/qmui-images-distribution/
-UI_dev/project/images/config.json
+node_modules/
 .DS_Store
 .idea
 
