@@ -144,7 +144,7 @@
 
         <div class="dm_column_tip">
             <ol>
-                <li>在 UI_dev/config.js 中增加 <code>styleResultPath</code> 和 <code>needsSourceMaps</code> 两个字段，分别为 CSS 输出目录（相对 qmui_web 目录）和编译样式是否需要 Source Maps 支持，默认值分别为 <code>../../public/style/css</code> 和 <code>false</code>。
+                <li>在 UI_dev/qmui.config.js 中增加 <code>styleResultPath</code> 和 <code>needsSourceMaps</code> 两个字段，分别为 CSS 输出目录（相对 qmui_web 目录）和编译样式是否需要 Source Maps 支持，默认值分别为 <code>../../public/style/css</code> 和 <code>false</code>。
                 </li>
                 <li>在 UI_dev/qmui_web 下执行一次 <code>npm install</code>，安装增加的依赖包。</li>
             </ol>
@@ -237,13 +237,13 @@ npm install gulpjs/gulp#4.0 -g
 
         <p class="dm_column_tip"><strong>这些目录 QMUI 会提供工具帮助完成创建，开发者并不需要手工创建这些目录。</strong></p>
 
-        <p class="dm_column_tip">另外这些目录结构只是层次上要求如此，即不建议修改目录的层级，但目录名如果与其他模块或组件冲突，可以自行修改目录名，并同步修改 config.js 的相关设置（config.js 需要复制到 UI_dev 中修改，如果直接修改 QMUI 源码中的配置文件，会影响框架的独立性，详细请参考“<a href="#qui_useConfig" title="使用配置文件">使用配置文件”</a>）</p>
+        <p class="dm_column_tip">另外这些目录结构只是层次上要求如此，即不建议修改目录的层级，但目录名如果与其他模块或组件冲突，可以自行修改目录名，并同步修改 qmui.config.js 的相关设置（qmui.qmui.config.js 需要复制到 UI_dev 中修改，如果直接修改 QMUI 源码中的配置文件，会影响框架的独立性，详细请参考“<a href="#qui_useConfig" title="使用配置文件">使用配置文件”</a>）</p>
 
         <!-- 图片文件管理 start -->
         <div class="dm_column_item">
 
             <h3 id="qui_imagesManage" class="dm_column_item_title">图片文件管理</h3>
-            <p class="dm_column_tip">为了解决 CSS Sprite 造成的重复劳动工作以及管理图片，QMUI 提供了一套图片文件管理的方案。图片文件统一放置在一个目录中（project/images），其中，需要做雪碧图的图片应该在 images 下建立子目录统一放置，QMUI 会根据相应的规则合成雪碧图，关于这一点的详细情况，请参考<a href="widget.html#qui_widget_autoSprite">这里</a>。而不需要做成雪碧图的独立图片，应该放置在 images/independent（由 config.js 中的 independentImagesDirectory 选项控制）目录中，该目录中也可以再建立子目录。另外，无论是雪碧图还是独立图片，QMUI 都会统一管理这些图片，输出到静态资源目录（public/style/images），并自动进行图片压缩。</p>
+            <p class="dm_column_tip">为了解决 CSS Sprite 造成的重复劳动工作以及管理图片，QMUI 提供了一套图片文件管理的方案。图片文件统一放置在一个目录中（project/images），其中，需要做雪碧图的图片应该在 images 下建立子目录统一放置，QMUI 会根据相应的规则合成雪碧图，关于这一点的详细情况，请参考<a href="widget.html#qui_widget_autoSprite">这里</a>。而不需要做成雪碧图的独立图片，应该放置在 images/independent（由 qmui.config.js 中的 independentImagesDirectory 选项控制）目录中，该目录中也可以再建立子目录。另外，无论是雪碧图还是独立图片，QMUI 都会统一管理这些图片，输出到静态资源目录（public/style/images），并自动进行图片压缩。</p>
         </div>
         <!-- 图片文件管理 end -->
     </div>
@@ -304,7 +304,7 @@ yo qmui
 
             <h3 id="qui_scaffold" class="dm_column_item_title">脚手架</h3>
 
-            <div class="dm_column_tip">QMUI 中的脚手架由 gulp 充当，<strong>所谓的脚手架，一般都是用于快速解决大量重复劳动力的工作，从而提升效率。</strong>QMUI 的 gulp 中预先实现了监控 Sass 文件并自动编译，样式优化（浏览器兼容自动处理等），雪碧图处理，模板 include 能力（可以传参和使用条件判断），浏览器自动刷新，图片压缩，文件清理，文件合并以及自动变更路径的能力。各个命令都是在 qmui_web 文件夹中调用对应的 gulp 命令即可，部分命令依赖于 config.js 的配置。具体命令列表及功能可以参考<a href="./scaffold.html">脚手架</a>页面。
+            <div class="dm_column_tip">QMUI 中的脚手架由 gulp 充当，<strong>所谓的脚手架，一般都是用于快速解决大量重复劳动力的工作，从而提升效率。</strong>QMUI 的 gulp 中预先实现了监控 Sass 文件并自动编译，样式优化（浏览器兼容自动处理等），雪碧图处理，模板 include 能力（可以传参和使用条件判断），浏览器自动刷新，图片压缩，文件清理，文件合并以及自动变更路径的能力。各个命令都是在 qmui_web 文件夹中调用对应的 gulp 命令即可，部分命令依赖于 qmui.config.js 的配置。具体命令列表及功能可以参考<a href="./scaffold.html">脚手架</a>页面。
             </div>
 
             <div class="dm_column_tip">
@@ -428,8 +428,8 @@ npm install</code></pre>
 
             <h3 id="qui_useConfig" class="dm_column_item_title">使用配置文件</h3>
 
-            <p class="dm_column_tip">在 qmui_web（QMUI Web 框架根目录）中，有一个配置文件 config.js，<strong>在项目开始之前应该把配置文件复制到 qmui_web 的上一层目录（按推荐的文件结构，应该是 UI_dev 目录）</strong>，用于框架在 gulp 这一层的配置。</p>
-            <p class="dm_column_tip">具体地说，config.js 配置 gulp 在使用时的一些依赖的变量，如果开发时使用的就是框架所推荐的文件结构，那么基本上只需要配置 <code>project</code> 和 <code>prefix</code> 两个参数即可。详细的配置选项如下：</p>
+            <p class="dm_column_tip">在 qmui_web（QMUI Web 框架根目录）中，有一个配置文件 qmui.config.js，<strong>在项目开始之前应该把配置文件复制到 qmui_web 的上一层目录（按推荐的文件结构，应该是 UI_dev 目录）</strong>，用于框架在 gulp 这一层的配置。</p>
+            <p class="dm_column_tip">具体地说，qmui.config.js 配置 gulp 在使用时的一些依赖的变量，如果开发时使用的就是框架所推荐的文件结构，那么基本上只需要配置 <code>project</code> 和 <code>prefix</code> 两个参数即可。详细的配置选项如下：</p>
 
             <div class="dm_column_tip">
                 <ul>
@@ -491,7 +491,7 @@ npm install</code></pre>
 
             <h3 id="qui_configUser" class="dm_column_item_title">用户个人配置</h3>
 
-            <p class="dm_column_tip">考虑到每位开发者可能有自己的开发习惯，因此除了项目中的 config.js，QMUI 还支持每位开发者在本地建立个人的配置表，例如项目中的 config.js 的 <code>needsSourceMaps</code> 被统一设置为 true，因此这时所有开发这个项目的成员都会默认使用 Source Maps 的功能，但项目成员中有开发者希望关闭这个功能，那么这位成员可以在 config.js 平级建立一个 config.user.js 文件，把 <code>needsSourceMaps</code> 设置为 false，那么 QMUI 会优先以 config.user.js 中的值为准。需要注意的是，config.user.js 应当在本地建立和使用，不应该提交到版本管理中，否则也会影响其他项目成员。</p>
+            <p class="dm_column_tip">考虑到每位开发者可能有自己的开发习惯，因此除了项目中的 qmui.config.js，QMUI 还支持每位开发者在本地建立个人的配置表，例如项目中的 qmui.qmui.config.js 的 <code>needsSourceMaps</code> 被统一设置为 true，因此这时所有开发这个项目的成员都会默认使用 Source Maps 的功能，但项目成员中有开发者希望关闭这个功能，那么这位成员可以在 qmui.qmui.config.js 平级建立一个 config.user.js 文件，把 <code>needsSourceMaps</code> 设置为 false，那么 QMUI 会优先以 config.user.js 中的值为准。需要注意的是，config.user.js 应当在本地建立和使用，不应该提交到版本管理中，否则也会影响其他项目成员。</p>
 
         </div>
         <!-- 用户个人配置 end -->

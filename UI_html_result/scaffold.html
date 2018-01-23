@@ -94,7 +94,7 @@
         <p class="dm_column_tip">QMUI 中的各种工具方法已经预先集成为一个脚手架，包括监控 Sass 文件并自动编译，样式优化（浏览器兼容自动处理等），雪碧图处理，模板 include
             能力（可以传参和使用条件判断），图片压缩，文件清理等功能。</p>
 
-        <p class="dm_column_tip"><strong>各个命令都是在 qmui_web 文件夹中调用对应的 gulp 命令即可</strong>，部分命令依赖于 config.js 的配置。<strong>但实际使用时大部分操作都无需手工调用，QMUI 中已经根据工作流程设置好对应 Watch 机制（文件监控）</strong>，包括上面提到的 Sass 编译，样式优化，雪碧图处理，模板 include 编译，浏览器自动刷新，图片压缩以及同步图片文件夹等大部分的功能。除了清理文件和合并变更文件两个任务，这两个任务的使用会在下面额外详述。</p>
+        <p class="dm_column_tip"><strong>各个命令都是在 qmui_web 文件夹中调用对应的 gulp 命令即可</strong>，部分命令依赖于 qmui.config.js 的配置。<strong>但实际使用时大部分操作都无需手工调用，QMUI 中已经根据工作流程设置好对应 Watch 机制（文件监控）</strong>，包括上面提到的 Sass 编译，样式优化，雪碧图处理，模板 include 编译，浏览器自动刷新，图片压缩以及同步图片文件夹等大部分的功能。除了清理文件和合并变更文件两个任务，这两个任务的使用会在下面额外详述。</p>
 
         <p class="dm_column_tip">因此常规的使用流程只需要一句命令</p>
 
@@ -248,7 +248,7 @@ gulp</code></pre>
                 </div>
             </div>
 
-            <p class="dm_column_tip">这个例子中，_header.html 作为一个公共模块，被 start.html include，然后再由 gulp 处理生成最终的页面。这里为了避免 gulp 起效，使用了"&&"代替"@@"，实际上 QMUI 中使用的 include 引擎的默认前缀为 @@，即所有的方法和变量都以 @@ 开头。这个前缀以及是否开启 include 引擎都可以在 config.js 中配置。</p>
+            <p class="dm_column_tip">这个例子中，_header.html 作为一个公共模块，被 start.html include，然后再由 gulp 处理生成最终的页面。这里为了避免 gulp 起效，使用了"&&"代替"@@"，实际上 QMUI 中使用的 include 引擎的默认前缀为 @@，即所有的方法和变量都以 @@ 开头。这个前缀以及是否开启 include 引擎都可以在 qmui.config.js 中配置。</p>
 
             <p class="dm_column_tip"><strong>另外值得注意的是，如果一个变量在某些模板中需要省略不写（例如一个布尔值，默认设定为 false，大部分的页面按需求都是 false 因此都不写），那么在使用这个变量进行条件判断时，需要先用 javascript 的 typeof 方法判断变量是否 undefined 再进行其他判断，否则 gulp 会报 warning。</strong>
             </p>
@@ -264,7 +264,7 @@ gulp</code></pre>
             <div class="dm_column_tip">QMUI 带有基于 <a href="https://www.browsersync.io/" target="_blank">BrowserSync</a>的浏览器自动刷新功能，同时支持本地服务器模式（server）和代理模式（proxy）。
             </div>
 
-            <div class="dm_column_tip">本地服务器模式（server）适合静态页面的开发，也是默认的模式，代理模式（proxy）则适合本身有本地服务的动态页面的开发（如本地的 Node.js 服务，PHP 本地开发）。详细的配置可以通过调整 config.js 中对应的配置项，相关配置条目说明如下：
+            <div class="dm_column_tip">本地服务器模式（server）适合静态页面的开发，也是默认的模式，代理模式（proxy）则适合本身有本地服务的动态页面的开发（如本地的 Node.js 服务，PHP 本地开发）。详细的配置可以通过调整 qmui.config.js 中对应的配置项，相关配置条目说明如下：
             </div>
 
             <div class="dm_column_tip">
@@ -291,7 +291,7 @@ gulp</code></pre>
 
             <h3 id="qui_scaffoldClean" class="dm_column_item_title">清理文件</h3>
 
-            <p class="dm_column_tip">清理文件任务用于快速删除一些无用文件，需要手工调用。默认的配置是删除 UI_dev（qmui_web 上一层目录）的 .sass-cache 目录。config.js
+            <p class="dm_column_tip">清理文件任务用于快速删除一些无用文件，需要手工调用。默认的配置是删除 UI_dev（qmui_web 上一层目录）的 .sass-cache 目录。qmui.config.js
                 中的 <code>cleanFileType</code> 可以控制具体要删除的文件。</p>
 
             <div class="dm_column_item_info dm_column_item_info_Single">
@@ -313,8 +313,8 @@ gulp clean</code></pre>
 
             <div class="dm_column_tip">
                 <ol>
-                    <li>把 qmui_web 目录中的 mergeRule.js 复制到上一层目录（即 UI_dev）</li>
-                    <li>按自身项目需要在 mergeRule.js 中写好文件合并规则，其中 key 为合并得到的最终文件（格式为字符串），value 为需要被合并的文件（格式为 glob），<strong>所有的路径均以模板中实际的文件引用路径为准（可参考下面的例子）</strong></li>
+                    <li>把 qmui_web 目录中的 qmui.merge.rule.js 复制到上一层目录（即 UI_dev）</li>
+                    <li>按自身项目需要在 qmui.merge.rule.js 中写好文件合并规则，其中 key 为合并得到的最终文件（格式为字符串），value 为需要被合并的文件（格式为 glob），<strong>所有的路径均以模板中实际的文件引用路径为准（可参考下面的例子）</strong></li>
                     <li>在 qmui_web 目录执行命令 gulp merge 即可合并</li>
                 </ol>
             </div>
@@ -323,7 +323,7 @@ gulp clean</code></pre>
 
             <div class="dm_column_item_info dm_column_item_info_Single">
                 <div class="dm_column_item_info_code">
-<pre><code class="javascript:;">// mergeRule.js
+<pre><code class="javascript:;">// qmui.merge.rule.js
 {
   "../public/js/all.js" : ["../public/js/lib.js", "../public/js/function.js", "../public/js/index.js"]
 }</code></pre>
