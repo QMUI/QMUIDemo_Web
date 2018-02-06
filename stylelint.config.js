@@ -16,6 +16,9 @@ module.exports = {
         // @include 黑名单
         'wechat-work/unused-mixins':
             [
+                'display-flex',
+                'flexbox',
+                '/^flex-/',
                 '/^transition/',
                 '/^transform/',
                 '/^translate/',
