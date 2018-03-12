@@ -7,8 +7,8 @@
     "url": "git+https://github.com/QMUI/QMUIDemo_Web.git"
   },
   "dependencies": {
-    "eruda": "^1.2.6",
-    "jquery": "~1.12.4"
+    "eruda": "^1.4.3",
+    "jquery": "~3.3.1"
   },
   "devDependencies": {},
   "scripts": {
