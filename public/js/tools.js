@@ -136,7 +136,7 @@ for (var i = 0, llength = comments.length; i < llength; i++) {
 document.getElementById('toolSidebarNav').innerHTML = document.getElementById('toolSidebarNav').innerHTML + siderHtml.join('');
 document.getElementById('toolMain').innerHTML = document.getElementById('toolMain').innerHTML + mainHtml.join('');
 
-// 展开/收起方法实现详情
+// 展开/收起方法实现详
 $('.tool_stage .dm_column_item_info_code').on('click', function() {
 	var groupIndex = $(this).parent().parent().data('groupindex'),
 			itemIndex = $(this).parent().parent().data('itemindex');
