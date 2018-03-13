@@ -6,22 +6,6 @@
 
 // 工具方法
 
-// 暂时没有使用，先注释
-// // 判断 class 是否存在
-// var hasClass = function(e, c) {
-
-//   var l = e.length;
-
-//   for( var i = 0; i < l; i++ ){
-
-//     var t = ' ' + e[i].className + ' ';
-
-//     if( t.indexOf(' ' + c + ' ') != -1 ) return true; // 若包含多个 DOM ，则其中一个包含指定的 class 则返回 true
-//   }
-
-//   return false;
-// }
-
 // 增加一个 class
 var addClass = function (e, c) {
     var t = ' ' + e.className + ' ',
@@ -178,7 +162,7 @@ var frameSidebarItemIsInActive = function (target) {
 var makeFrameSidebarActive = function (columnIndex, itemIndex) {
     var group = $('.js_sidebar_group').removeClass('frame_sidebar_nav_item_Open').eq(columnIndex).addClass('frame_sidebar_nav_item_Open');
     $('.js_sidebar_item').removeClass('frame_sidebar_nav_item_Active');
-    if (group.size() > 0) {
+    if (group.length > 0) {
         group.find('.js_sidebar_item').eq(itemIndex).addClass('frame_sidebar_nav_item_Active');
     }
 };
@@ -204,8 +188,8 @@ $('.frame_cnt').on('scroll', function () {
             columnIndex = 0,
             itemIndex = 0;
         if (frameCntHeight + frameCntScrollTop >= frameCntContentHeight) { // 到达页面底部的特殊处理
-            columnIndex = $('.dm_column').size() - 1;
-            itemIndex = $('.dm_column').last().find('.dm_column_item').size() - 1;
+            columnIndex = $('.dm_column').length - 1;
+            itemIndex = $('.dm_column').last().find('.dm_column_item').length - 1;
         } else {  // 页面滚动的处理
             $('.dm_column').each(function (i) { // eslint-disable-line
                 if (frameSidebarItemIsInActive(this)) {
@@ -236,7 +220,6 @@ $('.frame_sidebar_nav').delegate('.js_sidebar_group', 'click', function () {
 // 为侧边栏二级目录绑定点击事件
 $('.frame_sidebar_nav').delegate('.js_sidebar_item', 'click', function (event) {
     confirmNavIsInClick();
-    console.log($(this).html());
     $(this).addClass('frame_sidebar_nav_item_Active').siblings('.js_sidebar_item').removeClass('frame_sidebar_nav_item_Active');
     event.stopPropagation();
 });

@@ -4,7 +4,9 @@
 
 ## 本地运行
 ```
-#进入 UI_dev/qmui_web 执行以下命令
+#在 Demo 项目根目录执行以下命令
+npm install
+#然后进入 UI_dev/qmui_web 执行以下命令
 npm install
 #完成后执行以下命令
 gulp
