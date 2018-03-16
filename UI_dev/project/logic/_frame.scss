@@ -16,13 +16,13 @@
  *
  */
 
-/* #wrap 外层框架 */
+// #wrap 外层框架
 .frame_wrap {
     position: relative;
     min-height: 100%;
 }
 
-/* #head 版头 */
+// #head 版头
 .frame_head {
     @extend %clear;
     // 保持 header 的内容左侧与侧栏内容左侧视觉上对齐
@@ -35,7 +35,7 @@
     }
 }
 
-/* #title 网站标题 */
+// #title 网站标题
 .frame_head_title {
     float: left;
     margin-right: $frame_nav_item_marginRight;
@@ -54,7 +54,7 @@
     }
 }
 
-/* #nav 网站导航 */
+// #nav 网站导航
 .frame_nav {
     @include bfc;
     -webkit-font-smoothing: antialiased;
@@ -78,7 +78,7 @@
     color: #fff;
 }
 
-/* #sidebar 左侧栏 */
+// #sidebar 左侧栏
 .frame_sidebar {
     position: absolute;
     top: $frame_head_height;
@@ -95,7 +95,7 @@
     padding: $frame_sidebar_inner_padding;
 }
 
-/* #sidebar_nav 侧栏导航 */
+// #sidebar_nav 侧栏导航
 .frame_sidebar_nav {
     font-size: 14px;
 }
@@ -178,7 +178,7 @@
     }
 }
 
-/* #cnt 右侧主体 */
+// #cnt 右侧主体
 .frame_cnt {
     position: absolute;
     top: $frame_head_height;
@@ -189,7 +189,7 @@
     overflow: auto;
 }
 
-/* #media 小屏幕适配 */
+// #media 小屏幕适配
 @media screen and (max-width: 1366px) {
     .frame_head {
         padding-left: $frame_sidebar_widthSmall - $frame_sidebar_inner_widthSmall - getLengthDirectionValue($frame_sidebar_inner_padding, "right");

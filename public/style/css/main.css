@@ -218,8 +218,6 @@ audio, canvas, video {
  *
  * #common
  */
-/* #common */
-xmp,
 pre {
   margin: 0;
 }
@@ -240,7 +238,6 @@ a:hover {
   text-decoration: underline;
 }
 
-/* 全局动画 */
 .frame_nav_item, .index_downloadBtn, .index_banner_startBtn,
 .index_banner_githubBtn,
 .index_banner_updateBtn {
@@ -950,7 +947,6 @@ textarea:focus:-ms-input-placeholder {
   margin-bottom: 85px;
 }
 
-/* 栏目标题（大组件的标题） */
 .dm_column_title {
   border-style: solid;
   border-color: #D4D6D8;
@@ -1001,7 +997,6 @@ textarea:focus:-ms-input-placeholder {
   }
 }
 
-/* 提示语，可以用在栏目这一层，也可以用在栏目项中 */
 .dm_column_tip {
   max-width: 840px;
   margin-bottom: 22px;
@@ -1033,7 +1028,6 @@ pre.dm_column_tip {
           box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.4);
 }
 
-/* 栏目项 */
 .dm_column_item {
   margin-bottom: 30px;
 }
@@ -1042,7 +1036,6 @@ pre.dm_column_tip {
   margin-bottom: 0;
 }
 
-/* 栏目项的标题（小组件的标题） */
 .dm_column_item_title {
   margin-bottom: 20px;
   font-size: 24px;
@@ -1050,7 +1043,13 @@ pre.dm_column_tip {
   font-weight: bold;
 }
 
-/* 栏目项的信息 */
+.dm_column_item_subtitle {
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: #333;
+  font-weight: bold;
+}
+
 .dm_column_item_info {
   border-style: solid;
   border-color: #e4dcc5;
@@ -1102,7 +1101,6 @@ pre.dm_column_tip {
   margin-bottom: 30px;
 }
 
-/* 栏目项的实际效果展示 */
 .dm_column_display {
   padding: 15px;
 }
@@ -1183,10 +1181,6 @@ pre.dm_column_tip {
   color: #707070;
 }
 
-.dm_column_item_info_code xmp {
-  display: inline-block;
-}
-
 .dm_column_item_info_Single .dm_column_item_info_code {
   border-style: solid;
   border-color: #DEE0E2;
@@ -1248,7 +1242,6 @@ pre.dm_column_tip {
   margin-top: 20px;
 }
 
-/* 给组件外部使用的类 */
 .dm_columnDisplayControl {
   position: relative !important;
   z-index: 10;
@@ -1295,7 +1288,6 @@ pre.dm_column_tip {
   zoom: 1;
 }
 
-/* 等高左右双栏 - 方法1 */
 .dm_dualCols1 {
   border: 1px solid #c9c9c9;
 }
@@ -1311,7 +1303,6 @@ pre.dm_column_tip {
   padding: 10px;
 }
 
-/* 等高左右双栏 - 方法2 */
 .dm_dualCols2 {
   border: 1px solid #c9c9c9;
   overflow: hidden;
@@ -1330,7 +1321,6 @@ pre.dm_column_tip {
   padding: 10px;
 }
 
-/* 文件上传按钮 */
 .dm_fileUpload {
   position: relative;
   overflow: hidden;
@@ -1346,7 +1336,6 @@ pre.dm_column_tip {
   cursor: pointer;
 }
 
-/* 树状选择菜单 */
 .dm_treeMenu {
   position: relative;
 }
@@ -1423,13 +1412,11 @@ pre.dm_column_tip {
  * #responsive 响应式
  *
  */
-/* #wrap 外层框架 */
 .frame_wrap {
   position: relative;
   min-height: 100%;
 }
 
-/* #head 版头 */
 .frame_head {
   padding-left: 188px;
   background-color: #00A3E1;
@@ -1440,7 +1427,6 @@ pre.dm_column_tip {
   display: none;
 }
 
-/* #title 网站标题 */
 .frame_head_title {
   float: left;
   margin-right: 28px;
@@ -1459,7 +1445,6 @@ pre.dm_column_tip {
   text-decoration: none;
 }
 
-/* #nav 网站导航 */
 .frame_nav {
   overflow: hidden;
   zoom: 1;
@@ -1483,7 +1468,6 @@ pre.dm_column_tip {
   color: #fff;
 }
 
-/* #sidebar 左侧栏 */
 .frame_sidebar {
   position: absolute;
   top: 46px;
@@ -1500,7 +1484,6 @@ pre.dm_column_tip {
   padding: 43px 22px 50px 0;
 }
 
-/* #sidebar_nav 侧栏导航 */
 .frame_sidebar_nav {
   font-size: 14px;
 }
@@ -1567,7 +1550,6 @@ pre.dm_column_tip {
   text-transform: none;
 }
 
-/* #cnt 右侧主体 */
 .frame_cnt {
   position: absolute;
   top: 46px;
@@ -1578,7 +1560,6 @@ pre.dm_column_tip {
   overflow: auto;
 }
 
-/* #media 小屏幕适配 */
 @media screen and (max-width: 1366px) {
   .frame_head {
     padding-left: 98px;
@@ -1727,7 +1708,6 @@ pre.dm_column_tip {
  * @date 2015-08-18
  *
  */
-/* 展示遮罩层效果时使用的对话框 */
 .widget_dialogInMask {
   position: absolute;
   left: 50%;
@@ -2065,46 +2045,6 @@ pre.dm_column_tip {
   margin-bottom: 22px;
 }
 
-.index_starWrap {
-  position: absolute;
-  right: 0;
-  top: 0;
-  z-index: 100;
-  width: 162px;
-  height: 163px;
-  overflow: hidden;
-}
-
-.index_star {
-  position: absolute;
-  right: -67px;
-  top: 52px;
-  width: 268px;
-  padding: 2px 0;
-  background-color: #fff;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.15);
-          box-shadow: rgba(0, 0, 0, 0.15);
-  -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-
-.index_star_inner {
-  display: block;
-  height: 28px;
-  border: 1px dashed #7FD0E8;
-  border-width: 1px 0;
-  line-height: 28px;
-  font-size: 16px;
-  color: #01AAE1;
-  text-align: center;
-}
-
-.index_star_inner:hover {
-  text-decoration: none;
-  color: #01AAE1;
-}
-
 @media handheld and (max-width: 846px), screen and (max-width: 846px) {
   .index_banner {
     padding: 30px 30px 25px 30px;
@@ -2203,19 +2143,6 @@ pre.dm_column_tip {
   .index_foot .qw_icon {
     margin-bottom: 28px;
     vertical-align: top;
-  }
-  .index_starWrap {
-    width: 126px;
-    height: 125px;
-  }
-  .index_star {
-    right: -52px;
-    top: 37px;
-    width: 208px;
-  }
-  .index_star_inner {
-    height: 24px;
-    line-height: 24px;
   }
 }
 

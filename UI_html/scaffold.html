@@ -1,5 +1,5 @@
 @@include('./_header.html', {
-"title": "脚手架 - QMUI Web",
+"title": "内置工作流 - QMUI Web",
 "currentPage": "scaffold"
 })
 <div class="frame_sidebar" id="frame_sidebar">
@@ -8,7 +8,7 @@
 
         <ul class="frame_sidebar_nav">
             <li class="frame_sidebar_nav_item js_sidebar_group">
-                <a class="frame_sidebar_nav_link" href="#qui_scaffold">脚手架的使用</a>
+                <a class="frame_sidebar_nav_link" href="#qui_scaffold">工作流的使用</a>
                 <ul class="frame_sidebar_nav frame_sidebar_nav_Children">
                     <li class="frame_sidebar_nav_item js_sidebar_item">
                         <a class="frame_sidebar_nav_link" href="#qui_scaffoldSprite">雪碧图处理</a>
@@ -34,12 +34,12 @@
 
 <div class="frame_cnt">
 
-    <!-- 脚手架的使用 start -->
+    <!-- 工作流的使用 start -->
     <div class="dm_column">
 
-        <h2 id="qui_scaffold" class="dm_column_title">脚手架的使用</h2>
+        <h2 id="qui_scaffold" class="dm_column_title">工作流的使用</h2>
 
-        <p class="dm_column_tip">QMUI 中的各种工具方法已经预先集成为一个脚手架，包括监控 Sass 文件并自动编译，样式优化（浏览器兼容自动处理等），雪碧图处理，模板 include
+        <p class="dm_column_tip">QMUI 中的各种工具方法已经预先集成为一个工作流，包括监控 Sass 文件并自动编译，样式优化（浏览器兼容自动处理等），雪碧图处理，模板 include
             能力（可以传参和使用条件判断），图片压缩，文件清理等功能。</p>
 
         <p class="dm_column_tip"><strong>各个命令都是在 qmui_web 文件夹中调用对应的 gulp 命令即可</strong>，部分命令依赖于 qmui.config.js 的配置。<strong>但实际使用时大部分操作都无需手工调用，QMUI 中已经根据工作流程设置好对应 Watch 机制（文件监控）</strong>，包括上面提到的 Sass 编译，样式优化，雪碧图处理，模板 include 编译，浏览器自动刷新，图片压缩以及同步图片文件夹等大部分的功能。除了清理文件和合并变更文件两个任务，这两个任务的使用会在下面额外详述。</p>
@@ -64,15 +64,16 @@ gulp</code></pre>
 
             <h3 id="qui_scaffoldSprite" class="dm_column_item_title">雪碧图处理</h3>
 
-            <p class="dm_column_tip">QMUI 中集成了基于 <a href="https://github.com/Jeff2Ma/postcss-lazysprite" target="_blank">postcss-lazysprite</a> 的雪碧图自动处理，使用时只需要在 UI_dev/project/images 中建立一个图片文件夹，把需要的图片放入，QMUI 会按规则生成所有的 CSS 以及雪碧图文件。以本 Demo 中使用到的雪碧图为例，创建时需要如下步骤：</p>
+            <p class="dm_column_tip">QMUI 中集成了基于 <a href="https://github.com/Jeff2Ma/postcss-lazysprite" target="_blank">postcss-lazysprite</a> 和 <a href="https://github.com/jostinsu/postcss-svg-sprite" target="_blank">postcss-svg-sprite</a> 的雪碧图自动处理，使用时只需要在 UI_dev/project/images 中建立一个图片文件夹，把需要的图片放入，QMUI 会按规则生成所有的 CSS 以及雪碧图文件。以本 Demo 中使用到的雪碧图为例，创建时需要如下步骤：</p>
 
-            <div class="dm_column_tip">在 UI_dev/project/images 中建立一个 icons 文件夹，把需要的图片放入。</div>
+            <div class="dm_column_tip">在 UI_dev/project/images 中建立 icons 和 svgIcon 目录，分别放置所需的普通图片和 SVG 图片。</div>
 
             <div class="dm_column_tip">在样式文件需要输出雪碧图 CSS 的地方添加如下代码：</div>
 
             <div class="dm_column_item_info dm_column_item_info_Single">
                 <div class="dm_column_item_info_code">
-<pre><code class="scss">@lazysprite "icons#icon";
+<pre><code class="scss">@lazysprite "icons#icon"; /* 普通图片 */
+@svgsprite "svgIcon"; /* SVG 图片 */
 </code></pre>
                 </div>
             </div>
@@ -81,15 +82,38 @@ gulp</code></pre>
 
             <div class="dm_column_item_info dm_column_item_info_Single">
                 <div class="dm_column_item_info_code">
-<pre><code class="css">.dm_icon_BannerLogo {
-  background-image: url(../images/icons.7fc7e2bab2.png);
-  background-position: 0 0;
-  width: 160px;
-  height: 160px;
+<pre><code class="css">/* 普通图片输出 */
+.dm_icon{
+    display: inline-block;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
 }
-
+.dm_icon_BannerLogo {
+    background-image: url(../images/icons.7fc7e2bab2.png);
+    background-position: 0 0;
+    width: 160px;
+    height: 160px;
+}
 .dm_icon_BannerMobileLogo {
-...
+    ...
+}
+/* SVG 图片输出 */
+.dm_svgIcon {
+    background: url("../images/svgIcon.svg") left top no-repeat;
+    display: inline-block;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    vertical-align: top;
+}
+.dm_svgIcon_AppExmail {
+    width: 40px;
+    height: 40px;
+    background-position: -128px -122px;
+}
+.dm_svgIcon_AppPermissionWorknote {
+    ...
 }
 </code></pre>
                 </div>
@@ -101,6 +125,7 @@ gulp</code></pre>
                 <div class="dm_column_item_info_code">
 <pre><code class="html"><span class="dm_icon dm_icon_BannerLogo"></span>
 <span class="dm_icon dm_icon_BannerMobileLogo"></span>
+<span class="dm_svgIcon dm_svgIcon_Members"></span>
 </code></pre>
                 </div>
             </div>
@@ -109,8 +134,8 @@ gulp</code></pre>
                 <ol>
                     <li>可以看出输出的 Class-name 由项目前缀 + 目录名 + 图片名组成。</li>
                     <li>“icons#icon” 中的 icon 表示目录名缩写，设置了该目录名缩写则输出的 class 中使用该缩写，不设置则默认使用目录名。</li>
-                    <li>多倍图处理只需要在 icons 目录中加入文件名带 "_2x/@2x"，“_3x/@3x” 这类后缀的多倍图文件即可，框架也会自动输出对应的样式以及雪碧图文件。</li>
-                    <li>如需定制雪碧图功能，可以查看 postcss-lazysprite 的 <a href="https://github.com/Jeff2Ma/postcss-lazysprite#options" target="_blank">options</a>，根据需要自行调整 QMUI 的相关源码。
+                    <li>普通图片多倍图处理只需要在 icons 目录中加入文件名带 "_2x/@2x"，“_3x/@3x” 这类后缀的多倍图文件即可，框架也会自动输出对应的样式以及雪碧图文件。</li>
+                    <li>如需定制雪碧图功能，可以分别查看 postcss-lazysprite 的 <a href="https://github.com/Jeff2Ma/postcss-lazysprite#options" target="_blank">options</a> 和 postcss-svg-sprite 的 <a href="https://github.com/jostinsu/postcss-svg-sprite#options" target="_blank">options</a>，根据需要自行调整 QMUI 的相关源码。
                     </li>
                 </ol>
             </div>
@@ -316,7 +341,7 @@ gulp clean</code></pre>
         <!-- 合并变更文件 end -->
 
     </div>
-    <!-- 脚手架的使用 end -->
+    <!-- 工作流的使用 end -->
 
 </div><!-- content end -->
 

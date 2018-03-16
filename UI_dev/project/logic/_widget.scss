@@ -6,7 +6,7 @@
  *
  */
 
-/* 展示遮罩层效果时使用的对话框 */
+// 展示遮罩层效果时使用的对话框
 .widget_dialogInMask {
     @include absoluteCenter(442px, 148px);
     position: fixed;

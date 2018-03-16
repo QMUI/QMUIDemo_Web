@@ -31,10 +31,6 @@ module.exports = {
         'browserSyncProxy': ''
     },
 
-    'svgSprite': {
-        'openSvgSprite': true
-    },
-
     'template': {
         'openIncludeFunction': true,
         'includePrefix': '@@'

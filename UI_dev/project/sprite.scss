@@ -1,0 +1,86 @@
+@charset "UTF-8";
+/**
+ * sprite.scss 雪碧图效果展示页面
+ * @author Kayo
+ * @date 2018-03-16
+ *
+ */
+
+// 业务公共变量
+@import "_var";
+
+// 引入 QMUI
+@import "../qmui_web/qmui/_qmui";
+
+// 业务基础样式
+@import "_base";
+
+// 普通雪碧图
+@lazysprite "icons#icon";
+
+// SVG 雪碧图
+@svgsprite svgIcon;
+
+// 业务逻辑代码
+.sprite_wrap {
+    padding-top: 50px;
+    width: $frame_base_width;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.sprite_wrap_title {
+    margin-bottom: 50px;
+    color: $common_color_black;
+    font-size: 45px;
+}
+
+.sprite_section {
+    position: relative;
+    margin-bottom: 58px;
+
+    &:before {
+        content: ".";
+        position: absolute;
+        bottom: 0;
+        left: $index_column_separator_spacingHorizontal;
+        right: $index_column_separator_spacingHorizontal;
+        font-size: 0;
+        border-top: 1px solid $common_color_separator;
+
+        @include screenResolution(2) {
+            transform: scaleY(.5);
+        }
+        @include screenResolution(3) {
+            transform: scaleY((1 / 3));
+        }
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+
+        &:before {
+            content: normal;
+        }
+    }
+}
+
+.sprite_section_title {
+    margin-bottom: 22px;
+    font-size: 34px;
+}
+
+.sprite_section_cnt {
+    padding: 20px;
+    background-color: #f8f9fa;
+}
+
+.sprite_section_Svg {
+    .dm_svgIcon {
+        margin-left: 20px;
+
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+}

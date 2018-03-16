@@ -33,6 +33,7 @@ $common_body_color: #474860;
 $common_color_link: #00A3E1;
 $common_color_linkTapHighlight: rgba(105, 186, 255, .13);
 $common_color_lightGray: #9595A3;
+$common_color_black: #333;
 $common_color_gray: #787878;
 $common_color_darkGray: #555557;
 $common_color_separator: #D4D6D8;
@@ -175,18 +176,5 @@ $index_appIntro_img_dropShadow: 0 20px 20px #cfdce6;
 $index_appIntro_img_width: 440px;
 $index_appIntro_img_height: 640px;
 $index_appIntro_img_mobile_width: 90%;
-
-$index_star_rotate: 45deg;
-$index_star_padding: 2px 0;
-// PC 下
-$index_star_width: 268px;
-$index_star_right: -(floor($index_star_width / 4));
-$index_star_top: abs($index_star_right) - 15;
-$index_star_inner_height: 28px;
-// 响应移动端
-$index_star_mobile_width: 208px;
-$index_star_mobile_right: -(floor($index_star_mobile_width / 4));
-$index_star_mobile_top: abs($index_star_mobile_right) - 15;
-$index_star_inner_mobile_height: 24px;
 
 $index_banner_only_single_btn_screen_width: $index_banner_smallBtn_width * 2 + $index_banner_startBtn_mobile_marginHorizontal * 2 + $frame_base_mobile_paddingHorizontal * 2; // 宽度不足以横排 Banner 两个按钮时的屏幕宽度 = 两个 Banner 按钮的小宽度 + Banner 按钮的水平 margin（左右两个按钮各提供一个 margin）+ 最外层左右留白

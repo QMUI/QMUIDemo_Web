@@ -285,46 +285,6 @@
     }
 }
 
-// #star Github Star 引导
-.index_starWrap {
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: $common_zIndex_10;
-    // Star 条旋转45度后可以看作等腰三角形的斜边，其底边长为宽度 * cos45°，由于旋转45度，因此露出屏幕外的长度只有一半，最后加上 right 的绝对值即为实际显示的底边长度
-    width: ceil($index_star_width * cos($index_star_rotate)) / 2 + abs($index_star_right);
-    // 同理，这里相当于等腰三角形的高，也是由于旋转45度，因此露出屏幕外的高度只有一半，由于旋转中心点在长方形的中间，因此需要加上高度的一半，最后加上 top 值即为实际显示的高的长度
-    height: ceil($index_star_width * cos($index_star_rotate)) / 2 + ($index_star_inner_height + getLengthDirectionValue($index_star_padding, vertical) * 2) / 2 + ($index_star_top);
-    overflow: hidden;
-}
-
-.index_star {
-    position: absolute;
-    right: $index_star_right;
-    top: $index_star_top;
-    width: $index_star_width;
-    padding: $index_star_padding;
-    background-color: #fff;
-    box-shadow: rgba(0, 0, 0, .15);
-    transform: rotate($index_star_rotate);
-}
-
-.index_star_inner {
-    display: block;
-    height: $index_star_inner_height;
-    border: 1px dashed #7FD0E8;
-    border-width: 1px 0;
-    line-height: $index_star_inner_height;
-    font-size: 16px;
-    color: #01AAE1;
-    text-align: center;
-
-    &:hover {
-        text-decoration: none;
-        color: #01AAE1;
-    }
-}
-
 // #responsive 响应式
 @include forMobile() {
     .index_banner {
@@ -436,22 +396,6 @@
             margin-bottom: 28px;
             vertical-align: top;
         }
-    }
-
-    .index_starWrap {
-        // Star 条旋转45度后可以看作等腰三角形的斜边，其底边长为宽度 * cos45°，由于旋转45度，因此露出屏幕外的长度只有一半，最后加上 right 的绝对值即为实际显示的底边长度
-        width: ceil($index_star_mobile_width * cos($index_star_rotate)) / 2 + abs($index_star_mobile_right);
-        // 同理，这里相当于等腰三角形的高，也是由于旋转45度，因此露出屏幕外的高度只有一半，由于旋转中心点在长方形的中间，因此需要加上高度的一半，最后加上 top 值即为实际显示的高的长度
-        height: ceil($index_star_mobile_width * cos($index_star_rotate)) / 2 + ($index_star_inner_mobile_height + getLengthDirectionValue($index_star_padding, vertical) * 2) / 2 + ($index_star_mobile_top);
-    }
-    .index_star {
-        right: $index_star_mobile_right;
-        top: $index_star_mobile_top;
-        width: $index_star_mobile_width;
-    }
-    .index_star_inner {
-        height: $index_star_inner_mobile_height;
-        line-height: $index_star_inner_mobile_height;
     }
 }
 
