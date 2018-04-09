@@ -75,6 +75,9 @@
                     </li>
                 </ul>
             </li>
+            <li class="frame_sidebar_nav_item js_sidebar_group">
+                <a class="frame_sidebar_nav_link" href="#qui_customTask">创建自定义任务（高级）</a>
+            </li>
         </ul>
     </div>
 </div>
@@ -88,25 +91,17 @@
 
         <p class="dm_column_tip">QMUI Web 目前以 Github Release 管理版本，使用<a href="#qui_quickStart">快速开始</a>安装 QMUI Web 的用户只需进入项目 UI_dev/qmui 目录执行 git pull 即可更新至最新版本。通过其他方式安装的用户可以直接在 <a href="https://github.com/Tencent/QMUI_Web/releases" target="_blank">Github</a> 中下载最新版本来进行更新。</p>
 
-        <p class="dm_column_tip">QMUI 框架目前已经推出 2.0.0 版本，在该版本中抛弃了对 Compass 的依赖，Sass 编译处理也从 Ruby-Sass 替换为 Node-Sass，因此 1.x 版本升级到 2.0.0 后需要对项目进行一些处理才能适配。为了效率的提升，我们建议所有用户升级到 2.0.0 版本。目前升级到 2.0.0 后只需对项目执行两步修改：</p>
+        <p class="dm_column_tip">QMUI 框架目前推出 3.0.0 版本，基于 gulp4 进行开发，重新梳理了框架的依赖包，能提供更稳定以及高效的工作流，并且集成了一套完整的 SVG Sprite 解决方案，可以方便地处理 SVG Sprite 的场景。另外对组件和工具方法也作出了一些优化。从 2.x 系列版本升级到 3.0.0 版本只需简单的步骤：</p>
 
         <div class="dm_column_tip">
             <ol>
-                <li>在 UI_dev/qmui.config.js 中增加 <code>styleResultPath</code> 和 <code>needsSourceMaps</code> 两个字段，分别为 CSS 输出目录（相对 qmui_web 目录）和编译样式是否需要 Source Maps 支持，默认值分别为 <code>../../public/style/css</code> 和 <code>false</code>。
-                </li>
-                <li>在 UI_dev/qmui_web 下执行一次 <code>npm install</code>，安装增加的依赖包。</li>
+                <li>升级 UI_dev/qmui_web 目录中的 QMUI Web 源码。</li>
+                <li>在 UI_dev/qmui_web 下执行一次 <code>npm install</code>，更新依赖包。</li>
+                <li>把 UI_dev 下的 config.js 重命名为 qmui.config.js。</li>
             </ol>
         </div>
 
-        <p class="dm_column_tip">如果还使用了 QMUI 的一些附加组件/工具，那么还需要注意以下两点：</p>
-
-        <div class="dm_column_tip">
-            <ol>
-                <li>如果还使用了原 CSS Sprite 的扩展组件，还需要改为新的雪碧图语法，请参考<a href="./scaffold.html#qui_scaffoldSprite" target="_blank">这里</a>。
-                </li>
-                <li>如果有使用 <a href="./app.html" target="_blank">QMUI Web Desktop</a>，请升级至 1.3.0 或以上版本。</li>
-            </ol>
-        </div>
+        <p class="dm_column_tip">如果有使用 <a href="./app.html" target="_blank">QMUI Web Desktop</a>，请升级至 1.3.1 或以上版本。</p>
 
     </div>
     <!-- 更新 end -->
@@ -138,18 +133,10 @@
 
             <div class="dm_column_item_info dm_column_item_info_Single">
                 <div class="dm_column_item_info_code">
-<pre><code class="bash">#全局安装 gulp4
-npm install gulpjs/gulp#4.0 -g
+<pre><code class="bash">#全局安装 gulp
+npm install -g gulp-cli
 </code></pre>
                 </div>
-            </div>
-
-            <div class="dm_column_tip">
-                <ul>
-                    <li>Gulp 4 并未正式发布，目前安装需要依赖 Git 环境，Windows 用户需要先安装 git，然后在 Git Bash 下执行安装命令。</li>
-                    <li>1.x 版本的环境配置请参考<a href="https://github.com/Tencent/QMUI_Web/wiki/1.x-%E7%89%88%E6%9C%AC%E7%9B%B8%E5%85%B3%E9%85%8D%E7%BD%AE#%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE"
-                target="_blank">这里</a>。</li>
-                </ul>
             </div>
 
         </div>
@@ -181,7 +168,6 @@ npm install gulpjs/gulp#4.0 -g
 ├─UI_html         // 静态模板目录
 └─UI_html_result  // 静态模板经 gulp 处理后的版本，用于前端拼接最终的模板
 </pre>
-        </p>
 
         <p class="dm_column_tip"><strong>这些目录 QMUI 会提供工具帮助完成创建，开发者并不需要手工创建这些目录。</strong></p>
 
@@ -446,6 +432,93 @@ npm install</code></pre>
 
     </div>
     <!-- 创建新项目（高级） end -->
+
+    <!-- 创建自定义任务（高级） start -->
+    <div class="dm_column">
+        <h2 id="qui_customTask" class="dm_column_title">创建自定义任务（高级）</h2>
+
+    <p class="dm_column_tip">QMUI Web 支持在内置工作流原有任务的基础上增加自定义的任务，通过特定的格式建立任务文件，可以调用 QMUI Web 工作流中的公共配置和组件来编写自定义任务，适用于需要针对项目添加额外的流程。</p>
+
+        <!-- 如何创建 start -->
+        <div class="dm_column_item">
+
+            <h3 id="qui_createTask" class="dm_column_item_title">如何创建自定义任务</h3>
+
+            <p class="dm_column_tip">对 QMUI Web 来说，创建自定义任务只需要在配置文件（UI_dev/qmui.config.js）中增加 <code>customTasks</code> 字段，传入自定义任务的任务名和所在的 JavaScript 文件的相对路径即可（相对 qmui_web 目录），例如：</p>
+
+            <pre class="dm_column_tip">
+UI_dev
+├── qmui.config.js
+├── project
+├── qmui_web
+└── testTask.js
+            </pre>
+
+            <div class="dm_column_item_info dm_column_item_info_Single">
+                <div class="dm_column_item_info_code">
+<pre><code class="bash">// qmui.config.js
+module.exports = {
+    /**
+     * 模板 include 引擎
+     *
+     */
+    'template': {
+        'openIncludeFunction': true,
+        'includePrefix': '@@'
+    },
+
+    /**
+     * 增加自定义任务
+     */
+    'customTasks': {
+        'testTask': '../testTask.js'
+    }
+};</code></pre>
+                </div>
+            </div>
+
+            <div class="dm_column_item_info dm_column_item_info_Single">
+                <div class="dm_column_item_info_code">
+<pre><code class="bash">// testTask.js
+module.exports = function (gulp, common) {
+
+    var taskName = 'testTask';
+
+    gulp.task(taskName, function (done) {
+
+        // Custom task logic code
+        common.util.log('testTask execute succeed');
+
+        done();
+    });
+
+    // Task Description (For gulp list)
+    common.tasks[taskName] = {
+        description: 'Custom Task testTask'
+    };
+};</code></pre>
+                </div>
+            </div>
+
+            <p class="dm_column_tip">
+                如上面的示例中的 testTask.js，自定义任务需要按照特定的格式编写，这样自定义任务才可以接入 QMUI Web 的内置工作流，并可以使用内置工作流中的公共配置和组件，为了方便开发者创建自定义任务，QMUI 的 Yeoman 脚手架 generator-qmui 增加了自定义任务的子模板，可以快速创建符合规范的自定义任务文件，例如：
+            </p>
+
+            <div class="dm_column_item_info dm_column_item_info_Single">
+                <div class="dm_column_item_info_code">
+<pre><code class="bash">#安装 Yeoman，如果本地已安装可以忽略
+npm install -g yo
+#安装 QMUI 的模板，如果本地已安装可以忽略
+npm install -g generator-qmui
+#在需要创建自定义任务文件的目录执行以下命令
+yo qmui:task fileName;</code></pre>
+                </div>
+            </div>
+
+        </div>
+        <!-- 如何创建 end -->
+    </div>
+    <!-- 创建自定义任务（高级） end -->
 
 </div><!-- content end -->
 
