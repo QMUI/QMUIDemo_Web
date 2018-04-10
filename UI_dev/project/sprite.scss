@@ -63,6 +63,15 @@
             content: normal;
         }
     }
+
+    .dm_icon,
+    .dm_svgIcon {
+        margin-left: 20px;
+
+        &:first-child {
+            margin-left: 0;
+        }
+    }
 }
 
 .sprite_section_title {
@@ -73,14 +82,4 @@
 .sprite_section_cnt {
     padding: 20px;
     background-color: #f8f9fa;
-}
-
-.sprite_section_Svg {
-    .dm_svgIcon {
-        margin-left: 20px;
-
-        &:first-child {
-            margin-left: 0;
-        }
-    }
 }

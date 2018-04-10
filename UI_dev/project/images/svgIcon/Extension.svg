@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="160px" height="160px" viewBox="0 0 160 160" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>Extension</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Extension" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="icon" x="-66" y="0" width="160" height="160"></rect>
+        <path d="M22,61.0020036 C22,60.4486123 22.4433975,60 23.0028267,60 L136.997173,60 C137.551019,60 138,60.4406204 138,61.0020036 L138,124.992025 C138,127.205569 136.201197,129 134.007017,129 L25.9929826,129 C23.7877192,129 22,127.207498 22,124.992025 L22,61.0020036 Z" id="boxBottom" stroke="#03C0E6" stroke-width="2" fill="#FFFFFF"></path>
+        <g id="QMUI" transform="translate(36.000000, 107.000000)" stroke="#03C0E6">
+            <path d="M27,0 L27,9" id="Line"></path>
+            <path d="M19,0 L19,6.5 C19,6.5 19.5,8.5 21.5,8.5 C23.5,8.5 24,6.5 24,6.5 L24,0" id="Line" stroke-linecap="square"></path>
+            <polyline id="Line" stroke-linecap="square" points="9 9 9 0 12.5 8 16 0 16 9"></polyline>
+            <path d="M0,4.5 C1.020539e-16,7 0.65234375,7.2331543 1.61743164,8 C2.6366071,8.44702148 3,8 3,8 L6,10 L4.25683594,8 C4.25683594,8 6,7 6,4.5 C6,2 4.96728516,1 3,0.5 C1.03271484,1 0,2 0,4.5 Z" id="Line" stroke-linecap="square"></path>
+        </g>
+        <path d="M40.3169803,57.5155424 C41.2464073,58.8875537 43.3443539,60 45.0026984,60 L114.997302,60 C116.648622,60 118.753514,58.8876704 119.68302,57.5155424 L137.31698,31.4844576 C138.246407,30.1124463 137.654347,29 135.9944,29 L24.0056003,29 C22.3455252,29 21.7535136,30.1123296 22.6830197,31.4844576 L40.3169803,57.5155424 Z" id="boxTopBackground" fill="#D5F8FF" transform="translate(79.999969, 44.500000) scale(1, -1) translate(-79.999969, -44.500000) "></path>
+        <path d="M83,97 L88,66 L88,31.0023996 C88,29.8962786 87.1072288,29 86.0059397,29 L73.9940603,29 C72.8945138,29 72,29.8965048 72,31.0023996 L72,66 L77,97" id="boxRope" stroke="#03C0E6" stroke-width="2" fill="#FFFFFF" transform="translate(80.000000, 63.000000) scale(1, -1) translate(-80.000000, -63.000000) "></path>
+        <path d="M40.8783731,30.655735 C41.4978305,29.7412978 42.893082,29 43.9937508,29 L116.006249,29 C117.107367,29 118.498391,29.7357204 119.121627,30.655735 L137.878373,58.344265 C138.497831,59.2587022 138.101293,60 137.0014,60 L22.9985999,60 C21.8948037,60 21.4983912,59.2642796 22.1216269,58.344265 L40.8783731,30.655735 Z" id="boxTop" stroke="#03C0E6" stroke-width="2"></path>
+    </g>
+</svg>

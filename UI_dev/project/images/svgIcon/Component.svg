@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="160px" height="160px" viewBox="0 0 160 160" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>Component</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Component" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="icon" x="0" y="0" width="160" height="160"></rect>
+        <path d="M47,80 L28,80 L28,34.9994471 C28,31.1337592 31.1357289,28 34.9994471,28 L80,28 L80,47 C83.8659932,47 87,50.1340068 87,54 C87,57.8659932 83.8659932,61 80,61 L80,80 L61,80 C61,76.1340068 57.8659932,73 54,73 C50.1340068,73 47,76.1340068 47,80 Z" id="ouzzleTopLeft" stroke="#03C0E6" stroke-width="2" fill="#D5F8FF"></path>
+        <path d="M80,106 L80,125 L61,125 C61,128.865993 57.8659932,132 54,132 C50.1340068,132 47,128.865993 47,125 L28,125 L28,79.9994471 C28,76.1337592 31.1357289,73 34.9994471,73 L80,73 L80,92 C76.1340068,92 73,95.1340068 73,99 C73,102.865993 76.1340068,106 80,106 Z" id="puzzleBottomLeft" stroke="#03C0E6" stroke-width="2" fill="#D5F8FF" transform="translate(54.000000, 102.500000) scale(1, -1) translate(-54.000000, -102.500000) "></path>
+        <path d="M92,132 L73,132 L73,86.9994471 C73,83.1337592 76.1357289,80 79.9994471,80 L125,80 L125,99 C128.865993,99 132,102.134007 132,106 C132,109.865993 128.865993,113 125,113 L125,132 L106,132 C106,128.134007 102.865993,125 99,125 C95.1340068,125 92,128.134007 92,132 Z" id="puzzleBottomRight" stroke="#03C0E6" stroke-width="2" fill="#D5F8FF" transform="translate(102.500000, 106.000000) scale(-1, -1) translate(-102.500000, -106.000000) "></path>
+        <path d="M97,85 L75,85 L75,32.995804 C75,27.4752739 79.4838282,23 84.995804,23 L137,23 L137,45.0549288 C132.50005,45.5523731 129,49.3674463 129,54 C129,58.6325537 132.50005,62.4476269 137,62.9450712 L137,85 L115,85 C115,89.9705627 110.970563,94 106,94 C101.029437,94 97,89.9705627 97,85 Z" id="puzzleTopRight" stroke="#03C0E6" stroke-width="2" fill="#FFFFFF" transform="translate(106.000000, 58.500000) scale(-1, 1) translate(-106.000000, -58.500000) "></path>
+    </g>
+</svg>

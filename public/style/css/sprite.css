@@ -486,35 +486,25 @@ a:hover {
     line-height: 0;
     vertical-align: top;
 }
-.dm_svgIcon_AppExmail {
-    width: 40px;
-    height: 40px;
-    background-position: -128px -122px;
-}
-.dm_svgIcon_AppPermissionWorknote {
-    width: 24px;
-    height: 24px;
-    background-position: -122px -88px;
-}
-.dm_svgIcon_CardClose {
-    width: 112px;
-    height: 112px;
+.dm_svgIcon_Component {
+    width: 160px;
+    height: 160px;
     background-position: 0 0;
 }
-.dm_svgIcon_ClaimFeatureApproval {
-    width: 78px;
-    height: 78px;
-    background-position: -122px 0;
+.dm_svgIcon_Extension {
+    width: 160px;
+    height: 160px;
+    background-position: -170px 0;
 }
-.dm_svgIcon_CorpAuthErr {
-    width: 48px;
-    height: 54px;
-    background-position: -70px -122px;
+.dm_svgIcon_Sass {
+    width: 160px;
+    height: 160px;
+    background-position: 0 -170px;
 }
-.dm_svgIcon_Members {
-    width: 60px;
-    height: 60px;
-    background-position: 0 -122px;
+.dm_svgIcon_Workflow {
+    width: 160px;
+    height: 160px;
+    background-position: -170px -170px;
 }
 .sprite_wrap {
     padding-top: 50px;
@@ -568,6 +558,16 @@ a:hover {
     content: normal;
 }
 
+.sprite_section .dm_icon,
+.sprite_section .dm_svgIcon {
+    margin-left: 20px;
+}
+
+.sprite_section .dm_icon:first-child,
+.sprite_section .dm_svgIcon:first-child {
+    margin-left: 0;
+}
+
 .sprite_section_title {
     margin-bottom: 22px;
     font-size: 34px;
@@ -576,12 +576,4 @@ a:hover {
 .sprite_section_cnt {
     padding: 20px;
     background-color: #f8f9fa;
-}
-
-.sprite_section_Svg .dm_svgIcon {
-    margin-left: 20px;
-}
-
-.sprite_section_Svg .dm_svgIcon:first-child {
-    margin-left: 0;
 }
