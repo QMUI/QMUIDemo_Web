@@ -499,12 +499,12 @@ a:hover {
 .dm_svgIcon_CardClose {
     width: 112px;
     height: 112px;
-    background-position: -0px -0px;
+    background-position: 0 0;
 }
 .dm_svgIcon_ClaimFeatureApproval {
     width: 78px;
     height: 78px;
-    background-position: -122px -0px;
+    background-position: -122px 0;
 }
 .dm_svgIcon_CorpAuthErr {
     width: 48px;
@@ -514,7 +514,7 @@ a:hover {
 .dm_svgIcon_Members {
     width: 60px;
     height: 60px;
-    background-position: -0px -122px;
+    background-position: 0 -122px;
 }
 .sprite_wrap {
     padding-top: 50px;
