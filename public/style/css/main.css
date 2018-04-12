@@ -991,9 +991,9 @@ textarea:focus:-ms-input-placeholder {
         width: 300%;
         height: 300%;
         border-radius: 0;
-        -webkit-transform: scale(0.33333);
-            -ms-transform: scale(0.33333);
-                transform: scale(0.33333);
+        -webkit-transform: scale(0.333333);
+            -ms-transform: scale(0.333333);
+                transform: scale(0.333333);
     }
 }
 
@@ -1091,9 +1091,9 @@ pre.dm_column_tip {
         width: 300%;
         height: 300%;
         border-radius: 12px;
-        -webkit-transform: scale(0.33333);
-            -ms-transform: scale(0.33333);
-                transform: scale(0.33333);
+        -webkit-transform: scale(0.333333);
+            -ms-transform: scale(0.333333);
+                transform: scale(0.333333);
     }
 }
 
@@ -1168,9 +1168,9 @@ pre.dm_column_tip {
         width: 300%;
         height: 300%;
         border-radius: 0;
-        -webkit-transform: scale(0.33333);
-            -ms-transform: scale(0.33333);
-                transform: scale(0.33333);
+        -webkit-transform: scale(0.333333);
+            -ms-transform: scale(0.333333);
+                transform: scale(0.333333);
     }
 }
 
@@ -1219,9 +1219,9 @@ pre.dm_column_tip {
         width: 300%;
         height: 300%;
         border-radius: 0;
-        -webkit-transform: scale(0.33333);
-            -ms-transform: scale(0.33333);
-                transform: scale(0.33333);
+        -webkit-transform: scale(0.333333);
+            -ms-transform: scale(0.333333);
+                transform: scale(0.333333);
     }
 }
 
@@ -1678,9 +1678,9 @@ pre.dm_column_tip {
         width: 300%;
         height: 300%;
         border-radius: 0;
-        -webkit-transform: scale(0.33333);
-            -ms-transform: scale(0.33333);
-                transform: scale(0.33333);
+        -webkit-transform: scale(0.333333);
+            -ms-transform: scale(0.333333);
+                transform: scale(0.333333);
     }
 }
 
@@ -1753,9 +1753,9 @@ pre.dm_column_tip {
 
 @media (-webkit-min-device-pixel-ratio: 3), (min--moz-device-pixel-ratio: 3), (min-device-pixel-ratio: 3), (-o-min-device-pixel-ratio: 3/1), (min-resolution: 3dppx), (min-resolution: 288dpi) {
     .index_column:before {
-        -webkit-transform: scaleY(0.33333);
-            -ms-transform: scaleY(0.33333);
-                transform: scaleY(0.33333);
+        -webkit-transform: scaleY(0.333333);
+            -ms-transform: scaleY(0.333333);
+                transform: scaleY(0.333333);
     }
 }
 
@@ -2103,7 +2103,7 @@ pre.dm_column_tip {
     .index_appIntro_img {
         height: auto;
         width: 90%;
-        padding-bottom: 130.90909%;
+        padding-bottom: 130.909091%;
     }
     .index_appIntro_desc {
         margin-bottom: 30px;

@@ -486,22 +486,22 @@ a:hover {
     line-height: 0;
     vertical-align: top;
 }
-.dm_svgIcon_Component {
+.dm_svgIcon_Extension {
     width: 160px;
     height: 160px;
     background-position: 0 0;
 }
-.dm_svgIcon_Extension {
+.dm_svgIcon_Sass {
     width: 160px;
     height: 160px;
     background-position: -170px 0;
 }
-.dm_svgIcon_Sass {
+.dm_svgIcon_Workflow {
     width: 160px;
     height: 160px;
     background-position: 0 -170px;
 }
-.dm_svgIcon_Workflow {
+.dm_svgIcon_Component {
     width: 160px;
     height: 160px;
     background-position: -170px -170px;
@@ -544,9 +544,9 @@ a:hover {
 
 @media (-webkit-min-device-pixel-ratio: 3), (min--moz-device-pixel-ratio: 3), (min-device-pixel-ratio: 3), (-o-min-device-pixel-ratio: 3/1), (min-resolution: 3dppx), (min-resolution: 288dpi) {
     .sprite_section:before {
-        -webkit-transform: scaleY(0.33333);
-            -ms-transform: scaleY(0.33333);
-                transform: scaleY(0.33333);
+        -webkit-transform: scaleY(0.333333);
+            -ms-transform: scaleY(0.333333);
+                transform: scaleY(0.333333);
     }
 }
 
