@@ -120,6 +120,11 @@
             </li>
             <li class="frame_sidebar_nav_item js_sidebar_group">
                 <a class="frame_sidebar_nav_link" href="#qui_customTask">创建自定义任务（高级）</a>
+                <ul class="frame_sidebar_nav frame_sidebar_nav_Children">
+                    <li class="frame_sidebar_nav_item js_sidebar_item">
+                        <a class="frame_sidebar_nav_link" href="#qui_createTask">如何创建自定义任务</a>
+                    </li>
+                </ul>
             </li>
         </ul>
     </div>
@@ -134,17 +139,7 @@
 
         <p class="dm_column_tip">QMUI Web 目前以 Github Release 管理版本，使用<a href="#qui_quickStart">快速开始</a>安装 QMUI Web 的用户只需进入项目 UI_dev/qmui 目录执行 git pull 即可更新至最新版本。通过其他方式安装的用户可以直接在 <a href="https://github.com/Tencent/QMUI_Web/releases" target="_blank">Github</a> 中下载最新版本来进行更新。</p>
 
-        <p class="dm_column_tip">QMUI 框架目前推出 3.0.0 版本，基于 gulp4 进行开发，重新梳理了框架的依赖包，能提供更稳定以及高效的工作流，并且集成了一套完整的 SVG Sprite 解决方案，可以方便地处理 SVG Sprite 的场景。另外对组件和工具方法也作出了一些优化。从 2.x 系列版本升级到 3.0.0 版本只需简单的步骤：</p>
-
-        <div class="dm_column_tip">
-            <ol>
-                <li>升级 UI_dev/qmui_web 目录中的 QMUI Web 源码。</li>
-                <li>在 UI_dev/qmui_web 下执行一次 <code>npm install</code>，更新依赖包。</li>
-                <li>把 UI_dev 下的 config.js 重命名为 qmui.config.js。</li>
-            </ol>
-        </div>
-
-        <p class="dm_column_tip">如果有使用 <a href="./app.html" target="_blank">QMUI Web Desktop</a>，请升级至 1.3.1 或以上版本。</p>
+        <p class="dm_column_tip">QMUI 框架目前推出 3.0.0 版本，基于 Gulp 4 进行开发，重新梳理了框架的依赖包，能提供更稳定以及高效的工作流，并且集成了一套完整的 SVG Sprite 解决方案，可以方便地处理 SVG Sprite 的场景，同时对组件和工具方法也作出了一些优化。另外由于新版作出了大量的结构上的修改，因此与旧版本并不兼容，从旧版本升级到新版请浏览<a href="https://github.com/Tencent/QMUI_Web/releases/tag/3.0.0" target="_blank">这里</a>。</p>
 
     </div>
     <!-- 更新 end -->
@@ -154,7 +149,7 @@
 
         <h2 id="qui_overview" class="dm_column_title">概况</h2>
 
-        <p class="dm_column_tip">QMUI Web 主要分为 project 和 qmui 两个文件夹，project 是我们实际编写项目内容的文件夹，分为 logic（业务代码） 和 widget（公共组件），为了保持 QMUI 的独立性，project 文件夹会被基于 gulp 的工具复制一份到外层目录中使用，而不是直接修改 QMUI 目录中的版本。这个工具实际上也是 QMUI 提供的脚手架，会提供如雪碧图处理、include 模板功能、清理文件、压缩功能等便捷功能。</p>
+        <p class="dm_column_tip">QMUI Web 主要分为 project 和 qmui 两个文件夹，project 是我们实际编写项目内容的文件夹，分为 logic（业务代码） 和 widget（公共组件），为了保持 QMUI 的独立性，project 文件夹会被基于 Gulp 的工具复制一份到外层目录中使用，而不是直接修改 QMUI 目录中的版本。这个工具实际上也是 QMUI 提供的脚手架，会提供如雪碧图处理、include 模板功能、清理文件、压缩功能等便捷功能。</p>
 
         <p class="dm_column_tip">QMUI Web 遵循 <a href="./codeNorm.html" target="_blank" title="QMUI 编码规范">QMUI 编码规范</a>，因此框架中提供的样式除 Reset 外都以 qui_ 作开头，以充当框架的命名空间。业务上的样式也应该有自己的命名空间，例如本 Demo 中的样式的公共部分都以 dm_ 开头，各细致的业务就以业务的功能作开头（例如组件页面的非公共代码都以 widget_ 开头），从而以不同的命名空间划分不同的样式，避免样式的互相干扰。</p>
 
@@ -169,14 +164,14 @@
 
         <h2 id="qui_environment" class="dm_column_title">环境配置</h2>
 
-        <p class="dm_column_tip">QMUI Web 基于 gulp 和 Node.js，请确保安装 <a href="https://nodejs.org/" target="_blank">Node.js</a>（建议 6.0 或以上版本），并用以下命令全局安装
-            gulp：</p>
+        <p class="dm_column_tip">QMUI Web 基于 Gulp 和 Node.js，请确保安装 <a href="https://nodejs.org/" target="_blank">Node.js</a>（建议 6.0 或以上版本），并用以下命令全局安装
+            Gulp：</p>
 
         <div class="dm_column_item">
 
             <div class="dm_column_item_info dm_column_item_info_Single">
                 <div class="dm_column_item_info_code">
-<pre><code class="bash">#全局安装 gulp
+<pre><code class="bash">#全局安装 Gulp
 npm install -g gulp-cli
 </code></pre>
                 </div>
@@ -196,20 +191,20 @@ npm install -g gulp-cli
 
         <pre class="dm_column_tip">
 项目根目录
-├─public          // 静态资源目录，由 gulp 生成
+├─public          // 静态资源目录，由 Gulp 生成
 │  ├─js           // 静态资源 js 文件
 │  ├─style        // 静态资源 UI 文件
 │  │  ├─css       // 静态资源 css 文件
 │  │  └─images    // 静态资源 images 文件
 │  └─template     // 最终的模板目录，区别于静态模板基于原生 HTML，最终模板通常是用功能完备的模板引擎驱动
 ├─UI_dev          // 实际进行开发的样式目录
-│  ├─project      // 项目相关 Sass 与 images 文件，由 gulp 生成，请参考“<a href="#qui_createProject" title="创建新项目">创建新项目</a>”
+│  ├─project      // 项目相关 Sass 与 images 文件，由 Gulp 生成，请参考“<a href="#qui_createProject" title="创建新项目">创建新项目</a>”
 │  │  ├─images    // 项目相关图片文件
 │  │  ├─logic     // 项目相关逻辑样式
 │  │  └─widget    // 项目相关公共组件样式
 │  └─qmui_web     // <strong>QMUI Web 主源码应放置在这一层目录</strong>
 ├─UI_html         // 静态模板目录
-└─UI_html_result  // 静态模板经 gulp 处理后的版本，用于前端拼接最终的模板
+└─UI_html_result  // 静态模板经 Gulp 处理后的版本，用于前端拼接最终的模板
 </pre>
 
         <p class="dm_column_tip"><strong>这些目录 QMUI 会提供工具帮助完成创建，开发者并不需要手工创建这些目录。</strong></p>
@@ -281,7 +276,7 @@ yo qmui
 
             <h3 id="qui_scaffold" class="dm_column_item_title">内置工作流</h3>
 
-            <div class="dm_column_tip">QMUI 中的内置工作流由 gulp 驱动，用于快速解决大量重复劳动力的工作，从而提升效率。QMUI 的 gulp 中预先实现了监控 Sass 文件并自动编译，样式优化（浏览器兼容自动处理等），雪碧图处理，模板 include 能力（可以传参和使用条件判断），浏览器自动刷新，图片压缩，文件清理，文件合并以及自动变更路径的能力。各个命令都是在 qmui_web 文件夹中调用对应的 gulp 命令即可，部分命令依赖于 qmui.config.js 的配置。具体命令列表及功能可以参考<a href="./scaffold.html">内置工作流</a>页面。
+            <div class="dm_column_tip">QMUI 中的内置工作流由 Gulp 驱动，用于快速解决大量重复劳动力的工作，从而提升效率。QMUI 的 Gulp 中预先实现了监控 Sass 文件并自动编译，样式优化（浏览器兼容自动处理等），雪碧图处理，模板 include 能力（可以传参和使用条件判断），浏览器自动刷新，图片压缩，文件清理，文件合并以及自动变更路径的能力。各个命令都是在 qmui_web 文件夹中调用对应的 gulp 命令即可，部分命令依赖于 qmui.config.js 的配置。具体命令列表及功能可以参考<a href="./scaffold.html">内置工作流</a>页面。
             </div>
 
             <div class="dm_column_tip">
@@ -405,15 +400,15 @@ npm install</code></pre>
 
             <h3 id="qui_useConfig" class="dm_column_item_title">使用配置文件</h3>
 
-            <p class="dm_column_tip">在 qmui_web（QMUI Web 框架根目录）中，有一个配置文件 qmui.config.js，<strong>在项目开始之前应该把配置文件复制到 qmui_web 的上一层目录（按推荐的文件结构，应该是 UI_dev 目录）</strong>，用于框架在 gulp 这一层的配置。</p>
-            <p class="dm_column_tip">具体地说，qmui.config.js 配置 gulp 在使用时的一些依赖的变量，如果开发时使用的就是框架所推荐的文件结构，那么基本上只需要配置 <code>project</code> 和 <code>prefix</code> 两个参数即可。详细的配置选项如下：</p>
+            <p class="dm_column_tip">在 qmui_web（QMUI Web 框架根目录）中，有一个配置文件 qmui.config.js，<strong>在项目开始之前应该把配置文件复制到 qmui_web 的上一层目录（按推荐的文件结构，应该是 UI_dev 目录）</strong>，用于框架在 Gulp 这一层的配置。</p>
+            <p class="dm_column_tip">具体地说，qmui.config.js 配置 Gulp 在使用时的一些依赖的变量，如果开发时使用的就是框架所推荐的文件结构，那么基本上只需要配置 <code>project</code> 和 <code>prefix</code> 两个参数即可。详细的配置选项如下：</p>
 
             <div class="dm_column_tip">
                 <ul>
                     <li><code>project</code> 项目名称，暂时没有被实际用到，只是预留接口</li>
                     <li><code>prefix</code> 代码前缀，用于在样式和 HTML 中创建 class 的命名前缀，即命名空间，必须根据项目名称定好一个清晰不容易与其他项目冲突的前缀</li>
                     <li><code>resultCssFileName</code> 项目主样式文件的名称，在创建新项目时会被用到，一般来说，QMUI 建议如果项目不是非常大的量级，都只使用一个样式表，方便代码管理</li>
-                    <li><code>cleanFileType</code> 执行gulp clean 命令时需要清除的文件</li>
+                    <li><code>cleanFileType</code> 执行 gulp clean 命令时需要清除的文件</li>
                     <li><code>needsSourceMaps</code> 是否需要支持 Css Source Maps。</li>
                     <li><code>needsImagesMinAndSync</code> 是否需要压缩图片功能。</li>
                     <li><code>browserSyncMod</code> BrowserSync 的运行模式，默认为 'server'，即本地服务器模式，'proxy' 为代理模式，'close' 表示不开启本功能。
@@ -427,10 +422,10 @@ npm install</code></pre>
                     <li><code>browserSyncProxy</code> 需要进行代理的代理地址，代理模式（proxy）下方可产生作用。</li>
                     <li><code>htmlSourcePath</code> 静态模板来源目录，即模板开发的目录</li>
                     <li><code>imagesSourcePath</code> 图片文件来源目录，即图片开发的目录</li>
-                    <li><code>htmlResultPath</code> 静态模板经 gulp 处理后输出的目录，即把 include 合并后的输出版本</li>
-                    <li><code>imagesResultPath</code> 图片文件经 gulp 处理后输出的目录，即最终实际被项目使用的图片资源</li>
+                    <li><code>htmlResultPath</code> 静态模板经 Gulp 处理后输出的目录，即把 include 合并后的输出版本</li>
+                    <li><code>imagesResultPath</code> 图片文件经 Gulp 处理后输出的目录，即最终实际被项目使用的图片资源</li>
                     <li><code>independentImagesDirectory</code> 独立图片的开发目录的目录名，QMUI 会根据这个目录名在 imagesSourcePath 目录中生成一个子目录</li>
-                    <li><code>styleResultPath</code> 样式表经 gulp 处理后输出的目录</li>
+                    <li><code>styleResultPath</code> 样式表经 Gulp 处理后输出的目录</li>
                     <li><code>openIncludeFunction</code> 是否开启模板 include 引擎，默认开启</li>
                     <li><code>includePrefix</code> include 引擎所使用的前缀，它影响了所有 include 方法的使用，默认为 @@</li>
                 </ul>

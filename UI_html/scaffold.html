@@ -42,7 +42,7 @@
         <p class="dm_column_tip">QMUI 中的各种工具方法已经预先集成为一个工作流，包括监控 Sass 文件并自动编译，样式优化（浏览器兼容自动处理等），雪碧图处理，模板 include
             能力（可以传参和使用条件判断），图片压缩，文件清理等功能。</p>
 
-        <p class="dm_column_tip"><strong>各个命令都是在 qmui_web 文件夹中调用对应的 gulp 命令即可</strong>，部分命令依赖于 qmui.config.js 的配置。<strong>但实际使用时大部分操作都无需手工调用，QMUI 中已经根据工作流程设置好对应 Watch 机制（文件监控）</strong>，包括上面提到的 Sass 编译，样式优化，雪碧图处理，模板 include 编译，浏览器自动刷新，图片压缩以及同步图片文件夹等大部分的功能。除了清理文件和合并变更文件两个任务，这两个任务的使用会在下面额外详述。</p>
+        <p class="dm_column_tip"><strong>各个命令都是在 qmui_web 文件夹中调用对应的 Gulp 命令即可</strong>，部分命令依赖于 qmui.config.js 的配置。<strong>但实际使用时大部分操作都无需手工调用，QMUI 中已经根据工作流程设置好对应 Watch 机制（文件监控）</strong>，包括上面提到的 Sass 编译，样式优化，雪碧图处理，模板 include 编译，浏览器自动刷新，图片压缩以及同步图片文件夹等大部分的功能。除了清理文件和合并变更文件两个任务，这两个任务的使用会在下面额外详述。</p>
 
         <p class="dm_column_tip">因此常规的使用流程只需要一句命令</p>
 
@@ -57,7 +57,7 @@ gulp</code></pre>
             <img src="../public/style/images/independent/Gulp.gif" alt="Gulp 任务效果图"/>
         </p>
 
-        <p class="dm_column_tip"><strong>如果有特殊情况，需要手工调用 gulp 中 Watch 会自动调用的方法，请务必先关闭 gulp 的监听，否则可能会产生冲突。</strong></p>
+        <p class="dm_column_tip"><strong>如果有特殊情况，需要手工调用 Gulp 中 Watch 会自动调用的方法，请务必先关闭 Gulp 的监听，否则可能会产生冲突。</strong></p>
 
         <!-- 雪碧图处理 start -->
         <div class="dm_column_item">
@@ -222,9 +222,9 @@ gulp</code></pre>
                 </div>
             </div>
 
-            <p class="dm_column_tip">这个例子中，_header.html 作为一个公共模块，被 start.html include，然后再由 gulp 处理生成最终的页面。这里为了避免 gulp 起效，使用了"&&"代替"@@"，实际上 QMUI 中使用的 include 引擎的默认前缀为 @@，即所有的方法和变量都以 @@ 开头。这个前缀以及是否开启 include 引擎都可以在 qmui.config.js 中配置。</p>
+            <p class="dm_column_tip">这个例子中，_header.html 作为一个公共模块，被 start.html include，然后再由 Gulp 处理生成最终的页面。这里为了避免 gulp 起效，使用了"&&"代替"@@"，实际上 QMUI 中使用的 include 引擎的默认前缀为 @@，即所有的方法和变量都以 @@ 开头。这个前缀以及是否开启 include 引擎都可以在 qmui.config.js 中配置。</p>
 
-            <p class="dm_column_tip"><strong>另外值得注意的是，如果一个变量在某些模板中需要省略不写（例如一个布尔值，默认设定为 false，大部分的页面按需求都是 false 因此都不写），那么在使用这个变量进行条件判断时，需要先用 javascript 的 typeof 方法判断变量是否 undefined 再进行其他判断，否则 gulp 会报 warning。</strong>
+            <p class="dm_column_tip"><strong>另外值得注意的是，如果一个变量在某些模板中需要省略不写（例如一个布尔值，默认设定为 false，大部分的页面按需求都是 false 因此都不写），那么在使用这个变量进行条件判断时，需要先用 javascript 的 typeof 方法判断变量是否 undefined 再进行其他判断，否则 Gulp 会报 warning。</strong>
             </p>
 
         </div>
