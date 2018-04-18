@@ -478,33 +478,33 @@ a:hover {
         background-size: 500px 412px;
     }
 }
-.dm_svgIcon {
+.dm_svgIcon { 
     background: url("../images/svgIcon.svg") left top no-repeat;
     display: inline-block;
     overflow: hidden;
     font-size: 0;
     line-height: 0;
-    vertical-align: top;
+    vertical-align: top; 
 }
-.dm_svgIcon_Extension {
+.dm_svgIcon_Component { 
     width: 160px;
     height: 160px;
-    background-position: 0 0;
+    background-position: 0 0; 
 }
-.dm_svgIcon_Sass {
+.dm_svgIcon_Extension { 
     width: 160px;
     height: 160px;
-    background-position: -170px 0;
+    background-position: -170px 0; 
 }
-.dm_svgIcon_Workflow {
+.dm_svgIcon_Sass { 
     width: 160px;
     height: 160px;
-    background-position: 0 -170px;
+    background-position: 0 -170px; 
 }
-.dm_svgIcon_Component {
+.dm_svgIcon_Workflow { 
     width: 160px;
     height: 160px;
-    background-position: -170px -170px;
+    background-position: -170px -170px; 
 }
 .sprite_wrap {
     padding-top: 50px;
