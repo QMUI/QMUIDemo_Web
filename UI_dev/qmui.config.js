@@ -26,7 +26,8 @@ module.exports = {
             '/public': '../../public',
             '/data': '../../data',
             '/node_modules': '../../node_modules',
-            '/web': '../../UI_html_result'
+            '/web': '../../UI_html_result',
+            '/cache.js': '../../cache.js'
         },
         'browserSyncProxy': ''
     },

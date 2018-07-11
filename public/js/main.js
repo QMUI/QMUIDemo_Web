@@ -83,7 +83,7 @@ if (showMask && maskWrap) {
 // 第三方框架调用，忽略检测
 // 微信接口
 var currentUrlWithoutHash = window.location.href.replace(window.location.hash, '');
-$.getJSON('http://qmuiteam.com/wxapi/signature.php?url=' + encodeURIComponent(currentUrlWithoutHash)).done(function (result) {
+$.getJSON(window.location.protocol + '//qmuiteam.com/wxapi/signature.php?url=' + encodeURIComponent(currentUrlWithoutHash)).done(function (result) {
     wx.config({
         debug: false,
         appId: result.appId,
@@ -99,11 +99,11 @@ $.getJSON('http://qmuiteam.com/wxapi/signature.php?url=' + encodeURIComponent(cu
 
 wx.ready(function () {
     var currentUrl = window.location.href,
-        isIndex = currentUrl.indexOf('index') != -1 || currentUrl.indexOf('html') == -1,
+        isIndex = currentUrl.indexOf('index') !== -1 || currentUrl.indexOf('html') === -1,
         config = {
             desc: '一个旨在提高 UI 开发效率，快速产生项目 UI 的前端框架', // 分享描述
             link: currentUrl, // 分享链接
-            imgUrl: 'http://qmuiteam.com/web/public/style/images/independent/share/ShareLogo.png', // 分享图标
+            imgUrl: window.location.protocol + '//qmuiteam.com/web/public/style/images/independent/share/ShareLogo.png', // 分享图标
             success: function () {
                 console.log('分享成功');
             },
@@ -124,7 +124,7 @@ wx.ready(function () {
 if (window.localStorage) {
     (function () {
         var src = '../node_modules/eruda/eruda.min.js';
-        if (!(/eruda=true/).test(window.location) && localStorage.getItem('active-eruda') != 'true') return;
+        if (!(/eruda=true/).test(window.location) && localStorage.getItem('active-eruda') !== 'true') return;
         document.write('<scr' +
             'ipt src="' +
             src +
@@ -223,3 +223,12 @@ $('.frame_sidebar_nav').delegate('.js_sidebar_item', 'click', function (event) {
     $(this).addClass('frame_sidebar_nav_item_Active').siblings('.js_sidebar_item').removeClass('frame_sidebar_nav_item_Active');
     event.stopPropagation();
 });
+
+// Service Worker 缓存
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('../cache.js').then(function (registration) {
+        console.log('Service worker registration succeeded:', registration);
+    }).catch(function (error) {
+        console.log('Service worker registration failed:', error);
+    });
+}
