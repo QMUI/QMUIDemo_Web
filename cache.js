@@ -4,7 +4,7 @@
  * 基于 Service Worker 的缓存处理。
  */
 
-var VERSION = '1';
+var VERSION = '2';
 
 var CACHE_NAME = 'MAIN_' + VERSION;
 
@@ -29,26 +29,21 @@ self.addEventListener('activate', function (event) {
     event.waitUntil(
         caches.keys().then(function (cacheNames) {
             return Promise.all(
-                cacheNames.filter(function (cacheName) {
-                }).map(function (cacheName) {
-                    console.log('Deleteing cache: ' + cacheName);
-                    return caches.delete(cacheName);
+                cacheNames.map(function(cacheName) {
+                    if (cacheName !== CACHE_NAME) {
+                        console.log('Deleteing cache: ' + cacheName);
+                        return caches.delete(cacheName);
+                    }
                 })
             );
         })
     );
 });
 
-self.addEventListener('message', function (e) {
-    var message = e.data;
-    console.log('Got the message:' + message);
-});
-
 // 捕获请求并返回缓存数据
 self.addEventListener('fetch', function (event) {
     event.respondWith(
         caches.match(event.request).then(function (response) {
-            // Cache hit - return response
             // 如果成功匹配 Cache，则直接返回缓存。
             if (response) {
                 return response;
