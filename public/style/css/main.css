@@ -507,7 +507,6 @@ a:hover {
     padding: 0 12px;
     background: #04C9E8;
     border: 1px solid transparent;
-    /* line-height 的偏移值依赖于不同字体 */
     line-height: 32px;
     line-height: 31px \9\0;
     outline: none;
