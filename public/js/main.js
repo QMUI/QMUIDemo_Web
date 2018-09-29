@@ -223,12 +223,3 @@ $('.frame_sidebar_nav').delegate('.js_sidebar_item', 'click', function (event) {
     $(this).addClass('frame_sidebar_nav_item_Active').siblings('.js_sidebar_item').removeClass('frame_sidebar_nav_item_Active');
     event.stopPropagation();
 });
-
-// Service Worker 缓存
-if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('../cache.js').then(function (registration) {
-        console.log('Service worker registration succeeded:', registration);
-    }).catch(function (error) {
-        console.log('Service worker registration failed:', error);
-    });
-}

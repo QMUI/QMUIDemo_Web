@@ -130,7 +130,7 @@ body, input, textarea, select, button {
 
 input, textarea, select, button {
     font-size: inherit;
-    -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 a {
