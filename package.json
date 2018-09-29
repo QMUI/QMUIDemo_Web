@@ -9,7 +9,7 @@
     "dependencies": {
         "eruda": "^1.4.3",
         "jquery": "~3.3.1",
-        "stylelint-wechat-work-css": "^0.3.2"
+        "stylelint-wechat-work-css": "^0.4.1"
     },
     "devDependencies": {},
     "scripts": {
