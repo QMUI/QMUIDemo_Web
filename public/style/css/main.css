@@ -951,6 +951,7 @@ textarea:focus:-ms-input-placeholder {
     border-color: #D4D6D8;
     border-width: 0 0 1px 0;
     border-radius: 0;
+    border-style: solid;
     margin-bottom: 30px;
     padding-bottom: 10px;
     font-size: 38px;
@@ -975,6 +976,7 @@ textarea:focus:-ms-input-placeholder {
         border-style: solid;
         border-color: #D4D6D8;
         border-width: 0 0 1px 0;
+        border-style: solid;
         -webkit-transform: scale(0.5);
             -ms-transform: scale(0.5);
                 transform: scale(0.5);
@@ -1054,6 +1056,7 @@ pre.dm_column_tip {
     border-color: #e4dcc5;
     border-width: 1px;
     border-radius: 4px;
+    border-style: solid;
     max-width: 840px;
 }
 
@@ -1073,6 +1076,7 @@ pre.dm_column_tip {
         border-style: solid;
         border-color: #e4dcc5;
         border-width: 1px;
+        border-style: solid;
         -webkit-transform: scale(0.5);
             -ms-transform: scale(0.5);
                 transform: scale(0.5);
@@ -1125,6 +1129,7 @@ pre.dm_column_tip {
     border-color: #e4dcc5;
     border-width: 1px 0 0 0;
     border-radius: 0;
+    border-style: solid;
     padding: 15px;
     font-size: 14px;
     background-color: #FAF8F2;
@@ -1149,6 +1154,7 @@ pre.dm_column_tip {
         border-style: solid;
         border-color: #e4dcc5;
         border-width: 1px 0 0 0;
+        border-style: solid;
         -webkit-transform: scale(0.5);
             -ms-transform: scale(0.5);
                 transform: scale(0.5);
@@ -1185,6 +1191,7 @@ pre.dm_column_tip {
     border-color: #DEE0E2;
     border-width: 0;
     border-radius: 0;
+    border-style: solid;
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 2dppx), (min-resolution: 192dpi) {
@@ -1203,6 +1210,7 @@ pre.dm_column_tip {
         border-style: solid;
         border-color: #DEE0E2;
         border-width: 0;
+        border-style: solid;
         -webkit-transform: scale(0.5);
             -ms-transform: scale(0.5);
                 transform: scale(0.5);
@@ -1643,6 +1651,7 @@ pre.dm_column_tip {
         border-color: #fff;
         border-width: 0 0 1px 0;
         border-radius: 0;
+        border-style: solid;
     }
 }
 
@@ -1662,6 +1671,7 @@ pre.dm_column_tip {
         border-style: solid;
         border-color: #fff;
         border-width: 0 0 1px 0;
+        border-style: solid;
         -webkit-transform: scale(0.5);
             -ms-transform: scale(0.5);
                 transform: scale(0.5);
