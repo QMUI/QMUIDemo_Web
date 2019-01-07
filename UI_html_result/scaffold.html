@@ -1,131 +1,7 @@
-<!DOCTYPE html>
-<html lang="zh-cmn">
-<head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
-    <meta name="renderer" content="webkit"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
-    <meta content="no-siteapp" http-equiv="Cache-Control"/>
-    <meta name="description" content="一个旨在提高 UI 开发效率，快速产生项目 UI 的前端框架"/>
-    <meta name="keywords" content="QMUI Web,QMUI,UI 开发,QMUI Web 官网,前端工作流,UI 开发框架"/>
-    <title>内置工作流 - QMUI Web</title>
-    <link rel="icon" type="image/png" sizes="16x16" href="../public/style/images/independent/favicon/favicon_16h.png"/>
-    <link rel="icon" type="image/png" sizes="32x32" href="../public/style/images/independent/favicon/favicon_32h.png"/>
-    <link rel="icon" type="image/png" sizes="48x48" href="../public/style/images/independent/favicon/favicon_48h.png"/>
-    <link rel="stylesheet" href="../public/style/css/main_release.css"/>
-</head>
-<body class="frame_wrap">
-
-<div style="position: absolute; opacity: 0; z-index: -1;">
-    <img src="../public/style/images/independent/share/ShareLogo.png" alt="微信分享 Logo"/>
-</div>
-
-<header id="head" class="frame_head">
-    
-    
-    <div class="frame_head_title"><a class="dm_icon dm_icon_TopLogo frame_head_title_link" href="./index.html">QMUI
-        Web</a></div>
-    
-
-    <a class="frame_head_showMenuBtn" id="showMenuBtn" href="javascript:;">
-        <span class="dm_icon dm_icon_Menu"></span>
-    </a>
-    <a class="frame_head_closeMenuBtn" id="closeMenuBtn" href="javascript:;">
-        <span class="dm_icon dm_icon_CloseMenu"></span>
-    </a>
-
-    <nav class="frame_nav">
-        <a class="frame_nav_item " href="start.html">开始使用</a>
-        <a class="frame_nav_item " href="tools.html">工具方法</a>
-        <a class="frame_nav_item frame_nav_item_Curr" href="scaffold.html">内置工作流</a>
-        <a class="frame_nav_item " href="widget.html">组件</a>
-        <a class="frame_nav_item " href="codeNorm.html">编码规范</a>
-        <a class="frame_nav_item " href="app.html">QMUI Web Desktop</a>
-    </nav>
-</header>
-
-<div class="frame_sidebar" id="frame_sidebar">
-
-    <div class="frame_sidebar_inner">
-
-        <ul class="frame_sidebar_nav">
-            <li class="frame_sidebar_nav_item js_sidebar_group">
-                <a class="frame_sidebar_nav_link" href="#qui_scaffold">工作流的使用</a>
-                <ul class="frame_sidebar_nav frame_sidebar_nav_Children">
-                    <li class="frame_sidebar_nav_item js_sidebar_item">
-                        <a class="frame_sidebar_nav_link" href="#qui_scaffoldSprite">雪碧图处理</a>
-                    </li>
-                    <li class="frame_sidebar_nav_item js_sidebar_item">
-                        <a class="frame_sidebar_nav_link" href="#qui_scaffoldInclude">模板引擎</a>
-                    </li>
-                    <li class="frame_sidebar_nav_item js_sidebar_item">
-                        <a class="frame_sidebar_nav_link" href="#qui_scaffoldBrowserSync">浏览器自动刷新</a>
-                    </li>
-                    <li class="frame_sidebar_nav_item js_sidebar_item">
-                        <a class="frame_sidebar_nav_link" href="#qui_scaffoldClean">清理文件</a>
-                    </li>
-                    <li class="frame_sidebar_nav_item js_sidebar_item">
-                        <a class="frame_sidebar_nav_link" href="#qui_scaffoldMerge">合并变更文件</a>
-                    </li>
-                </ul>
-            </li>
-        </ul>
-
-    </div>
-</div>
-
-<div class="frame_cnt">
-
-    <!-- 工作流的使用 start -->
-    <div class="dm_column">
-
-        <h2 id="qui_scaffold" class="dm_column_title">工作流的使用</h2>
-
-        <p class="dm_column_tip">QMUI 中的各种工具方法已经预先集成为一个工作流，包括监控 Sass 文件并自动编译，样式优化（浏览器兼容自动处理等），雪碧图处理，模板 include
-            能力（可以传参和使用条件判断），图片压缩，文件清理等功能。</p>
-
-        <p class="dm_column_tip"><strong>各个命令都是在 qmui_web 文件夹中调用对应的 Gulp 命令即可</strong>，部分命令依赖于 qmui.config.js 的配置。<strong>但实际使用时大部分操作都无需手工调用，QMUI 中已经根据工作流程设置好对应 Watch 机制（文件监控）</strong>，包括上面提到的 Sass 编译，样式优化，雪碧图处理，模板 include 编译，浏览器自动刷新，图片压缩以及同步图片文件夹等大部分的功能。除了清理文件和合并变更文件两个任务，这两个任务的使用会在下面额外详述。</p>
-
-        <p class="dm_column_tip">因此常规的使用流程只需要一句命令</p>
-
-        <div class="dm_column_item_info dm_column_item_info_Single">
-            <div class="dm_column_item_info_code">
-<pre><code class="bash">#开启默认任务，文件监控会自动完成绝大部分常规操作
-gulp</code></pre>
-            </div>
-        </div>
-
-        <p class="dm_column_tip">
-            <img src="../public/style/images/independent/Gulp.gif" alt="Gulp 任务效果图"/>
-        </p>
-
-        <p class="dm_column_tip"><strong>如果有特殊情况，需要手工调用 Gulp 中 Watch 会自动调用的方法，请务必先关闭 Gulp 的监听，否则可能会产生冲突。</strong></p>
-
-        <!-- 雪碧图处理 start -->
-        <div class="dm_column_item">
-
-            <h3 id="qui_scaffoldSprite" class="dm_column_item_title">雪碧图处理</h3>
-
-            <p class="dm_column_tip">QMUI 中集成了基于 <a href="https://github.com/Jeff2Ma/postcss-lazysprite" target="_blank">postcss-lazysprite</a> 和 <a href="https://github.com/jostinsu/postcss-svg-sprite" target="_blank">postcss-svg-sprite</a> 的雪碧图自动处理，使用时只需要在 UI_dev/project/images 中建立一个图片文件夹，把需要的图片放入，QMUI 会按规则生成所有的 CSS 以及雪碧图文件。以本 Demo 中使用到的雪碧图为例，创建时需要如下步骤：</p>
-
-            <div class="dm_column_tip">在 UI_dev/project/images 中建立 icons 和 svgIcon 目录，分别放置所需的普通图片和 SVG 图片。</div>
-
-            <div class="dm_column_tip">在样式文件需要输出雪碧图 CSS 的地方添加如下代码：</div>
-
-            <div class="dm_column_item_info dm_column_item_info_Single">
-                <div class="dm_column_item_info_code">
-<pre><code class="scss">@lazysprite "icons#icon"; /* 普通图片 */
+<!DOCTYPE html><html lang="zh-cmn"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"><meta name="renderer" content="webkit"><meta http-equiv="X-UA-Compatible" content="IE=Edge"><meta content="no-siteapp" http-equiv="Cache-Control"><meta name="description" content="一个旨在提高 UI 开发效率，快速产生项目 UI 的前端框架"><meta name="keywords" content="QMUI Web,QMUI,UI 开发,QMUI Web 官网,前端工作流,UI 开发框架"><title>内置工作流 - QMUI Web</title><link rel="icon" type="image/png" sizes="16x16" href="../public/style/images/independent/favicon/favicon_16h.png"><link rel="icon" type="image/png" sizes="32x32" href="../public/style/images/independent/favicon/favicon_32h.png"><link rel="icon" type="image/png" sizes="48x48" href="../public/style/images/independent/favicon/favicon_48h.png"><link rel="stylesheet" href="../public/style/css/main_release.css"></head><body class="frame_wrap"><div style="position: absolute; opacity: 0; z-index: -1;"><img src="../public/style/images/independent/share/ShareLogo.png" alt="微信分享 Logo"></div><header id="head" class="frame_head"><div class="frame_head_title"><a class="dm_icon dm_icon_TopLogo frame_head_title_link" href="./index.html">QMUI Web</a></div><a class="frame_head_showMenuBtn" id="showMenuBtn" href="javascript:;"><span class="dm_icon dm_icon_Menu"></span> </a><a class="frame_head_closeMenuBtn" id="closeMenuBtn" href="javascript:;"><span class="dm_icon dm_icon_CloseMenu"></span></a><nav class="frame_nav"><a class="frame_nav_item" href="start.html">开始使用</a> <a class="frame_nav_item" href="tools.html">工具方法</a> <a class="frame_nav_item frame_nav_item_Curr" href="scaffold.html">内置工作流</a> <a class="frame_nav_item" href="widget.html">组件</a> <a class="frame_nav_item" href="codeNorm.html">编码规范</a> <a class="frame_nav_item" href="app.html">QMUI Web Desktop</a></nav></header><div class="frame_sidebar" id="frame_sidebar"><div class="frame_sidebar_inner"><ul class="frame_sidebar_nav"><li class="frame_sidebar_nav_item js_sidebar_group"><a class="frame_sidebar_nav_link" href="#qui_scaffold">工作流的使用</a><ul class="frame_sidebar_nav frame_sidebar_nav_Children"><li class="frame_sidebar_nav_item js_sidebar_item"><a class="frame_sidebar_nav_link" href="#qui_scaffoldSprite">雪碧图处理</a></li><li class="frame_sidebar_nav_item js_sidebar_item"><a class="frame_sidebar_nav_link" href="#qui_scaffoldInclude">模板引擎</a></li><li class="frame_sidebar_nav_item js_sidebar_item"><a class="frame_sidebar_nav_link" href="#qui_scaffoldBrowserSync">浏览器自动刷新</a></li><li class="frame_sidebar_nav_item js_sidebar_item"><a class="frame_sidebar_nav_link" href="#qui_scaffoldClean">清理文件</a></li><li class="frame_sidebar_nav_item js_sidebar_item"><a class="frame_sidebar_nav_link" href="#qui_scaffoldMerge">合并变更文件</a></li></ul></li></ul></div></div><div class="frame_cnt"><div class="dm_column"><h2 id="qui_scaffold" class="dm_column_title">工作流的使用</h2><p class="dm_column_tip">QMUI 中的各种工具方法已经预先集成为一个工作流，包括监控 Sass 文件并自动编译，样式优化（浏览器兼容自动处理等），雪碧图处理，模板 include 能力（可以传参和使用条件判断），图片压缩，文件清理等功能。</p><p class="dm_column_tip"><strong>各个命令都是在 qmui_web 文件夹中调用对应的 Gulp 命令即可</strong>，部分命令依赖于 qmui.config.js 的配置。<strong>但实际使用时大部分操作都无需手工调用，QMUI 中已经根据工作流程设置好对应 Watch 机制（文件监控）</strong>，包括上面提到的 Sass 编译，样式优化，雪碧图处理，模板 include 编译，浏览器自动刷新，图片压缩以及同步图片文件夹等大部分的功能。除了清理文件和合并变更文件两个任务，这两个任务的使用会在下面额外详述。</p><p class="dm_column_tip">因此常规的使用流程只需要一句命令</p><div class="dm_column_item_info dm_column_item_info_Single"><div class="dm_column_item_info_code"><pre><code class="bash">#开启默认任务，文件监控会自动完成绝大部分常规操作
+gulp</code></pre></div></div><p class="dm_column_tip"><img src="../public/style/images/independent/Gulp.gif" alt="Gulp 任务效果图"></p><p class="dm_column_tip"><strong>如果有特殊情况，需要手工调用 Gulp 中 Watch 会自动调用的方法，请务必先关闭 Gulp 的监听，否则可能会产生冲突。</strong></p><div class="dm_column_item"><h3 id="qui_scaffoldSprite" class="dm_column_item_title">雪碧图处理</h3><p class="dm_column_tip">QMUI 中集成了基于 <a href="https://github.com/Jeff2Ma/postcss-lazysprite" target="_blank">postcss-lazysprite</a> 和 <a href="https://github.com/jostinsu/postcss-svg-sprite" target="_blank">postcss-svg-sprite</a> 的雪碧图自动处理，使用时只需要在 UI_dev/project/images 中建立一个图片文件夹，把需要的图片放入，QMUI 会按规则生成所有的 CSS 以及雪碧图文件。以本 Demo 中使用到的雪碧图为例，创建时需要如下步骤：</p><div class="dm_column_tip">在 UI_dev/project/images 中建立 icons 和 svgIcon 目录，分别放置所需的普通图片和 SVG 图片。</div><div class="dm_column_tip">在样式文件需要输出雪碧图 CSS 的地方添加如下代码：</div><div class="dm_column_item_info dm_column_item_info_Single"><div class="dm_column_item_info_code"><pre><code class="scss">@lazysprite "icons#icon"; /* 普通图片 */
 @svgsprite "svgIcon"; /* SVG 图片 */
-</code></pre>
-                </div>
-            </div>
-
-            <div class="dm_column_tip">执行编译后会输出如下样式：</div>
-
-            <div class="dm_column_item_info dm_column_item_info_Single">
-                <div class="dm_column_item_info_code">
-<pre><code class="css">/* 普通图片输出 */
+</code></pre></div></div><div class="dm_column_tip">执行编译后会输出如下样式：</div><div class="dm_column_item_info dm_column_item_info_Single"><div class="dm_column_item_info_code"><pre><code class="css">/* 普通图片输出 */
 .dm_icon{
     display: inline-block;
     overflow: hidden;
@@ -158,45 +34,10 @@ gulp</code></pre>
 .dm_svgIcon_AppPermissionWorknote {
     ...
 }
-</code></pre>
-                </div>
-            </div>
-
-            <div class="dm_column_tip">使用 icon 只需在 HTML 中使用对应的 class：</div>
-
-            <div class="dm_column_item_info dm_column_item_info_Single">
-                <div class="dm_column_item_info_code">
-<pre><code class="html"><span class="dm_icon dm_icon_BannerLogo"></span>
+</code></pre></div></div><div class="dm_column_tip">使用 icon 只需在 HTML 中使用对应的 class：</div><div class="dm_column_item_info dm_column_item_info_Single"><div class="dm_column_item_info_code"><pre><code class="html"><span class="dm_icon dm_icon_BannerLogo"></span>
 <span class="dm_icon dm_icon_BannerMobileLogo"></span>
 <span class="dm_svgIcon dm_svgIcon_Members"></span>
-</code></pre>
-                </div>
-            </div>
-
-            <div class="dm_column_tip">
-                <ol>
-                    <li>可以看出输出的 Class-name 由项目前缀 + 目录名 + 图片名组成。</li>
-                    <li>“icons#icon” 中的 icon 表示目录名缩写，设置了该目录名缩写则输出的 class 中使用该缩写，不设置则默认使用目录名。</li>
-                    <li>普通图片多倍图处理只需要在 icons 目录中加入文件名带 "_2x/@2x"，“_3x/@3x” 这类后缀的多倍图文件即可，框架也会自动输出对应的样式以及雪碧图文件。</li>
-                    <li>如需定制雪碧图功能，可以分别查看 postcss-lazysprite 的 <a href="https://github.com/Jeff2Ma/postcss-lazysprite#options" target="_blank">options</a> 和 postcss-svg-sprite 的 <a href="https://github.com/jostinsu/postcss-svg-sprite#options" target="_blank">options</a>，根据需要自行调整 QMUI 的相关源码。
-                    </li>
-                    <li>完整的雪碧图效果展示页面请浏览 <a href="./sprite.html" target="_blank">Sprite Demo</a>。</li>
-                </ol>
-            </div>
-
-        </div>
-        <!-- 雪碧图处理 end -->
-
-        <!-- 模板 include 能力 start -->
-        <div class="dm_column_item">
-
-            <h3 id="qui_scaffoldInclude" class="dm_column_item_title">模板引擎</h3>
-
-            <p class="dm_column_tip">QMUI 提供了轻量实用的模板引擎，除了支持基础的 include 功能以外，还支持条件判断以及变量传递，即在调用 include 方法时可以传递任意自定义的变量，在被 include 的模板中可以获取这些变量对应的值，并利用这些值来进行条件判断，支持 Number，Boolean, String，Object 几种变量类型。另外，不希望被编译输出的文件（例如被 include 的文件通常不希望被编译输出），使用 _ 作为文件名开头即可，例如：
-
-            <div class="dm_column_item_info dm_column_item_info_Single">
-                <div class="dm_column_item_info_code">
-<pre><code class="html">&lt;!-- _header.html --&gt;
+</code></pre></div></div><div class="dm_column_tip"><ol><li>可以看出输出的 Class-name 由项目前缀 + 目录名 + 图片名组成。</li><li>“icons#icon” 中的 icon 表示目录名缩写，设置了该目录名缩写则输出的 class 中使用该缩写，不设置则默认使用目录名。</li><li>普通图片多倍图处理只需要在 icons 目录中加入文件名带 "_2x/@2x"，“_3x/@3x” 这类后缀的多倍图文件即可，框架也会自动输出对应的样式以及雪碧图文件。</li><li>如需定制雪碧图功能，可以分别查看 postcss-lazysprite 的 <a href="https://github.com/Jeff2Ma/postcss-lazysprite#options" target="_blank">options</a> 和 postcss-svg-sprite 的 <a href="https://github.com/jostinsu/postcss-svg-sprite#options" target="_blank">options</a>，根据需要自行调整 QMUI 的相关源码。</li><li>完整的雪碧图效果展示页面请浏览 <a href="./sprite.html" target="_blank">Sprite Demo</a>。</li></ol></div></div><div class="dm_column_item"><h3 id="qui_scaffoldInclude" class="dm_column_item_title">模板引擎</h3><p class="dm_column_tip">QMUI 提供了轻量实用的模板引擎，除了支持基础的 include 功能以外，还支持条件判断以及变量传递，即在调用 include 方法时可以传递任意自定义的变量，在被 include 的模板中可以获取这些变量对应的值，并利用这些值来进行条件判断，支持 Number，Boolean, String，Object 几种变量类型。另外，不希望被编译输出的文件（例如被 include 的文件通常不希望被编译输出），使用 _ 作为文件名开头即可，例如：</p><div class="dm_column_item_info dm_column_item_info_Single"><div class="dm_column_item_info_code"><pre><code class="html">&lt;!-- _header.html --&gt;
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
@@ -218,13 +59,7 @@ gulp</code></pre>
       &lt;a class=&quot;frame_head_title_link&quot; href=&quot;./start.html&quot;&gt;QMUI Web&lt;/a&gt;
     &lt;/div&gt;
     }
-  &lt;/div&gt;</code></pre>
-                </div>
-            </div>
-
-            <div class="dm_column_item_info dm_column_item_info_Single">
-                <div class="dm_column_item_info_code">
-<pre><code class="html">&lt;!-- start.html --&gt;
+  &lt;/div&gt;</code></pre></div></div><div class="dm_column_item_info dm_column_item_info_Single"><div class="dm_column_item_info_code"><pre><code class="html">&lt;!-- start.html --&gt;
 &amp;&amp;include(&#x27;./_header.html&#x27;, {
   &quot;index&quot; : true,
   &quot;title&quot;: &quot;QMUI Web&quot;,
@@ -236,13 +71,7 @@ gulp</code></pre>
   &lt;div class=&quot;frame_cnt&quot;&gt;正文内容&lt;/div&gt;
   &lt;div&gt;页脚&lt;/div&gt;
 &lt;/body&gt;
-&lt;/html&gt;</code></pre>
-                </div>
-            </div>
-
-            <div class="dm_column_item_info dm_column_item_info_Single">
-                <div class="dm_column_item_info_code">
-<pre><code class="html">&lt;!-- start.html（输出结果） --&gt;
+&lt;/html&gt;</code></pre></div></div><div class="dm_column_item_info dm_column_item_info_Single"><div class="dm_column_item_info_code"><pre><code class="html">&lt;!-- start.html（输出结果） --&gt;
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
@@ -261,95 +90,11 @@ gulp</code></pre>
   &lt;div class=&quot;frame_cnt&quot;&gt;正文内容&lt;/div&gt;
   &lt;div&gt;页脚&lt;/div&gt;
 &lt;/body&gt;
-&lt;/html&gt;</code></pre>
-                </div>
-            </div>
-
-            <p class="dm_column_tip">这个例子中，_header.html 作为一个公共模块，被 start.html include，然后再由 Gulp 处理生成最终的页面。这里为了避免 gulp 起效，使用了"&&"代替"@@"，实际上 QMUI 中使用的 include 引擎的默认前缀为 @@，即所有的方法和变量都以 @@ 开头。这个前缀以及是否开启 include 引擎都可以在 qmui.config.js 中配置。</p>
-
-            <p class="dm_column_tip"><strong>另外值得注意的是，如果一个变量在某些模板中需要省略不写（例如一个布尔值，默认设定为 false，大部分的页面按需求都是 false 因此都不写），那么在使用这个变量进行条件判断时，需要先用 javascript 的 typeof 方法判断变量是否 undefined 再进行其他判断，否则 Gulp 会报 warning。</strong>
-            </p>
-
-        </div>
-        <!-- 模板 include 能力 end -->
-
-        <!-- 浏览器自动刷新 start -->
-        <div class="dm_column_item">
-
-            <h3 id="qui_scaffoldBrowserSync" class="dm_column_item_title">浏览器自动刷新</h3>
-
-            <div class="dm_column_tip">QMUI 带有基于 <a href="https://www.browsersync.io/" target="_blank">BrowserSync</a>的浏览器自动刷新功能，同时支持本地服务器模式（server）和代理模式（proxy）。
-            </div>
-
-            <div class="dm_column_tip">本地服务器模式（server）适合静态页面的开发，也是默认的模式，代理模式（proxy）则适合本身有本地服务的动态页面的开发（如本地的 Node.js 服务，PHP 本地开发）。详细的配置可以通过调整 qmui.config.js 中对应的配置项，相关配置条目说明如下：
-            </div>
-
-            <div class="dm_column_tip">
-                <ul>
-                    <li><code>browserSyncMod</code> BrowserSync 的运行模式，默认为 'server'，即本地服务器模式，'proxy' 为代理模式，'close' 表示不开启本功能。
-                    </li>
-                    <li><code>browserSyncPort</code>自定义端口，默认为3030。请注意避免使用常用端口以及其他本地已占用的端口，包括在代理模式（proxy）下不能与代理对象使用相同的端口。
-                    </li>
-                    <li><code>browserSyncShowLog</code> 是否在显示 BrowserSync 的日志，默认为 false，即不显示日志。</li>
-                    <li><code>browserSyncStartPath</code> 开启 BrowserSync 后的默认打开的路径。</li>
-                    <li><code>browserSyncHost</code> 自定义开启 BrowserSync 后的默认 IP，可填写域名。为空则默认为 localhost。开启 BrowserSync 后，浏览器地址栏会自动打开 browserSyncHost + browserSyncStartPath 合并后的网址。
-                    </li>
-                    <li><code>browserSyncWatchPath</code> 要监控变动的文件目录，一旦该目录下文件产生变动则自动刷新浏览器。</li>
-                    <li><code>browserSyncServerRoute</code> 自定义路由，把项目中的目录结构定义成指定的路由，本地服务器模式（server）下方可产生作用。</li>
-                    <li><code>browserSyncProxy</code> 需要进行代理的代理地址，代理模式（proxy）下方可产生作用。</li>
-                </ul>
-            </div>
-
-        </div>
-        <!-- 浏览器自动刷新 end -->
-
-        <!-- 清理文件 start -->
-        <div class="dm_column_item">
-
-            <h3 id="qui_scaffoldClean" class="dm_column_item_title">清理文件</h3>
-
-            <p class="dm_column_tip">清理文件任务用于快速删除一些无用文件，需要手工调用。默认的配置是删除 UI_dev（qmui_web 上一层目录）的 .sass-cache 目录。qmui.config.js
-                中的 <code>cleanFileType</code> 可以控制具体要删除的文件。</p>
-
-            <div class="dm_column_item_info dm_column_item_info_Single">
-                <div class="dm_column_item_info_code">
-<pre><code class="bash">#清理文件命令
-gulp clean</code></pre>
-                </div>
-            </div>
-
-        </div>
-        <!-- 清理文件 end -->
-
-        <!-- 合并变更文件 start -->
-        <div class="dm_column_item">
-
-            <h3 id="qui_scaffoldMerge" class="dm_column_item_title">合并变更文件</h3>
-
-            <p class="dm_column_tip">合并变更文件是一个手工调用的方法。可以将模板文件中的 &lt;link&gt; &lt;script&gt;文件按指定规则合并，并变更文件引用。具体使用步骤如下：</p>
-
-            <div class="dm_column_tip">
-                <ol>
-                    <li>把 qmui_web 目录中的 qmui.merge.rule.js 复制到上一层目录（即 UI_dev）</li>
-                    <li>按自身项目需要在 qmui.merge.rule.js 中写好文件合并规则，其中 key 为合并得到的最终文件（格式为字符串），value 为需要被合并的文件（格式为 glob），<strong>所有的路径均以模板中实际的文件引用路径为准（可参考下面的例子）</strong></li>
-                    <li>在 qmui_web 目录执行命令 gulp merge 即可合并</li>
-                </ol>
-            </div>
-
-            <p class="dm_column_tip">具体例子如下：</p>
-
-            <div class="dm_column_item_info dm_column_item_info_Single">
-                <div class="dm_column_item_info_code">
-<pre><code class="javascript:;">// qmui.merge.rule.js
+&lt;/html&gt;</code></pre></div></div><p class="dm_column_tip">这个例子中，_header.html 作为一个公共模块，被 start.html include，然后再由 Gulp 处理生成最终的页面。这里为了避免 gulp 起效，使用了"&&"代替"@@"，实际上 QMUI 中使用的 include 引擎的默认前缀为 @@，即所有的方法和变量都以 @@ 开头。这个前缀以及是否开启 include 引擎都可以在 qmui.config.js 中配置。</p><p class="dm_column_tip"><strong>另外值得注意的是，如果一个变量在某些模板中需要省略不写（例如一个布尔值，默认设定为 false，大部分的页面按需求都是 false 因此都不写），那么在使用这个变量进行条件判断时，需要先用 javascript 的 typeof 方法判断变量是否 undefined 再进行其他判断，否则 Gulp 会报 warning。</strong></p></div><div class="dm_column_item"><h3 id="qui_scaffoldBrowserSync" class="dm_column_item_title">浏览器自动刷新</h3><div class="dm_column_tip">QMUI 带有基于 <a href="https://www.browsersync.io/" target="_blank">BrowserSync</a>的浏览器自动刷新功能，同时支持本地服务器模式（server）和代理模式（proxy）。</div><div class="dm_column_tip">本地服务器模式（server）适合静态页面的开发，也是默认的模式，代理模式（proxy）则适合本身有本地服务的动态页面的开发（如本地的 Node.js 服务，PHP 本地开发）。详细的配置可以通过调整 qmui.config.js 中对应的配置项，相关配置条目说明如下：</div><div class="dm_column_tip"><ul><li><code>browserSyncMod</code> BrowserSync 的运行模式，默认为 'server'，即本地服务器模式，'proxy' 为代理模式，'close' 表示不开启本功能。</li><li><code>browserSyncPort</code>自定义端口，默认为3030。请注意避免使用常用端口以及其他本地已占用的端口，包括在代理模式（proxy）下不能与代理对象使用相同的端口。</li><li><code>browserSyncShowLog</code> 是否在显示 BrowserSync 的日志，默认为 false，即不显示日志。</li><li><code>browserSyncStartPath</code> 开启 BrowserSync 后的默认打开的路径。</li><li><code>browserSyncHost</code> 自定义开启 BrowserSync 后的默认 IP，可填写域名。为空则默认为 localhost。开启 BrowserSync 后，浏览器地址栏会自动打开 browserSyncHost + browserSyncStartPath 合并后的网址。</li><li><code>browserSyncWatchPath</code> 要监控变动的文件目录，一旦该目录下文件产生变动则自动刷新浏览器。</li><li><code>browserSyncServerRoute</code> 自定义路由，把项目中的目录结构定义成指定的路由，本地服务器模式（server）下方可产生作用。</li><li><code>browserSyncProxy</code> 需要进行代理的代理地址，代理模式（proxy）下方可产生作用。</li></ul></div></div><div class="dm_column_item"><h3 id="qui_scaffoldClean" class="dm_column_item_title">清理文件</h3><p class="dm_column_tip">清理文件任务用于快速删除一些无用文件，需要手工调用。默认的配置是删除 UI_dev（qmui_web 上一层目录）的 .sass-cache 目录。qmui.config.js 中的 <code>cleanFileType</code> 可以控制具体要删除的文件。</p><div class="dm_column_item_info dm_column_item_info_Single"><div class="dm_column_item_info_code"><pre><code class="bash">#清理文件命令
+gulp clean</code></pre></div></div></div><div class="dm_column_item"><h3 id="qui_scaffoldMerge" class="dm_column_item_title">合并变更文件</h3><p class="dm_column_tip">合并变更文件是一个手工调用的方法。可以将模板文件中的 &lt;link&gt; &lt;script&gt;文件按指定规则合并，并变更文件引用。具体使用步骤如下：</p><div class="dm_column_tip"><ol><li>把 qmui_web 目录中的 qmui.merge.rule.js 复制到上一层目录（即 UI_dev）</li><li>按自身项目需要在 qmui.merge.rule.js 中写好文件合并规则，其中 key 为合并得到的最终文件（格式为字符串），value 为需要被合并的文件（格式为 glob），<strong>所有的路径均以模板中实际的文件引用路径为准（可参考下面的例子）</strong></li><li>在 qmui_web 目录执行命令 gulp merge 即可合并</li></ol></div><p class="dm_column_tip">具体例子如下：</p><div class="dm_column_item_info dm_column_item_info_Single"><div class="dm_column_item_info_code"><pre><code class="javascript:;">// qmui.merge.rule.js
 {
   "../public/js/all.js" : ["../public/js/lib.js", "../public/js/function.js", "../public/js/index.js"]
-}</code></pre>
-                </div>
-            </div>
-
-            <div class="dm_column_item_info dm_column_item_info_Single">
-                <div class="dm_column_item_info_code">
-<pre><code class="html">&lt;!-- test.html gulp merge 执行之前的页面 --&gt;
+}</code></pre></div></div><div class="dm_column_item_info dm_column_item_info_Single"><div class="dm_column_item_info_code"><pre><code class="html">&lt;!-- test.html gulp merge 执行之前的页面 --&gt;
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
@@ -361,13 +106,7 @@ gulp clean</code></pre>
     &lt;script src=&quot;../public/js/function.js&quot;&gt;&lt;/script&gt;
     &lt;script src=&quot;../public/js/index.js&quot;&gt;&lt;/script&gt;
   &lt;/body&gt;
-&lt;/html&gt;</code></pre>
-                </div>
-            </div>
-
-            <div class="dm_column_item_info dm_column_item_info_Single">
-                <div class="dm_column_item_info_code">
-<pre><code class="html">&lt;!-- test.html gulp merge 执行之后的页面 --&gt;
+&lt;/html&gt;</code></pre></div></div><div class="dm_column_item_info dm_column_item_info_Single"><div class="dm_column_item_info_code"><pre><code class="html">&lt;!-- test.html gulp merge 执行之后的页面 --&gt;
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
@@ -377,24 +116,4 @@ gulp clean</code></pre>
   &lt;body class=&quot;frame_wrap&quot;&gt;
     &lt;script src=&quot;../public/js/all.js&quot;&gt;&lt;/script&gt;
   &lt;/body&gt;
-&lt;/html&gt;</code></pre>
-                </div>
-            </div>
-
-        </div>
-        <!-- 合并变更文件 end -->
-
-    </div>
-    <!-- 工作流的使用 end -->
-
-</div><!-- content end -->
-
-<script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
-<script type="text/javascript" src="../public/js/all.js"></script>
-
-
-
-</body>
-</html>
-
-
+&lt;/html&gt;</code></pre></div></div></div></div></div><script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script><script type="text/javascript" src="../public/js/all.js"></script></body></html>
