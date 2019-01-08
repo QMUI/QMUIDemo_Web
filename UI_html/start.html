@@ -475,22 +475,20 @@ module.exports = {
             <div class="dm_column_item_info dm_column_item_info_Single">
                 <div class="dm_column_item_info_code">
 <pre><code class="bash">// testTask.js
-module.exports = function (gulp, common) {
+module.exports = function (gulp, mix) {
 
-    var taskName = 'testTask';
+    const taskName = 'testTask';
 
-    gulp.task(taskName, function (done) {
+    gulp.task(taskName, done => {
 
         // Custom task logic code
-        common.util.log('testTask execute succeed');
+        mix.util.log('testTask execute succeed');
 
         done();
     });
 
     // Task Description (For gulp list)
-    common.tasks[taskName] = {
-        description: 'Custom Task testTask'
-    };
+    mix.addTaskDescription(taskName, 'Custom Task testTask');
 };</code></pre>
                 </div>
             </div>

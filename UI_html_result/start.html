@@ -51,22 +51,20 @@ module.exports = {
         'testTask': '../testTask.js'
     }
 };</code></pre></div></div><div class="dm_column_item_info dm_column_item_info_Single"><div class="dm_column_item_info_code"><pre><code class="bash">// testTask.js
-module.exports = function (gulp, common) {
+module.exports = function (gulp, mix) {
 
-    var taskName = 'testTask';
+    const taskName = 'testTask';
 
-    gulp.task(taskName, function (done) {
+    gulp.task(taskName, done => {
 
         // Custom task logic code
-        common.util.log('testTask execute succeed');
+        mix.util.log('testTask execute succeed');
 
         done();
     });
 
     // Task Description (For gulp list)
-    common.tasks[taskName] = {
-        description: 'Custom Task testTask'
-    };
+    mix.addTaskDescription(taskName, 'Custom Task testTask');
 };</code></pre></div></div><p class="dm_column_tip">如上面的示例中的 testTask.js，自定义任务需要按照特定的格式编写，这样自定义任务才可以接入 QMUI Web 的内置工作流，并可以使用内置工作流中的公共配置和组件，为了方便开发者创建自定义任务，QMUI 的 Yeoman 脚手架 generator-qmui 增加了自定义任务的子模板，可以快速创建符合规范的自定义任务文件，例如：</p><div class="dm_column_item_info dm_column_item_info_Single"><div class="dm_column_item_info_code"><pre><code class="bash">#安装 Yeoman，如果本地已安装可以忽略
 npm install -g yo
 #安装 QMUI 的模板，如果本地已安装可以忽略
