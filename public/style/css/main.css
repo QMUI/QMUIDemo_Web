@@ -52,24 +52,6 @@
  * @date 2014-10-31
  *
  */
-.qui_clear:after, .dm_tabNav:after, .dm_column_display_cnt:after, .frame_head:after, .index_cnt_ability_list:after {
-    clear: both;
-    content: ".";
-    display: block;
-    line-height: 0;
-    font-size: 0;
-    visibility: hidden;
-}
-
-.qui_txtOverflow, .frame_sidebar_nav_link {
-    overflow: hidden;
-    white-space: nowrap;
-    -o-text-overflow: ellipsis;
-       text-overflow: ellipsis;
-    word-break: break-all;
-    word-wrap: normal;
-}
-
 /**
  * _tool.scss 常用工具方法
  * @author Kayo
@@ -193,6 +175,24 @@ audio, canvas, video {
 
 .qui_txtUnderlineNone {
     text-decoration: none !important;
+}
+
+.qui_txtOverflow {
+    overflow: hidden;
+    white-space: nowrap;
+    -o-text-overflow: ellipsis;
+       text-overflow: ellipsis;
+    word-break: break-all;
+    word-wrap: normal;
+}
+
+.qui_clear:after {
+    clear: both;
+    content: ".";
+    display: block;
+    line-height: 0;
+    font-size: 0;
+    visibility: hidden;
 }
 
 .qui_txtNowrap {
@@ -741,6 +741,15 @@ a.dm_btn:hover {
     border-bottom: 1px solid #DEE0E2;
 }
 
+.dm_tabNav:after {
+    clear: both;
+    content: ".";
+    display: block;
+    line-height: 0;
+    font-size: 0;
+    visibility: hidden;
+}
+
 .dm_tabNav_item {
     float: left;
     margin: 0 24px -1px 0;
@@ -1118,6 +1127,15 @@ pre.dm_column_tip {
     overflow: auto;
 }
 
+.dm_column_display_cnt:after {
+    clear: both;
+    content: ".";
+    display: block;
+    line-height: 0;
+    font-size: 0;
+    visibility: hidden;
+}
+
 .dm_column_display_cnt .dm_inputText,
 .dm_column_display_cnt .dm_textarea {
     margin-bottom: 10px;
@@ -1429,6 +1447,15 @@ pre.dm_column_tip {
     background-color: #00A3E1;
 }
 
+.frame_head:after {
+    clear: both;
+    content: ".";
+    display: block;
+    line-height: 0;
+    font-size: 0;
+    visibility: hidden;
+}
+
 .frame_head .frame_head_showMenuBtn,
 .frame_head .frame_head_closeMenuBtn {
     display: none;
@@ -1496,6 +1523,12 @@ pre.dm_column_tip {
 }
 
 .frame_sidebar_nav_link {
+    overflow: hidden;
+    white-space: nowrap;
+    -o-text-overflow: ellipsis;
+       text-overflow: ellipsis;
+    word-break: break-all;
+    word-wrap: normal;
     display: block;
     margin-bottom: 2px;
     padding: 7px 0 7px 20px;
@@ -1958,6 +1991,15 @@ pre.dm_column_tip {
 
 .index_cnt_ability {
     padding-bottom: 42px;
+}
+
+.index_cnt_ability_list:after {
+    clear: both;
+    content: ".";
+    display: block;
+    line-height: 0;
+    font-size: 0;
+    visibility: hidden;
 }
 
 .index_ability_item {

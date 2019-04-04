@@ -113,7 +113,7 @@ pre.dm_column_tip {
 }
 
 .dm_column_display_cnt {
-    @extend %clear; // 子元素可能有浮动元素，统一预先清除浮动
+    @include clear; // 子元素可能有浮动元素，统一预先清除浮动
     overflow: auto;
 
     // 展示文本输入组件时附加的样式

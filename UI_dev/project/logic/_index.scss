@@ -193,7 +193,7 @@
 }
 
 .index_cnt_ability_list {
-    @extend %clear;
+    @include clear;
 }
 
 .index_ability_item {

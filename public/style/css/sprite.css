@@ -52,24 +52,6 @@
  * @date 2014-10-31
  *
  */
-.qui_clear:after {
-    clear: both;
-    content: ".";
-    display: block;
-    line-height: 0;
-    font-size: 0;
-    visibility: hidden;
-}
-
-.qui_txtOverflow {
-    overflow: hidden;
-    white-space: nowrap;
-    -o-text-overflow: ellipsis;
-       text-overflow: ellipsis;
-    word-break: break-all;
-    word-wrap: normal;
-}
-
 /**
  * _tool.scss 常用工具方法
  * @author Kayo
@@ -183,6 +165,24 @@ audio, canvas, video {
 
 .qui_txtUnderlineNone {
     text-decoration: none !important;
+}
+
+.qui_txtOverflow {
+    overflow: hidden;
+    white-space: nowrap;
+    -o-text-overflow: ellipsis;
+       text-overflow: ellipsis;
+    word-break: break-all;
+    word-wrap: normal;
+}
+
+.qui_clear:after {
+    clear: both;
+    content: ".";
+    display: block;
+    line-height: 0;
+    font-size: 0;
+    visibility: hidden;
 }
 
 .qui_txtNowrap {
