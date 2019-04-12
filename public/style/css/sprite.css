@@ -333,7 +333,7 @@ a:hover {
     height: 160px;
 }
 
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 2dppx), only screen and (min-resolution: 192dpi){
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 2dppx), only screen and (min-resolution: 192dpi){
     .dm_icon_BannerLogo{
         background-image: url(../images/icons_2x.b54790f3c7.png);
         background-position: 0 0;
@@ -534,7 +534,7 @@ a:hover {
     border-top: 1px solid #D4D6D8;
 }
 
-@media (-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 2dppx), (min-resolution: 192dpi) {
+@media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 2dppx), (min-resolution: 192dpi) {
     .sprite_section:before {
         -webkit-transform: scaleY(0.5);
             -ms-transform: scaleY(0.5);
@@ -542,7 +542,7 @@ a:hover {
     }
 }
 
-@media (-webkit-min-device-pixel-ratio: 3), (min--moz-device-pixel-ratio: 3), (min-device-pixel-ratio: 3), (-o-min-device-pixel-ratio: 3/1), (min-resolution: 3dppx), (min-resolution: 288dpi) {
+@media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3), (-o-min-device-pixel-ratio: 3/1), (min-resolution: 3dppx), (min-resolution: 288dpi) {
     .sprite_section:before {
         -webkit-transform: scaleY(0.333333);
             -ms-transform: scaleY(0.333333);

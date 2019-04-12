@@ -343,7 +343,7 @@ a:hover {
     width: 160px;
     height: 160px;
 }
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 2dppx), only screen and (min-resolution: 192dpi){
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 2dppx), only screen and (min-resolution: 192dpi){
     .dm_icon_BannerLogo{
         background-image: url(../images/icons_2x.b54790f3c7.png);
         background-position: 0 0;
@@ -969,7 +969,7 @@ textarea:focus:-ms-input-placeholder {
     text-transform: capitalize;
 }
 
-@media (-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 2dppx), (min-resolution: 192dpi) {
+@media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 2dppx), (min-resolution: 192dpi) {
     .dm_column_title {
         position: relative;
         border: 0;
@@ -996,7 +996,7 @@ textarea:focus:-ms-input-placeholder {
     }
 }
 
-@media (-webkit-min-device-pixel-ratio: 3), (min--moz-device-pixel-ratio: 3), (min-device-pixel-ratio: 3), (-o-min-device-pixel-ratio: 3/1), (min-resolution: 3dppx), (min-resolution: 288dpi) {
+@media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3), (-o-min-device-pixel-ratio: 3/1), (min-resolution: 3dppx), (min-resolution: 288dpi) {
     .dm_column_title:after {
         width: 300%;
         height: 300%;
@@ -1069,7 +1069,7 @@ pre.dm_column_tip {
     max-width: 840px;
 }
 
-@media (-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 2dppx), (min-resolution: 192dpi) {
+@media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 2dppx), (min-resolution: 192dpi) {
     .dm_column_item_info {
         position: relative;
         border: 0;
@@ -1098,7 +1098,7 @@ pre.dm_column_tip {
     }
 }
 
-@media (-webkit-min-device-pixel-ratio: 3), (min--moz-device-pixel-ratio: 3), (min-device-pixel-ratio: 3), (-o-min-device-pixel-ratio: 3/1), (min-resolution: 3dppx), (min-resolution: 288dpi) {
+@media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3), (-o-min-device-pixel-ratio: 3/1), (min-resolution: 3dppx), (min-resolution: 288dpi) {
     .dm_column_item_info:after {
         width: 300%;
         height: 300%;
@@ -1154,7 +1154,7 @@ pre.dm_column_tip {
     overflow: auto;
 }
 
-@media (-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 2dppx), (min-resolution: 192dpi) {
+@media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 2dppx), (min-resolution: 192dpi) {
     .dm_column_item_info_code,
     .dm_column_item_info_tips {
         position: relative;
@@ -1185,7 +1185,7 @@ pre.dm_column_tip {
     }
 }
 
-@media (-webkit-min-device-pixel-ratio: 3), (min--moz-device-pixel-ratio: 3), (min-device-pixel-ratio: 3), (-o-min-device-pixel-ratio: 3/1), (min-resolution: 3dppx), (min-resolution: 288dpi) {
+@media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3), (-o-min-device-pixel-ratio: 3/1), (min-resolution: 3dppx), (min-resolution: 288dpi) {
     .dm_column_item_info_code:after,
     .dm_column_item_info_tips:after {
         width: 300%;
@@ -1212,7 +1212,7 @@ pre.dm_column_tip {
     border-style: solid;
 }
 
-@media (-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 2dppx), (min-resolution: 192dpi) {
+@media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 2dppx), (min-resolution: 192dpi) {
     .dm_column_item_info_Single .dm_column_item_info_code {
         position: relative;
         border: 0;
@@ -1239,7 +1239,7 @@ pre.dm_column_tip {
     }
 }
 
-@media (-webkit-min-device-pixel-ratio: 3), (min--moz-device-pixel-ratio: 3), (min-device-pixel-ratio: 3), (-o-min-device-pixel-ratio: 3/1), (min-resolution: 3dppx), (min-resolution: 288dpi) {
+@media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3), (-o-min-device-pixel-ratio: 3/1), (min-resolution: 3dppx), (min-resolution: 288dpi) {
     .dm_column_item_info_Single .dm_column_item_info_code:after {
         width: 300%;
         height: 300%;
@@ -1688,7 +1688,7 @@ pre.dm_column_tip {
     }
 }
 
-@media handheld and (max-width: 846px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 846px) and (-webkit-min-device-pixel-ratio: 2), handheld and (max-width: 846px) and (min--moz-device-pixel-ratio: 2), screen and (max-width: 846px) and (min--moz-device-pixel-ratio: 2), handheld and (max-width: 846px) and (min-device-pixel-ratio: 2), screen and (max-width: 846px) and (min-device-pixel-ratio: 2), handheld and (max-width: 846px) and (-o-min-device-pixel-ratio: 2/1), handheld and (max-width: 846px) and (min-resolution: 2dppx), screen and (max-width: 846px) and (-o-min-device-pixel-ratio: 2/1), screen and (max-width: 846px) and (min-resolution: 2dppx), handheld and (max-width: 846px) and (min-resolution: 192dpi), screen and (max-width: 846px) and (min-resolution: 192dpi) {
+@media handheld and (max-width: 846px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 846px) and (-webkit-min-device-pixel-ratio: 2), handheld and (max-width: 846px) and (min-device-pixel-ratio: 2), screen and (max-width: 846px) and (min-device-pixel-ratio: 2), handheld and (max-width: 846px) and (-o-min-device-pixel-ratio: 2/1), handheld and (max-width: 846px) and (min-resolution: 2dppx), screen and (max-width: 846px) and (-o-min-device-pixel-ratio: 2/1), screen and (max-width: 846px) and (min-resolution: 2dppx), handheld and (max-width: 846px) and (min-resolution: 192dpi), screen and (max-width: 846px) and (min-resolution: 192dpi) {
     .frame_nav_item {
         position: relative;
         border: 0;
@@ -1715,7 +1715,7 @@ pre.dm_column_tip {
     }
 }
 
-@media handheld and (max-width: 846px) and (-webkit-min-device-pixel-ratio: 3), screen and (max-width: 846px) and (-webkit-min-device-pixel-ratio: 3), handheld and (max-width: 846px) and (min--moz-device-pixel-ratio: 3), screen and (max-width: 846px) and (min--moz-device-pixel-ratio: 3), handheld and (max-width: 846px) and (min-device-pixel-ratio: 3), screen and (max-width: 846px) and (min-device-pixel-ratio: 3), handheld and (max-width: 846px) and (-o-min-device-pixel-ratio: 3/1), handheld and (max-width: 846px) and (min-resolution: 3dppx), screen and (max-width: 846px) and (-o-min-device-pixel-ratio: 3/1), screen and (max-width: 846px) and (min-resolution: 3dppx), handheld and (max-width: 846px) and (min-resolution: 288dpi), screen and (max-width: 846px) and (min-resolution: 288dpi) {
+@media handheld and (max-width: 846px) and (-webkit-min-device-pixel-ratio: 3), screen and (max-width: 846px) and (-webkit-min-device-pixel-ratio: 3), handheld and (max-width: 846px) and (min-device-pixel-ratio: 3), screen and (max-width: 846px) and (min-device-pixel-ratio: 3), handheld and (max-width: 846px) and (-o-min-device-pixel-ratio: 3/1), handheld and (max-width: 846px) and (min-resolution: 3dppx), screen and (max-width: 846px) and (-o-min-device-pixel-ratio: 3/1), screen and (max-width: 846px) and (min-resolution: 3dppx), handheld and (max-width: 846px) and (min-resolution: 288dpi), screen and (max-width: 846px) and (min-resolution: 288dpi) {
     .frame_nav_item:after {
         width: 300%;
         height: 300%;
@@ -1785,7 +1785,7 @@ pre.dm_column_tip {
     border-top: 1px solid #D4D6D8;
 }
 
-@media (-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 2dppx), (min-resolution: 192dpi) {
+@media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 2dppx), (min-resolution: 192dpi) {
     .index_column:before {
         -webkit-transform: scaleY(0.5);
             -ms-transform: scaleY(0.5);
@@ -1793,7 +1793,7 @@ pre.dm_column_tip {
     }
 }
 
-@media (-webkit-min-device-pixel-ratio: 3), (min--moz-device-pixel-ratio: 3), (min-device-pixel-ratio: 3), (-o-min-device-pixel-ratio: 3/1), (min-resolution: 3dppx), (min-resolution: 288dpi) {
+@media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3), (-o-min-device-pixel-ratio: 3/1), (min-resolution: 3dppx), (min-resolution: 288dpi) {
     .index_column:before {
         -webkit-transform: scaleY(0.333333);
             -ms-transform: scaleY(0.333333);
@@ -2054,7 +2054,7 @@ pre.dm_column_tip {
             box-shadow: 0 20px 30px 0 #CFDCE6;
 }
 
-@media (-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 2dppx), (min-resolution: 192dpi) {
+@media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 2dppx), (min-resolution: 192dpi) {
     .index_appIntro_img {
         background-image: url("../images/independent/App_2x.png");
     }
