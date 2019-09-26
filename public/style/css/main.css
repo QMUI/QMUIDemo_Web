@@ -1663,7 +1663,6 @@ pre.dm_column_tip {
         -webkit-box-sizing: border-box;
                 box-sizing: border-box;
         background-image: -webkit-gradient(linear, left top, left bottom, from(#00A3E1), to(#06DCE9));
-        background-image: -webkit-linear-gradient(top, #00A3E1 0%, #06DCE9 100%);
         background-image: -o-linear-gradient(top, #00A3E1 0%, #06DCE9 100%);
         background-image: linear-gradient(to bottom, #00A3E1 0%, #06DCE9 100%);
         background-repeat: repeat-x;
@@ -1876,7 +1875,6 @@ pre.dm_column_tip {
 .index_banner {
     padding: 75px 0 85px;
     background-image: -webkit-gradient(linear, left top, left bottom, from(#00A3E1), to(#06DCE9));
-    background-image: -webkit-linear-gradient(top, #00A3E1 0%, #06DCE9 100%);
     background-image: -o-linear-gradient(top, #00A3E1 0%, #06DCE9 100%);
     background-image: linear-gradient(to bottom, #00A3E1 0%, #06DCE9 100%);
     background-repeat: repeat-x;
