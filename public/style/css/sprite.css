@@ -265,14 +265,14 @@ a:hover {
 
 .dm_icon_Component{
     background-image: url(../images/icons.7fc7e2bab2.png);
-    background-position: -340px 0;
+    background-position: -170px 0;
     width: 160px;
     height: 160px;
 }
 
 .dm_icon_Extension{
     background-image: url(../images/icons.7fc7e2bab2.png);
-    background-position: -170px -170px;
+    background-position: 0 -170px;
     width: 160px;
     height: 160px;
 }
@@ -286,14 +286,14 @@ a:hover {
 
 .dm_icon_QQMailLogo{
     background-image: url(../images/icons.7fc7e2bab2.png);
-    background-position: -196px -340px;
+    background-position: -340px -260px;
     width: 104px;
     height: 32px;
 }
 
 .dm_icon_Sass{
     background-image: url(../images/icons.7fc7e2bab2.png);
-    background-position: 0 -170px;
+    background-position: -170px -170px;
     width: 160px;
     height: 160px;
 }
@@ -314,21 +314,21 @@ a:hover {
 
 .dm_icon_WeReadLogo{
     background-image: url(../images/icons.7fc7e2bab2.png);
-    background-position: -340px -260px;
+    background-position: -82px -340px;
     width: 104px;
     height: 32px;
 }
 
 .dm_icon_WeWorkLogo{
     background-image: url(../images/icons.7fc7e2bab2.png);
-    background-position: -82px -340px;
+    background-position: -196px -340px;
     width: 104px;
     height: 32px;
 }
 
 .dm_icon_Workflow{
     background-image: url(../images/icons.7fc7e2bab2.png);
-    background-position: -170px 0;
+    background-position: -340px 0;
     width: 160px;
     height: 160px;
 }
@@ -356,12 +356,12 @@ a:hover {
     }
     .dm_icon_Component{
         background-image: url(../images/icons_2x.b54790f3c7.png);
-        background-position: -340px 0;
+        background-position: -170px 0;
         background-size: 500px 412px;
     }
     .dm_icon_Extension{
         background-image: url(../images/icons_2x.b54790f3c7.png);
-        background-position: -170px -170px;
+        background-position: 0 -170px;
         background-size: 500px 412px;
     }
     .dm_icon_Menu{
@@ -371,12 +371,12 @@ a:hover {
     }
     .dm_icon_QQMailLogo{
         background-image: url(../images/icons_2x.b54790f3c7.png);
-        background-position: -196px -340px;
+        background-position: -340px -260px;
         background-size: 500px 412px;
     }
     .dm_icon_Sass{
         background-image: url(../images/icons_2x.b54790f3c7.png);
-        background-position: 0 -170px;
+        background-position: -170px -170px;
         background-size: 500px 412px;
     }
     .dm_icon_TopLogo{
@@ -391,17 +391,17 @@ a:hover {
     }
     .dm_icon_WeReadLogo{
         background-image: url(../images/icons_2x.b54790f3c7.png);
-        background-position: -340px -260px;
+        background-position: -82px -340px;
         background-size: 500px 412px;
     }
     .dm_icon_WeWorkLogo{
         background-image: url(../images/icons_2x.b54790f3c7.png);
-        background-position: -82px -340px;
+        background-position: -196px -340px;
         background-size: 500px 412px;
     }
     .dm_icon_Workflow{
         background-image: url(../images/icons_2x.b54790f3c7.png);
-        background-position: -170px 0;
+        background-position: -340px 0;
         background-size: 500px 412px;
     }
 }
@@ -429,12 +429,12 @@ a:hover {
     }
     .dm_icon_Component{
         background-image: url(../images/icons_3x.7a6b0c4755.png);
-        background-position: -340px 0;
+        background-position: -170px 0;
         background-size: 500px 412px;
     }
     .dm_icon_Extension{
         background-image: url(../images/icons_3x.7a6b0c4755.png);
-        background-position: -170px -170px;
+        background-position: 0 -170px;
         background-size: 500px 412px;
     }
     .dm_icon_Menu{
@@ -444,12 +444,12 @@ a:hover {
     }
     .dm_icon_QQMailLogo{
         background-image: url(../images/icons_3x.7a6b0c4755.png);
-        background-position: -196px -340px;
+        background-position: -340px -260px;
         background-size: 500px 412px;
     }
     .dm_icon_Sass{
         background-image: url(../images/icons_3x.7a6b0c4755.png);
-        background-position: 0 -170px;
+        background-position: -170px -170px;
         background-size: 500px 412px;
     }
     .dm_icon_TopLogo{
@@ -464,17 +464,17 @@ a:hover {
     }
     .dm_icon_WeReadLogo{
         background-image: url(../images/icons_3x.7a6b0c4755.png);
-        background-position: -340px -260px;
+        background-position: -82px -340px;
         background-size: 500px 412px;
     }
     .dm_icon_WeWorkLogo{
         background-image: url(../images/icons_3x.7a6b0c4755.png);
-        background-position: -82px -340px;
+        background-position: -196px -340px;
         background-size: 500px 412px;
     }
     .dm_icon_Workflow{
         background-image: url(../images/icons_3x.7a6b0c4755.png);
-        background-position: -170px 0;
+        background-position: -340px 0;
         background-size: 500px 412px;
     }
 }
@@ -523,7 +523,6 @@ a:hover {
     position: relative;
     margin-bottom: 58px;
 }
-
 .sprite_section:before {
     content: ".";
     position: absolute;
@@ -533,7 +532,6 @@ a:hover {
     font-size: 0;
     border-top: 1px solid #D4D6D8;
 }
-
 @media (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 2dppx), (min-resolution: 192dpi) {
     .sprite_section:before {
         -webkit-transform: scaleY(0.5);
@@ -541,28 +539,23 @@ a:hover {
                 transform: scaleY(0.5);
     }
 }
-
 @media (-webkit-min-device-pixel-ratio: 3), (min-device-pixel-ratio: 3), (-o-min-device-pixel-ratio: 3/1), (min-resolution: 3dppx), (min-resolution: 288dpi) {
     .sprite_section:before {
-        -webkit-transform: scaleY(0.333333);
-            -ms-transform: scaleY(0.333333);
-                transform: scaleY(0.333333);
+        -webkit-transform: scaleY(0.3333333333);
+            -ms-transform: scaleY(0.3333333333);
+                transform: scaleY(0.3333333333);
     }
 }
-
 .sprite_section:last-child {
     margin-bottom: 0;
 }
-
 .sprite_section:last-child:before {
     content: normal;
 }
-
 .sprite_section .dm_icon,
 .sprite_section .dm_svgIcon {
     margin-left: 20px;
 }
-
 .sprite_section .dm_icon:first-child,
 .sprite_section .dm_svgIcon:first-child {
     margin-left: 0;
