@@ -831,10 +831,10 @@ error-ex@^1.3.1:
   dependencies:
     is-arrayish "^0.2.1"
 
-eruda@^2.4.1:
-  version "2.4.1"
-  resolved "https://mirrors.tencent.com/npm/eruda/-/eruda-2.4.1.tgz#dedc9b78546feb827d6ccafbfd7dae480509d2a2"
-  integrity sha512-rI16JoCsyy/pzXbPo7X6EMSUrhbtKZeFZGopiqrmCKxA8GlH61IXjlQAk1SWGpVpkJ6A1z7leuF8EmhFsU+OXQ==
+eruda@^2.10.0:
+  version "2.10.0"
+  resolved "https://mirrors.tencent.com/npm/eruda/-/eruda-2.10.0.tgz#3fb4add7bb807f7c144e90f3c8bc443595d33876"
+  integrity sha512-Q/ysvghhDJzsEBykgxXjvxSSc4FQun4S9z7O85PJwyra9QCoiEJV1fZNO2g9CeZLbl0Qc/JGw3U3guniWKS4xA==
 
 escalade@^3.1.1:
   version "3.1.1"
@@ -1474,10 +1474,10 @@ jison-gho@^0.6.1-215:
     "@gerhobbelt/recast" "0.13.0-24"
     "@gerhobbelt/xregexp" "3.2.0-22"
 
-jquery@~3.6.0:
-  version "3.6.0"
-  resolved "http://mirrors.tencent.com/npm/jquery/-/jquery-3.6.0.tgz#c72a09f15c1bdce142f49dbf1170bdf8adac2470"
-  integrity sha512-JVzAR/AjBvVt2BmYhxRCSYysDsPcssdmTFnzyLEts9qNwmjmu4JTAMYubEfwVOSwpQ1I1sKKFcxhZCI2buerfw==
+jquery@~3.6.3:
+  version "3.6.3"
+  resolved "https://mirrors.tencent.com/npm/jquery/-/jquery-3.6.3.tgz#23ed2ffed8a19e048814f13391a19afcdba160e6"
+  integrity sha512-bZ5Sy3YzKo9Fyc8wH2iIQK4JImJ6R0GWI9kL1/k7Z91ZBNgkRXE6U0JfHIizZbort8ZunhSI3jw9I6253ahKfg==
 
 js-tokens@^4.0.0:
   version "4.0.0"
