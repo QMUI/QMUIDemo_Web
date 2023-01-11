@@ -7,9 +7,9 @@
         "url": "git+https://github.com/QMUI/QMUIDemo_Web.git"
     },
     "dependencies": {
-        "eruda": "^2.4.1",
+        "eruda": "^2.10.0",
         "global": "^4.4.0",
-        "jquery": "~3.6.0",
+        "jquery": "~3.6.3",
         "stylelint-wechat-work-css": "^0.5.0"
     },
     "devDependencies": {},
